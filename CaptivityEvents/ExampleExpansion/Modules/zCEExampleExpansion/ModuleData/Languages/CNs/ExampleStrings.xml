@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    简体中文本地化文件
+-->
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="string">
+    <tags>
+        <tag language="简体中文"/>
+    </tags>
+    <strings>
+        <!-- ========== 示例1：商人事件 ========== -->
+        <string id="EXAMPLE001" text="你在路边遇到了一位神秘的商人。他打开了一个破旧的箱子，里面闪烁着奇异的光芒。"只需100金币，这件宝物就是你的了，"他说道，眼中闪烁着狡黠的光芒。"/>
+        <string id="EXAMPLE002" text="花100金币购买"/>
+        <string id="EXAMPLE003" text="[魅力50+] 试着讨价还价到50金币"/>
+        <string id="EXAMPLE004" text="礼貌地拒绝并离开"/>
+        <string id="EXAMPLE005" text="你打开包裹，发现里面是一张藏宝图！按图索骥，你在附近找到了一小笔财富。"/>
+        <string id="EXAMPLE006" text="收下战利品"/>
+        <string id="EXAMPLE007" text="你打开包裹，里面只有一堆石头和一张嘲讽的纸条。那个商人已经消失得无影无踪..."/>
+        <string id="EXAMPLE008" text="叹气，继续前进..."/>
+
+        <!-- ========== 示例2：逃跑事件 ========== -->
+        <string id="EXAMPLE010" text="夜深人静，你注意到看守似乎打起了瞌睡。钥匙就挂在腰间，随着呼吸轻轻晃动。这可能是你逃跑的机会..."/>
+        <string id="EXAMPLE011" text="[盗贼60+] 悄悄偷取钥匙"/>
+        <string id="EXAMPLE012" text="制造噪音分散注意力，趁机逃跑"/>
+        <string id="EXAMPLE013" text="太危险了，继续等待更好的机会"/>
+
+        <!-- ========== 示例3：俘虏事件 ========== -->
+        <string id="EXAMPLE020" text="你队伍中的一名俘虏跪倒在你面前，苦苦哀求："求求您放了我吧！我可以为您效力，我什么都愿意做！""/>
+        <string id="EXAMPLE021" text="释放这名俘虏"/>
+        <string id="EXAMPLE022" text="[领导力40+] 接受他的效忠"/>
+        <string id="EXAMPLE023" text="殴打他以儆效尤"/>
+        <string id="EXAMPLE024" text="不予理会"/>
+
+        <!-- ========== 示例4：休息事件 ========== -->
+        <string id="EXAMPLE030" text="你发现了一处隐蔽的营地遗址，看起来是个休息的好地方。你可以在这里休整一下恢复体力。"/>
+        <string id="EXAMPLE031" text="在这里休息几个小时"/>
+        <string id="EXAMPLE032" text="没时间休息，继续前进"/>
+        <string id="EXAMPLE033" text="经过几个小时的休息，你感觉精力充沛，准备继续旅程。"/>
+        <string id="EXAMPLE034" text="开始休息..."/>
+        <string id="EXAMPLE035" text="你感觉焕然一新！"/>
+        <string id="EXAMPLE036" text="继续旅程"/>
+
+        <!-- ========== 示例5：土匪伏击事件 ========== -->
+        <string id="EXAMPLE040" text="前方传来喊杀声！一群土匪从树丛中冲出，将你的队伍团团围住。"把钱留下，人可以走！"为首的土匪咆哮道。"/>
+        <string id="EXAMPLE041" text="拔剑迎战！"/>
+        <string id="EXAMPLE042" text="交出200金币换取安全"/>
+        <string id="EXAMPLE043" text="[侦察50+] 利用地形优势逃脱"/>
+        <string id="EXAMPLE044" text="你成功击退了土匪的伏击！在打扫战场时，你发现了一些战利品。"/>
+        <string id="EXAMPLE045" text="收集战利品"/>
+        <string id="EXAMPLE046" text="你被土匪击败了...他们搜刮了你的财物，将你丢在路边。"/>
+        <string id="EXAMPLE047" text="挣扎着爬起来..."/>
+
+        <!-- ========== 自定义技能/标志 ========== -->
+        <string id="EXSKILL001" text="示例声望"/>
+        <string id="EXSKILL002" text="临时状态"/>
+        <string id="EXFLAG001" text="示例标志1"/>
+        <string id="EXFLAG002" text="示例标志2"/>
+    </strings>
+</base>

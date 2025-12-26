@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    ╔══════════════════════════════════════════════════════════════════╗
+    ║           CE示例事件扩展包 - Example Events                      ║
+    ║     本文件展示如何创建各类事件，包含详细中文注释                   ║
+    ╚══════════════════════════════════════════════════════════════════╝
+-->
+<CEEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../CaptivityEventsV1.3.11.1311/Modules/zCaptivityEvents/ModuleLoader/CaptivityRequired/Events/CEEventsModal.xsd">
+
+    <!-- ================================================================
+         示例1：简单随机事件（玩家未被俘时触发）
+         展示：基础结构、多选项、属性变化
+    ================================================================= -->
+    <CEEvent>
+        <!-- 事件唯一标识符，建议使用前缀区分你的mod -->
+        <Name>EXAMPLE_random_merchant_001</Name>
+
+        <!-- 事件描述文本
+             {=StringID} 用于本地化，如果不需要多语言可直接写中文
+             {?CONDITION}...{?}...{\?} 是条件文本语法 -->
+        <Text>{=EXAMPLE001}你在路边遇到了一位神秘的商人。他打开了一个破旧的箱子，里面闪烁着奇异的光芒。"只需100金币，这件宝物就是你的了，"他说道，眼中闪烁着狡黠的光芒。</Text>
+
+        <!-- 背景图片名称（不含扩展名），放在Images目录下 -->
+        <BackgroundName>default_random</BackgroundName>
+
+        <!-- ★ 触发条件标志（必须包含Random/Captor/Captive之一）-->
+        <MultipleRestrictedListOfFlags>
+            <!-- Random = 随机事件（玩家未被俘、无需俘虏时触发）-->
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <!-- 只在陆地触发 -->
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <!-- 在行军途中触发 -->
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <!-- 只在白天触发 -->
+            <RestrictedListOfFlags>TimeDay</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <!-- 玩家可选的选项 -->
+        <Options>
+            <!-- 选项1：购买 -->
+            <Option>
+                <Order>0</Order>
+                <!-- 选项的后果/效果 -->
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=EXAMPLE002}花100金币购买</OptionText>
+                <!-- 扣除100金币 -->
+                <GoldTotal>-100</GoldTotal>
+                <!-- 触发后续事件（购买结果） -->
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>EXAMPLE_random_merchant_001a</EventName>
+                        <EventWeight>3</EventWeight><!-- 权重3：好结果 -->
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>EXAMPLE_random_merchant_001b</EventName>
+                        <EventWeight>1</EventWeight><!-- 权重1：坏结果 -->
+                    </TriggerEvent>
+                </TriggerEvents>
+                <!-- 需要至少100金币才能选择 -->
+                <ReqGoldAbove>100</ReqGoldAbove>
+            </Option>
+
+            <!-- 选项2：讨价还价（需要魅力技能） -->
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=EXAMPLE003}[魅力50+] 试着讨价还价到50金币</OptionText>
+                <GoldTotal>-50</GoldTotal>
+                <TriggerEventName>EXAMPLE_random_merchant_001a</TriggerEventName>
+                <!-- 需要魅力技能至少50 -->
+                <SkillsRequired>
+                    <SkillRequired Id="Charm" Min="50" Ref="Hero"/>
+                </SkillsRequired>
+                <ReqGoldAbove>50</ReqGoldAbove>
+            </Option>
+
+            <!-- 选项3：离开 -->
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Leave</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=EXAMPLE004}礼貌地拒绝并离开</OptionText>
+            </Option>
+        </Options>
+
+        <!-- 事件触发权重（越高越容易触发）-->
+        <WeightedChanceOfOccurring>10</WeightedChanceOfOccurring>
+
+        <!-- 最低年龄限制 -->
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- 购买结果事件（好）：只能由其他事件触发 -->
+    <CEEvent>
+        <Name>EXAMPLE_random_merchant_001a</Name>
+        <Text>{=EXAMPLE005}你打开包裹，发现里面是一张藏宝图！按图索骥，你在附近找到了一小笔财富。</Text>
+        <BackgroundName>default_random</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <!-- ★ 这个标志表示只能被其他事件触发，不会随机出现 -->
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>GiveGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=EXAMPLE006}收下战利品</OptionText>
+                <!-- R表示随机范围：获得200-500金币 -->
+                <GoldTotal>R 200 500</GoldTotal>
+                <!-- 增加1-3声望 -->
+                <RenownTotal>R 1 3</RenownTotal>
+            </Option>
+        </Options>
+    </CEEvent>
+
+    <!-- 购买结果事件（坏）：被骗了 -->
+    <CEEvent>
+        <Name>EXAMPLE_random_merchant_001b</Name>
+        <Text>{=EXAMPLE007}你打开包裹，里面只有一堆石头和一张嘲讽的纸条。那个商人已经消失得无影无踪...</Text>
+        <BackgroundName>default_random</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=EXAMPLE008}叹气，继续前进...</OptionText>
+            </Option>
+        </Options>
+    </CEEvent>
+
+
+    <!-- ================================================================
+         示例2：被俘事件（玩家被俘虏时触发）
+         展示：条件背景、逃跑机制、技能检定
+    ================================================================= -->
+    <CEEvent>
+        <Name>EXAMPLE_captive_escape_plan_001</Name>
+        <Text>{=EXAMPLE010}夜深人静，你注意到看守似乎打起了瞌睡。{?ISCAPTORFEMALE}那个女看守{?}那个看守{\?}的钥匙就挂在腰间，随着呼吸轻轻晃动。这可能是你逃跑的机会...</Text>
+
+        <!-- 条件背景：根据不同条件显示不同图片 -->
+        <Backgrounds>
+            <Background Name="default_female_prison" Weight="1" UseConditions="CE_background_female"/>
+            <Background Name="default_male_prison" Weight="1" UseConditions="CE_background_male"/>
+        </Backgrounds>
+
+        <MultipleRestrictedListOfFlags>
+            <!-- Captive = 被俘事件 -->
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <!-- 在城市监狱或城堡中 -->
+            <RestrictedListOfFlags>LocationDungeon</RestrictedListOfFlags>
+            <!-- 只在夜间触发 -->
+            <RestrictedListOfFlags>TimeNight</RestrictedListOfFlags>
+            <!-- 允许被覆写 -->
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <Options>
+            <!-- 选项1：偷钥匙尝试逃跑（需要盗贼技能） -->
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=EXAMPLE011}[盗贼60+] 悄悄偷取钥匙</OptionText>
+                <!-- 逃跑成功率70% -->
+                <EscapeChance>70</EscapeChance>
+                <SkillsRequired>
+                    <SkillRequired Id="Roguery" Min="60" Ref="Hero"/>
+                </SkillsRequired>
+                <!-- 逃跑成功后提升盗贼技能 -->
+                <SkillsToLevel>
+                    <Skill Id="Roguery" ByXP="100" Ref="Hero" Color="Green"/>
+                </SkillsToLevel>
+            </Option>
+
+            <!-- 选项2：制造噪音分散注意力 -->
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=EXAMPLE012}制造噪音分散注意力，趁机逃跑</OptionText>
+                <!-- 较低的成功率 -->
+                <EscapeChance>30</EscapeChance>
+            </Option>
+
+            <!-- 选项3：继续等待 -->
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=EXAMPLE013}太危险了，继续等待更好的机会</OptionText>
+            </Option>
+        </Options>
+
+        <WeightedChanceOfOccurring>15</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+
+    <!-- ================================================================
+         示例3：俘虏者事件（玩家有俘虏时触发）
+         展示：俘虏交互、关系变化、招募机制
+    ================================================================= -->
+    <CEEvent>
+        <Name>EXAMPLE_captor_prisoner_plea_001</Name>
+        <Text>{=EXAMPLE020}你队伍中的一名俘虏跪倒在你面前，苦苦哀求："求求您放了我吧！我可以为您效力，我什么都愿意做！"</Text>
+        <BackgroundName>captor_default</BackgroundName>
+
+        <MultipleRestrictedListOfFlags>
+            <!-- Captor = 俘虏者事件（玩家有俘虏时触发） -->
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <Options>
+            <!-- 选项1：释放 -->
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ReleaseRandomPrisoners</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=EXAMPLE021}释放这名俘虏</OptionText>
+                <RenownTotal>1</RenownTotal>
+                <!-- 需要仁慈特质 -->
+                <TraitsToLevel>
+                    <Trait Id="Mercy" ByLevel="1" Ref="Hero" Color="Green"/>
+                </TraitsToLevel>
+            </Option>
+
+            <!-- 选项2：招募（需要领导力） -->
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <!-- 俘虏加入队伍 -->
+                    <RestrictedListOfConsequences>JoinCaptor</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=EXAMPLE022}[领导力40+] 接受他的效忠</OptionText>
+                <SkillsRequired>
+                    <SkillRequired Id="Leadership" Min="40" Ref="Hero"/>
+                </SkillsRequired>
+            </Option>
+
+            <!-- 选项3：残忍对待 -->
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>WoundPrisoner</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=EXAMPLE023}殴打他以儆效尤</OptionText>
+                <RelationTotal>-5</RelationTotal>
+                <!-- 减少仁慈特质 -->
+                <TraitsToLevel>
+                    <Trait Id="Mercy" ByLevel="-1" Ref="Hero" Color="Red"/>
+                </TraitsToLevel>
+            </Option>
+
+            <!-- 选项4：忽略 -->
+            <Option>
+                <Order>3</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=EXAMPLE024}不予理会</OptionText>
+            </Option>
+        </Options>
+
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <!-- 需要至少有1名俘虏 -->
+        <ReqCaptivesAbove>1</ReqCaptivesAbove>
+    </CEEvent>
+
+
+    <!-- ================================================================
+         示例4：进度事件（需要等待时间完成）
+         展示：ProgressEvent、延时事件
+    ================================================================= -->
+    <CEEvent>
+        <Name>EXAMPLE_random_rest_camp_001</Name>
+        <Text>{=EXAMPLE030}你发现了一处隐蔽的营地遗址，看起来是个休息的好地方。你可以在这里休整一下恢复体力。</Text>
+        <BackgroundName>default_random</BackgroundName>
+
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <!-- 玩家不忙碌时才触发 -->
+            <RestrictedListOfFlags>PlayerIsNotBusy</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <Options>
+            <!-- 选项1：休息（需要等待） -->
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Wait</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=EXAMPLE031}在这里休息几个小时</OptionText>
+                <TriggerEventName>EXAMPLE_random_rest_camp_001a</TriggerEventName>
+            </Option>
+
+            <!-- 选项2：继续前进 -->
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Leave</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=EXAMPLE032}没时间休息，继续前进</OptionText>
+            </Option>
+        </Options>
+
+        <WeightedChanceOfOccurring>10</WeightedChanceOfOccurring>
+    </CEEvent>
+
+    <!-- 休息完成事件 -->
+    <CEEvent>
+        <Name>EXAMPLE_random_rest_camp_001a</Name>
+        <Text>{=EXAMPLE033}经过几个小时的休息，你感觉精力充沛，准备继续旅程。</Text>
+        <BackgroundName>default_random</BackgroundName>
+
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <!-- 进度菜单类型 -->
+            <RestrictedListOfFlags>ProgressMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <!-- 进度事件设置 -->
+        <ProgressEvent>
+            <!-- 队伍停止移动 -->
+            <ShouldStopMoving>true</ShouldStopMoving>
+            <!-- 显示模式：0=只显示进度条 -->
+            <DisplayProgressMode>0</DisplayProgressMode>
+            <!-- 需要4小时完成 -->
+            <TimeToTake>4</TimeToTake>
+            <!-- 完成后触发的事件 -->
+            <TriggerEventName>EXAMPLE_random_rest_camp_001b</TriggerEventName>
+        </ProgressEvent>
+
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=EXAMPLE034}开始休息...</OptionText>
+            </Option>
+        </Options>
+    </CEEvent>
+
+    <!-- 休息结果事件 -->
+    <CEEvent>
+        <Name>EXAMPLE_random_rest_camp_001b</Name>
+        <Text>{=EXAMPLE035}你感觉焕然一新！</Text>
+        <BackgroundName>default_random</BackgroundName>
+
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Leave</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=EXAMPLE036}继续旅程</OptionText>
+                <!-- 恢复生命值 -->
+                <HealthTotal>30</HealthTotal>
+                <!-- 提升士气 -->
+                <MoraleTotal>5</MoraleTotal>
+            </Option>
+        </Options>
+    </CEEvent>
+
+
+    <!-- ================================================================
+         示例5：战斗事件
+         展示：BattleSettings、生成敌人、战斗结果
+    ================================================================= -->
+    <CEEvent>
+        <Name>EXAMPLE_random_bandit_ambush_001</Name>
+        <Text>{=EXAMPLE040}前方传来喊杀声！一群土匪从树丛中冲出，将你的队伍团团围住。"把钱留下，人可以走！"为首的土匪咆哮道。</Text>
+        <BackgroundName>default_random</BackgroundName>
+
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>PlayerIsNotBusy</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <Options>
+            <!-- 选项1：战斗 -->
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>StartBattle</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=EXAMPLE041}拔剑迎战！</OptionText>
+
+                <!-- 战斗设置 -->
+                <BattleSettings
+                    Ref="enemy"
+                    Victory="EXAMPLE_random_bandit_ambush_001_win"
+                    Defeat="EXAMPLE_random_bandit_ambush_001_lose"
+                    EnemyName="Mountain Bandits"
+                    PlayerTroops="20">
+                    <!-- 生成敌方士兵 -->
+                    <SpawnTroops>
+                        <SpawnTroop Id="cs_mountain_bandits_troop" Ref="enemy" Number="8"/>
+                        <SpawnTroop Id="cs_looter" Ref="enemy" Number="5"/>
+                    </SpawnTroops>
+                </BattleSettings>
+            </Option>
+
+            <!-- 选项2：交钱 -->
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Leave</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=EXAMPLE042}交出200金币换取安全</OptionText>
+                <GoldTotal>-200</GoldTotal>
+                <RenownTotal>-2</RenownTotal>
+                <ReqGoldAbove>200</ReqGoldAbove>
+            </Option>
+
+            <!-- 选项3：逃跑（需要侦察技能） -->
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Leave</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=EXAMPLE043}[侦察50+] 利用地形优势逃脱</OptionText>
+                <SkillsRequired>
+                    <SkillRequired Id="Scouting" Min="50" Ref="Hero"/>
+                </SkillsRequired>
+            </Option>
+        </Options>
+
+        <WeightedChanceOfOccurring>8</WeightedChanceOfOccurring>
+        <!-- 需要至少5名士兵 -->
+        <ReqTroopsAbove>5</ReqTroopsAbove>
+    </CEEvent>
+
+    <!-- 战斗胜利事件 -->
+    <CEEvent>
+        <Name>EXAMPLE_random_bandit_ambush_001_win</Name>
+        <Text>{=EXAMPLE044}你成功击退了土匪的伏击！在打扫战场时，你发现了一些战利品。</Text>
+        <BackgroundName>encounter_win</BackgroundName>
+
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>GiveGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Leave</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=EXAMPLE045}收集战利品</OptionText>
+                <GoldTotal>R 100 300</GoldTotal>
+                <RenownTotal>R 2 5</RenownTotal>
+            </Option>
+        </Options>
+    </CEEvent>
+
+    <!-- 战斗失败事件 -->
+    <CEEvent>
+        <Name>EXAMPLE_random_bandit_ambush_001_lose</Name>
+        <Text>{=EXAMPLE046}你被土匪击败了...他们搜刮了你的财物，将你丢在路边。</Text>
+        <BackgroundName>encounter_lose</BackgroundName>
+
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Leave</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=EXAMPLE047}挣扎着爬起来...</OptionText>
+                <GoldTotal>R -200 -100</GoldTotal>
+                <HealthTotal>-30</HealthTotal>
+            </Option>
+        </Options>
+    </CEEvent>
+
+
+    <!-- ================================================================
+         示例6：条件事件定义（用于条件背景判断）
+         这些事件本身不会触发，只用于其他事件的条件检查
+    ================================================================= -->
+    <CEEvent>
+        <Name>CE_background_female</Name>
+        <Text>条件检查用</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_background_male</Name>
+        <Text>条件检查用</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+    </CEEvent>
+
+</CEEvents>

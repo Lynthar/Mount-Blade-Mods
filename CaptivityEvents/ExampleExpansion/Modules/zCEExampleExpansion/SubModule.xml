@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Module>
+  <!-- 模块显示名称 -->
+  <Name value="CE Example Expansion - 示例扩展包" />
+
+  <!-- 模块唯一ID，必须以z开头确保加载顺序在核心模块之后 -->
+  <Id value="zCEExampleExpansion" />
+
+  <!-- 版本号 -->
+  <Version value="v1.0.0" />
+
+  <!-- 模块类型 -->
+  <ModuleType value="Community" />
+  <ModuleCategory value="Singleplayer" />
+
+  <!-- 依赖模块：必须依赖核心CaptivityEvents模块 -->
+  <DependedModules>
+    <DependedModule Id="zCaptivityEvents" DependentVersion="v1.3.11.1311" />
+  </DependedModules>
+
+  <!-- 无需DLL，纯数据驱动 -->
+  <SubModules></SubModules>
+</Module>
