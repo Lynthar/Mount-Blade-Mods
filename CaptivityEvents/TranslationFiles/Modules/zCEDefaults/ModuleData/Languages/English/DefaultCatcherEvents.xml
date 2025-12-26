@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema" type="string">
+  <tags>
+    <tag language="English" />
+  </tags>
+  <strings>
+    <string id="DefaultCatcherEvents1" text="Your captor looks at you appraisingly, then walks over and briefly fondles one of your breasts. They shake their head, telling you they thought they recognized your womanly assets from the last brothel they had the visited. Hopefully this doesn't give them any ideas..." />
+    <string id="DefaultCatcherEvents2" text="Stammer that you're no longer a whore." />
+  </strings>
+</base>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema" type="string">
+  <tags>
+    <tag language="English" />
+  </tags>
+  <strings>
+    <string id="DefaultRandomEventsCompanionsMale1" text="{COMPANION_NAME_1} asks to speak with you. You invite her to your tent. {COMPANION_NAME_1} says your troops are lazy lately and need more exercise." />
+    <string id="DefaultRandomEventsCompanionsMale2" text="Agree and offer 500 gold for training." />
+    <string id="DefaultRandomEventsCompanionsMale3" text="Kick away for a waste of time." />
+    <string id="DefaultRandomEventsCompanionsMale4" text="Come up with an excuse." />
+  </strings>
+</base>

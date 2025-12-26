@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CEEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+   <!-- ==================================================================================================== -->
+   <!-- |                          RANDOM EVENTS - NAVAL - COMMON                                           | -->
+   <!-- ==================================================================================================== -->
+
+   <!-- #region Common - Sea -->
+   <CEEvent>
+      <Name>CE_naval_friendly_fishing</Name>
+      <Backgrounds>
+         <Background Name="CE_DRENC_1" Weight="1" />
+      </Backgrounds>
+      <NotificationName>ce_naval_notification</NotificationName>
+      <Text>{=DefaultRandomEventsNavalCommon1}Your crew spots a small fishing boat. The fishermen wave; perhaps trade is possible.</Text>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>GiveGold</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsNavalCommon2}Trade some provisions.</OptionText>
+            <MoraleTotal>5</MoraleTotal>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsNavalCommon3}Ignore them and sail on.</OptionText>
+            <MoraleTotal>-2</MoraleTotal>
+         </Option>
+      </Options>
+
+      <SexualContent>false</SexualContent>
+      <ReqCustomCode>true</ReqCustomCode>
+      <WeightedChanceOfOccurring>10</WeightedChanceOfOccurring>
+   </CEEvent>
+
+   <CEEvent>
+      <Name>CE_naval_flotsam_rescue</Name>
+      <Backgrounds>
+         <Background Name="CE_DRENC_2" Weight="1" />
+      </Backgrounds>
+      <NotificationName>ce_naval_notification</NotificationName>
+      <Text>{=DefaultRandomEventsNavalCommon4}Floating debris and a half-submerged crate drift nearby. Someone may have been shipwrecked — do you investigate?</Text>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>GiveGold</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsNavalCommon5}Pull survivors and salvage supplies.</OptionText>
+            <MoraleTotal>6</MoraleTotal>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsNavalCommon6}Leave the wreck to the sea; keep watch instead.</OptionText>
+            <MoraleTotal>-4</MoraleTotal>
+         </Option>
+      </Options>
+
+      <SexualContent>false</SexualContent>
+      <ReqCustomCode>true</ReqCustomCode>
+      <WeightedChanceOfOccurring>5</WeightedChanceOfOccurring>
+   </CEEvent>
+
+   <CEEvent>
+      <Name>CE_naval_whale_sighting</Name>
+      <Backgrounds>
+         <Background Name="CE_DRENC_3" Weight="1" />
+      </Backgrounds>
+      <NotificationName>ce_naval_notification</NotificationName>
+      <Text>{=DefaultRandomEventsNavalCommon7}A huge shape breaks the surface nearby — a whale breaches, spraying water and awe across the deck.</Text>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsNavalCommon8}Enjoy the spectacle.</OptionText>
+            <MoraleTotal>4</MoraleTotal>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>GiveGold</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsNavalCommon9}Attempt to harvest a sample for the ship's stores.</OptionText>
+            <MoraleTotal>-2</MoraleTotal>
+         </Option>
+      </Options>
+      <SexualContent>false</SexualContent>
+      <ReqCustomCode>true</ReqCustomCode>
+      <WeightedChanceOfOccurring>2</WeightedChanceOfOccurring>
+   </CEEvent>
+
+   <!-- #endregion -->
+
+</CEEvents>

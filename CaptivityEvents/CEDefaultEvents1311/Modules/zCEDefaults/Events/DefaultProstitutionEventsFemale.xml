@@ -1,0 +1,1980 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CEEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../zCaptivityEvents/ModuleLoader/CaptivityRequired/Events/CEEventsModal.xsd">
+
+    <!-- RECOMMEND TO REPLACING THIS FILE WITH YOUR OWN EVENTS -->
+
+    <!-- #region Levels -->
+    <CEEvent>
+        <Name>CE_prostitution_level_1</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsProstitute</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroProstituteLevelBelow>60</ReqHeroProstituteLevelBelow>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_prostitution_level_2</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsProstitute</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroProstituteLevelAbove>60</ReqHeroProstituteLevelAbove>
+    </CEEvent>
+
+    <!-- #endregion -->
+
+    <!-- Slavery -->
+
+    <!-- #region Sold to Slavery Prostitution Events -->
+    <CEEvent>
+        <Name>CE_prostitution_town_brothel</Name>
+        <Text>{=DefaultProstitutionEventsFemale1}A woman wearing far too much makeup to be healthy enters your cell, looking at your naked body appraisingly. She introduces herself as a purveyor of earthly delights, and informs your captor that your supple breasts and pert ass are precisely the sort of thing her customers will pay to plunder, and that she'd be happy to provide them a share of the proceeds if she were allowed to sell your juicy assets to anyone willing to pay a nominal fee.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>PlayerOwnsNotBrothelInSettlement</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale2}Ask your captor to let you work.</OptionText>
+                <RenownTotal>R -1 0</RenownTotal>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_prostitution_town_brothel_1</EventName>
+                        <EventWeight>3</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_prostitution_town_brothel_2</EventName>
+                        <EventWeight>20</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale3}Beg your captor not to sell you.</OptionText>
+                <RenownTotal>1</RenownTotal>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_prostitution_town_brothel_1</EventName>
+                        <EventWeight>20</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_prostitution_town_brothel_2</EventName>
+                        <EventWeight>3</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+        </Options>
+        <ReqHeroSlaveLevelBelow>150</ReqHeroSlaveLevelBelow>
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>50</WeightedChanceOfOccurring>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_prostitution_town_brothel_1</Name>
+        <Text>{=DefaultProstitutionEventsFemale4}Your captor orders you to be quiet, and informs the woman that he feels quite capable of using a slave to its full potential without some whore telling him how to do so. She steps towards the door, flouncing her breasts in disbelief at his rude dismissal, and winks at you as she exits, her wicked smile promising that you'll be serving her coinpurse sooner or later...</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale5}Continue.</OptionText>
+            </Option>
+        </Options>
+
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_prostitution_town_brothel_2</Name>
+        <Text>{=DefaultProstitutionEventsFemale6}Your captor orders you to be quiet, and informs the woman that a break from you would be quite appreciated. Smiling, she pays your owner and leads you through the streets of the town into a cozy-looking building, where she replaces your rags with scandalously revealing clothes and chains you to the post of a bed. She explains that she usually makes clients pay extra to tie up their whores, but in your case she felt she should help you resist any naughty urges you might have to escape.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AddSlaveryFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AddProstitutionFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeProstitutionLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale5}Continue.</OptionText>
+                <ProstitutionTotal>0</ProstitutionTotal>
+            </Option>
+        </Options>
+
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_prostitution_town_market</Name>
+        <Text>{=DefaultProstitutionEventsFemale7}A woman wearing far too much makeup to be healthy enters the market, looking at your naked body appraisingly. She introduces herself as a purveyor of earthly delights, and informs your captor that your supple breasts and pert ass are precisely the sort of thing her customers will pay to plunder, and that she'd be happy to provide them a share of the proceeds if she were allowed to sell your juicy assets to anyone willing to pay a nominal fee.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroNotOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>PlayerOwnsNotBrothelInSettlement</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale2}Ask your captor to let you work.</OptionText>
+                <RenownTotal>R -1 0</RenownTotal>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_prostitution_town_brothel_1</EventName>
+                        <EventWeight>3</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_prostitution_town_brothel_2</EventName>
+                        <EventWeight>20</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale3}Beg your captor not to sell you.</OptionText>
+                <RenownTotal>1</RenownTotal>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_prostitution_town_brothel_1</EventName>
+                        <EventWeight>20</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_prostitution_town_brothel_2</EventName>
+                        <EventWeight>3</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroSlaveLevelBelow>150</ReqHeroSlaveLevelBelow>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Starter Slave Work -->
+    <CEEvent>
+        <Name>CE_slave_prostitution_1</Name>
+        <Text>{=DefaultProstitutionEventsFemale8}Your newest customer arrives, smiling eagerly at your nervous expression.</Text>
+        <BackgroundName>CE_DWM_10</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsProstitute</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>PlayerOwnsNotBrothelInSettlement</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale9}Pleasure him like a good whore.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_slave_prostitution_1_obedient_1</EventName>
+                        <EventWeight>10</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_slave_prostitution_1_obedient_2</EventName>
+                        <EventWeight>10</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+                <HealthTotal>R 20 30</HealthTotal>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale10}Beg him for mercy.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_slave_prostitution_1_begging_1</EventName>
+                        <EventWeight>10</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_slave_prostitution_1_begging_2</EventName>
+                        <EventWeight>10</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+                <HealthTotal>R 1 20</HealthTotal>
+            </Option>
+            <Option>
+                <Order>3</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale11}No - you can't do this.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_slave_prostitution_1_punishment_1</EventName>
+                        <EventWeight>10</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_slave_prostitution_1_punishment_2</EventName>
+                        <EventWeight>10</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_slave_prostitution_1_punishment_3</EventName>
+                        <EventWeight>10</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+                <ReqHeroHealthAbovePercentage>20</ReqHeroHealthAbovePercentage>
+                <ReqHeroSlaveLevelBelow>50</ReqHeroSlaveLevelBelow>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>20</EscapeChance>
+        <WeightedChanceOfOccurring>50</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroProstituteLevelBelow>60</ReqHeroProstituteLevelBelow>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Experienced Slave Work -->
+    <CEEvent>
+        <Name>CE_slave_prostitution_2</Name>
+        <Text>{=DefaultProstitutionEventsFemale8}Your newest customer arrives, smiling eagerly at your nervous expression.</Text>
+        <BackgroundName>CE_DWM_11</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsProstitute</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>PlayerOwnsNotBrothelInSettlement</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale9}Pleasure him like a good whore.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_slave_prostitution_1_obedient_1</EventName>
+                        <EventWeight>10</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_slave_prostitution_2_obedient_1</EventName>
+                        <EventWeight>10</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+                <HealthTotal>R 20 30</HealthTotal>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale12}Serve reluctantly.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_slave_prostitution_2_reluctantly_1</EventName>
+                        <EventWeight>10</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+                <HealthTotal>R 1 20</HealthTotal>
+            </Option>
+            <Option>
+                <Order>3</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale11}No - you can't do this.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_slave_prostitution_1_punishment_1</EventName>
+                        <EventWeight>10</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_slave_prostitution_1_punishment_2</EventName>
+                        <EventWeight>10</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_slave_prostitution_1_punishment_3</EventName>
+                        <EventWeight>10</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+                <ReqHeroHealthAbovePercentage>20</ReqHeroHealthAbovePercentage>
+                <ReqHeroSlaveLevelBelow>50</ReqHeroSlaveLevelBelow>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>20</EscapeChance>
+        <WeightedChanceOfOccurring>50</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroProstituteLevelAbove>60</ReqHeroProstituteLevelAbove>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Obedient Slave Prostitution -->
+    <CEEvent>
+        <Name>CE_slave_prostitution_1_obedient_1</Name>
+        <Text>{=DefaultProstitutionEventsFemale13}Your next customer is a handsome but rough-looking man who specifically requests a whore of your approximate description, and as he enters he wastes no time in bending you over the bed and spanking you twice, hard enough to get your blood flowing but cause no real damage. Within seconds he's inside you, the ridges on his cock rubbing deliciously against your inner walls, and his thrusts are slow but forceful, penetrating you deeply and leaving no part of your insides untouched.</Text>
+        <Backgrounds>
+            <Background Name="CE_DPEF_1" Weight="1" UseConditions="CE_prostitution_level_1" />
+            <Background Name="CE_DPEF_2" Weight="1" UseConditions="CE_prostitution_level_2" />
+        </Backgrounds>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeProstitutionLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale14}Ride his cock.</OptionText>
+                <TriggerEventName>CE_slave_prostitution_1_obedient_1_1</TriggerEventName>
+                <ProstitutionTotal>R 5 10</ProstitutionTotal>
+                <SlaveryTotal>R 5 10</SlaveryTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slave_prostitution_1_obedient_1_1</Name>
+        <Text>{=DefaultProstitutionEventsFemale15}He fucks your needy cunt ragged. His stamina is unbelievable, and by the time you feel his sticky warmth spurt deep into your womb you're almost senseless with pleasure; you're sure you've orgasmed five or six times in the past two hours. He grunts in appreciation and a stream of milky fluid pours down your legs and over the side of the bed as he leaves.</Text>
+        <Backgrounds>
+            <Background Name="CE_DPEF_3" Weight="1" UseConditions="CE_prostitution_level_1" />
+            <Background Name="CE_DPEF_4" Weight="1" UseConditions="CE_prostitution_level_2" />
+        </Backgrounds>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeProstitutionLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationRisk</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale16}Try to recover.</OptionText>
+                <PregnancyRiskModifier>5</PregnancyRiskModifier>
+                <ProstitutionTotal>R 5 10</ProstitutionTotal>
+                <SlaveryTotal>R 5 10</SlaveryTotal>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_slave_prostitution_obedient_pleased</EventName>
+                        <EventWeight>R -5 5</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slave_prostitution_1_obedient_2</Name>
+        <Text>{=DefaultProstitutionEventsFemale17}Seeing you so compliant, your customer wastes no time, eagerly thrusting his manhood into your mouth. Your jaw gives way and you try not to choke as the rigid shaft pushes deeper into your throat.</Text>
+        <BackgroundName>CE_DSEF_female_4</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeProstitutionLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale18}Wrap your tongue around his cock.</OptionText>
+                <TriggerEventName>CE_slave_prostitution_1_obedient_2_1</TriggerEventName>
+                <ProstitutionTotal>R 5 10</ProstitutionTotal>
+                <SlaveryTotal>R 5 10</SlaveryTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slave_prostitution_1_obedient_2_1</Name>
+        <Text>{=DefaultProstitutionEventsFemale19}He grunts eagerly, savoring the sensation of your pliant throat around his glans, and it isn't long before you taste a torrent of salty semen coating your tongue. He clasps the back of your head with both hands, bucking, shuddering, and painfully pushing into the back of your throat as he moans in ecstasy. When at last he finishes, pulling out, he compliments your skill and orders you to swallow his gift.</Text>
+        <BackgroundName>CE_DSEF_female_3</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeProstitutionLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale20}Swallow his cum like a good whore.</OptionText>
+                <ProstitutionTotal>R 5 10</ProstitutionTotal>
+                <SlaveryTotal>R 5 10</SlaveryTotal>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_slave_prostitution_obedient_pleased</EventName>
+                        <EventWeight>R -5 5</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slave_prostitution_2_obedient_1</Name>
+        <Text>{=DefaultProstitutionEventsFemale21}The man cheerfully orders you to remove his clothes as he closes the door, and you gingerly unlace his breeches. A bulbous, purple penis springs eagerly into view, lightly tapping your nose. You wrap your hands around it, stroking it to full length as the man moans, running his rough hands through your hair.</Text>
+        <BackgroundName>CE_DPEF_2</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale22}Continue pleasuring his manhood.</OptionText>
+                <TriggerEventName>CE_slave_prostitution_2_obedient_2_1</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slave_prostitution_2_obedient_2_1</Name>
+        <Text>{=DefaultProstitutionEventsFemale23}You vary your strokes, alternating both speed and pressure as he grunts, thrusting into your hands. He asks you to massage his testicles, so you comply, grasping them gently in one hand and feeling the bulbous orbs within. After a few minutes you feel them swell with arousal, and he lets out a deafening bellow, staggering to his knees as you feel jets of sticky seed land on your hands and face.</Text>
+        <BackgroundName>CE_DPEF_2</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeProstitutionLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale24}Thank him and clean yourself off.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_slave_prostitution_obedient_pleased</EventName>
+                        <EventWeight>R -5 5</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+                <ProstitutionTotal>R 5 10</ProstitutionTotal>
+                <SlaveryTotal>R 5 10</SlaveryTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slave_prostitution_obedient_pleased</Name>
+        <Text>{=DefaultProstitutionEventsFemale25}Your customer sighs, his lust sated, and you recognize the euphoric look so common to men who've used your body for their pleasure. He lifts your chin, as though memorizing the curves of your face, and briefly kisses your forehead. Quite happy with your performance, he leaves you an extra sack of coin in appreciation, promising to return to try the rest of your body when time - and coin - allow.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale26}Thank him.</OptionText>
+                <GoldTotal>30</GoldTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Begging Slave Prostitution-->
+    <CEEvent>
+        <Name>CE_slave_prostitution_1_begging_1</Name>
+        <Text>{=DefaultProstitutionEventsFemale27}You start to explain that you're not here of your own accord, but the man seems interested only in unlacing his breeches. As his massive purple member springs free from its prison, he assures you that he's well aware you're a slave - he paid extra for a whore who can't say no. As your eyes widen in fear, he grabs you by the hair and pulls you to your knees, eagerly thrusting his manhood into your mouth. Your jaw gives way and you try not to choke as the rigid shaft pushes deeper into your throat.</Text>
+        <BackgroundName>CE_DSEF_female_4</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale28}Try to scream.</OptionText>
+                <TriggerEventName>CE_slave_prostitution_1_begging_1_1</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slave_prostitution_1_begging_1_1</Name>
+        <Text>{=DefaultProstitutionEventsFemale29}He grunts eagerly, savoring the sensation of your pliant throat around his glans, and it isn't long before you taste a torrent of salty semen coating your tongue. He clasps the back of your head with both hands, bucking, shuddering, and painfully pushing into the back of your throat as he moans in ecstasy. When at last he finishes, pulling out, he recommends that you learn that your place is on your knees, guzzling cum like a good whore, and orders you to swallow his gift.</Text>
+        <BackgroundName>CE_DSEF_female_3</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeProstitutionLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale30}Swallow his cum.</OptionText>
+                <ProstitutionTotal>R 5 10</ProstitutionTotal>
+                <SlaveryTotal>R 5 10</SlaveryTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeProstitutionLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale31}Cough it out.</OptionText>
+                <ProstitutionTotal>R 1 3</ProstitutionTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slave_prostitution_1_begging_2</Name>
+        <Text>{=DefaultProstitutionEventsFemale32}Your customer is a rough-looking stranger who specifically requests a whore of your approximate description. He smiles in a predatory manner as he enters, wasting no time in pushing you onto the bed. You try to explain that you're not a whore, you've just been enslaved and abused by your captors, but he raises a finger to your mouth, calmly but firmly ushering you to silence. As you whimper, you feel the tip of his cock expertly stroke your clit and a burst of pleasure fills your mind, overriding any will you might have had to resist.</Text>
+        <BackgroundName>CE_DPEF_female_12</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale33}Let him play with you.</OptionText>
+                <TriggerEventName>CE_slave_prostitution_1_begging_2_1</TriggerEventName>
+                <ProstitutionTotal>10</ProstitutionTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale34}Try to push him away.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_slave_prostitution_1_punishment_1</EventName>
+                        <EventWeight>50</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_slave_prostitution_1_punishment_2</EventName>
+                        <EventWeight>50</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slave_prostitution_1_begging_2_1</Name>
+        <Text>{=DefaultProstitutionEventsFemale35}The dark stranger smiles at your needy expression and gently grasps at your throat. He orders you to scream for him and whether by choice or not you comply, moaning and screeching in pain and pleasure as he fucks your needy cunt ragged. His stamina is unbelievable, and by the time you feel his sticky warmth spurt deep into your womb your entire body is singing with pleasure, your mind so wracked with orgasms that you find it difficult to even think. He grunts in appreciation, and a stream of thick, milky fluid pours down your legs as he leaves.</Text>
+        <BackgroundName>CE_DPEF_female_13</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeProstitutionLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationRisk</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale36}Who was that man?</OptionText>
+                <PregnancyRiskModifier>1</PregnancyRiskModifier>
+                <ProstitutionTotal>R 5 10</ProstitutionTotal>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Reluctant Slave Prostitution (Experienced) -->
+    <CEEvent>
+        <Name>CE_slave_prostitution_2_reluctantly_1</Name>
+        <Text>{=DefaultProstitutionEventsFemale37}Your customer is a rough-looking stranger who specifically requests a whore of your approximate description. He smiles in a predatory manner as he enters, wasting no time in pushing you onto the bed. For a moment you feel a shudder of fear run down your spine, but as you feel his massive rod tease your clit, a surge of arousal runs through you.</Text>
+        <BackgroundName>CE_DPEF_female_14</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale38}Pant breathlessly.</OptionText>
+                <TriggerEventName>CE_slave_prostitution_2_reluctantly_1_1</TriggerEventName>
+                <ProstitutionTotal>10</ProstitutionTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slave_prostitution_2_reluctantly_1_1</Name>
+        <Text>{=DefaultProstitutionEventsFemale35}The dark stranger smiles at your needy expression and gently grasps at your throat. He orders you to scream for him and whether by choice or not you comply, moaning and screeching in pain and pleasure as he fucks your needy cunt ragged. His stamina is unbelievable, and by the time you feel his sticky warmth spurt deep into your womb your entire body is singing with pleasure, your mind so wracked with orgasms that you find it difficult to even think. He grunts in appreciation, and a stream of thick, milky fluid pours down your legs as he leaves.</Text>
+        <BackgroundName>CE_DPEF_female_7</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeProstitutionLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationRisk</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale16}Try to recover.</OptionText>
+                <PregnancyRiskModifier>1</PregnancyRiskModifier>
+                <ProstitutionTotal>R 5 10</ProstitutionTotal>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Punishments Slave Prostitution -->
+    <CEEvent>
+        <Name>CE_slave_prostitution_1_punishment_1</Name>
+        <Text>{=DefaultProstitutionEventsFemale39}The brothel owner sneers at you, muttering that he'll get his coin from your worthless cunt with or without your obedience. He rewards your disobedience by locking you into a wooden pillory. A crowd quickly gathers to watch your debasement as the first of the day's 'customers' begins thrusting his cock into your face. You feel several other pairs of hands groping your breasts and ass, and after a brief argument a meaty rod begins to push its way into your womanhood...</Text>
+        <BackgroundName>CE_DCEF_female_1</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale40}Cry out for mercy.</OptionText>
+                <TriggerEventName>CE_slave_prostitution_1_punishment_1_1</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slave_prostitution_1_punishment_1_1</Name>
+        <Text>{=DefaultProstitutionEventsFemale41}Your holes are brutally pounded into submission by the horny crowd. By the time the sun begins to set, your body is coated in slime, your jaw aches as a pool of salty liquid drips from your bloodied lips, and your poor cunt and ass are a both literal and figurative fountain of semen and pain. Your eyes have long since been glued shut with drying seed, and as yet another man grabs your skull by the hair, violently thrusting his cock down your throat, you start to lose consciousness.</Text>
+        <BackgroundName>CE_DCEF_female_2</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeProstitutionLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationRisk</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale42}Collapse in exhaustion.</OptionText>
+                <ProstitutionTotal>R 5 10</ProstitutionTotal>
+                <SlaveryTotal>R 5 10</SlaveryTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slave_prostitution_1_punishment_2</Name>
+        <Text>{=DefaultProstitutionEventsFemale43}The brothel's owner calls for his guards to punish you, and they do so with relish. You're tied to a post, able to do little more than scream for mercy as they whip your breasts and legs into submission. They wield the tool expertly, taking you to the edge of consciousness before letting you recover just long enough for the pain to set in, then starting again. Only when your voice cracks and you find yourself unable to scream do they stop, untying you and dragging your helpless form back to your room.</Text>
+        <BackgroundName>CE_DPEF_female_25</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale16}Try to recover.</OptionText>
+                <HealthTotal>-40</HealthTotal>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slave_prostitution_1_punishment_3</Name>
+        <Text>{=DefaultProstitutionEventsFemale44}You are escorted to your room by the brothel guards to await punishment. They leer menacingly at you, and you can't help thinking of the horrible things they have planned. Is there some way for you to escape this horrible situation?</Text>
+        <BackgroundName>CE_DWM_10</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale45}Brace for the whip.</OptionText>
+                <TriggerEventName>CE_slave_prostitution_1_punishment_3_1</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EscapeIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale46}Try to escape.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_slave_prostitution_escape_failure</EventName>
+                        <EventWeight>5</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_slave_prostitution_escape_failure_2</EventName>
+                        <EventWeight>5</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_slave_prostitution_escape_success</EventName>
+                        <EventWeight>5</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slave_prostitution_1_punishment_3_1</Name>
+        <Text>{=DefaultProstitutionEventsFemale47}You're tied to a post, able to do little more than scream for mercy as they whip your breasts and legs into submission. They wield the tool expertly, taking you to the edge of consciousness before letting you recover just long enough for the pain to set in, then starting again. Only when your voice cracks and you find yourself unable to scream do they stop, untying you and dragging your helpless form back to your room.</Text>
+        <BackgroundName>CE_DPEF_female_25</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale16}Try to recover.</OptionText>
+                <HealthTotal>-40</HealthTotal>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Slave Escape / Capture -->
+    <CEEvent>
+        <Name>CE_slave_prostitution_escape_failure</Name>
+        <Text>{=DefaultProstitutionEventsFemale48}You carefully escape while your guards are distracted, and make your way out the window, reaching the ground with a burst of relief. Just as you move to hide behind a passing caravan, you feel a muscled hand grasp your arm, and you're roughly shoved against the wall. One of the guards appears to have caught up to you with commendable speed, and whispers menacingly that seeing as how you're such a clever little whore he'll be sure to give you extra special attention from now on...</Text>
+        <BackgroundName>CE_DPEF_female_4</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale49}Maybe that wasn't a great idea...</OptionText>
+                <HealthTotal>-40</HealthTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slave_prostitution_escape_failure_2</Name>
+        <Text>{=DefaultProstitutionEventsFemale50}You carefully escape while your guards are distracted, and make your way out the window, reaching the ground with a burst of relief. You move to hide behind a passing caravan, realizing only too late that it's filled with slaves on their way to the market. The caravan guard smiles nastily at you, informing their employer that a new piece of merchandise has kindly volunteered itself for the market. Their cruel laughs ring in your ears as you are chained to a post, ready to be sold to the highest bidder.</Text>
+        <BackgroundName>CE_DPEF_female_5</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>RemoveProstitutionFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale51}Maybe that was a terrible idea...</OptionText>
+                <HealthTotal>-40</HealthTotal>
+                <SlaveryTotal>0</SlaveryTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slave_prostitution_escape_success</Name>
+        <Text>{=DefaultProstitutionEventsFemale52}You're almost spotted by a group of unusually wary brothel guards as you escape, but manage to give them the slip by dropping a dish in another room as you scurry away. You don't allow yourself to relax until you're quite a ways from them, but the feeling of relief when you're finally sure you're free is overwhelming and very, very welcome.</Text>
+        <BackgroundName>encounter_escape</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>RemoveProstitutionFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>RemoveSlaveryFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Escape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale53}Continue your journey.</OptionText>
+                <SlaveryTotal>0</SlaveryTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- Free -->
+
+    <!-- #region Free Prostitution -->
+    <CEEvent>
+        <Name>CE_free_prostitution_1</Name>
+        <Text>{=DefaultProstitutionEventsFemale54}Your newest customer arrives, smiling eagerly as you display your ample assets and inviting expression.</Text>
+        <BackgroundName>CE_DWM_12</BackgroundName>
+        <SoundName>captivity/event/test</SoundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsNotSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsProstitute</RestrictedListOfFlags>
+            <RestrictedListOfFlags>PlayerOwnsNotBrothelInSettlement</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale9}Pleasure him like a good whore.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_free_prostitution_1_great_1</EventName>
+                        <EventWeight>33</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_free_prostitution_1_good_1</EventName>
+                        <EventWeight>50</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_free_prostitution_1_good_2</EventName>
+                        <EventWeight>50</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_free_prostitution_1_bad_1</EventName>
+                        <EventWeight>33</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>RemoveProstitutionFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Leave</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale11}No - you can't do this.</OptionText>
+                <ReqHeroProstituteLevelAbove>50</ReqHeroProstituteLevelAbove>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>20</EscapeChance>
+        <WeightedChanceOfOccurring>50</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroProstituteLevelBelow>200</ReqHeroProstituteLevelBelow>
+    </CEEvent>
+
+    <!-- #region Free Great Events -->
+    <CEEvent>
+        <Name>CE_free_prostitution_1_great_1</Name>
+        <Text>{=DefaultProstitutionEventsFemale55}Your next customer is a handsome but rough-looking man who specifically requests a whore of your approximate description, and as he enters he wastes no time in shoving you to your knees, thrusting his cock into your mouth. He spends a few minutes face-fucking you, taking care not to damage the back of your throat, then bends you over the bed and spanks you twice, hard enough to get your blood flowing but cause no real damage. Within seconds he's inside you, the ridges on his cock rubbing deliciously against your inner walls, and his thrusts are slow but forceful, penetrating you deeply and leaving no part of your insides untouched.</Text>
+        <BackgroundName>CE_DPEF_female_9</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale56}Pant with arousal.</OptionText>
+                <TriggerEventName>CE_free_prostitution_1_great_1_2</TriggerEventName>
+                <ProstitutionTotal>10</ProstitutionTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_free_prostitution_1_great_1_2</Name>
+        <Text>{=DefaultProstitutionEventsFemale57}The dark stranger orders you to scream for him as he gently grasps at your throat and you comply, moaning and screeching in pain and pleasure as he fucks your needy cunt ragged. His stamina is unbelievable, and by the time you feel his sticky warmth spurt deep into your womb you're almost senseless with pleasure; you're sure you've orgasmed five or six times in the past two hours. He grunts in appreciation and a stream of milky fluid pours down your legs and over the side of the bed as he leaves, dropping a large sackful of unusual coins on the counter for the madam to sort through.</Text>
+        <BackgroundName>CE_DPEF_female_10</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeProstitutionLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationRisk</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>GiveGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>GiveGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale16}Try to recover.</OptionText>
+                <PregnancyRiskModifier>5</PregnancyRiskModifier>
+                <ProstitutionTotal>10</ProstitutionTotal>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Free Good Events -->
+    <CEEvent>
+        <Name>CE_free_prostitution_1_good_1</Name>
+        <Text>{=DefaultProstitutionEventsFemale58}The man cheerfully orders you to remove his clothes as he closes the door, and you gingerly unlace his breeches. A bulbous, purple penis springs into view, lightly tapping your nose, and you briefly swirl your tongue around it before he pushes you back against the bed, spreading your legs. He penetrates you swiftly, slapping his balls against your ass, then begins fondling your breasts and occasionally spanking you to get you to move faster. He doesn't seem to really care that you exist, just that you're a convenient hole for him to fuck. His come drips out of your slit as he leaves, complimenting you on a perfectly adequate fucking, and pays a handful of coins to the brothel's Madam.</Text>
+        <BackgroundName>CE_DPEF_female_9</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeProstitutionLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationRisk</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>GiveGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale59}At least you got paid.</OptionText>
+                <PregnancyRiskModifier>5</PregnancyRiskModifier>
+                <ProstitutionTotal>5</ProstitutionTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_free_prostitution_1_good_2</Name>
+        <Text>{=DefaultProstitutionEventsFemale21}The man cheerfully orders you to remove his clothes as he closes the door, and you gingerly unlace his breeches. A bulbous, purple penis springs eagerly into view, lightly tapping your nose. You wrap your hands around it, stroking it to full length as the man moans, running his rough hands through your hair.</Text>
+        <BackgroundName>CE_DPEF_female_8</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale22}Continue pleasuring his manhood.</OptionText>
+                <TriggerEventName>CE_free_prostitution_1_good_2_1</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_free_prostitution_1_good_2_1</Name>
+        <Text>{=DefaultProstitutionEventsFemale23}You vary your strokes, alternating both speed and pressure as he grunts, thrusting into your hands. He asks you to massage his testicles, so you comply, grasping them gently in one hand and feeling the bulbous orbs within. After a few minutes you feel them swell with arousal, and he lets out a deafening bellow, staggering to his knees as you feel jets of sticky seed land on your hands and face.</Text>
+        <BackgroundName>CE_DPEF_female_8</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeProstitutionLevel</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale24}Thank him and clean yourself off.</OptionText>
+                <ProstitutionTotal>R 5 10</ProstitutionTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Free Bad Events-->
+    <CEEvent>
+        <Name>CE_free_prostitution_1_bad_1</Name>
+        <Text>{=DefaultProstitutionEventsFemale60}Your client doesn't bother lubricating your hole before he starts fucking you painfully in your asshole; your agonized screams carry through the building, and after a brief while he sighs disdainfully and begins dressing himself. He complains to the madam that he's having trouble keeping himself hard with all your sniveling and whining, and suggests that she train her whores better if she wants to keep customers coming back. She steps into your room, furious, and slaps your to the ground, berating you. She tells you that you're a whore now, not some delicate flower, and you'd best shape up and eagerly take your next client's cock in whatever hole they ask or she'll teach you what pain really is.</Text>
+        <BackgroundName>CE_DPEF_female_11</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeProstitutionLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale5}Continue.</OptionText>
+                <ProstitutionTotal>-5</ProstitutionTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #endregion Free Prostitution -->
+
+    <!-- #region Renowned Prostitution -->
+    <CEEvent>
+        <Name>CE_prostitution_renowned</Name>
+        <Text>{=DefaultProstitutionEventsFemale61}You're known far and wide for your skill as a whore; the children of noblemen come from miles away to taste the delicious bounty between your supple legs.</Text>
+        <BackgroundName>CE_DPEF_female_1</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsNotSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsProstitute</RestrictedListOfFlags>
+            <RestrictedListOfFlags>PlayerOwnsNotBrothelInSettlement</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale62}Service another customer.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_free_prostitution_2_great_1</EventName>
+                        <EventWeight>20</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_free_prostitution_2_good_1</EventName>
+                        <EventWeight>60</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_free_prostitution_2_bad_1</EventName>
+                        <EventWeight>20</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>RemoveProstitutionFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Leave</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale63}Leave.</OptionText>
+                <ReqHeroProstituteLevelAbove>50</ReqHeroProstituteLevelAbove>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>50</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroProstituteLevelAbove>200</ReqHeroProstituteLevelAbove>
+    </CEEvent>
+
+    <!-- #region Renowned Great Events -->
+    <CEEvent>
+        <Name>CE_free_prostitution_2_great_1</Name>
+        <Text>{=DefaultProstitutionEventsFemale55}Your next customer is a handsome but rough-looking man who specifically requests a whore of your approximate description, and as he enters he wastes no time in shoving you to your knees, thrusting his cock into your mouth. He spends a few minutes face-fucking you, taking care not to damage the back of your throat, then bends you over the bed and spanks you twice, hard enough to get your blood flowing but cause no real damage. Within seconds he's inside you, the ridges on his cock rubbing deliciously against your inner walls, and his thrusts are slow but forceful, penetrating you deeply and leaving no part of your insides untouched.</Text>
+        <BackgroundName>CE_DPEF_female_1</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale56}Pant with arousal.</OptionText>
+                <TriggerEventName>CE_free_prostitution_2_great_1_2</TriggerEventName>
+                <ProstitutionTotal>10</ProstitutionTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_free_prostitution_2_great_1_2</Name>
+        <Text>{=DefaultProstitutionEventsFemale57}The dark stranger orders you to scream for him as he gently grasps at your throat and you comply, moaning and screeching in pain and pleasure as he fucks your needy cunt ragged. His stamina is unbelievable, and by the time you feel his sticky warmth spurt deep into your womb you're almost senseless with pleasure; you're sure you've orgasmed five or six times in the past two hours. He grunts in appreciation and a stream of milky fluid pours down your legs and over the side of the bed as he leaves, dropping a large sackful of unusual coins on the counter for the madam to sort through.</Text>
+        <BackgroundName>CE_DPEF_female_2</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeProstitutionLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationRisk</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>GiveGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>GiveGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale16}Try to recover.</OptionText>
+                <PregnancyRiskModifier>5</PregnancyRiskModifier>
+                <ProstitutionTotal>10</ProstitutionTotal>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Renowned Good Events -->
+    <CEEvent>
+        <Name>CE_free_prostitution_2_good_1</Name>
+        <Text>{=DefaultProstitutionEventsFemale58}The man cheerfully orders you to remove his clothes as he closes the door, and you gingerly unlace his breeches. A bulbous, purple penis springs into view, lightly tapping your nose, and you briefly swirl your tongue around it before he pushes you back against the bed, spreading your legs. He penetrates you swiftly, slapping his balls against your ass, then begins fondling your breasts and occasionally spanking you to get you to move faster. He doesn't seem to really care that you exist, just that you're a convenient hole for him to fuck. His come drips out of your slit as he leaves, complimenting you on a perfectly adequate fucking, and pays a handful of coins to the brothel's Madam.</Text>
+        <BackgroundName>CE_DPEF_female_3</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeProstitutionLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationRisk</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>GiveGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale59}At least you got paid.</OptionText>
+                <PregnancyRiskModifier>5</PregnancyRiskModifier>
+                <ProstitutionTotal>5</ProstitutionTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Renowned Bad Events -->
+    <CEEvent>
+        <Name>CE_free_prostitution_2_bad_1</Name>
+        <Text>{=DefaultProstitutionEventsFemale64}Your client doesn't bother lubricating your hole before he starts fucking you painfully in your asshole; your agonized screams carry through the building, and after a brief while he sighs disdainfully and begins dressing himself. He complains to the madam that he's having trouble keeping himself hard with all your sniveling and whining, and suggests that she train her whores better if she wants to keep customers coming back. She steps into your room, furious, and begins berating you. She tells you that you're a famous whore now, and you'd best shape up and eagerly take your next client's cock in whatever hole they ask or your reputation may suffer.</Text>
+        <BackgroundName>CE_DPEF_female_11</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeProstitutionLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale5}Continue.</OptionText>
+                <ProstitutionTotal>-5</ProstitutionTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #endregion Renowned Prostitution -->
+
+    <!-- Owner -->
+
+    <!-- #region Owner -->
+
+    <!-- #region Owner Great Events -->
+    <CEEvent>
+        <Name>CE_prostitution_owner_great</Name>
+        <Text>{=DefaultProstitutionEventsFemale65}The brothel is flooded with customers and extra gold is flowing in. You spot an opportunity to assist one of your whores.</Text>
+        <BackgroundName>CE_DPEF_female_15</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsNotSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsProstitute</RestrictedListOfFlags>
+            <RestrictedListOfFlags>PlayerOwnsBrothelInSettlement</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>GiveGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeProstitutionLevel</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale66}Assist her.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_prostitution_owner_great_1</EventName>
+                        <EventWeight>30</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_prostitution_owner_great_2</EventName>
+                        <EventWeight>10</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+                <ProstitutionTotal>10</ProstitutionTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>GiveGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale67}Just collect the gold.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <WeightedChanceOfOccurring>40</WeightedChanceOfOccurring>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_prostitution_owner_great_1</Name>
+        <Text>{=DefaultProstitutionEventsFemale68}You assist a whore in finishing her client. With your hands around his cock, you vary your strokes, alternating both speed and pressure as he grunts and cums onto the whore's face.</Text>
+        <BackgroundName>CE_DPEF_female_18</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeProstitutionLevel</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale69}Look for more clients.</OptionText>
+                <TriggerEventName>CE_prostitution_owner_great_2</TriggerEventName>
+                <ProstitutionTotal>5</ProstitutionTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeProstitutionLevel</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale5}Continue.</OptionText>
+                <ProstitutionTotal>5</ProstitutionTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_prostitution_owner_great_2</Name>
+        <Text>{=DefaultProstitutionEventsFemale70}The man cheerfully orders both of you to remove his clothes as he closes the door, and you gingerly unlace his breeches. A bulbous, purple penis springs eagerly into view, lightly tapping your noses. You and the whore begin to stroke it and lick it to full length as the man moans, running his rough hands through both of your hairs.</Text>
+        <BackgroundName>CE_DPEF_female_16</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale5}Continue.</OptionText>
+                <TriggerEventName>CE_prostitution_owner_great_2_1</TriggerEventName>
+                <ProstitutionTotal>5</ProstitutionTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_prostitution_owner_great_2_1</Name>
+        <Text>{=DefaultProstitutionEventsFemale71}You grab your partner's ass and open up her pussy for easy access. Within seconds he's inside her, the ridges on his cock rubbing deliciously against her inner walls, and his thrusts are slow but forceful, penetrating her deeply and leaving no part of her insides untouched...</Text>
+        <BackgroundName>CE_DPEF_female_17</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale5}Continue.</OptionText>
+                <TriggerEventName>CE_prostitution_owner_great_2_2</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_prostitution_owner_great_2_2</Name>
+        <Text>{=DefaultProstitutionEventsFemale72}As his sticky warmth spurt deep into her womb, He grunts in appreciation and a stream of milky fluid pours down her and your legs and over the side of the bed as he leaves, dropping a large sackful of unusual coins on the counter for you to sort through.</Text>
+        <BackgroundName>CE_DPEF_female_19</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeProstitutionLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>GiveGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale5}Continue.</OptionText>
+                <ProstitutionTotal>5</ProstitutionTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Owner Good Events -->
+    <CEEvent>
+        <Name>CE_prostitution_owner_good</Name>
+        <Text>{=DefaultProstitutionEventsFemale73}The brothel business is doing well. It is time to collect on your extra profits.</Text>
+        <BackgroundName>CE_DPEF_female_15</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsNotSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsProstitute</RestrictedListOfFlags>
+            <RestrictedListOfFlags>PlayerOwnsBrothelInSettlement</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeProstitutionLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>GiveGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale74}Collect your gold.</OptionText>
+                <ProstitutionTotal>5</ProstitutionTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <WeightedChanceOfOccurring>40</WeightedChanceOfOccurring>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Owner Bad Events -->
+    <CEEvent>
+        <Name>CE_prostitution_owner_bad</Name>
+        <Text>{=DefaultProstitutionEventsFemale75}A customer complains to you that he's having trouble keeping himself hard with one of your whore's sniveling and whining, and suggests that you should train your whores better if you wants to keep customers coming back.</Text>
+        <BackgroundName>CE_DWM_2</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsNotSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsProstitute</RestrictedListOfFlags>
+            <RestrictedListOfFlags>PlayerOwnsBrothelInSettlement</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <!-- need to add brutal xp -->
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeProstitutionLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale76}Berate the whore.</OptionText>
+                <TriggerEventName>CE_prostitution_owner_bad_1</TriggerEventName>
+                <ProstitutionTotal>-5</ProstitutionTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeProstitutionLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale77}Ignore the whore.</OptionText>
+                <ProstitutionTotal>-5</ProstitutionTotal>
+            </Option>
+            <!-- need to add mercy xp -->
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeProstitutionLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale78}Give the girl a break.</OptionText>
+                <TriggerEventName>CE_prostitution_owner_bad_2</TriggerEventName>
+                <ReqGoldAbove>10</ReqGoldAbove>
+                <GoldTotal>-10</GoldTotal>
+                <ProstitutionTotal>-5</ProstitutionTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_prostitution_owner_bad_1</Name>
+        <Text>{=DefaultProstitutionEventsFemale79}You tell her that she's a whore now, not some delicate flower, and she'd best shape up and eagerly take her next client's cock in whatever hole they ask or you'll teach you what pain really is.</Text>
+        <BackgroundName>CE_DPEF_female_21</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale5}Continue.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_prostitution_owner_bad_2</Name>
+        <Text>{=DefaultProstitutionEventsFemale80}You calm the girl down, allowing her to take a break for the rest of the day.</Text>
+        <BackgroundName>CE_DPEF_female_20</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale5}Continue.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #endregion -->
+
+    <!-- Free || Owner -->
+
+    <!-- #region Siege Prostitution (Experimental) -->
+    <CEEvent>
+        <Name>CE_prostitution_siege</Name>
+        <Text>{=DefaultProstitutionEventsFemale81}The brothel is closed due to the siege... Maybe you'll be able to find customers elsewhere?</Text>
+        <BackgroundName>CE_DPEF_female_22</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+            <RestrictedListOfFlags>DuringSiege</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsNotSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsProstitute</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale82}Don't risk it.</OptionText>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale83}Walk the streets for customers.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_prostitution_street_1_good</EventName>
+                        <EventWeight>20</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_prostitution_street_1_none</EventName>
+                        <EventWeight>60</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_prostitution_street_1_slave</EventName>
+                        <EventWeight>20</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>20</EscapeChance>
+        <WeightedChanceOfOccurring>50</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_prostitution_street_1_good</Name>
+        <Text>{=DefaultProstitutionEventsFemale84}You walk the streets for additional customers, and before long a group of eager young men follows you back to the brothel for some fun.</Text>
+        <BackgroundName>CE_DPEF_female_24</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale85}This was a great idea.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_prostitution_street_1_none</Name>
+        <Text>{=DefaultProstitutionEventsFemale86}You walk the streets for additional customers, but what with the ongoing siege no one seems to be interested in risking their neck for what you have to offer.</Text>
+        <BackgroundName>CE_DPEF_female_22</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale87}Cowards...</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_prostitution_street_1_slave</Name>
+        <Text>{=DefaultProstitutionEventsFemale88}As you walk the streets, you find yourself neatly surrounded by a group of rowdy-looking men. They leer at you and insist that the streets aren't safe for such a fine lady as yourself. They refuse to take no for an answer, growing uncomfortably close as they make increasingly lewd remarks about your body.</Text>
+        <BackgroundName>CE_DPEF_female_6</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>StartBattle</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale89}Fight your way out.</OptionText>
+                <BattleSettings Ref="City" Victory="CE_prostitution_street_1_slave_1" Defeat="CE_prostitution_street_1_slave_2" EnemyName="Slavers" PlayerTroops="0">
+                    <SpawnTroops>
+                        <SpawnTroop Ref="Enemy" Id="Random" Number="1" />
+                        <SpawnTroop Ref="Enemy" Id="Random" Number="1" />
+                        <SpawnTroop Ref="Enemy" Id="Random" Number="1" />
+                        <SpawnTroop Ref="Enemy" Id="Random" Number="1" />
+                    </SpawnTroops>
+                </BattleSettings>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <TriggerEventName>d</TriggerEventName>
+                <OptionText>{=DefaultProstitutionEventsFemale90}Attempt to run.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_prostitution_street_1_slave_1</Name>
+        <Text>{=DefaultProstitutionEventsFemale91}You manage to evade the clasp of the slave collar. Perhaps you will not be so lucky next time.</Text>
+        <BackgroundName>CE_DPEF_female_23</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale92}That was close.</OptionText>
+                <SlaveryTotal>0</SlaveryTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_prostitution_street_1_slave_2</Name>
+        <Text>{=DefaultProstitutionEventsFemale93}You feel the clasp of a slave collar around your neck. They carry you to the market, and before long you find yourself tied to a post, ready to be sold to the highest bidder.</Text>
+        <BackgroundName>CE_DPEF_female_26</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>RemoveProstitutionFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AddSlaveryFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale51}Maybe that was a terrible idea...</OptionText>
+                <HealthTotal>-40</HealthTotal>
+                <SlaveryTotal>0</SlaveryTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_prostitution_street_1_slave_3</Name>
+        <Text>{=DefaultProstitutionEventsFemale94}Realizing you're in serious trouble, you try to make a run for it but they grab your legs, and you feel the clasp of a slave collar around your neck. They carry you to the market, and before long you find yourself tied to a post, ready to be sold to the highest bidder.</Text>
+        <BackgroundName>CE_DPEF_female_26</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>RemoveProstitutionFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AddSlaveryFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultProstitutionEventsFemale51}Maybe that was a terrible idea...</OptionText>
+                <HealthTotal>-40</HealthTotal>
+                <SlaveryTotal>0</SlaveryTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+</CEEvents>

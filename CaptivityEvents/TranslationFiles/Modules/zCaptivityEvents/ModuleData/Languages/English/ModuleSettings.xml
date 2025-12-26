@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="string">
+    <tags>
+        <tag language="English" />
+    </tags>
+    <strings>
+        <string id="CESETTINGS0085" text="Pictures" />
+        <string id="CESETTINGS0086" text="Custom Backgrounds" />
+        <string id="CESETTINGS0087" text="Custom backgrounds toggle. (Will not help if default backgrounds are overwritten)" />
+        <string id="CESETTINGS0088" text="Random" />
+        <string id="CESETTINGS0089" text="Events of " />
+        <string id="CESETTINGS0090" text="Custom Flags of " />
+        <string id="CESETTINGS0091" text="Custom Flag Toggle" />
+        <string id="CESETTINGS0092" text="Developer Mode" />
+        <string id="CESETTINGS0093" text="Pregnancy" />
+        <string id="CESETTINGS0094" text="Gear" />
+        <string id="CESETTINGS0095" text="Other" />
+        <string id="CESETTINGS0096" text="Events" />
+        <string id="CESETTINGS0097" text="Escape" />
+        <string id="CESETTINGS0098" text="Captive" />
+        <string id="CESETTINGS0099" text="Captor" />
+        <string id="CESETTINGS1000" text="Captive Events Enabled" />
+        <string id="CESETTINGS1001" text="Captor Events Enabled" />
+        <string id="CESETTINGS1002" text="Event wait between occurrences in Traveling Party" />
+        <string id="CESETTINGS1003" text="How often should an event occur while in a regular party. (Gametime in between events)" />
+        <string id="CESETTINGS1004" text="Event wait between occurrences in Settlement" />
+        <string id="CESETTINGS1005" text="How should an event occur in settlements. (Prostitution affected too) (Gametime in between events)" />
+        <string id="CESETTINGS1006" text="Event wait between occurrences in Lord's Party" />
+        <string id="CESETTINGS1007" text="How often should an event occur in a lord's party. (Gametime in between events)" />
+        <string id="CESETTINGS1008" text="Event wait between occurrences while Captor" />
+        <string id="CESETTINGS1009" text="How often should an event occur while Captor. (Gametime in between events)" />
+        <string id="CESETTINGS1010" text="Event Map Notifications" />
+        <string id="CESETTINGS1011" text="If events will fire as map notifications for captor/random." />
+        <string id="CESETTINGS1012" text="Random Events Enabled" />
+        <string id="CESETTINGS1013" text="Random events are events that do not require captives." />
+        <string id="CESETTINGS1014" text="Random Events Ratio" />
+        <string id="CESETTINGS1015" text="If captives in party how often should random events fire over captor." />
+        <string id="CESETTINGS1016" text="Notifications Textures" />
+        <string id="CESETTINGS1017" text="Default Notifications textures are replaced by a custom texture notifications." />
+        <string id="CESETTINGS1018" text="Captives Gear (Captor)" />
+        <string id="CESETTINGS1019" text="Captive Heroes who have been stripped gain their gear back after escape." />
+        <string id="CESETTINGS1020" text="Modified Prisoner Escape Behavior" />
+        <string id="CESETTINGS1021" text="Use modified behavior in game for prisoner escape, Turn off for compatability with mods that effect prisoner behavior." />
+        <string id="CESETTINGS1022" text="Decrease/Increase Clan Level" />   
+        <string id="CESETTINGS1023" text="Keep/Increase Clan Level" />   
+        <string id="CESETTINGS1024" text="Renown Choice" />
+        <string id="CESETTINGS1025" text="Renown decrease/increase choice. Keeps minimum at current clan level or allows to decrease or disables renown changes." />
+        <string id="CESETTINGS1026" text="Games Default Auto Ransom Behavior" />
+        <string id="CESETTINGS1027" text="Allow the games default behavior regarding auto-ransom. Depends on Modified Prisoner Escape Behavior." />
+        <string id="CESETTINGS1028" text="Common Events" />
+        <string id="CESETTINGS1029" text="Should events tagged with common be enabled." />
+        <string id="CESETTINGS1030" text="Non Sexual Content" />
+        <string id="CESETTINGS1031" text="Should non sexual content events be enabled." />
+        <string id="CESETTINGS1032" text="Sexual Content" />
+        <string id="CESETTINGS1033" text="Should sexual content events be enabled." />
+        <string id="CESETTINGS1034" text="Prostitution Events" />
+        <string id="CESETTINGS1035" text="Should Prostitution events be enabled, also controls brothel" />
+        <string id="CESETTINGS1036" text="Femdom Events" />
+        <string id="CESETTINGS1037" text="Should Female Domination events be enabled." />
+        <string id="CESETTINGS1038" text="Bestiality Events" />
+        <string id="CESETTINGS1039" text="Should Bestiality events be enabled." />
+        <string id="CESETTINGS1040" text="Romance Events" />
+        <string id="CESETTINGS1041" text="Should Romance events be enabled." />
+        <string id="CESETTINGS1042" text="Slavery Events" />
+        <string id="CESETTINGS1043" text="Should Slavery events be enabled." />
+        <string id="CESETTINGS1044" text="Stolen Gear" />
+        <string id="CESETTINGS1045" text="Should the captor take the player's gear." />
+        <string id="CESETTINGS1046" text="Stolen Gear Quest" />
+        <string id="CESETTINGS1047" text="Should quest activate to retrieve stolen gear." />
+        <string id="CESETTINGS1048" text="Stolen Gear Quest Duration" />
+        <string id="CESETTINGS1049" text="How long should stolen gear quest last." />
+        <string id="CESETTINGS1050" text="Stolen Gear Quest Chance" />
+        <string id="CESETTINGS1051" text="Chance someone finds your stolen gear." />
+        <string id="CESETTINGS1052" text="Better OutFit Chance" />
+        <string id="CESETTINGS1053" text="Likelyhood of receiving a better outfit (Given based on captors culture)." />
+        <string id="CESETTINGS1054" text="Weapon Chance" />
+        <string id="CESETTINGS1055" text="Likelyhood of receiving an weapon." />
+        <string id="CESETTINGS1056" text="Better Weapon Chance" />
+        <string id="CESETTINGS1057" text="Likelyhood of receiving an better weapon." />
+        <string id="CESETTINGS1058" text="Weapon Skill Calculation (Ignores Chance)" />
+        <string id="CESETTINGS1059" text="(One Handed, Two Handed, Polearm Skill) is calculated for the player to receive a better weapon or not, ignores chance." />
+        <string id="CESETTINGS1060" text="Ranged Weapon Chance" />
+        <string id="CESETTINGS1061" text="Likelyhood of receiving an better ranged weapons." />
+        <string id="CESETTINGS1062" text="Ranged Calculation (Ignores Chance)" />
+        <string id="CESETTINGS1063" text="(Bow, Crossbow, Throwing) is calculated for the player to receive an one-handed weapon or not, ignores chance." />
+        <string id="CESETTINGS1064" text="Horse Chance" />
+        <string id="CESETTINGS1065" text="Likelyhood of receiving an horse." />
+        <string id="CESETTINGS1066" text="Horse Skill Calculation (Ignores Chance)" />
+        <string id="CESETTINGS1067" text="Horse Skill is calculates if the player receives a horse or not, ignores chance." />
+        <string id="CESETTINGS1068" text="Pregnancy Chance" />
+        <string id="CESETTINGS1069" text="Likelyhood of impregnation, overrides various events" />
+        <string id="CESETTINGS1070" text="Attractiveness Calculation (Ignores Chance)" />
+        <string id="CESETTINGS1071" text="Perks (Perfect Health, Gourmet, InBloom) and Charm level calculates impregnation chance, ignores chance." />
+        <string id="CESETTINGS1072" text="Use PregnancyModifiers" />
+        <string id="CESETTINGS1073" text="Use event pregnancy modifiers on top of the current chance or calculation." />
+        <string id="CESETTINGS1074" text="Pregnancy Duration In Days" />
+        <string id="CESETTINGS1075" text="Days pregnancy lasts." />
+        <string id="CESETTINGS1076" text="Pregnancy Toggle" />
+        <string id="CESETTINGS1077" text="Allows impregnation by the mod." />
+        <string id="CESETTINGS1078" text="Pregnancy Messages" />
+        <string id="CESETTINGS1079" text="Allows daily pregnancy messages by Captivity Events." />
+        <string id="CESETTINGS1080" text="Hunting begins time after mission load" />
+        <string id="CESETTINGS1081" text="Seconds to wait until hunt begins" />
+        <string id="CESETTINGS1082" text="Max amount of prisoners to spawn for hunt" />
+        <string id="CESETTINGS1083" text="Amount of prisoners that will spawn for hunt" />
+        <string id="CESETTINGS1084" text="Renown Min (Enabled On Decrease/Increase Clan Level)" />
+        <string id="CESETTINGS1085" text="Renown can only drop to this point. Enabled if Clan Choice is Decrease/Increase Clan Level." />
+        <string id="CESETTINGS1086" text="Disable HeroModification via Harmony (Compatability)" />
+        <string id="CESETTINGS1087" text="Disables Harmony for compatability with mods who modify hero spouse states (causes ex spouses to appear)" />
+        <string id="CESETTINGS1088" text="Logging Toggle (Slows Down The Game)" />
+        <string id="CESETTINGS1089" text="Log the events (Debug Mode)" />
+        <string id="CESETTINGS1090" text="Outfit" />
+        <string id="CESETTINGS1091" text="Weapons" />
+        <string id="CESETTINGS1092" text="Horse" />
+        <string id="CESETTINGS1093" text="Quest" /> 
+        <string id="CESETTINGS1094" text="Allow escape during hunt" /> 
+        <string id="CESETTINGS1095" text="Allows prisoners to escape if not killed or wounded in the hunt" /> 
+        <string id="CESETTINGS1096" text="Prisoner Dialogue" />
+        <string id="CESETTINGS1097" text="Overwrites the default prisoner conversation menu." />
+        <string id="CESETTINGS1098" text="Hero Prisoner Escape Chance (Party)" />
+        <string id="CESETTINGS1099" text="Hero prisoner daily escape chance from player's party" />
+        <string id="CESETTINGS1100" text="Hero Prisoner Escape Chance (Settlement)" />
+        <string id="CESETTINGS1101" text="Hero prisoner daily escape chance from player's settlements" />
+        <string id="CESETTINGS1102" text="Hero Prisoner Escape Chance (Other)" />
+        <string id="CESETTINGS1103" text="Hero prisoner daily escape chance from non-player sources" />
+        <string id="CESETTINGS1104" text="Regular Prisoner Escape Chance (Party)" />
+        <string id="CESETTINGS1105" text="Regular prisoner escape chance from player's party, active only when prisoner exceeded" />
+        <string id="CESETTINGS1106" text="Regular Prisoner Escape Chance (Settlement)" />
+        <string id="CESETTINGS1107" text="Regular prisoner escape chance from player's settlements, active only when prisoner exceeded" />
+        <string id="CESETTINGS1108" text="Regular Prisoner Escape Chance (Others)" />
+        <string id="CESETTINGS1109" text="Regular prisoner escape chance from non-player sources, active only when prisoner exceeded" />
+        <string id="CESETTINGS1110" text="Games Default Exceeded Prisoners System" />
+        <string id="CESETTINGS1111" text="Allows the games default behavior regarding exceeded prisoner system, Hourly escape chance based on default 10% or above chances" />
+        <string id="CESETTINGS1112" text="Toggle Brothel Prisoner's Clothing (Hero)" />
+        <string id="CESETTINGS1113" text="Changes the brothel prisoner's clothing to the settlement's culture." />
+        <string id="CESETTINGS1114" text="Disabled For Player" />
+        <string id="CESETTINGS1115" text="Off" />
+        <string id="CESETTINGS1116" text="On" />
+        <string id="CESETTINGS1117" text="Any" />
+        <string id="CESETTINGS1118" text="Female" />
+        <string id="CESETTINGS1119" text="Male" />
+        <string id="CESETTINGS1120" text="Brothel Prisoners Allowed" />
+        <string id="CESETTINGS1121" text="Allows the gender to be prisoners in the brothel" />
+        <string id="CESETTINGS1122" text="Other Events" />
+        <string id="CESETTINGS1123" text="Event" />
+        <string id="CESETTINGS1124" text="Custom Event Frequency" />
+        <string id="CESETTINGS1125" text="Custom Event Image" />
+        <string id="CESETTINGS1126" text="Default is " />
+        <string id="CESETTINGS1127" text="Hunt" />
+        <string id="CESETTINGS1128" text="Brothel" />
+        <string id="CESETTINGS1129" text="Notifications" />
+
+        <string id="CESETTINGS1130" text="Regular" />
+        <string id="CESETTINGS1131" text="Hero" />
+        <string id="CESETTINGS1132" text="Prisoner Escape (Party)" />
+        <string id="CESETTINGS1133" text="Prisoner Escape (Settlement)" />
+        <string id="CESETTINGS1134" text="Prisoner Escape (Other)" />
+        <string id="CESETTINGS1135" text="Prisoner Escape Chance" />
+        <string id="CESETTINGS1136" text="Override default escape chance" />
+        <string id="CESETTINGS1137" text="Chance to escape between 0 and 100" />
+        <string id="CESETTINGS1138" text="Regular Prisoner Chance (Brothel)" />
+        <string id="CESETTINGS1139" text="Hero Prisoner Chance (Brothel)" />
+        <string id="CESETTINGS1140" text="Captive events are events where the player is the captive." />
+        <string id="CESETTINGS1141" text="Captor events are events that require captives while leading a party." />
+
+        <string id="CESETTINGS1142" text="Number of Images Preloaded" />
+        <string id="CESETTINGS1143" text="How many images should be preloaded. (increases memory usage)" />
+    </strings>
+</base>

@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CEEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../zCaptivityEvents/ModuleLoader/CaptivityRequired/Events/CEEventsModal.xsd">
+    
+    <!-- ===================================================================== -->
+    <!-- CAPTIVE EVENT CONDITIONALS                                            -->
+    <!-- Conditions for events that trigger when hero is captured              -->
+    <!-- ===================================================================== -->
+    
+    <!-- #region Terrain-Based Captive Events -->
+    <!-- Captive event images for plain and forest terrain -->
+    <CEEvent>
+        <Name>CE_captive_event_images_plain</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <TerrainTypesRequirements>
+            <TerrainTypes>
+                <TerrainType>Plain</TerrainType>
+            </TerrainTypes>
+            <TerrainTypes>
+                <TerrainType>Forest</TerrainType>
+            </TerrainTypes>
+        </TerrainTypesRequirements>
+
+
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    
+    <!-- Captive event images for desert terrain -->
+    <CEEvent>
+        <Name>CE_captive_event_images_desert</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>IgnoreAllOther</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <TerrainTypesRequirements>
+            <TerrainTypes>
+                <TerrainType>Desert</TerrainType>
+            </TerrainTypes>
+        </TerrainTypesRequirements>
+
+
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    
+    <!-- Captive event images for snow and mountain terrain -->
+    <CEEvent>
+        <Name>CE_captive_event_images_snow_mountain</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>IgnoreAllOther</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <TerrainTypesRequirements>
+            <TerrainTypes>
+                <TerrainType>Snow</TerrainType>
+            </TerrainTypes>
+            <TerrainTypes>
+                <TerrainType>Mountain</TerrainType>
+            </TerrainTypes>
+        </TerrainTypesRequirements>
+
+
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Sea & Bandit Captures -->
+    <!-- Captured by bandits at sea location -->
+    <CEEvent>
+        <Name>CE_captured_bandit_sea</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>BanditParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+            <RestrictedListOfFlags>IgnoreAllOther</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <ReqCustomCode>true</ReqCustomCode>
+        <SexualContent>false</SexualContent>
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    
+    <!-- Captured by any party at sea location -->
+    <CEEvent>
+        <Name>CE_captured_general_sea</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+            <RestrictedListOfFlags>IgnoreAllOther</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <ReqCustomCode>true</ReqCustomCode>
+        <SexualContent>false</SexualContent>
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    
+    <!-- Captured by bandit party (any location) -->
+    <CEEvent>
+        <Name>CE_captured_bandit</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>BanditParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>IgnoreAllOther</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <ReqCustomCode>true</ReqCustomCode>
+        <SexualContent>false</SexualContent>
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    
+    <!-- Captured by any party (general condition) -->
+    <CEEvent>
+        <Name>CE_captured_general</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <ReqCustomCode>true</ReqCustomCode>
+        <SexualContent>false</SexualContent>
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+    
+    <!-- #region Gender-Specific Captures -->
+    <!-- Female hero captured at bandit hideout -->
+    <CEEvent>
+        <Name>CE_common_female_bandit_hideout</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationHideout</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>IgnoreAllOther</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Female hero captured by bandit party -->
+    <CEEvent>
+        <Name>CE_common_female_bandits</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>BanditParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>IgnoreAllOther</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Female hero captured (general condition) -->
+    <CEEvent>
+        <Name>CE_common_female</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Male hero captured (general condition) -->
+    <CEEvent>
+        <Name>CE_common_male</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- ===================================================================== -->
+    <!-- SLAVERY WAITING MENU CONDITIONS                                       -->
+    <!-- Conditions for enslaved heroes in different terrain types             -->
+    <!-- ===================================================================== -->
+    
+    <!-- #region Slavery Waiting Menu Conditions -->
+    <!-- Enslaved hero in forest/plain/mountain terrain -->
+    <CEEvent>
+        <Name>CE_waiting_menu_slave_forest</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <TerrainTypesRequirements>
+            <TerrainTypes>
+                <TerrainType>Forest</TerrainType>
+            </TerrainTypes>
+            <TerrainTypes>
+                <TerrainType>Plain</TerrainType>
+            </TerrainTypes>
+            <TerrainTypes>
+                <TerrainType>Mountain</TerrainType>
+            </TerrainTypes>
+        </TerrainTypesRequirements>
+
+
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    
+    <!-- Enslaved hero in snow terrain -->
+    <CEEvent>
+        <Name>CE_waiting_menu_slave_snow</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>IgnoreAllOther</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <TerrainTypesRequirements>
+            <TerrainTypes>
+                <TerrainType>Snow</TerrainType>
+            </TerrainTypes>
+        </TerrainTypesRequirements>
+
+
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    
+    <!-- Enslaved hero in desert terrain -->
+    <CEEvent>
+        <Name>CE_waiting_menu_slave_desert</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>IgnoreAllOther</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <TerrainTypesRequirements>
+            <TerrainTypes>
+                <TerrainType>Desert</TerrainType>
+            </TerrainTypes>
+        </TerrainTypesRequirements>
+
+
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- #endregion -->
+
+    <!-- ===================================================================== -->
+    <!-- BANDIT WAITING MENU CONDITIONS                                        -->
+    <!-- Conditions for waiting menu when captured by bandits                  -->
+    <!-- ===================================================================== -->
+    
+    <!-- #region Bandit Captures by Terrain -->
+    <!-- Bandit captivity in plain/forest/mountain/steppe/water terrain -->
+    <CEEvent>
+        <Name>CE_waiting_menu_bandit_plain</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>BanditParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>IgnoreAllOther</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <TerrainTypesRequirements>
+            <TerrainTypes>
+                <TerrainType>Plain</TerrainType>
+            </TerrainTypes>
+            <TerrainTypes>
+                <TerrainType>Mountain</TerrainType>
+            </TerrainTypes>
+            <TerrainTypes>
+                <TerrainType>Steppe</TerrainType>
+            </TerrainTypes>
+            <TerrainTypes>
+                <TerrainType>Lake</TerrainType>
+            </TerrainTypes>
+            <TerrainTypes>
+                <TerrainType>River</TerrainType>
+            </TerrainTypes>
+        </TerrainTypesRequirements>
+
+
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Bandit captivity in forest terrain -->
+    <CEEvent>
+        <Name>CE_waiting_menu_bandit_forest</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>BanditParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>IgnoreAllOther</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <TerrainTypesRequirements>
+            <TerrainTypes>
+                <TerrainType>Forest</TerrainType>
+            </TerrainTypes>
+        </TerrainTypesRequirements>
+
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Bandit captivity in snow terrain -->
+    <CEEvent>
+        <Name>CE_waiting_menu_bandit_snow</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>BanditParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>IgnoreAllOther</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <TerrainTypesRequirements>
+            <TerrainTypes>
+                <TerrainType>Snow</TerrainType>
+            </TerrainTypes>
+        </TerrainTypesRequirements>
+
+
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    
+    <!-- Bandit captivity in desert terrain -->
+    <CEEvent>
+        <Name>CE_waiting_menu_bandit_desert</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>BanditParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>IgnoreAllOther</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <TerrainTypesRequirements>
+            <TerrainTypes>
+                <TerrainType>Desert</TerrainType>
+            </TerrainTypes>
+        </TerrainTypesRequirements>
+
+
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    
+    <!-- Bandit captivity at sea location -->
+    <CEEvent>
+        <Name>CE_waiting_menu_bandit_sea</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>BanditParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+            <RestrictedListOfFlags>IgnoreAllOther</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- ===================================================================== -->
+    <!-- GENERAL WAITING MENU CONDITIONS                                       -->
+    <!-- Conditions for waiting menu when captured by any party                -->
+    <!-- ===================================================================== -->
+    
+    <!-- #region General Captures by Terrain -->
+    <!-- General captivity in plain/mountain/steppe/water terrain -->
+    <CEEvent>
+        <Name>CE_waiting_menu_general_plain</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <TerrainTypesRequirements>
+            <TerrainTypes>
+                <TerrainType>Plain</TerrainType>
+            </TerrainTypes>
+            <TerrainTypes>
+                <TerrainType>Mountain</TerrainType>
+            </TerrainTypes>
+            <TerrainTypes>
+                <TerrainType>Steppe</TerrainType>
+            </TerrainTypes>
+            <TerrainTypes>
+                <TerrainType>Lake</TerrainType>
+            </TerrainTypes>
+            <TerrainTypes>
+                <TerrainType>River</TerrainType>
+            </TerrainTypes>
+        </TerrainTypesRequirements>
+
+
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    
+    <!-- General captivity in snow terrain -->
+    <CEEvent>
+        <Name>CE_waiting_menu_general_snow</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>IgnoreAllOther</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <TerrainTypesRequirements>
+            <TerrainTypes>
+                <TerrainType>Snow</TerrainType>
+            </TerrainTypes>
+        </TerrainTypesRequirements>
+
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    
+    <!-- General captivity in desert terrain -->
+    <CEEvent>
+        <Name>CE_waiting_menu_general_desert</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>IgnoreAllOther</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <TerrainTypesRequirements>
+            <TerrainTypes>
+                <TerrainType>Desert</TerrainType>
+            </TerrainTypes>
+        </TerrainTypesRequirements>
+
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    
+    <!-- General captivity in forest terrain -->
+    <CEEvent>
+        <Name>CE_waiting_menu_general_forest</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>IgnoreAllOther</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <TerrainTypesRequirements>
+            <TerrainTypes>
+                <TerrainType>Forest</TerrainType>
+            </TerrainTypes>
+        </TerrainTypesRequirements>
+
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Special Location Captures -->
+    <!-- General captivity at sea location -->
+    <CEEvent>
+        <Name>CE_waiting_menu_general_sea</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+            <RestrictedListOfFlags>IgnoreAllOther</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- General captivity in town/location -->
+    <CEEvent>
+        <Name>CE_waiting_menu_general_town</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInPort</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInTown</RestrictedListOfFlags>
+            <RestrictedListOfFlags>IgnoreAllOther</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- General captivity at bandit hideout on land -->
+    <CEEvent>
+        <Name>CE_waiting_menu_general_bandit_prisoner</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationHideout</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>IgnoreAllOther</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    
+    <!-- General captivity condition (no specific location/terrain) -->
+    <CEEvent>
+        <Name>CE_waiting_menu_general_prisoner</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- #endregion -->
+    
+    <!-- ===================================================================== -->
+    <!-- RANDOM EVENT CONDITIONALS                                             -->
+    <!-- Conditions for random events in different terrain types               -->
+    <!-- ===================================================================== -->
+    
+    <!-- #region Terrain-Based Random Events -->
+    <!-- Random event images for plain and forest terrain -->
+    <CEEvent>
+        <Name>CE_random_event_images_plain</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <TerrainTypesRequirements>
+            <TerrainTypes>
+                <TerrainType>Plain</TerrainType>
+            </TerrainTypes>
+            <TerrainTypes>
+                <TerrainType>Forest</TerrainType>
+            </TerrainTypes>
+        </TerrainTypesRequirements>
+
+
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    
+    <!-- Random event images for desert terrain -->
+    <CEEvent>
+        <Name>CE_random_event_images_desert</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>IgnoreAllOther</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <TerrainTypesRequirements>
+            <TerrainTypes>
+                <TerrainType>Desert</TerrainType>
+            </TerrainTypes>
+        </TerrainTypesRequirements>
+
+
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    
+    <!-- Random event images for snow and mountain terrain -->
+    <CEEvent>
+        <Name>CE_random_event_images_snow_mountain</Name>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>IgnoreAllOther</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <TerrainTypesRequirements>
+            <TerrainTypes>
+                <TerrainType>Snow</TerrainType>
+            </TerrainTypes>
+            <TerrainTypes>
+                <TerrainType>Mountain</TerrainType>
+            </TerrainTypes>
+        </TerrainTypesRequirements>
+
+
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+</CEEvents>

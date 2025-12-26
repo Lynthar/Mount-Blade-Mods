@@ -1,0 +1,963 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CEEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../zCaptivityEvents/ModuleLoader/CaptivityRequired/Events/CEEventsModal.xsd">
+
+<!-- ==================================================================================================== -->
+<!-- |                                        CAPTOR EVENTS - COMMON                                    | -->
+<!-- ==================================================================================================== -->
+    <!-- #region Raid Events -->
+    <CEEvent>
+        <Name>CE_captor_event_random_villagers_raid</Name>
+        <Text>{=DefaultCaptorEventsCommon1}Breaking down the door to a seemingly abandoned cottage, you're surprised to find a collection of villagers hiding inside, mainly women, children, and elders. They beg for your mercy, and you decide not to kill them on the spot - after all, they may turn out to be more valuable as prisoners than as corpses.</Text>
+        <BackgroundName>CE_DWM_21</BackgroundName>
+        <NotificationName>CE_N_RAID</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>DuringRaid</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>GainRandomPrisoners</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon2}Take them all prisoner.</OptionText>
+                <MoraleTotal>-5</MoraleTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>GainRandomPrisoners</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeCaptorGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon_Raid2}Let the elders and children go for a ransom.</OptionText>
+                <CaptorGoldTotal>R 100 300</CaptorGoldTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Charm" Min="25" Ref="Captor" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="R 40 150" Ref="Captor" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon_Raid3}Let them go free.</OptionText>
+                <MoraleTotal>5</MoraleTotal>
+            </Option>
+        </Options>
+
+
+        <WeightedChanceOfOccurring>500</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_captor_event_found_gold_raid</Name>
+        <Text>{=DefaultCaptorEventsCommon3}Making your way through an unusually well-appointed cottage, your keen eyes discover a hatch hidden under an unusually-placed carpet. Your eyes glisten with deadly sin as you discover a hidden cache of gold inside. An auspicious start to what will doubtless be a very profitable day...</Text>
+        <BackgroundName>CE_DWM_21</BackgroundName>
+        <NotificationName>CE_N_RAID</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>DuringRaid</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeCaptorGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon4}Take it all!</OptionText>
+                <CaptorGoldTotal>R 300 1200</CaptorGoldTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Roguery" Min="30" Ref="Captor" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Roguery" ByXP="R 60 180" Ref="Captor" />
+                    <Skill Id="Scouting" ByXP="R 50 150" Ref="Captor" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeCaptorGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon_Raid4}Grab what you can quickly.</OptionText>
+                <CaptorGoldTotal>R 150 600</CaptorGoldTotal>
+            </Option>
+        </Options>
+
+
+        <WeightedChanceOfOccurring>200</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_captor_raid_armory</Name>
+        <Text>{=DefaultCaptorEventsCommon_Raid5}Your men discover a well-stocked armory hidden in a fortified building. Quality weapons and armor line the walls, far better than what most villagers should possess. This cache would significantly improve your troops' equipment.</Text>
+        <BackgroundName>CE_DWM_21</BackgroundName>
+        <NotificationName>CE_N_RAID</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>DuringRaid</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon_Raid6}Distribute the equipment to your troops.</OptionText>
+                <MoraleTotal>15</MoraleTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Leadership" Min="35" Ref="Captor" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Leadership" ByXP="R 60 200" Ref="Captor" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeCaptorGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon_Raid7}Sell it at the next town.</OptionText>
+                <CaptorGoldTotal>R 400 1000</CaptorGoldTotal>
+            </Option>
+        </Options>
+        <ReqTroopsAbove>3</ReqTroopsAbove>
+
+        <WeightedChanceOfOccurring>100</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Prisoner Management -->
+    <CEEvent>
+        <Name>CE_captor_captive_rebel</Name>
+        <Text>{=DefaultCaptorEventsCommon5}Your prisoners outnumber your party and have managed to free themselves. Unfortunately for you, their first thought is of revenge, and you find yourself in the midst of violent rebellion. Gathering your troops, you hope your battlefield experience will prove more effective than raw numbers or your positions will be reversed before the day is out.</Text>
+        <BackgroundName>CE_DWM_21</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>PlayerIsNotBusy</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptivesOutNumber</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>RebelPrisoners</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon6}Get ready for battle.</OptionText>
+                <MoraleTotal>R -40 -15</MoraleTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon_Rebel2}Use your leadership to quell the rebellion.</OptionText>
+                <MoraleTotal>-10</MoraleTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Leadership" Min="50" Ref="Captor" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Leadership" ByXP="R 80 280" Ref="Captor" />
+                    <Skill Id="Tactics" ByXP="R 60 200" Ref="Captor" />
+                </SkillsToLevel>
+            </Option>
+        </Options>
+
+        <ReqCaptivesAbove>5</ReqCaptivesAbove>
+
+        <WeightedChanceOfOccurring>1000</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_captor_prisoner_sick</Name>
+        <Text>{=DefaultCaptorEventsCommon_Sick1}One of your captives has fallen seriously ill. The sickness is spreading among the prisoners, and if left untreated could infect your own troops. Your medic recommends immediate action.</Text>
+        <BackgroundName>captor_default</BackgroundName>
+        <NotificationName>CE_N_COMMON</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon_Sick2}Treat the sick prisoners properly.</OptionText>
+                <MoraleTotal>5</MoraleTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Medicine" Min="40" Ref="Captor" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Medicine" ByXP="R 70 250" Ref="Captor" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeCaptorGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon_Sick3}Quarantine and provide basic care.</OptionText>
+                <CaptorGoldTotal>-50</CaptorGoldTotal>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Release</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon_Sick4}Release the sick prisoners.</OptionText>
+                <MoraleTotal>-5</MoraleTotal>
+            </Option>
+        </Options>
+
+        <ReqCaptivesAbove>3</ReqCaptivesAbove>
+
+        <WeightedChanceOfOccurring>50</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_captor_prisoner_skilled</Name>
+        <Text>{=DefaultCaptorEventsCommon_Skilled1}You discover that one of your prisoners, {CAPTIVE_NAME}, possesses remarkable skills as a warrior. Several of your men have taken notice and suggest that such talent could be useful if properly motivated.</Text>
+        <BackgroundName>captor_default</BackgroundName>
+        <NotificationName>CE_N_COMMON</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptiveIsHero</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>JoinCaptor</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon_Skilled2}Convince them to join your cause.</OptionText>
+                <SkillsRequired>
+                    <SkillRequired Id="Charm" Min="45" Ref="Captor" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="R 80 280" Ref="Captor" />
+                    <Skill Id="Leadership" ByXP="R 60 200" Ref="Captor" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeCaptorGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Release</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon_Skilled3}Ransom them for a higher price.</OptionText>
+                <CaptorGoldTotal>R 500 1500</CaptorGoldTotal>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon_Skilled4}Keep them as a valuable prisoner.</OptionText>
+            </Option>
+        </Options>
+
+        <ReqCaptivesAbove>1</ReqCaptivesAbove>
+        <ReqTroopsAbove>2</ReqTroopsAbove>
+
+        <WeightedChanceOfOccurring>30</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_captor_ransom_demand</Name>
+        <Text>{=DefaultCaptorEventsCommon_Ransom1}A messenger arrives bearing a substantial ransom offer for {CAPTIVE_NAME}. It seems their family is wealthy and willing to pay handsomely for their return. The offer is generous, but you could potentially negotiate for more.</Text>
+        <BackgroundName>captor_default</BackgroundName>
+        <NotificationName>CE_N_COMMON</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptiveIsHero</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeCaptorGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon_Ransom2}Negotiate for maximum payment.</OptionText>
+                <CaptorGoldTotal>R 800 2000</CaptorGoldTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Trade" Min="40" Ref="Captor" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Trade" ByXP="R 70 250" Ref="Captor" />
+                    <Skill Id="Charm" ByXP="R 60 200" Ref="Captor" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeCaptorGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon_Ransom3}Accept the initial offer.</OptionText>
+                <CaptorGoldTotal>R 500 1200</CaptorGoldTotal>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon_Ransom4}Refuse and keep the prisoner.</OptionText>
+                <MoraleTotal>-3</MoraleTotal>
+            </Option>
+        </Options>
+
+        <ReqCaptivesAbove>1</ReqCaptivesAbove>
+
+        <WeightedChanceOfOccurring>80</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_captor_prisoner_information</Name>
+        <Text>{=DefaultCaptorEventsCommon_Info1}During interrogation, {CAPTIVE_NAME} reveals they have valuable information about enemy troop movements and hidden supply caches. They're willing to trade this knowledge for better treatment or perhaps even freedom.</Text>
+        <BackgroundName>captor_default</BackgroundName>
+        <NotificationName>CE_N_COMMON</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptiveIsHero</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeCaptorGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon_Info2}Extract all information skillfully.</OptionText>
+                <CaptorGoldTotal>R 300 800</CaptorGoldTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Roguery" Min="45" Ref="Captor" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Roguery" ByXP="R 80 300" Ref="Captor" />
+                    <Skill Id="Scouting" ByXP="R 60 200" Ref="Captor" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeCaptorGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon_Info3}Trade better conditions for information.</OptionText>
+                <CaptorGoldTotal>R 150 400</CaptorGoldTotal>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon_Info4}Release them in exchange for the information.</OptionText>
+                <MoraleTotal>5</MoraleTotal>
+            </Option>
+        </Options>
+
+        <ReqCaptivesAbove>1</ReqCaptivesAbove>
+
+        <WeightedChanceOfOccurring>60</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_captor_guard_brutality</Name>
+        <Text>{=DefaultCaptorEventsCommon_Guard1}You witness one of your guards treating prisoners with excessive cruelty. While harsh discipline maintains order, this level of brutality is causing unrest among both prisoners and some of your more honorable troops.</Text>
+        <BackgroundName>captor_default</BackgroundName>
+        <NotificationName>CE_N_COMMON</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon_Guard2}Discipline the guard and establish fair treatment.</OptionText>
+                <MoraleTotal>10</MoraleTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Leadership" Min="40" Ref="Captor" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Leadership" ByXP="R 70 250" Ref="Captor" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon_Guard3}Allow it - fear keeps prisoners compliant.</OptionText>
+                <MoraleTotal>-8</MoraleTotal>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon_Guard4}Quietly warn the guard to be more discreet.</OptionText>
+            </Option>
+        </Options>
+
+        <ReqCaptivesAbove>3</ReqCaptivesAbove>
+        <ReqTroopsAbove>3</ReqTroopsAbove>
+
+        <WeightedChanceOfOccurring>40</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_captor_prisoner_fight</Name>
+        <Text>{=DefaultCaptorEventsCommon_Fight1}Two prisoners get into a violent altercation. One is badly injured while the other stands over them with a makeshift weapon. Your guards are calling for you to decide their fate.</Text>
+        <BackgroundName>captor_default</BackgroundName>
+        <NotificationName>CE_N_COMMON</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon_Fight2}Execute the aggressor as an example.</OptionText>
+                <MoraleTotal>-5</MoraleTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon_Fight3}Treat both and separate them.</OptionText>
+                <SkillsRequired>
+                    <SkillRequired Id="Medicine" Min="30" Ref="Captor" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Medicine" ByXP="R 60 200" Ref="Captor" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon_Fight4}Punish both equally.</OptionText>
+                <MoraleTotal>3</MoraleTotal>
+            </Option>
+        </Options>
+
+        <ReqCaptivesAbove>5</ReqCaptivesAbove>
+        <ReqTroopsAbove>2</ReqTroopsAbove>
+
+        <WeightedChanceOfOccurring>45</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Escape Events -->
+
+    <CEEvent>
+        <Name>CE_captor_female_escape</Name>
+        <Text>{=DefaultCaptorEventsCommon7}You receive word that {CAPTIVE_NAME} has managed to escape. Your guard swears up and down she just disappeared, but their embarrassed stammering tells a different story.</Text>
+        <BackgroundName>captor_default</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>RemoveSlaveryFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Escape</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon8}Warn your guards to keep better watch.</OptionText>
+                <SlaveryTotal>0</SlaveryTotal>
+                <MoraleTotal>-5</MoraleTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>RemoveSlaveryFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Escape</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon_Escape2}Send trackers after her.</OptionText>
+                <SlaveryTotal>0</SlaveryTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Scouting" Min="35" Ref="Captor" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Scouting" ByXP="R 60 200" Ref="Captor" />
+                    <Skill Id="Roguery" ByXP="R 50 150" Ref="Captor" />
+                </SkillsToLevel>
+            </Option>
+        </Options>
+
+
+        <WeightedChanceOfOccurring>3</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_captor_male_escape</Name>
+        <Text>{=DefaultCaptorEventsCommon9}You receive word that {CAPTIVE_NAME} has managed to escape. Your guard swears up and down he just disappeared, but their embarrassed stammering tells a different story.</Text>
+        <BackgroundName>captor_default</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>RemoveSlaveryFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Escape</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon8}Warn your guards to keep better watch.</OptionText>
+                <SlaveryTotal>0</SlaveryTotal>
+                <MoraleTotal>-5</MoraleTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>RemoveSlaveryFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Escape</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon_Escape3}Send trackers after him.</OptionText>
+                <SlaveryTotal>0</SlaveryTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Scouting" Min="35" Ref="Captor" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Scouting" ByXP="R 60 200" Ref="Captor" />
+                    <Skill Id="Roguery" ByXP="R 50 150" Ref="Captor" />
+                </SkillsToLevel>
+            </Option>
+        </Options>
+
+
+        <WeightedChanceOfOccurring>3</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_captor_male_slave_escape</Name>
+        <Text>{=DefaultCaptorEventsCommon10}You receive word that {CAPTIVE_NAME} has managed to escape. His chains appear to have been broken using a tool of some sort.</Text>
+        <BackgroundName>captor_default</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptiveIsHero</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>RemoveSlaveryFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Escape</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon8}Warn your guards to keep better watch.</OptionText>
+                <SlaveryTotal>0</SlaveryTotal>
+                <MoraleTotal>-7</MoraleTotal>
+            </Option>
+        </Options>
+
+
+        <WeightedChanceOfOccurring>3</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_captor_female_slave_escape</Name>
+        <Text>{=DefaultCaptorEventsCommon11}You receive word that {CAPTIVE_NAME} has managed to escape. Her chains appear to have been broken using a tool of some sort.</Text>
+        <BackgroundName>captor_default</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptiveIsHero</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>RemoveSlaveryFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Escape</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon8}Warn your guards to keep better watch.</OptionText>
+                <SlaveryTotal>0</SlaveryTotal>
+                <MoraleTotal>-7</MoraleTotal>
+            </Option>
+        </Options>
+
+
+        <WeightedChanceOfOccurring>1</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Recruitment Events -->
+    <CEEvent>
+        <Name>CE_captor_female_recruitment</Name>
+        <Text>{=DefaultCaptorEventsCommon12}{CAPTIVE_NAME} approaches you, kneeling respectfully, and tells you they've been watching your leadership during their captivity and are deeply impressed. They ask if you would be willing to let them join you so that they might serve under your banner.</Text>
+        <BackgroundName>captor_default</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptiveIsHero</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>JoinCaptor</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon13}Accept their fealty.</OptionText>
+                <SkillsRequired>
+                    <SkillRequired Id="Leadership" Min="35" Ref="Captor" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Leadership" ByXP="R 70 250" Ref="Captor" />
+                    <Skill Id="Charm" ByXP="R 60 200" Ref="Captor" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeCaptorGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Release</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon_Recruit2}Ransom them instead.</OptionText>
+                <CaptorGoldTotal>R 400 1000</CaptorGoldTotal>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon14}Decline and keep them captive.</OptionText>
+            </Option>
+        </Options>
+
+
+        <WeightedChanceOfOccurring>25</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_captor_male_recruitment</Name>
+        <Text>{=DefaultCaptorEventsCommon12}{CAPTIVE_NAME} approaches you, kneeling respectfully, and tells you they've been watching your leadership during their captivity and are deeply impressed. They ask if you would be willing to let them join you so that they might serve under your banner.</Text>
+        <BackgroundName>captor_default</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptiveIsHero</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>JoinCaptor</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon13}Accept their fealty.</OptionText>
+                <SkillsRequired>
+                    <SkillRequired Id="Leadership" Min="35" Ref="Captor" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Leadership" ByXP="R 70 250" Ref="Captor" />
+                    <Skill Id="Charm" ByXP="R 60 200" Ref="Captor" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeCaptorGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Release</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon_Recruit3}Ransom them instead.</OptionText>
+                <CaptorGoldTotal>R 400 1000</CaptorGoldTotal>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon14}Decline and keep them captive.</OptionText>
+            </Option>
+        </Options>
+
+
+        <WeightedChanceOfOccurring>25</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- New Land Events -->
+    <CEEvent>
+        <Name>CE_captor_common_prisoner_diplomacy</Name>
+        <Text>{=DefaultCaptorEventsCommon15}A messenger arrives bearing a formal proposal - {CAPTIVE_NAME}'s family offers both gold and a favorable alliance in exchange for their safe return. The offer is generous, but releasing them may have strategic consequences.</Text>
+        <BackgroundName>CE_CEC_1</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptiveIsHero</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeCaptorGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Release</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon16}Accept the offer.</OptionText>
+                <CaptorGoldTotal>R 800 2000</CaptorGoldTotal>
+                <RelationTotal>25</RelationTotal>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="R 80 240" Ref="Captor" Color="Purple" />
+                    <Skill Id="Trade" ByXP="R 70 200" Ref="Captor" Color="Yellow" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeCaptorGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Release</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon17}Negotiate for more gold.</OptionText>
+                <CaptorGoldTotal>R 1200 2500</CaptorGoldTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Trade" Min="50" Ref="Captor" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Trade" ByXP="R 90 280" Ref="Captor" Color="Yellow" />
+                    <Skill Id="Charm" ByXP="R 60 180" Ref="Captor" Color="Purple" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon18}Refuse - keep your prisoner.</OptionText>
+                <RelationTotal>-20</RelationTotal>
+                <SkillsToLevel>
+                    <Skill Id="Leadership" ByXP="R 50 150" Ref="Captor" Color="Blue" />
+                </SkillsToLevel>
+            </Option>
+        </Options>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>30</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_captor_common_escape_attempt</Name>
+        <Text>{=DefaultCaptorEventsCommon19}Your scouts report that one of your prisoners attempted to escape during the night but was recaptured. The prisoner stands before you, defiant despite the failure. Your troops watch to see how you'll handle this challenge to your authority.</Text>
+        <BackgroundName>CE_CEC_2</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptiveIsHero</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon20}Punish them severely.</OptionText>
+                <HealthTotal>-25</HealthTotal>
+                <MoraleTotal>10</MoraleTotal>
+                <SkillsToLevel>
+                    <Skill Id="Leadership" ByXP="R 70 200" Ref="Captor" Color="Blue" />
+                    <Skill Id="Roguery" ByXP="R 60 180" Ref="Captor" Color="Red" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon21}Respect their courage and spare them.</OptionText>
+                <RelationTotal>10</RelationTotal>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="R 70 200" Ref="Captor" Color="Purple" />
+                    <Skill Id="Leadership" ByXP="R 50 150" Ref="Captor" Color="Blue" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon22}Double their chains.</OptionText>
+                <HealthTotal>-10</HealthTotal>
+                <SkillsToLevel>
+                    <Skill Id="Roguery" ByXP="R 50 150" Ref="Captor" Color="Red" />
+                </SkillsToLevel>
+            </Option>
+        </Options>
+        <ReqTroopsAbove>2</ReqTroopsAbove>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>35</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_captor_common_cargo_inspection</Name>
+        <Text>{=DefaultCaptorEventsCommon23}While taking inventory of your prisoners' confiscated possessions, you discover valuable contraband hidden among their belongings. This could be sold for profit, but keeping it may cause complications with local authorities.</Text>
+        <BackgroundName>CE_CEC_3</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeCaptorGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon24}Sell it discreetly.</OptionText>
+                <CaptorGoldTotal>R 400 1000</CaptorGoldTotal>
+                <SkillsToLevel>
+                    <Skill Id="Roguery" ByXP="R 80 240" Ref="Captor" Color="Red" />
+                    <Skill Id="Trade" ByXP="R 60 180" Ref="Captor" Color="Yellow" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeCaptorGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon25}Turn it in for a reward.</OptionText>
+                <CaptorGoldTotal>R 200 500</CaptorGoldTotal>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="R 60 180" Ref="Captor" Color="Purple" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon26}Destroy it to avoid trouble.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Leadership" ByXP="R 50 150" Ref="Captor" Color="Blue" />
+                </SkillsToLevel>
+            </Option>
+        </Options>
+        <ReqCaptivesAbove>3</ReqCaptivesAbove>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>25</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+</CEEvents>

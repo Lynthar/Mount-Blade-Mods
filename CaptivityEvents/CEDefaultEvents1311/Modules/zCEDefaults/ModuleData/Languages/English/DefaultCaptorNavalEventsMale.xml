@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema" type="string">
+  <tags>
+    <tag language="English" />
+  </tags>
+  <strings>
+    <string id="DefaultCaptorEventsMale62" text="A fierce storm batters your ship, waves crashing over the deck. Your prisoners are secured in the hold, but several are panicking and could cause chaos if not controlled. Your crew looks to you for orders as the vessel pitches violently." />
+    <string id="DefaultCaptorEventsMale63" text="Command your crew to secure everything." />
+    <string id="DefaultCaptorEventsMale64" text="Put prisoners to work manning the pumps." />
+    <string id="DefaultCaptorEventsMale65" text="Throw some prisoners overboard to lighten the ship." />
+    <string id="DefaultCaptorEventsMale72" text="Tensions are running high aboard your vessel. Some crew members are unhappy with how you're handling the prisoners - some think you're too soft, others think you're too cruel. You've heard whispers of mutiny, and your boatswain warns that you need to address this before it escalates." />
+    <string id="DefaultCaptorEventsMale73" text="Assert your authority firmly but fairly." />
+    <string id="DefaultCaptorEventsMale74" text="Make an example of the ringleaders." />
+    <string id="DefaultCaptorEventsMale75" text="Compromise by releasing some prisoners." />
+  </strings>
+</base>

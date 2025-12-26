@@ -1,0 +1,1052 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CEEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../zCaptivityEvents/ModuleLoader/CaptivityRequired/Events/CEEventsModal.xsd">
+
+    <!-- ==================================================================================================== -->
+    <!-- |                                     CAPTOR EVENTS - MALE                                         | -->
+    <!-- ==================================================================================================== -->
+
+    <!-- #region Non-Hero Events -->
+    <CEEvent>
+        <Name>CE_captor_male_bolton_one</Name>
+        <Text>{=DefaultCaptorEventsMale1}You grow bored of ceaselessly plodding along the empty road and decide it's time for some fun. Your sword arm could use some exercise, and what better practice than live targets? You recall the ancient hunting traditions of your clan, and a smile slowly creeps across your face as you realize you have a collection of prisoners that certainly haven't been paying for your hospitality. What's more, a little show of force might make them all the more compliant...</Text>
+        <BackgroundName>CE_DCTEM_male_1</BackgroundName>
+        <NotificationName>CE_N_MH</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorGenderIsMale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptiveIsNonHero</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>PlayerIsNotBusy</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale2}Begin preparations.</OptionText>
+                <TraitsToLevel>
+                    <Trait Id="Mercy" ByXP="R -500 -200" Ref="Captor" Color="Cyan" />
+                    <Trait Id="Honor" ByXP="R -500 -200" Ref="Captor" Color="Cyan" />
+                </TraitsToLevel>
+                <SkillsToLevel>
+                    <Skill Id="Leadership" ByXP="R 50 150" Ref="Captor" Color="Blue" />
+                    <Skill Id="Tactics" ByXP="R 40 120" Ref="Captor" Color="Green" />
+                </SkillsToLevel>
+                <TriggerEventName>CE_captor_male_bolton_one_next</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale3}That seems rather cruel...</OptionText>
+            </Option>
+            <Option>
+                <Order>3</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale4}Release a group of prisoners instead.</OptionText>
+                <TriggerEventName>CE_captor_male_bolton_one_next_free</TriggerEventName>
+            </Option>
+        </Options>
+        <ReqCaptivesAbove>3</ReqCaptivesAbove>
+        
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_captor_male_bolton_one_next</Name>
+        <Text>{=DefaultCaptorEventsMale5}You separate out a group of your most disobedient and useless prisoners. They don't seem to understand, at first, but by the time they've all been gathered together they seem to have caught on to your plans. Some are terrified, others eager for the chance to escape, and their shouts of rage and pleas for mercy are terrible to hear. You magnanimously let them know they'll have a brief head start. Their shouts and the rush of movement puts the glorious rush of the hunt pumping through your veins, and after a brief pause to let the group spread out and weaken itself...</Text>
+        <BackgroundName>CE_DCTEM_male_1</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>HuntPrisoners</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale6}Call for the hunt to begin!</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Roguery" ByXP="R 60 180" Ref="Captor" Color="Red" />
+                    <Skill Id="Athletics" ByXP="R 50 150" Ref="Captor" Color="Orange" />
+                </SkillsToLevel>
+            </Option>
+        </Options>
+
+        
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_captor_male_bolton_one_next_free</Name>
+        <Text>{=DefaultCaptorEventsMale7}You release a group of your prisoners, they thank you for your mercy before departing.</Text>
+        <BackgroundName>encounter_escape</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ReleaseRandomPrisoners</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale8}Continue your journey.</OptionText>
+                <TraitsToLevel>
+                    <Trait Id="Mercy" ByXP="R 200 500" Ref="Captor" Color="Cyan" />
+                    <Trait Id="Honor" ByXP="R 200 500" Ref="Captor" Color="Cyan" />
+                </TraitsToLevel>
+                <SkillsToLevel>
+                    <Skill Id="Leadership" ByXP="R 80 200" Ref="Captor" Color="Blue" />
+                    <Skill Id="Charm" ByXP="R 60 150" Ref="Captor" Color="Purple" />
+                </SkillsToLevel>
+            </Option>
+        </Options>
+
+        
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_captor_male_bolton_two</Name>
+        <Text>{=DefaultCaptorEventsMale9}You survey the group of captives following your party, realizing the herd has grown too large, and there have been a distressing number of reports of disobedience and resistance among your party. This will not stand; you recall your clan's ancient traditional punishment for troublemakers - ritual flaying - and with a sadistic smile, consider that it might be the perfect way to give the gift of terror to these ungrateful rabble-rousers.</Text>
+        <BackgroundName>CE_DCTEF_female_1</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorGenderIsMale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptiveIsNonHero</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale10}Time to flay some men.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Roguery" ByXP="R 70 200" Ref="Captor" Color="Red" />
+                    <Skill Id="Leadership" ByXP="R 50 150" Ref="Captor" Color="Blue" />
+                </SkillsToLevel>
+                <TriggerEventName>CE_captor_male_bolton_two_next</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale11}That seems extremely cruel...</OptionText>
+            </Option>
+            <Option>
+                <Order>3</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale4}Release a group of prisoners instead.</OptionText>
+                <TriggerEventName>CE_captor_male_bolton_one_next_free</TriggerEventName>
+            </Option>
+        </Options>
+        <ReqCaptivesAbove>3</ReqCaptivesAbove>
+        
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_captor_male_bolton_two_next</Name>
+        <Text>{=DefaultCaptorEventsMale12}You gather a group of the worst troublemakers and, tying them down in front of the other captives, proceed to demonstrate just how merciful you've been to them all this time. As the first stripe of flesh is torn from one of your bleating victims the rest of the captives seem unable to keep from watching, their eyes drawn to the horror of undulating flesh and their ears unable to drown out your victim's screams for mercy. Eventually the noise grows tiresome, and you resolve to cut out the next prisoner's tongue before you begin your work. By the time you finish, pounds of skin and flesh litter the earth, and the rich red color of the soil demonstrates how thirstily it has drunk of your victim's blood. Your other captives have soiled themselves in terror, retching and gibbering, and a group of ravens seem quite grateful for the feast you've provided.</Text>
+        <BackgroundName>CE_DCTEF_female_1</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeCaptorRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>KillRandomPrisoners</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale13}Let them fear me.</OptionText>
+                <RenownTotal>1</RenownTotal>
+                <MoraleTotal>10</MoraleTotal>
+                <TraitsToLevel>
+                    <Trait Id="Mercy" ByXP="R -500 -200" Ref="Captor" Color="Cyan" />
+                    <Trait Id="Honor" ByXP="R -500 -200" Ref="Captor" Color="Cyan" />
+                </TraitsToLevel>
+                <SkillsToLevel>
+                    <Skill Id="Roguery" ByXP="R 80 250" Ref="Captor" Color="Red" />
+                    <Skill Id="Medicine" ByXP="R 60 180" Ref="Captor" Color="Yellow" />
+                </SkillsToLevel>
+            </Option>
+        </Options>
+
+        
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- #endregion -->
+
+    <!-- #region Hero - Female Captive -->
+    <CEEvent>
+        <Name>CE_captor_male_two_female</Name>
+        <Text>{=DefaultCaptorEventsMale14}{CAPTIVE_NAME} kneels before you, shivering and emaciated. She begs you for some food, pleading that she hasn't had a meal in days, and can scarcely gather the strength to walk. Despite her frailty, you can't help but notice the shapely form beneath her rags and the endearing quiver of her lips. Should such a beauty be left to starve?</Text>
+        <BackgroundName>default_female</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorGenderIsMale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptiveIsHero</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale15}Allow her a brief meal.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="R 40 120" Ref="Captor" Color="Purple" />
+                    <Skill Id="Medicine" ByXP="R 30 100" Ref="Captor" Color="Yellow" />
+                </SkillsToLevel>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_captor_male_two_female_nice</EventName>
+                        <EventWeight>5</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_captor_male_two_female_nice_two</EventName>
+                        <EventWeight>5</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale16}Deny her foolish request.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Roguery" ByXP="R 30 90" Ref="Captor" Color="Red" />
+                </SkillsToLevel>
+                <TriggerEventName>CE_captor_male_two_female_rude</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_captor_male_two_female_nice</Name>
+        <Text>{=DefaultCaptorEventsMale17}You give {CAPTIVE_NAME} a few hunks of bread, and her tears of joy and relief are a sight to see. She eats ravenously, pausing occasionally to bow and thank you for your mercy, and appears a shade healthier by the time she is done.</Text>
+        <BackgroundName>default_female</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale18}Continue.</OptionText>
+                <RelationTotal>5</RelationTotal>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="R 50 150" Ref="Captor" Color="Purple" />
+                </SkillsToLevel>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_captor_male_two_female_nice_two</Name>
+        <Text>{=DefaultCaptorEventsMale19}You give {CAPTIVE_NAME} a few hunks of bread, and throw in a slice or two of fresh meat left over from yesterday's dinner. She seems overwhelmed by your mercy, and eats ravenously, pausing occasionally to thank you. She notices you watching her breasts flounce as she chews the meal, and moves towards you as she finishes. Kneeling, she grasps her breasts, fondling them suggestively, and asks if you wish her to show just how grateful she is for your mercy...</Text>
+        <BackgroundName>default_female</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale20}Smile, and unlace your breeches...</OptionText>
+                <TriggerEventName>CE_captor_male_two_female_nice_two_2</TriggerEventName>
+                <RelationTotal>5</RelationTotal>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="R 60 180" Ref="Captor" Color="Purple" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale21}That's not necessary.</OptionText>
+                <RelationTotal>5</RelationTotal>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="R 70 200" Ref="Captor" Color="Purple" />
+                </SkillsToLevel>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_captor_male_two_female_nice_two_2</Name>
+        <Text>{=DefaultCaptorEventsMale22}{CAPTIVE_NAME} licks her lips at the sight of your manhood, and her supple lips brush against the tip of your glans. She pleases you expertly, licking up and down your shaft and teasing your balls with her tongue as you pant and struggle to remain standing. You gasp as she takes your rod into her mouth, taking you all the way into her throat.</Text>
+        <BackgroundName>CE_DCEF_female_11</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale23}Relish the feeling.</OptionText>
+                <TriggerEventName>CE_captor_male_two_female_nice_two_3</TriggerEventName>
+                <RelationTotal>5</RelationTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_captor_male_two_female_nice_two_3</Name>
+        <Text>{=DefaultCaptorEventsMale24}{CAPTIVE_NAME}'s chin lightly brushes your balls, and as she starts humming you feel a surge of pleasure flow up from your testicles into your brain as a torrent of thick, salty liquid flows down her throat. She pulls herself off you slowly, collecting your cum into her mouth and briefly savoring it with the tip of her tongue before eagerly drinking it down and cleaning you with her mouth as your body quakes with aftershocks.</Text>
+        <BackgroundName>CE_DCEF_female_10</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale25}What a talented tongue...</OptionText>
+                <RelationTotal>5</RelationTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_captor_male_two_female_rude</Name>
+        <Text>{=DefaultCaptorEventsMale26}You deny {CAPTIVE_NAME}'s request. Her expression of despair is pathetic, if slightly adorable, and she shakes her head in disbelief as she slumps onto the ground, resigned. She winces in pain as her stomach growls audibly, but no longer dares meet your eye.</Text>
+        <BackgroundName>default_female</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale18}Continue.</OptionText>
+                <RelationTotal>-5</RelationTotal>
+                <HealthTotal>-10</HealthTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_captor_male_three_female</Name>
+        <Text>{=DefaultCaptorEventsMale27}{CAPTIVE_NAME} has attempted to escape, nearly making her way out of camp before she is caught, her arms and legs bound in iron shackles. She is dragged before you, insolence clearly visible in her narrowed eyes, and your guards ask what punishment you deem appropriate for rebellious captives. You can't help but notice the bulges in their breeches and the greasy hand-marks on her breasts and buttocks... It's clear your men have at least one punishment ready should you allow it. On the other hand, you find her quite fetching yourself...</Text>
+        <BackgroundName>default_female</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorGenderIsMale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptiveIsHero</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale28}Fuck your displeasure into her.</OptionText>
+                <TriggerEventName>CE_captor_male_three_female_hero</TriggerEventName>
+                <HealthTotal>-15</HealthTotal>
+                <SkillsToLevel>
+                    <Skill Id="Leadership" ByXP="R 60 180" Ref="Captor" Color="Blue" />
+                    <Skill Id="Roguery" ByXP="R 50 150" Ref="Captor" Color="Red" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationRisk</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale29}Let your men have their way with her.</OptionText>
+                <TriggerEventName>CE_captor_male_three_female_men</TriggerEventName>
+                <HealthTotal>-15</HealthTotal>
+                <SkillsToLevel>
+                    <Skill Id="Leadership" ByXP="R 50 150" Ref="Captor" Color="Blue" />
+                    <Skill Id="Tactics" ByXP="R 40 120" Ref="Captor" Color="Green" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale30}Have mercy on her.</OptionText>
+                <TriggerEventName>CE_captor_male_three_female_nice</TriggerEventName>
+                <RelationTotal>15</RelationTotal>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="R 70 200" Ref="Captor" Color="Purple" />
+                    <Skill Id="Leadership" ByXP="R 60 180" Ref="Captor" Color="Blue" />
+                </SkillsToLevel>
+            </Option>
+        </Options>
+
+        <ReqMaleTroopsAbove>2</ReqMaleTroopsAbove>
+        <SexualContent>true</SexualContent>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_captor_male_three_female_hero</Name>
+        <Text>{=DefaultCaptorEventsMale31}You declare that you will punish {CAPTIVE_NAME} personally, dragging her to your bed and chaining her arms to the posts. She quickly realizes the punishment you have in mind and begins kicking and screaming. Her struggles heighten your arousal, and as you loose your cock she begins crying in earnest. Her cunt clenches deliciously around you as you enter her, pounding your displeasure into her body, and though you try to pace yourself it's less than ten minutes before you erupt, saturating her helpless womb with your potent seed. The defeat in her eyes stands your manhood back to attention in record time, however, and you proceed to fuck her senseless, pounding into her for hours until your balls are painfully empty.</Text>
+        <BackgroundName>CE_DCEF_female_12</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationHero</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale32}Perhaps that will teach her...</OptionText>
+                <RelationTotal>-5</RelationTotal>
+                <HealthTotal>-20</HealthTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_captor_male_three_female_men</Name>
+        <Text>{=DefaultCaptorEventsMale33}Your men smile cruelly at your proclamation, dragging {CAPTIVE_NAME} over to a straw-wagon and chaining her arms to the sides. She quickly realizes the punishment they have in mind and begins kicking and screaming, but she is soon stripped of her rags, her legs held down by powerful hands as her anger turns to fear and she begins begging and praying for mercy.</Text>
+        <BackgroundName>CE_DCEF_general_2</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationRisk</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale34}Watch them punish her.</OptionText>
+                <TriggerEventName>CE_captor_male_three_female_men_2</TriggerEventName>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_captor_male_three_female_men_2</Name>
+        <Text>{=DefaultCaptorEventsMale35}The men waste no time in loosing their breeches, and a parade of erect cocks stands before her as she begins crying in earnest. Each of them takes her in turn, brutally pounding her body into the straw as they defile her, and the sound of manly grunts fills the camp as her voice grows hoarse from the screaming. By the time her punishment is over her sex is red and puffy, dripping with the ample seed of her tormentors, and the insolence in her eyes has been replaced with grim despair.</Text>
+        <BackgroundName>CE_DSEF_female_2</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationRisk</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale32}Perhaps that will teach her...</OptionText>
+                <RelationTotal>-5</RelationTotal>
+                <HealthTotal>-30</HealthTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_captor_male_three_female_nice</Name>
+        <Text>{=DefaultCaptorEventsMale36}{CAPTIVE_NAME} thanks you for your mercy, promising to behave herself in the future. She'd better, or you'll have to rethink that policy...</Text>
+        <BackgroundName>default_female</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale18}Continue.</OptionText>
+                <RelationTotal>10</RelationTotal>
+                <TraitsToLevel>
+                    <Trait Id="Mercy" ByLevel="1" Ref="Captor" />
+                </TraitsToLevel>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="R 80 250" Ref="Captor" Color="Purple" />
+                    <Skill Id="Leadership" ByXP="R 70 200" Ref="Captor" Color="Blue" />
+                </SkillsToLevel>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- #endregion -->
+
+    <!-- #region Hero - Male Captive -->
+    <CEEvent>
+        <Name>CE_captor_male_two_male</Name>
+        <Text>{=DefaultCaptorEventsMale37}{CAPTIVE_NAME} kneels before you, shivering and emaciated. He begs you for some food, pleading that he hasn't had a meal in days, and can scarcely gather the strength to walk. Despite his frailty, you can't help but notice the broad shoulders beneath his rags and the endearing quiver of his lips. Should such a handsome figure be left to starve?</Text>
+        <BackgroundName>default_male</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorGenderIsMale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptiveIsHero</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale38}Allow him a brief meal.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="R 40 120" Ref="Captor" Color="Purple" />
+                    <Skill Id="Medicine" ByXP="R 30 100" Ref="Captor" Color="Yellow" />
+                </SkillsToLevel>
+                <TriggerEventName>CE_captor_male_two_male_nice</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale39}Deny him food.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Roguery" ByXP="R 30 90" Ref="Captor" Color="Red" />
+                </SkillsToLevel>
+                <TriggerEventName>CE_captor_male_two_male_rude</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_captor_male_two_male_nice</Name>
+        <Text>{=DefaultCaptorEventsMale40}You give {CAPTIVE_NAME} a few hunks of bread, and his tears of joy and relief are a sight to see. He eats ravenously, pausing occasionally to bow and thank you for your mercy, and appears a shade healthier by the time he is done.</Text>
+        <BackgroundName>default_male</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale18}Continue.</OptionText>
+                <RelationTotal>5</RelationTotal>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="R 50 150" Ref="Captor" Color="Purple" />
+                </SkillsToLevel>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_captor_male_two_male_rude</Name>
+        <Text>{=DefaultCaptorEventsMale41}You deny {CAPTIVE_NAME}'s request. His expression of despair is pathetic, if slightly adorable, and he shakes his head in disbelief as he slumps onto the ground, resigned. He winces in pain as her stomach growls audibly, but no longer dares meet your eye.</Text>
+        <BackgroundName>default_male</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale18}Continue.</OptionText>
+                <RelationTotal>-5</RelationTotal>
+                <HealthTotal>-10</HealthTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_captor_male_three_male</Name>
+        <Text>{=DefaultCaptorEventsMale42}{CAPTIVE_NAME} has attempted to escape, nearly making his way out of camp before he is caught, his arms and legs bound in iron shackles. He is dragged before you, insolence clearly visible in his narrowed eyes, and your guards ask what punishment you deem appropriate for rebellious captives.</Text>
+        <BackgroundName>default_male</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorGenderIsMale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptiveIsHero</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale43}Whip him yourself.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Leadership" ByXP="R 60 180" Ref="Captor" Color="Blue" />
+                    <Skill Id="Roguery" ByXP="R 50 150" Ref="Captor" Color="Red" />
+                </SkillsToLevel>
+                <TriggerEventName>CE_captor_male_three_male_hero</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale44}Have your men whip him.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Leadership" ByXP="R 50 150" Ref="Captor" Color="Blue" />
+                    <Skill Id="Tactics" ByXP="R 40 120" Ref="Captor" Color="Green" />
+                </SkillsToLevel>
+                <TriggerEventName>CE_captor_male_three_male_men</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale45}Have mercy on him.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="R 70 200" Ref="Captor" Color="Purple" />
+                    <Skill Id="Leadership" ByXP="R 60 180" Ref="Captor" Color="Blue" />
+                </SkillsToLevel>
+                <TriggerEventName>CE_captor_male_three_male_nice</TriggerEventName>
+            </Option>
+        </Options>
+
+        <ReqTroopsAbove>2</ReqTroopsAbove>
+        <SexualContent>true</SexualContent>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_captor_male_three_male_hero</Name>
+        <Text>{=DefaultCaptorEventsMale46}You declare that you will punish {CAPTIVE_NAME} personally, lightly lifting a whip from a nearby cart. He trembles at the sight, begging for mercy as you chain his wrists to a post. You strip off his rags, not wanting to dirty them with her blood, and set to work laying harsh lashes across his body, taking care to evenly coat his front and back. He squeals and screams in agony as you ensure that no part of his body is spared, and by the time you're done the bright lines that now decorate his front and back, chest, legs, stomach and ass have begun to turn a gorgeous shade of purple. He whimpers as you finish, falling onto his side.</Text>
+        <BackgroundName>CE_DCEC_male_1</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale47}Perhaps that will teach him...</OptionText>
+                <RelationTotal>-5</RelationTotal>
+                <HealthTotal>-20</HealthTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_captor_male_three_male_men</Name>
+        <Text>{=DefaultCaptorEventsMale48}You instruct your men to punish {CAPTIVE_NAME}, and they proceed to chain him to a post, one of them grabbing a whip from a nearby cart. He trembles at the sight, begging for mercy, and they strip off his rags, not wanting to dirty them with his blood. They set to work laying harsh lashes across his body, and instruct him to count the lashes so that he knows the full cost of his disobedience. He screams and squeals like a pig as the numbers grow larger, and loses count once or twice; though he begs for mercy they force him to start over each time until he finally reaches forty and collapses, twitching in pain and exhaustion, his back black and bloodied.</Text>
+        <BackgroundName>CE_DCEC_male_1</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale47}Perhaps that will teach him...</OptionText>
+                <RelationTotal>-5</RelationTotal>
+                <HealthTotal>-20</HealthTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_captor_male_three_male_nice</Name>
+        <Text>{=DefaultCaptorEventsMale49}{CAPTIVE_NAME} thanks you for your mercy, promising to behave himself in the future. He'd better, or you'll have to rethink that policy...</Text>
+        <BackgroundName>default_male</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale18}Continue.</OptionText>
+                <RelationTotal>20</RelationTotal>
+                <TraitsToLevel>
+                    <Trait Id="Mercy" ByLevel="1" Ref="Captor" />
+                </TraitsToLevel>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="R 80 250" Ref="Captor" Color="Purple" />
+                    <Skill Id="Leadership" ByXP="R 70 200" Ref="Captor" Color="Blue" />
+                </SkillsToLevel>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- #endregion -->
+
+    <!-- #region New Land Events -->
+    <CEEvent>
+        <Name>CE_captor_male_interrogation_female</Name>
+        <Text>{=DefaultCaptorEventsMale50}You have {CAPTIVE_NAME} brought before you for interrogation. She's been holding back information about enemy movements and supply routes. Her defiant eyes meet yours, but you can see the fear beneath. Perhaps the right approach could loosen her tongue...</Text>
+        <BackgroundName>CE_CEM_male_1</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorGenderIsMale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptiveIsHero</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeCaptorGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale51}Use cunning interrogation techniques.</OptionText>
+                <CaptorGoldTotal>R 200 600</CaptorGoldTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Roguery" Min="50" Ref="Captor" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Roguery" ByXP="R 80 250" Ref="Captor" Color="Red" />
+                    <Skill Id="Charm" ByXP="R 60 180" Ref="Captor" Color="Purple" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale52}Offer her better treatment in exchange.</OptionText>
+                <RelationTotal>10</RelationTotal>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="R 70 200" Ref="Captor" Color="Purple" />
+                    <Skill Id="Trade" ByXP="R 50 150" Ref="Captor" Color="Yellow" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale53}Use intimidation and threats.</OptionText>
+                <HealthTotal>-15</HealthTotal>
+                <SkillsToLevel>
+                    <Skill Id="Roguery" ByXP="R 60 180" Ref="Captor" Color="Red" />
+                    <Skill Id="Leadership" ByXP="R 50 150" Ref="Captor" Color="Blue" />
+                </SkillsToLevel>
+            </Option>
+        </Options>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>25</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_captor_male_treasure_found</Name>
+        <Text>{=DefaultCaptorEventsMale54}While searching through the belongings of your prisoners, you discover a carefully hidden map showing the location of a buried treasure cache. One of your captives clearly knows more about this. Time to find out who...</Text>
+        <BackgroundName>CE_CEM_male_2</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorGenderIsMale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptiveIsHero</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeCaptorGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale55}Search for the treasure yourself.</OptionText>
+                <CaptorGoldTotal>R 500 1500</CaptorGoldTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Scouting" Min="40" Ref="Captor" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Scouting" ByXP="R 80 250" Ref="Captor" Color="Green" />
+                    <Skill Id="Roguery" ByXP="R 60 180" Ref="Captor" Color="Red" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeCaptorGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale56}Make a deal with the prisoner.</OptionText>
+                <CaptorGoldTotal>R 300 900</CaptorGoldTotal>
+                <RelationTotal>15</RelationTotal>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="R 70 200" Ref="Captor" Color="Purple" />
+                    <Skill Id="Trade" ByXP="R 60 180" Ref="Captor" Color="Yellow" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale57}Ignore it - probably a trap.</OptionText>
+            </Option>
+        </Options>
+        <ReqCaptivesAbove>1</ReqCaptivesAbove>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>15</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_captor_male_crew_discipline</Name>
+        <Text>{=DefaultCaptorEventsMale58}Your men have been getting too familiar with the female prisoners, and it's starting to affect discipline. Some soldiers are sneaking off with captives during watches, while others are fighting over certain prisoners. As their commander, you need to restore order.</Text>
+        <BackgroundName>CE_CEM_male_3</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorGenderIsMale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale59}Establish strict rules and punishments.</OptionText>
+                <MoraleTotal>15</MoraleTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Leadership" Min="45" Ref="Captor" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Leadership" ByXP="R 80 280" Ref="Captor" Color="Blue" />
+                    <Skill Id="Tactics" ByXP="R 60 200" Ref="Captor" Color="Green" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale60}Create a rotation system for prisoner access.</OptionText>
+                <MoraleTotal>8</MoraleTotal>
+                <SkillsToLevel>
+                    <Skill Id="Tactics" ByXP="R 60 180" Ref="Captor" Color="Green" />
+                    <Skill Id="Charm" ByXP="R 50 150" Ref="Captor" Color="Purple" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ReleaseRandomPrisoners</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsMale61}Release the problematic prisoners.</OptionText>
+                <MoraleTotal>5</MoraleTotal>
+                <SkillsToLevel>
+                    <Skill Id="Leadership" ByXP="R 50 150" Ref="Captor" Color="Blue" />
+                </SkillsToLevel>
+            </Option>
+        </Options>
+        <ReqCaptivesAbove>5</ReqCaptivesAbove>
+        <ReqFemaleCaptivesAbove>2</ReqFemaleCaptivesAbove>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>30</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- #endregion -->
+
+</CEEvents>

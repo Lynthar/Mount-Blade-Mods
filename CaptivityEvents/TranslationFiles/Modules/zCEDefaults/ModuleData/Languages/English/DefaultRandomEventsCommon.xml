@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema" type="string">
+  <tags>
+    <tag language="English" />
+  </tags>
+  <strings>
+    <string id="DefaultRandomEventsCommon1" text="Breaking down the door to a seemingly abandoned cottage, you're surprised to find a collection of villagers hiding inside, mainly women, children, and elders. They beg for your mercy, and you decide not to kill them on the spot - after all, they may turn out to be more valuable as prisoners than as corpses." />
+    <string id="DefaultRandomEventsCommon2" text="Continue raiding!" />
+    <string id="DefaultRandomEventsCommon3" text="Making your way through an unusually well-appointed cottage, your keen eyes discover a hatch hidden under an unusually-placed carpet. Your eyes glisten with deadly sin as you discover a hidden cache of gold inside. An auspicious start to what will doubtless be a very profitable day..." />
+    <string id="DefaultRandomEventsCommon4" text="You notice a thin trail of flattened grass by the side of the road, and stepping off to investigate discover an unmarked barrel. It's a bit damaged, having apparently fallen off the back of a cart, but remains intact enough that when you pop the cork the smell of sweet wine floods your senses. Not wishing to waste such a fortunate find, your party stops to partake and drown the day's tribulations in a few hours of fortuitous merriment." />
+    <string id="DefaultRandomEventsCommon5" text="Merrily continue your journey." />
+    <string id="DefaultRandomEventsCommon6" text="You hear the sound of ravens ahead, cawing and fighting each other over something hidden just over the next ridge. As you approach, you realize the birds have made an extravagant feast out of some unfortunate soul's corpse. The sight of half-eaten entrails and torn flesh bears grim witness to mankind's mortality." />
+    <string id="DefaultRandomEventsCommon7" text="Try not to dwell on it too much." />
+    <string id="DefaultRandomEventsCommon8" text="You find an odd sack by the side of the road; it looks as though it was abandoned recently, and upon opening it you discover a hefty sum of gold inside. It's yours now, but where could it have come from?" />
+    <string id="DefaultRandomEventsCommon9" text="Thank providence for your good luck." />
+    <string id="DefaultRandomEventsCommon10" text="You reach for your money-pouch, only to find it missing from your belt. You don't recall where you saw it last, and it's possible you simply misplaced it." />
+    <string id="DefaultRandomEventsCommon11" text="Be more careful next time..." />
+    <string id="DefaultRandomEventsCommon12" text="You come upon an effervescent spring, smelling slightly of sulfur. Fanciful childhood tales of secret healing springs danced in your head." />
+    <string id="DefaultRandomEventsCommon13" text="Take a drink." />
+    <string id="DefaultRandomEventsCommon14" text="Don't touch it." />
+    <string id="DefaultRandomEventsCommon15" text="You take a drink out of the spring. Maybe it was a bad idea as you feel nauseous." />
+    <string id="DefaultRandomEventsCommon16" text="Maybe I shouldn't have drank that." />
+    <string id="DefaultRandomEventsCommon17" text="You take a drink out of the spring. It feels refreshing." />
+    <string id="DefaultRandomEventsCommon18" text="That was nice." />
+  </strings>
+</base>

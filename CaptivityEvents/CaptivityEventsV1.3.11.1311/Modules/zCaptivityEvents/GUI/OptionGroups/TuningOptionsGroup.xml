@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TuningOptionsGroup.xml: Fine-tuning parameters and balancing -->
+<OptionsGroupDefinition GroupId="TuningOptions">
+    <Options>
+        <OptionsItem OptionId="EventRandomFireChance" DisplayName="Random Fire Chance (%)" Description="Percent chance (0-100) random event triggers." DefaultValue="20" Type="Numeric" Min="0" Max="100" />
+        <OptionsItem OptionId="EventAmountOfImagesToPreload" DisplayName="Preload Images" Description="Number of images to preload into memory." DefaultValue="40" Type="Numeric" Min="10" Max="200" />
+        <OptionsItem OptionId="BrothelOption" DisplayName="Brothel Option (1-3)" Description="Brothel management mode: 1=Default, 2=Enhanced, 3=Full Control." DefaultValue="1" Type="Numeric" Min="1" Max="3" />
+        <OptionsItem OptionId="EscapeAutoRansom" DisplayName="Auto Ransom on Escape" Description="Automatically ransom escaped prisoners (0=off, gold amount=ransom price)." DefaultValue="0" Type="Numeric" Min="0" Max="10000" />
+        <OptionsItem OptionId="RenownMin" DisplayName="Renown Minimum" Description="Minimum renown required for certain events." DefaultValue="150" Type="Numeric" Min="0" Max="1000" />
+        <OptionsItem OptionId="CustomBackgrounds" DisplayName="Custom Backgrounds" Description="Use custom backgrounds in events." DefaultValue="true" Type="Boolean" />
+        <OptionsItem OptionId="LogToggle" DisplayName="Debug Logging" Description="Enable debug log output for troubleshooting." DefaultValue="false" Type="Boolean" />
+        <OptionsItem OptionId="ProstitutionControl" DisplayName="Prostitution Events" Description="Enable prostitution-related events." DefaultValue="true" Type="Boolean" />
+        <OptionsItem OptionId="SlaveryToggle" DisplayName="Slavery Events" Description="Enable slavery-related events." DefaultValue="true" Type="Boolean" />
+        <OptionsItem OptionId="FemdomControl" DisplayName="Femdom Events" Description="Enable female domination events." DefaultValue="true" Type="Boolean" />
+        <OptionsItem OptionId="RomanceControl" DisplayName="Romance Events" Description="Enable romance-related events." DefaultValue="true" Type="Boolean" />
+    </Options>
+</OptionsGroupDefinition>

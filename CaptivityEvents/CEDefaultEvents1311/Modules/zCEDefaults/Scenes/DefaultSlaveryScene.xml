@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CECustomScenes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file://CECustomScenes.xsd">
+   <CEScene>
+      <Name>TheSlaveryScene</Name>
+      <Dialogue>
+         <Line Id="FirstLine" Ref="AI" InputToken="start" OutputToken="FirstResponse" Text="Wake up, whore! We are going for a nice walk.[ib:confident][rb:very_positive]" />
+
+         <Line Id="FirstLineResponse1" Ref="Player" InputToken="FirstResponse" OutputToken="FirstResponse1" Text="Let me go, bastard!" />
+         <Line Id="FirstLineResponse2" Ref="Player" InputToken="FirstResponse" OutputToken="FirstResponse2" Text="(Silence)" />
+         <Line Id="FirstLineResponse3" Ref="Player" InputToken="FirstResponse" OutputToken="FirstResponse3" Text="I don't want to talk to you." />
+
+         <Line Id="FirstResponse1AI" Ref="AI" InputToken="FirstResponse1" OutputToken="close_window" Text="Hahaha, next time keep the morale up.[ib:confident][rb:very_positive]" />
+         <Line Id="FirstResponse2AI" Ref="AI" InputToken="FirstResponse2" OutputToken="close_window" Text="Your pretty ass will fetch a nice sum, maybe enough to pay our wages.[ib:confident][rb:very_positive]" />
+         <Line Id="FirstResponse3AI" Ref="AI" InputToken="FirstResponse3" OutputToken="close_window" Text="Nor do I.[ib:hip][rb:very_positive]" />
+      </Dialogue>
+   </CEScene>
+</CECustomScenes>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema" type="string">
+  <tags>
+    <tag language="English" />
+  </tags>
+  <strings>
+    <string id="DefaultCaptiveEventsNavalFemale1" text="You're kept tied to the mast under watch. The crew whispers and eyes you; some look lecherous while others appear indifferent." />
+    <string id="DefaultCaptiveEventsNavalFemale2" text="Keep your head down." />
+    <string id="DefaultCaptiveEventsNavalFemale3" text="Act Aggressive." />
+    <string id="DefaultCaptiveEventsNavalFemale4" text="Late at night a sailor forces himself on you in the dim of the hold, ignoring your pleas as the ship creaks around you." />
+    <string id="DefaultCaptiveEventsNavalFemale5" text="Endure it and hope for mercy." />
+    <string id="DefaultCaptiveEventsNavalFemale6" text="The ship's captain asks you to assist in the galley; small kindnesses are offered if you comply." />
+    <string id="DefaultCaptiveEventsNavalFemale7" text="Accept and work in the galley." />
+    <string id="DefaultCaptiveEventsNavalFemale8" text="Refuse and risk punishment." />
+    <string id="DefaultCaptiveEventsNavalFemale9" text="Several crewmen take turns abusing you while the rest of the ship sleeps; your body is left bruised by dawn." />
+    
+    <!-- Naval Escape Events -->
+    <string id="DefaultCaptiveEventsNavalFemale10" text="Under cover of darkness, you slip over the side of the ship. The water is frigid and the waves violent, but you manage to find debris - broken planks and barrels lashed together into a makeshift raft. You haul yourself onto it, gasping and shivering. The ship continues on its course, its crew unaware of your escape. You're adrift now, exposed to the elements, but you're free. The raft bobs on the waves as you drift away. Whatever fate awaits you on these waters, it's better than remaining a captive." />
+    <string id="DefaultCaptiveEventsNavalFemale11" text="Survive on the raft." />
+    <string id="DefaultCaptiveEventsNavalFemale12" text="You jump overboard in a desperate bid for freedom, but the water is rougher than it looked. The waves batter you mercilessly, dragging you under again and again. Your strength fades quickly, and just as you're about to go under for the last time, a boat hook snags your clothing. Sailors haul you back aboard like a caught fish, coughing up seawater. The captain stands over you, his expression furious. &quot;Foolish prisoner. The sea would have killed you.&quot; He orders severe punishment. For the next several hours, you're made an example of to deter other escape attempts." />
+    <string id="DefaultCaptiveEventsNavalFemale13" text="Survive the punishment." />
+    <string id="DefaultCaptiveEventsNavalFemale14" text="The ship is moving through rough seas during a storm. The crew is distracted by the chaos of securing cargo and manning the sails. You're relatively healthy and strong - this might be your best chance to escape. You could try to slip overboard during the confusion. The waters are treacherous, but you're in good enough condition to attempt it. Do you take the risk?" />
+    <string id="DefaultCaptiveEventsNavalFemale15" text="Make a break for freedom!" />
+    <string id="DefaultCaptiveEventsNavalFemale16" text="Stay put. The risk is too great." />
+    <string id="DefaultCaptiveEventsNavalFemale17" text="Wait for a better opportunity." />
+    <string id="DefaultCaptiveEventsNavalFemale18" text="A violent storm hits the ship, and in the chaos you find yourself momentarily unguarded. The ship has pulled close to a rocky coastline for shelter. You're injured and weakened from captivity, but this might be your only chance. The waters look treacherous. Your body aches, and you're not sure you have the strength for a long swim. But staying means continued imprisonment." />
+    <string id="DefaultCaptiveEventsNavalFemale19" text="Jump into the storm-tossed sea!" />
+    <string id="DefaultCaptiveEventsNavalFemale20" text="Stay safe. You need to recover first." />
+    <string id="DefaultCaptiveEventsNavalFemale21" text="Bide your time." />
+    <string id="DefaultCaptiveEventsNavalFemale22" text="You're battered and weak from days of harsh treatment. The ship rocks in moderately rough seas. You notice the watch is thin - only a few sailors on deck. Your body screams in protest at the thought of action, but your mind whispers that you'll die if you stay. The water looks cold and uninviting. You're not sure you have the strength left, but desperation might be enough." />
+    <string id="DefaultCaptiveEventsNavalFemale23" text="Attempt escape despite your condition." />
+    <string id="DefaultCaptiveEventsNavalFemale24" text="Rest and recover. You're too weak." />
+      <string id="DefaultCaptiveEventsNavalFemale25" text="Negotiate with your captors instead." />
+      <string id="DefaultCaptiveEventsNavalFemale26" text="The captain summons you to his quarters late at night. He makes his intentions clear - submit willingly and you'll be treated better, or resist and face harsher conditions. His eyes gleam with expectation as he waits for your answer." />
+      <string id="DefaultCaptiveEventsNavalFemale27" text="Submit willingly to his demands." />
+      <string id="DefaultCaptiveEventsNavalFemale28" text="Resist and accept the consequences." />
+      <string id="DefaultCaptiveEventsNavalFemale29" text="The crew has been at sea for weeks without port. Several sailors corner you below deck, their intentions unmistakable. They offer you extra rations and protection from others if you cooperate. The alternative is being taken by force with nothing gained." />
+      <string id="DefaultCaptiveEventsNavalFemale30" text="Agree to cooperate for the benefits." />
+      <string id="DefaultCaptiveEventsNavalFemale31" text="Refuse and fight back." />
+      <string id="DefaultCaptiveEventsNavalFemale32" text="During a celebration after a successful raid, the crew is drunk and rowdy. The first mate pulls you aside and offers a deal - serve as entertainment for the men tonight willingly, and he'll ensure you get better treatment and possibly even freedom at the next port. Word of your cooperation would spread." />
+      <string id="DefaultCaptiveEventsNavalFemale33" text="Accept the deal and serve willingly." />
+      <string id="DefaultCaptiveEventsNavalFemale34" text="Refuse and face their drunken wrath." />
+      <string id="DefaultCaptiveEventsNavalFemale35" text="A wealthy merchant passenger aboard the ship takes interest in you. He approaches privately, offering gold to your captors for exclusive access to you. If you submit gracefully and play the role of a willing companion, he promises to purchase your freedom. Resisting would anger both him and the captain." />
+      <string id="DefaultCaptiveEventsNavalFemale36" text="Play the willing companion for potential freedom." />
+      <string id="DefaultCaptiveEventsNavalFemale37" text="Refuse to degrade yourself this way." />
+      <string id="DefaultCaptiveEventsNavalFemale38" text="The ship's officers hold a private gathering. You're brought before them and told you'll serve their pleasure this evening. One officer suggests that if you're enthusiastic and obedient, they'll vouch for your good behavior and reduce your captivity. Your reputation as a submissive captive would spread among the crew." />
+      <string id="DefaultCaptiveEventsNavalFemale39" text="Be enthusiastic and obedient for better treatment." />
+      <string id="DefaultCaptiveEventsNavalFemale40" text="Show defiance despite the situation." />
+   </strings>
+</base>

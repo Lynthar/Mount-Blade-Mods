@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CEEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="../../zCaptivityEvents/ModuleLoader/CaptivityRequired/Events/CEEventsModal.xsd">
+
+<!-- ==================================================================================================== -->
+<!-- |                                     CAPTIVE REQUIRED EVENTS - GENERAL                            | -->
+<!-- ==================================================================================================== -->
+
+   <!-- #region Required Capture Events -->
+
+   <CEEvent>
+      <Name>CE_taken_prisoner_sexual</Name>
+      <Backgrounds>
+         <Background Name="CE_DCRG_bandit_sea_1" Weight="1" UseConditions="CE_captured_bandit_sea" />
+         <Background Name="default_female_lost_sea" Weight="1" UseConditions="CE_captured_general_sea" />
+         <Background Name="CE_DCRG_bandit_1" Weight="1" UseConditions="CE_captured_bandit" />
+         <Background Name="default_female_lost" Weight="1" UseConditions="CE_captured_general" />
+      </Backgrounds>
+      <Text>{=DefaultCaptiveRequiredGeneral1}Your enemies take your weapons and armor as you surrender. Their leader briefly gropes your breast and buttocks, nodding approvingly as you are rounded up with the rest of the captives.</Text>
+      <MultipleRestrictedListOfFlags>
+         <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+         <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+         <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveRequiredGeneral2}What will happen to you now?</OptionText>
+            <TriggerEvents>
+               <TriggerEvent>
+                  <EventName>CE_advanced_sexual_capture</EventName>
+                  <EventWeight>1</EventWeight>
+                  <EventUseConditions>True</EventUseConditions>
+               </TriggerEvent>
+               <TriggerEvent>
+                  <EventName>CE_advanced_sexual_capture_settlement</EventName>
+                  <EventWeight>1</EventWeight>
+                  <EventUseConditions>True</EventUseConditions>
+               </TriggerEvent>
+               <TriggerEvent>
+                  <EventName>CE_advanced_sexual_capture_village</EventName>
+                  <EventWeight>1</EventWeight>
+                  <EventUseConditions>True</EventUseConditions>
+               </TriggerEvent>
+               <TriggerEvent>
+                  <EventName>CE_advanced_sexual_capture_sea</EventName>
+                  <EventWeight>1</EventWeight>
+                  <EventUseConditions>True</EventUseConditions>
+               </TriggerEvent>
+            </TriggerEvents>
+         </Option>
+      </Options>
+
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>false</SexualContent>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <CEEvent>
+      <Name>CE_advanced_sexual_capture</Name>
+      <Text>{=DefaultCaptiveRequiredGeneral3}You are stripped of your clothing and weapons, your supple breasts and pert buttocks on display for every horny man in camp. You suspect you'll be the star in more than one man's nighttime fantasies.</Text>
+      <Backgrounds>
+         <Background Name="CE_DCRG_bandit_2" Weight="1" UseConditions="CE_captured_bandit" />
+         <Background Name="default_female_lost_2" Weight="1" UseConditions="CE_captured_general" />
+      </Backgrounds>
+      <MultipleRestrictedListOfFlags>
+         <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+         <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+         <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+         <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+         <RestrictedListOfFlags>StripEnabled</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>StripPlayer</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveRequiredGeneral4}Or worse.</OptionText>
+         </Option>
+      </Options>
+
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <CEEvent>
+      <Name>CE_advanced_sexual_capture_sea</Name>
+      <Text>{=DefaultCaptiveRequiredNSFWEventsFemale15}You are stripped of your clothing and weapons aboard the ship, your supple breasts and pert buttocks on display for every horny sailor on deck. You suspect you'll be the star in more than one man's nighttime fantasies below deck...</Text>
+      <Backgrounds>
+         <Background Name="CE_DCRG_bandit_sea_2" Weight="1" UseConditions="CE_captured_bandit_sea" />
+         <Background Name="default_female_lost_sea_2" Weight="1"
+            UseConditions="CE_captured_general_sea" />
+      </Backgrounds>
+      <MultipleRestrictedListOfFlags>
+         <RestrictedListOfFlags>StripEnabled</RestrictedListOfFlags>
+         <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+         <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+         <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+         <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>StripPlayer</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveRequiredNSFWEventsFemale8}Or worse.</OptionText>
+         </Option>
+      </Options>
+
+      <SexualContent>true</SexualContent>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <!-- #endregion -->
+
+</CEEvents>

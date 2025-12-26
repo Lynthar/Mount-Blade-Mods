@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CEEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CEEventsModal.xsd">
+    <!-- REQUIRED EVENTS CALLED FROM CODE -->
+    <!-- Female Menu Dialogue -->
+    <CEEvent>
+        <Name>CE_captor_male_sexual_menu</Name>
+        <Text>{=DefaultCaptorRequiredEventsMale1}{CAPTIVE_NAME} kneels bound before you, helpless to resist your whims. What fate do you have in mind for her?</Text>
+        <BackgroundName>default_female</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorGenderIsMale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorRequiredEventsMale2}Clothe her in rags.</OptionText>
+                <TriggerEventName>CE_captor_male_sexual_strip</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorRequiredEventsMale3}Change what she's wearing.</OptionText>
+                <TriggerEventName>CE_captor_male_sexual_strip_two</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorRequiredEventsMale4}Make use of her womb.</OptionText>
+                <TriggerEventName>CE_captor_male_sexual_menu_three</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>3</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorRequiredEventsMale5}Leave her alone.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_captor_male_sexual_strip</Name>
+        <Text>{=DefaultCaptorRequiredEventsMale6}You order {CAPTIVE_NAME} to strip before you. She reluctantly complies, standing naked before you as you briefly admire her ample bosom and luscious thighs before handing her a collection of ill-fitting rags with which to clothe herself.</Text>
+        <BackgroundName>default_female</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Strip</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorRequiredEventsMale7}What else do you have in store?</OptionText>
+                <RelationTotal>-5</RelationTotal>
+                <TriggerEventName>CE_captor_male_sexual_menu</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_captor_male_sexual_strip_two</Name>
+        <Text>{=DefaultCaptorRequiredEventsMale8}You order {CAPTIVE_NAME} to strip before you. She reluctantly complies, standing naked before you as you briefly admire her ample bosom and luscious thighs.</Text>
+        <BackgroundName>default_female</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Strip</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorRequiredEventsMale9}Hand her a collection of ill-fitting rags to protect what remains of her modesty.</OptionText>
+                <RelationTotal>-5</RelationTotal>
+                <TriggerEventName>CE_captor_male_sexual_menu</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Strip</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <SkillsToLevel>
+                    <Skill Id="IsSlave" ByLevel="1" Ref="Hero" Color="Cyan" />
+                </SkillsToLevel>
+                <StripSettings>
+                    <Clothing>Slave</Clothing>
+                </StripSettings>
+                <OptionText>{=DefaultCaptorRequiredEventsMale10}Secure a iron collar around her neck, she will remain to serve as your slave.</OptionText>
+                <RelationTotal>-15</RelationTotal>
+                <TriggerEventName>CE_captor_male_sexual_menu</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Strip</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <StripSettings>
+                    <Clothing>Nude</Clothing>
+                </StripSettings>
+                <OptionText>{=DefaultCaptorRequiredEventsMale11}Give her nothing.</OptionText>
+                <RelationTotal>-10</RelationTotal>
+                <TriggerEventName>CE_captor_male_sexual_menu</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>3</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <RelationTotal>-2</RelationTotal>
+                <OptionText>{=DefaultCaptorRequiredEventsMale12}Return her garments.</OptionText>
+                <TriggerEventName>CE_captor_male_sexual_menu</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_captor_male_sexual_menu_three</Name>
+        <Text>{=DefaultCaptorRequiredEventsMale13}You recall several of your men commenting that they'd love to feel {CAPTIVE_NAME}'s body clenched around their manhoods. You have to admit her quivering breasts and shapely ass are quite fetching as she trembles before you.</Text>
+        <BackgroundName>default_female</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorRequiredEventsMale14}Better to plunder her assets yourself.</OptionText>
+                <TriggerEventName>CE_captor_male_sexual_menu_three_self_next</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorRequiredEventsMale15}Perhaps your men deserve a reward.</OptionText>
+                <TriggerEventName>CE_captor_male_sexual_menu_three_next</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorRequiredEventsMale16}Leave her alone. For now.</OptionText>
+                <TriggerEventName>CE_captor_male_sexual_menu</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_captor_male_sexual_menu_three_next</Name>
+        <Text>{=DefaultCaptorRequiredEventsMale17}{CAPTIVE_NAME} frantically pleads for mercy as you announce her fate. Your troops cheer enthusiastically, dragging her to an empty storage tent as she struggles frantically to escape. They push her onto a mattress, spreading her legs, and take it in turns to sate their lusts with her helpless body.</Text>
+        <BackgroundName>de_captive_1</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorRequiredEventsMale18}A good way to raise morale.</OptionText>
+                <MoraleTotal>5</MoraleTotal>
+                <TriggerEventName>CE_captor_male_sexual_menu_three_next_2</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>30</PregnancyRiskModifier>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_captor_male_sexual_menu_three_next_2</Name>
+        <Text>{=DefaultCaptorRequiredEventsMale19}{CAPTIVE_NAME}'s ordeal goes on for hours, and by the time the last of them spends his seed in her ruined sex she has lost all will to resist. Her holes are splayed wide, dripping with pints of viscous cum, and she twitches and moans incoherently, her pelvis bucking instinctively as the assault continues in her dreams.</Text>
+        <BackgroundName>de_captive_1</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationRisk</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorRequiredEventsMale18}A good way to raise morale.</OptionText>
+                <MoraleTotal>5</MoraleTotal>
+                <TriggerEventName>CE_captor_male_sexual_menu</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>30</PregnancyRiskModifier>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_captor_male_sexual_menu_three_self_next</Name>
+        <Text>{=DefaultCaptorRequiredEventsMale20}You decide to sample {CAPTIVE_NAME}'s womanly delights, leading her trembling body to your bed. You deftly shackle her wrists to the headboard, then strip off her clothes and liberate your eager shaft from its prison. She pleads piteously for you to show mercy, but as you penetrate her flower, savoring its warmth.</Text>
+        <BackgroundName>de_captive_1</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorRequiredEventsMale21}Sate your lust.</OptionText>
+                <TriggerEventName>CE_captor_male_sexual_menu_three_self_next_2</TriggerEventName>
+                <PregnancyRiskModifier>100</PregnancyRiskModifier>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>30</PregnancyRiskModifier>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_captor_male_sexual_menu_three_self_next_2</Name>
+        <Text>{=DefaultCaptorRequiredEventsMale22}{CAPTIVE_NAME} grows silent and her eyes well with tears. You take her with deep, flowing strokes, as your bulging testicles slap her supple ass, and carefully draw out your pleasure for over an hour and a half before your balls tighten in unspeakable ecstasy and you blast your potent seed into her fertile, defenseless womb.</Text>
+        <BackgroundName>de_captive_1</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationHero</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorRequiredEventsMale23}She'll certainly remember you.</OptionText>
+                <TriggerEventName>CE_captor_male_sexual_menu</TriggerEventName>
+                <PregnancyRiskModifier>100</PregnancyRiskModifier>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>30</PregnancyRiskModifier>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- Male Menu Dialogue -->
+    <CEEvent>
+        <Name>CE_captor_male_sexual_menu_m</Name>
+        <Text>{=DefaultCaptorRequiredEventsMale24}{CAPTIVE_NAME} kneels bound before you, helpless to resist your whims. What fate do you have in mind for him?</Text>
+        <BackgroundName>default_male</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorGenderIsMale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorRequiredEventsMale25}Clothe him in rags.</OptionText>
+                <TriggerEventName>CE_captor_male_sexual_strip_m</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorRequiredEventsMale26}Leave him alone.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_captor_male_sexual_strip_m</Name>
+        <Text>{=DefaultCaptorRequiredEventsMale27}You order {CAPTIVE_NAME} to strip before you. He reluctantly complies, you hand him a collection of ill-fitting rags with which to clothe himself.</Text>
+        <BackgroundName>default_male</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Strip</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorRequiredEventsMale28}What else do you have in store?</OptionText>
+                <RelationTotal>-10</RelationTotal>
+                <TriggerEventName>CE_captor_male_sexual_menu_m</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+</CEEvents>

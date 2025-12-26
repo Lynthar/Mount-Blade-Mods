@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CECustom xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file://CECustomModal.xsd">
+    <CEModuleName>Concubine Expansion</CEModuleName>
+     <CESkills>
+        <CESkill Id="Concubine" Name="Concubine" MinLevel="0" MaxLevel="1" />
+    </CESkills>
+</CECustom>

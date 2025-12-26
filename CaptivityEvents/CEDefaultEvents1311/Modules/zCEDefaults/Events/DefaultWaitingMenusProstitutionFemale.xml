@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CEEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../zCaptivityEvents/ModuleLoader/CaptivityRequired/Events/CEEventsModal.xsd">
+
+    <!-- Default Waiting Menus for Prostitution Events - Female Specific -->
+    <!-- #region Prostitution Waiting Menus -->
+    <CEEvent>
+        <Name>CE_prostitution_waiting_menu</Name>
+        <Text>{=DefaultWaitingMenusProstitutionFemale1}{?DAYS}You've been forced to work as a prostitute at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You're being forced to work as a prostitute at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;Waiting for a customer...</Text>
+        <BackgroundName>CE_DWM_10</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsProstitute</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroProstituteLevelBelow>60</ReqHeroProstituteLevelBelow>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_prostitution_waiting_menu_2</Name>
+        <Text>{=DefaultWaitingMenusProstitutionFemale2}{?DAYS}You've been forced to work as a prostitute at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You're being forced to work as a prostitute at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;Waiting for a customer...</Text>
+        <BackgroundName>CE_DWM_11</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsProstitute</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>RemoveSlaveryFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>RemoveProstitutionFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Leave</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultWaitingMenusProstitutionFemale3}Request your freedom.</OptionText>
+                <ReqHeroProstituteLevelAbove>110</ReqHeroProstituteLevelAbove>
+                <ReqGoldAbove>300</ReqGoldAbove>
+                <GoldTotal>-300</GoldTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroProstituteLevelAbove>60</ReqHeroProstituteLevelAbove>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_prostitution_waiting_menu_3</Name>
+        <Text>{=DefaultWaitingMenusProstitutionFemale4}{?DAYS}You've been a prostitute at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You're working as a prostitute at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;Waiting for a customer...</Text>
+        <BackgroundName>CE_DWM_12</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsNotSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsProstitute</RestrictedListOfFlags>
+            <RestrictedListOfFlags>PlayerOwnsNotBrothelInSettlement</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>RemoveProstitutionFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Leave</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultWaitingMenusProstitutionFemale5}Leave.</OptionText>
+                <ReqHeroProstituteLevelAbove>50</ReqHeroProstituteLevelAbove>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroProstituteLevelBelow>200</ReqHeroProstituteLevelBelow>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_prostitution_waiting_menu_4</Name>
+        <Text>{=DefaultWaitingMenusProstitutionFemale6}{?DAYS}You've been a prostitute at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You're working as a prostitute at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;Waiting for a customer...</Text>
+        <BackgroundName>CE_DWM_9</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsNotSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsProstitute</RestrictedListOfFlags>
+            <RestrictedListOfFlags>PlayerOwnsNotBrothelInSettlement</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>RemoveProstitutionFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Leave</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultWaitingMenusProstitutionFemale5}Leave.</OptionText>
+                <ReqHeroProstituteLevelAbove>50</ReqHeroProstituteLevelAbove>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroProstituteLevelAbove>200</ReqHeroProstituteLevelAbove>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_prostitution_waiting_menu_5</Name>
+        <Text>{=DefaultWaitingMenusProstitutionFemale7}{?DAYS}You've been managing the brothel at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You're managing the brothel at {SETTLEMENT_NAME}.{\?} Waiting for a customer...</Text>
+        <Backgrounds>
+            <Background Name="CE_DWM_1" Weight="1" />
+            <Background Name="CE_DWM_2" Weight="1" />
+        </Backgrounds>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsNotSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsProstitute</RestrictedListOfFlags>
+            <RestrictedListOfFlags>PlayerOwnsBrothelInSettlement</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>RemoveProstitutionFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Leave</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultWaitingMenusProstitutionFemale5}Leave.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- #region Prostitution Siege Menus -->
+    <CEEvent>
+        <Name>CE_prostitution_siege_menu_1</Name>
+        <Text>{=DefaultWaitingMenusProstitutionFemale8}{?DAYS}You've been forced to work as a prostitute at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You're being forced to work as a prostitute at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;The brothel is closed due to the siege. You hope your guards don't get any ideas about taking out their stress on your ass...</Text>
+        <BackgroundName>CE_DWM_1</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+            <RestrictedListOfFlags>DuringSiege</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsProstitute</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_prostitution_siege_menu_2</Name>
+        <Text>{=DefaultWaitingMenusProstitutionFemale9}{?DAYS}You've been a prostitute at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a prostitute at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;The brothel is closed due to the siege. This seems distinctly unfair, as who could possibly need a bit of relaxation more than men suffering the stress of imminent combat?</Text>
+        <BackgroundName>CE_DWM_1</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+            <RestrictedListOfFlags>DuringSiege</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsNotSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsProstitute</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>RemoveProstitutionFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Leave</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultWaitingMenusProstitutionFemale5}Leave.</OptionText>
+                <ReqHeroProstituteLevelAbove>50</ReqHeroProstituteLevelAbove>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_prostitution_siege_menu_3</Name>
+        <Text>{=DefaultWaitingMenusProstitutionFemale10}{?DAYS}You've been managing the brothel at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You're managing the brothel at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;The brothel is closed due to the siege. This seems distinctly unfair, as who could possibly need a bit of relaxation more than men suffering the stress of imminent combat?</Text>
+        <BackgroundName>CE_DWM_1</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+            <RestrictedListOfFlags>DuringSiege</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsNotSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsProstitute</RestrictedListOfFlags>
+            <RestrictedListOfFlags>PlayerOwnsBrothelInSettlement</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>RemoveProstitutionFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Leave</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultWaitingMenusProstitutionFemale5}Leave.</OptionText>
+                <ReqHeroProstituteLevelAbove>50</ReqHeroProstituteLevelAbove>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroProstituteLevelAbove>50</ReqHeroProstituteLevelAbove>
+    </CEEvent>
+
+    <!-- #endregion -->
+</CEEvents>

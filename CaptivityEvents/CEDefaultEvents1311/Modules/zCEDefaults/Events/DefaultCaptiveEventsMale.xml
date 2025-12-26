@@ -1,0 +1,963 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CEEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../zCaptivityEvents/ModuleLoader/CaptivityRequired/Events/CEEventsModal.xsd">
+    
+    <!-- ===================================================================== -->
+    <!-- DEFAULT CAPTIVE EVENTS - MALE                                        -->
+    <!-- Events that trigger when a male hero is captured                     -->
+    <!-- RECOMMEND REPLACING THIS FILE WITH YOUR OWN EVENTS                   -->
+    <!-- ===================================================================== -->
+    
+    <!-- #region Sexual Events -->
+    <!-- Events that provide sexual opportunities and character development opportunities -->
+    <!-- Sexual Event -->
+    <CEEvent>
+        <Name>CE_common_femdom_male</Name>
+        <Text>{=DefaultCaptiveEventsMale1}Your captor invites you to her tent and you follow, cautiously. You find her sitting on her bed, her dress hiked up over her legs, rubbing her pussy with one hand and holding a bottle of wine in her other. You start to realize why you are here and turn to leave, but it seems the guards have moved into place behind you; though they're facing the other direction, you get the distinct impression they will not look favorably upon any attempts to escape.</Text>
+        <BackgroundName></BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale2}Kneel down and crawl over to her.</OptionText>
+                <TriggerEventName>CE_common_femdom_male_continued</TriggerEventName>
+                <RenownTotal>R -1 0</RenownTotal>
+                <RelationTotal>5</RelationTotal>
+                <HealthTotal>10</HealthTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale3}Attack her!</OptionText>
+                <RelationTotal>-5</RelationTotal>
+                <ReqHeroHealthAbovePercentage>20</ReqHeroHealthAbovePercentage>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>40</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_common_femdom_male_continued</Name>
+        <Text>{=DefaultCaptiveEventsMale4}Your captor smiles as you approach, spreading her legs invitingly, but as you get closer she grabs you painfully by the hair and pours half the bottle of wine down your throat. As you gasp for air, she orders you to swallow and the burning liquid fills your stomach. As your head begins to spin, she guides your mouth to her cleft and orders you to pleasure her.</Text>
+        <BackgroundName></BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale5}Try to dry yourself off.</OptionText>
+                <TriggerEventName>CE_common_femdom_male_continued_2</TriggerEventName>
+                <RelationTotal>5</RelationTotal>
+                <HealthTotal>10</HealthTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_common_femdom_male_continued_2</Name>
+        <Text>{=DefaultCaptiveEventsMale6}You do your best to satisfy her with your tongue, and are rewarded with a crushing sensation around your neck as she uses her legs to pull your face tighter into her cunt. You struggle to breathe as she rubs your lips against her clit, arching and bucking against you. When she finally comes, your mouth is flooded with her sweet-tasting fluid. She tells you she'll have you again soon. The guards outside chuckle lightly as you leave, your face still drenched in her wetness.</Text>
+        <BackgroundName></BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale5}Try to dry yourself off.</OptionText>
+                <RelationTotal>5</RelationTotal>
+                <HealthTotal>10</HealthTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Skill & Trait Based Events -->
+    <!-- Events that provide skill training and character development opportunities -->
+    <!-- Athletics Training Event -->
+    <CEEvent>
+        <Name>CE_common_captive_male_athletics_training</Name>
+        <Text>{=DefaultCaptiveEventsMale7}Your captors force you into hard labor, hauling heavy stones and supplies across the camp. The work is exhausting but you can feel your muscles strengthening with each passing day.</Text>
+        <Backgrounds>
+            <Background Name="CE_DCEC_general_3" Weight="1" />
+        </Backgrounds>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale8}Work hard and build endurance.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Athletics" ByXP="10" Ref="Hero" />
+                </SkillsToLevel>
+                <HealthTotal>-5</HealthTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale9}Conserve your energy and do the minimum.</OptionText>
+                <HealthTotal>-15</HealthTotal>
+            </Option>
+        </Options>
+        <WeightedChanceOfOccurring>25</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Crafting/Smithing Event -->
+    <CEEvent>
+        <Name>CE_common_captive_male_smithing_work</Name>
+        <Text>{=DefaultCaptiveEventsMale10}Your captors put you to work in their makeshift forge, repairing weapons and armor. The blacksmith overseer is a harsh taskmaster but skilled in his craft. You could learn from him if you pay attention.</Text>
+        <Backgrounds>
+            <Background Name="CE_DCEC_general_3" Weight="1" />
+        </Backgrounds>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale11}Focus on learning the craft.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Crafting" ByXP="15" Ref="Hero" />
+                </SkillsToLevel>
+                <RelationTotal>3</RelationTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Crafting" Min="20" Ref="Hero" />
+                </SkillsRequired>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale12}Do your best to learn despite inexperience.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Crafting" ByXP="8" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale13}Sabotage the work.</OptionText>
+                <HealthTotal>-20</HealthTotal>
+                <RelationTotal>-10</RelationTotal>
+            </Option>
+        </Options>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Medicine/Healing Event -->
+    <CEEvent>
+        <Name>CE_common_captive_male_medical_aid</Name>
+        <Text>{=DefaultCaptiveEventsMale14}A plague has swept through the camp and many are sick. Your captors demand you help tend to the ill, despite your own weakened state. The camp healer shows you which herbs to use and how to dress wounds properly.</Text>
+        <Backgrounds>
+            <Background Name="CE_DCEC_general_2" Weight="1" />
+        </Backgrounds>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale15}Use your medical knowledge to help effectively.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Medicine" ByXP="20" Ref="Hero" />
+                </SkillsToLevel>
+                <RelationTotal>10</RelationTotal>
+                <HealthTotal>-10</HealthTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Medicine" Min="30" Ref="Hero" />
+                </SkillsRequired>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale16}Do your best to learn and help.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Medicine" ByXP="10" Ref="Hero" />
+                </SkillsToLevel>
+                <HealthTotal>-15</HealthTotal>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale17}Refuse to help the enemy.</OptionText>
+                <RelationTotal>-15</RelationTotal>
+            </Option>
+        </Options>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Tactics/Leadership Event -->
+    <CEEvent>
+        <Name>CE_common_captive_male_tactical_observation</Name>
+        <Text>{=DefaultCaptiveEventsMale18}Your captor forces you to observe their training drills and war councils, perhaps to humiliate you or perhaps to test your mettle. You watch as they discuss tactics and formations, making mental notes of their strategies and weaknesses.</Text>
+        <Backgrounds>
+            <Background Name="CE_DCEC_general_2" Weight="1" />
+        </Backgrounds>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale19}Share your tactical insights.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Tactics" ByXP="15" Ref="Hero" />
+                </SkillsToLevel>
+                <RelationTotal>8</RelationTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Tactics" Min="40" Ref="Hero" />
+                </SkillsRequired>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale20}Observe silently and learn.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Tactics" ByXP="10" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale21}Mock their inferior tactics.</OptionText>
+                <RelationTotal>-10</RelationTotal>
+                <TraitsRequired>
+                    <TraitRequired Id="Valor" Min="1" Ref="Hero" />
+                </TraitsRequired>
+            </Option>
+        </Options>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Roguery/Stealth Event -->
+    <CEEvent>
+        <Name>CE_common_captive_male_stealth_opportunity</Name>
+        <Text>{=DefaultCaptiveEventsMale22}Late at night, you notice the guards are lax in their watch. A skilled rogue might be able to slip away unnoticed, or at least steal some supplies to improve your situation. The shadows call to you.</Text>
+        <Backgrounds>
+            <Background Name="CE_DCEC_general_2" Weight="1" />
+        </Backgrounds>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale23}Use your stealth skills to escape.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Roguery" ByXP="5" Ref="Hero" />
+                </SkillsToLevel>
+                <SkillsRequired>
+                    <SkillRequired Id="Roguery" Min="50" Ref="Hero" />
+                </SkillsRequired>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale24}Steal supplies quietly.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Roguery" ByXP="10" Ref="Hero" />
+                </SkillsToLevel>
+                <GoldTotal>50</GoldTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Roguery" Min="25" Ref="Hero" />
+                </SkillsRequired>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale25}Stay put - too risky.</OptionText>
+                <HealthTotal>5</HealthTotal>
+            </Option>
+        </Options>
+        <EscapeChance>60</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroHealthAbovePercentage>30</ReqHeroHealthAbovePercentage>
+    </CEEvent>
+
+    <!-- Charm/Leadership Trait Event -->
+    <CEEvent>
+        <Name>CE_common_captive_male_persuasion_attempt</Name>
+        <Text>{=DefaultCaptiveEventsMale26}One of your captors seems less hostile than the others. Perhaps with the right words, you could improve your situation or even negotiate better treatment. A charismatic leader might sway them to your cause.</Text>
+        <Backgrounds>
+            <Background Name="CE_DCEC_general_7" Weight="1" />
+        </Backgrounds>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale27}Use your natural charm to win them over.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="15" Ref="Hero" />
+                </SkillsToLevel>
+                <RelationTotal>15</RelationTotal>
+                <HealthTotal>20</HealthTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Charm" Min="40" Ref="Hero" />
+                </SkillsRequired>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale28}Attempt to persuade them.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="8" Ref="Hero" />
+                </SkillsToLevel>
+                <RelationTotal>5</RelationTotal>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale29}Remain silent and defiant.</OptionText>
+                <TraitsRequired>
+                    <TraitRequired Id="Honor" Min="1" Ref="Hero" />
+                </TraitsRequired>
+            </Option>
+        </Options>
+        <WeightedChanceOfOccurring>25</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Location Specific Events -->
+    <!-- Events organized by specific locations: Town, Castle, Village -->
+    <!-- TOWN EVENTS -->
+    <!-- Tavern Wench Encounter -->
+    <CEEvent>
+        <Name>CE_common_captive_male_town_tavern_wench</Name>
+        <Text>{=DefaultCaptiveEventsMale30}Your captors have rented rooms at a local tavern while conducting business in town. A buxom serving wench notices you bound and guarded in the corner. She approaches your captors and negotiates something with them, coin changing hands. She returns with a knowing smile and leads you to a back room, saying your captors have "rented you out" for the evening to work off their tab.</Text>
+        <BackgroundName>CE_DEEM_male_1</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>NotableFemalesNearby</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInTown</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale31}Follow her obediently.</OptionText>
+                <TriggerEventName>CE_common_captive_male_town_tavern_wench_service</TriggerEventName>
+                <RelationTotal>5</RelationTotal>
+                <HealthTotal>10</HealthTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale32}Refuse and resist.</OptionText>
+                <RelationTotal>-10</RelationTotal>
+                <HealthTotal>-20</HealthTotal>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_common_captive_male_town_tavern_wench_service</Name>
+        <Text>{=DefaultCaptiveEventsMale33}The wench locks the door behind you and pushes you onto the bed. "Don't worry, handsome," she purrs, straddling you. "I paid good coin for you, and I intend to get my money's worth." She strips away her bodice, revealing ample breasts, and proceeds to use your body for her pleasure throughout the night. By morning, you're exhausted but she seems satisfied. She tosses you back to your captors with a wink, saying you were "worth every penny."</Text>
+        <BackgroundName>CE_DEEM_male_2</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale34}Recover and return to captivity.</OptionText>
+                <RelationTotal>8</RelationTotal>
+                <HealthTotal>15</HealthTotal>
+                <GoldTotal>50</GoldTotal>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Noble Lady Curiosity -->
+    <CEEvent>
+        <Name>CE_common_captive_male_town_noble_lady</Name>
+        <Text>{=DefaultCaptiveEventsMale35}While your captors parade you through the town marketplace in chains, a wealthy noblewoman takes interest in you. She approaches your female captor and the two women speak privately, glancing at you and laughing. Money exchanges hands, and the noblewoman leads you to her manor, saying she's "purchased an evening's entertainment."</Text>
+        <BackgroundName>CE_DEEM_male_3</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>NotableFemalesNearby</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInTown</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale36}Go with the noblewoman.</OptionText>
+                <TriggerEventName>CE_common_captive_male_town_noble_lady_manor</TriggerEventName>
+                <RelationTotal>10</RelationTotal>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>15</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_common_captive_male_town_noble_lady_manor</Name>
+        <Text>{=DefaultCaptiveEventsMale37}In her luxurious bedchamber, the noblewoman circles you like a predator. "My husband is away on campaign," she says, unlacing her gown. "And I have certain... needs." She's surprisingly gentle at first, but her passion quickly becomes demanding. She rides you vigorously, taking her pleasure multiple times through the night. In the morning, she dresses you, kisses you deeply, and returns you to your captors well-rested and well-fed, with a satisfied smile on her face.</Text>
+        <BackgroundName>CE_DEEM_male_4</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeCaptorGold</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale38}Return to your captors.</OptionText>
+                <RelationTotal>15</RelationTotal>
+                <HealthTotal>25</HealthTotal>
+                <CaptorGoldTotal>100</CaptorGoldTotal>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>15</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Market Labor -->
+    <CEEvent>
+        <Name>CE_common_captive_male_town_market_labor</Name>
+        <Text>{=DefaultCaptiveEventsMale39}Your captors force you to haul goods at the town marketplace, carrying heavy crates and barrels between merchants' stalls. The work is backbreaking under the hot sun, but the exercise strengthens your body. Local traders eye you with a mixture of pity and curiosity.</Text>
+        <BackgroundName>CE_DEEM_male_5</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInTown</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale40}Work diligently.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Athletics" ByXP="15" Ref="Hero" />
+                </SkillsToLevel>
+                <HealthTotal>-10</HealthTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale41}Steal coins while working.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Roguery" ByXP="12" Ref="Hero" />
+                </SkillsToLevel>
+                <GoldTotal>30</GoldTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Roguery" Min="20" Ref="Hero" />
+                </SkillsRequired>
+            </Option>
+        </Options>
+        <WeightedChanceOfOccurring>25</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- CASTLE EVENTS -->
+    <!-- Dungeon Interrogation -->
+    <CEEvent>
+        <Name>CE_common_captive_male_castle_interrogation</Name>
+        <Text>{=DefaultCaptiveEventsMale42}You're dragged from the castle dungeons to an interrogation chamber. Your female captor circles you slowly, candlelight casting shadows across her face. "Tell me about your allies, their movements, their plans," she demands. When you remain silent, she steps closer, her breath hot on your neck. "Perhaps I can persuade you another way..."</Text>
+        <BackgroundName>CE_DEEM_male_6</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInCastle</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale43}Resist her seduction.</OptionText>
+                <RelationTotal>-5</RelationTotal>
+                <TraitsRequired>
+                    <TraitRequired Id="Honor" Min="1" Ref="Hero" />
+                </TraitsRequired>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale44}Succumb to her methods.</OptionText>
+                <TriggerEventName>CE_common_captive_male_castle_interrogation_seduction</TriggerEventName>
+                <RelationTotal>10</RelationTotal>
+                <HealthTotal>15</HealthTotal>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>18</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_common_captive_male_castle_interrogation_seduction</Name>
+        <Text>{=DefaultCaptiveEventsMale45}She begins by running her hands over your chest, then lower. "You're a handsome prisoner," she whispers. "Cooperate, and I'll make this pleasurable for both of us." Her touch is skilled and deliberate, breaking down your resistance. Eventually she straddles you, riding you slowly while continuing her questions. In your weakened state, you reveal minor details between gasps. Satisfied, she finishes with you and leaves you chained but strangely content.</Text>
+        <BackgroundName>CE_DEEM_male_7</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale46}Return to your cell.</OptionText>
+                <RelationTotal>12</RelationTotal>
+                <HealthTotal>20</HealthTotal>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>18</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Castle Wall Repairs -->
+    <CEEvent>
+        <Name>CE_common_captive_male_castle_repairs</Name>
+        <Text>{=DefaultCaptiveEventsMale47}The castle is under repair from previous siege damage. You're put to work hauling stone blocks and mixing mortar alongside other prisoners. The castle engineer, a gruff veteran, barks orders but occasionally offers advice on proper construction techniques if you show interest.</Text>
+        <BackgroundName>CE_DEEM_male_8</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInCastle</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale48}Learn about fortifications.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Engineering" ByXP="20" Ref="Hero" />
+                </SkillsToLevel>
+                <RelationTotal>5</RelationTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Engineering" Min="25" Ref="Hero" />
+                </SkillsRequired>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale49}Just do the labor.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Engineering" ByXP="8" Ref="Hero" />
+                    <Skill Id="Athletics" ByXP="10" Ref="Hero" />
+                </SkillsToLevel>
+                <HealthTotal>-8</HealthTotal>
+            </Option>
+        </Options>
+        <WeightedChanceOfOccurring>22</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- VILLAGE EVENTS -->
+    <!-- Village Healer -->
+    <CEEvent>
+        <Name>CE_common_captive_male_village_healer</Name>
+        <Text>{=DefaultCaptiveEventsMale50}Your captors stop at a village to tend their wounds after a skirmish. The village healer, a wise woman with knowing eyes, examines you as well. "This one is injured too," she tells your captors. They reluctantly agree to let her treat you. In her cottage, she tends your wounds with skilled hands and herbal remedies.</Text>
+        <BackgroundName>CE_DEEM_male_9</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>NotableFemalesNearby</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInVillage</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale51}Learn from her techniques.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Medicine" ByXP="25" Ref="Hero" />
+                </SkillsToLevel>
+                <HealthTotal>30</HealthTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Medicine" Min="20" Ref="Hero" />
+                </SkillsRequired>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale52}Simply rest and heal.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Medicine" ByXP="10" Ref="Hero" />
+                </SkillsToLevel>
+                <HealthTotal>25</HealthTotal>
+            </Option>
+        </Options>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroHealthBelowPercentage>60</ReqHeroHealthBelowPercentage>
+    </CEEvent>
+
+    <!-- Village Farm Work -->
+    <CEEvent>
+        <Name>CE_common_captive_male_village_farming</Name>
+        <Text>{=DefaultCaptiveEventsMale53}Your captors stop at a village they control and "rent you out" to work the fields. A farmer's daughter is assigned to supervise your work. She's young, pretty, and seems amused by your predicament. As the day grows hot, she frequently offers you water and stolen glances.</Text>
+        <BackgroundName>CE_DEEM_male_10</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>NotableFemalesNearby</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInVillage</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale54}Flirt with her while working.</OptionText>
+                <TriggerEventName>CE_common_captive_male_village_farming_barn</TriggerEventName>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="10" Ref="Hero" />
+                </SkillsToLevel>
+                <RelationTotal>3</RelationTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Charm" Min="30" Ref="Hero" />
+                </SkillsRequired>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale55}Focus on the work.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Athletics" ByXP="12" Ref="Hero" />
+                </SkillsToLevel>
+                <HealthTotal>-5</HealthTotal>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_common_captive_male_village_farming_barn</Name>
+        <Text>{=DefaultCaptiveEventsMale56}As evening approaches, the farmer's daughter leads you to the barn to "put away tools." Once inside, she pushes you against a hay bale and kisses you boldly. "I've never been with a prisoner before," she giggles nervously. "Father won't be back for hours..." She strips eagerly and pulls you down into the hay. The encounter is quick but passionate, her inexperience offset by enthusiasm. Afterward, she straightens her dress and warns you to keep this secret.</Text>
+        <BackgroundName>CE_DEEM_male_11</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale57}Return to your captors.</OptionText>
+                <HealthTotal>15</HealthTotal>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- TRAVELING PARTY EVENTS (LAND) -->
+    <!-- Camp Washing -->
+    <CEEvent>
+        <Name>CE_common_captive_male_camp_washing</Name>
+        <Text>{=DefaultCaptiveEventsMale58}After days of travel, your captors make camp near a stream. Your female captor orders you to help her wash clothes and equipment. As you work beside the water, she strips down to bathe, seemingly unconcerned by your presence. She catches you staring and smirks. "See something you like, prisoner?"</Text>
+        <BackgroundName>CE_DEEM_male_12</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale59}Admit you're watching.</OptionText>
+                <TriggerEventName>CE_common_captive_male_camp_washing_intimate</TriggerEventName>
+                <RelationTotal>5</RelationTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale60}Look away respectfully.</OptionText>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>18</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_common_captive_male_camp_washing_intimate</Name>
+        <Text>{=DefaultCaptiveEventsMale61}She laughs at your honesty and beckons you closer. "Come wash my back, then." You obey, your hands trembling as you touch her wet skin. She leans back against you, clearly enjoying your nervousness. "You know," she murmurs, "prisoners who please me get better treatment." She turns and kisses you hungrily, pulling you into the shallow water. What follows is frantic and passionate, the risk of being caught adding excitement. Afterward, she warns you this changes nothing about your status as her prisoner.</Text>
+        <BackgroundName>CE_DEEM_male_13</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale62}Return to camp.</OptionText>
+                <RelationTotal>15</RelationTotal>
+                <HealthTotal>20</HealthTotal>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>18</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Roadside Rest -->
+    <CEEvent>
+        <Name>CE_common_captive_male_roadside_rest</Name>
+        <Text>{=DefaultCaptiveEventsMale63}During a rest stop on a long march, you're made to sit apart from the main group. You observe your surroundings and the behavior of your captors, noting their routines and weaknesses. A keen observer might spot opportunities for escape or ways to improve their standing.</Text>
+        <BackgroundName>CE_DEEM_male_14</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale64}Make a break for the woods.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Scouting" ByXP="10" Ref="Hero" />
+                </SkillsToLevel>
+                <SkillsRequired>
+                    <SkillRequired Id="Scouting" Min="40" Ref="Hero" />
+                </SkillsRequired>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale65}Study their patterns for future use.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Scouting" ByXP="15" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsMale66}Just rest.</OptionText>
+                <HealthTotal>10</HealthTotal>
+            </Option>
+        </Options>
+        <EscapeChance>45</EscapeChance>
+        <WeightedChanceOfOccurring>25</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroHealthAbovePercentage>30</ReqHeroHealthAbovePercentage>
+    </CEEvent>
+    <!-- #endregion -->
+</CEEvents>

@@ -1,0 +1,1667 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="CEEvents">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" ref="CEEvent" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="CEEvent">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="Name" />
+				<xs:element ref="Text" minOccurs="0" />
+				<xs:element ref="BackgroundName" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="NotificationName" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="SoundName" minOccurs="0" maxOccurs="1" />
+				<!-- Animations -->
+				<xs:element ref="BackgroundAnimation" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="BackgroundAnimationSpeed" minOccurs="0" maxOccurs="1" />
+				<!-- Conditional Backgrounds -->
+				<xs:element ref="Backgrounds" minOccurs="0" maxOccurs="1" />
+				<!-- Custom Flags -->
+				<xs:element ref="MultipleListOfCustomFlags" minOccurs="0" />
+				<xs:element ref="MultipleRestrictedListOfFlags" />
+				<xs:element ref="Options" minOccurs="0" />
+				<xs:element ref="ProgressEvent" minOccurs="0" />
+				<xs:element ref="OrderToCall" minOccurs="0" />
+				<!-- <UNIMPLEMENTED> Leave it as true -->
+				<xs:element ref="ReqCustomCode" minOccurs="0" />
+				<!-- </UNIMPLEMENTED> -->
+				<xs:element ref="CanOnlyHappenNrOfTimes" minOccurs="0" />
+				<!-- </UNIMPLEMENTED> -->
+				<xs:element ref="SexualContent" minOccurs="0" />
+				<xs:element ref="PregnancyRiskModifier" minOccurs="0" />
+				<xs:element ref="EscapeChance" minOccurs="0" />
+				<!-- How many multitudes higher chance it will have of occuring, an event with weight
+					5 will have five times greater chance of happening then an event with weight 1,
+					please do not use negative numbers.  -->
+				<xs:element ref="WeightedChanceOfOccurring" minOccurs="0" />
+				<xs:element ref="ReqHeroMinAge" minOccurs="0" />
+				<xs:element ref="ReqHeroMaxAge" minOccurs="0" />
+				<!-- BETA: finds given item by stringid in itemroster of captive (HeroParty) or
+					captor (CaptorParty) -->
+				<xs:element ref="ReqHeroPartyHaveItem" minOccurs="0" />
+				<xs:element ref="ReqCaptorPartyHaveItem" minOccurs="0" />
+				<!-- Required Levels -->
+				<xs:element ref="ReqHeroHealthBelowPercentage" minOccurs="0" />
+				<xs:element ref="ReqHeroHealthAbovePercentage" minOccurs="0" />
+				<xs:element ref="ReqHeroCaptorRelationAbove" minOccurs="0" />
+				<xs:element ref="ReqHeroCaptorRelationBelow" minOccurs="0" />
+				<xs:element ref="ReqHeroProstituteLevelAbove" minOccurs="0" />
+				<xs:element ref="ReqHeroProstituteLevelBelow" minOccurs="0" />
+				<xs:element ref="ReqHeroSlaveLevelAbove" minOccurs="0" />
+				<xs:element ref="ReqHeroSlaveLevelBelow" minOccurs="0" />
+				<!-- ReqTroops && ReqCaptives -->
+				<xs:element ref="ReqTroopsAbove" minOccurs="0" />
+				<xs:element ref="ReqTroopsBelow" minOccurs="0" />
+				<xs:element ref="ReqCaptivesAbove" minOccurs="0" />
+				<xs:element ref="ReqCaptivesBelow" minOccurs="0" />
+				<xs:element ref="ReqFemaleTroopsAbove" minOccurs="0" />
+				<xs:element ref="ReqFemaleTroopsBelow" minOccurs="0" />
+				<xs:element ref="ReqFemaleCaptivesAbove" minOccurs="0" />
+				<xs:element ref="ReqFemaleCaptivesBelow" minOccurs="0" />
+				<xs:element ref="ReqMaleTroopsAbove" minOccurs="0" />
+				<xs:element ref="ReqMaleTroopsBelow" minOccurs="0" />
+				<xs:element ref="ReqMaleCaptivesAbove" minOccurs="0" />
+				<xs:element ref="ReqMaleCaptivesBelow" minOccurs="0" />
+				<!-- ReqHeroTroops && ReqHeroCaptives -->
+				<xs:element ref="ReqHeroTroopsAbove" minOccurs="0" />
+				<xs:element ref="ReqHeroTroopsBelow" minOccurs="0" />
+				<xs:element ref="ReqHeroCaptivesAbove" minOccurs="0" />
+				<xs:element ref="ReqHeroCaptivesBelow" minOccurs="0" />
+				<xs:element ref="ReqHeroFemaleTroopsAbove" minOccurs="0" />
+				<xs:element ref="ReqHeroFemaleTroopsBelow" minOccurs="0" />
+				<xs:element ref="ReqHeroFemaleCaptivesAbove" minOccurs="0" />
+				<xs:element ref="ReqHeroFemaleCaptivesBelow" minOccurs="0" />
+				<xs:element ref="ReqHeroMaleTroopsAbove" minOccurs="0" />
+				<xs:element ref="ReqHeroMaleTroopsBelow" minOccurs="0" />
+				<xs:element ref="ReqHeroMaleCaptivesAbove" minOccurs="0" />
+				<xs:element ref="ReqHeroMaleCaptivesBelow" minOccurs="0" />
+				<!-- Morale -->
+				<xs:element ref="ReqMoraleBelow" minOccurs="0" />
+				<xs:element ref="ReqMoraleAbove" minOccurs="0" />
+				<!-- ReqGold only for main hero -->
+				<xs:element ref="ReqGoldAbove" minOccurs="0" />
+				<xs:element ref="ReqGoldBelow" minOccurs="0" />
+				<!-- Gold Specification Couple it with ChangeGold/ChangeCaptorGold -->
+				<xs:element ref="GoldTotal" minOccurs="0" />
+				<xs:element ref="CaptorGoldTotal" minOccurs="0" />
+				<!-- Number to decrease or increase based on flag -->
+				<xs:element ref="RelationTotal" minOccurs="0" />
+				<xs:element ref="MoraleTotal" minOccurs="0" />
+				<xs:element ref="HealthTotal" minOccurs="0" />
+				<xs:element ref="RenownTotal" minOccurs="0" />
+				<xs:element ref="ProstitutionTotal" minOccurs="0" />
+				<xs:element ref="SlaveryTotal" minOccurs="0" />
+				<!-- Referencing Multiple To Level -->
+				<xs:element ref="SkillsToLevel" minOccurs="0" />
+				<xs:element ref="TraitsToLevel" minOccurs="0" />
+				<!-- Requirements -->
+				<xs:element ref="SkillsRequired" minOccurs="0" />
+				<xs:element ref="TraitsRequired" minOccurs="0" />
+				<!-- Companions -->
+				<xs:element ref="Companions" minOccurs="0" />
+				<!-- Terrain Requirements -->
+				<xs:element ref="TerrainTypesRequirements" minOccurs="0" />
+				<!-- MenuOptions Requirements -->
+				<xs:element ref="MenuOptions" minOccurs="0" />
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Required elements of each event -->
+	<xs:element name="Name" type="xs:string" />
+	<xs:element name="Text" type="xs:string" />
+	<xs:element name="Flag" type="xs:string" />
+
+	<!-- Optional Elements -->
+	<xs:element name="BackgroundName" type="xs:string" />
+	<xs:element name="NotificationName" type="xs:string" />
+	<xs:element name="SoundName" type="xs:string" />
+
+	<xs:complexType name="BackgroundNames">
+		<xs:sequence>
+			<xs:choice maxOccurs="unbounded" minOccurs="0">
+				<xs:element name="BackgroundName" type="xs:string" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="BackgroundAnimation" type="BackgroundNames" />
+	<xs:element name="BackgroundAnimationSpeed" type="xs:float" />
+
+	<!-- Custom Flags -->
+	<xs:complexType name="CustomFlags">
+		<xs:sequence maxOccurs="unbounded" minOccurs="0">
+			<xs:element name="CustomFlag" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="MultipleListOfCustomFlags" type="CustomFlags" />
+
+	<xs:simpleType name="RestrictedListOfFlagsType" final="restriction">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="CanOnlyBeTriggeredByOtherEvent" />
+			<!-- Required Categories -->
+			<!-- Random Events events that happen randomly while not captive and do not require
+			prisoners -->
+			<xs:enumeration value="Random" />
+			<!-- Captor Events events that happen at random while not captive and require prisoners -->
+			<xs:enumeration value="Captor" />
+			<!-- Captive Events events that happen at random while captive -->
+			<xs:enumeration value="Captive" />
+			<!-- Events that are Overwritable DO NOT USE (ONLY MADE FOR REQUIRED AND DEFAULT EVENTS)-->
+			<xs:enumeration value="Overwritable" />
+			<!-- Types / Kinks -->
+			<xs:enumeration value="Common" />
+			<xs:enumeration value="Femdom" />
+			<xs:enumeration value="Prostitution" />
+			<xs:enumeration value="Romance" />
+			<xs:enumeration value="Slavery" />
+			<!-- New: Party Type -->
+			<xs:enumeration value="CaravanParty" />
+			<xs:enumeration value="BanditParty" />
+			<xs:enumeration value="LordParty" />
+			<xs:enumeration value="DefaultParty" />
+			<!-- Events in Locations must have a proper location flag Bundled -->
+			<!-- Notable Check -->
+			<xs:enumeration value="NotableFemalesNearby" />
+			<xs:enumeration value="NotableMalesNearby" />
+			<!-- Visit Checks -->
+			<xs:enumeration value="VisitedByTradeShip" />
+			<xs:enumeration value="VisitedByCaravan" />
+			<xs:enumeration value="VisitedByLord" />
+			<!-- During Siege -->
+			<xs:enumeration value="DuringSiege" />
+			<!-- DuringRaid -->
+			<xs:enumeration value="DuringRaid" />
+			<!-- Locations -->
+			<xs:enumeration value="LocationLand" />
+			<xs:enumeration value="LocationSea" />
+			<xs:enumeration value="LocationTravellingParty" />
+			<xs:enumeration value="LocationPartyInTown" />
+			<xs:enumeration value="LocationPartyInPort" />
+			<xs:enumeration value="LocationPartyInCastle" />
+			<xs:enumeration value="LocationPartyInVillage" />
+			<xs:enumeration value="LocationDungeon" />
+			<xs:enumeration value="LocationVillage" />
+			<xs:enumeration value="LocationCity" />
+			<xs:enumeration value="LocationCastle" />
+			<xs:enumeration value="LocationHideout" />
+			<xs:enumeration value="LocationTavern" />
+			<!-- PlayerIsNotBusy Flag -->
+			<xs:enumeration value="PlayerIsNotBusy" />
+			<!-- Companion Flag has space for another companion check -->
+			<xs:enumeration value="PlayerAllowedCompanion" />
+			<!-- Has strip settings -->
+			<xs:enumeration value="StripEnabled" />
+			<xs:enumeration value="StripDisabled" />
+			<!-- CaptivesOutNumber -->
+			<xs:enumeration value="CaptivesOutNumber" />
+			<!-- Time -->
+			<xs:enumeration value="TimeNight" />
+			<xs:enumeration value="TimeDay" />
+			<!-- Season -->
+			<xs:enumeration value="SeasonWinter" />
+			<xs:enumeration value="SeasonSpring" />
+			<xs:enumeration value="SeasonSummer" />
+			<xs:enumeration value="SeasonFall" />
+			<!-- NPC Owner Flags -->
+			<xs:enumeration value="OwnerGenderIsFemale" />
+			<xs:enumeration value="OwnerGenderIsMale" />
+			<!-- NPC Captor Flags -->
+			<xs:enumeration value="CaptorIsHero" />
+			<xs:enumeration value="CaptorIsNonHero" />
+			<xs:enumeration value="CaptorGenderIsFemale" />
+			<xs:enumeration value="CaptorGenderIsMale" />
+			<xs:enumeration value="CaptorHaveOffspring" />
+			<xs:enumeration value="CaptorNotHaveOffspring" />
+			<xs:enumeration value="CaptorHaveSpouse" />
+			<xs:enumeration value="CaptorNotHaveSpouse" />
+			<xs:enumeration value="CaptorOwnsCurrentSettlement" />
+			<xs:enumeration value="CaptorOwnsNotCurrentSettlement" />
+			<xs:enumeration value="CaptorFactionOwnsSettlement" />
+			<xs:enumeration value="CaptorNeutralFactionOwnsSettlement" />
+			<xs:enumeration value="CaptorEnemyFactionOwnsSettlement" />
+			<!-- Captive Hero Flags -->
+			<xs:enumeration value="CaptiveIsHero" />
+			<xs:enumeration value="CaptiveIsNonHero" />
+			<!-- Hero Flags are actually Captive Flags when Hero is Captor -->
+			<xs:enumeration value="HeroGenderIsFemale" />
+			<xs:enumeration value="HeroGenderIsMale" />
+			<xs:enumeration value="HeroHaveOffspring" />
+			<xs:enumeration value="HeroNotHaveOffspring" />
+			<xs:enumeration value="HeroHaveSpouse" />
+			<xs:enumeration value="HeroNotHaveSpouse" />
+			<xs:enumeration value="HeroIsPregnant" />
+			<xs:enumeration value="HeroIsNotPregnant" />
+			<xs:enumeration value="HeroOwnsFief" />
+			<xs:enumeration value="HeroOwnsNoFief" />
+			<xs:enumeration value="HeroIsClanLeader" />
+			<xs:enumeration value="HeroIsNotClanLeader" />
+			<xs:enumeration value="HeroIsFactionLeader" />
+			<xs:enumeration value="HeroIsNotFactionLeader" />
+			<!-- Hero Ownership Flags -->
+			<xs:enumeration value="HeroOwnsCurrentParty" />
+			<xs:enumeration value="HeroOwnsNotCurrentParty" />
+			<xs:enumeration value="HeroFactionOwnsParty" />
+			<xs:enumeration value="HeroNeutralFactionOwnsParty" />
+			<xs:enumeration value="HeroEnemyFactionOwnsParty" />
+			<xs:enumeration value="HeroOwnsCurrentSettlement" />
+			<xs:enumeration value="HeroOwnsNotCurrentSettlement" />
+			<xs:enumeration value="HeroFactionOwnsSettlement" />
+			<xs:enumeration value="HeroNeutralFactionOwnsSettlement" />
+			<xs:enumeration value="HeroEnemyFactionOwnsSettlement" />
+			<!-- Player/Captive Only Flags -->
+			<xs:enumeration value="HeroOwnedByNotable" />
+			<xs:enumeration value="HeroNotOwnedByNotable" />
+			<xs:enumeration value="HeroIsProstitute" />
+			<xs:enumeration value="HeroIsNotProstitute" />
+			<xs:enumeration value="HeroIsSlave" />
+			<xs:enumeration value="HeroIsNotSlave" />
+			<!-- Player Only Flags -->
+			<xs:enumeration value="PlayerOwnsBrothelInSettlement" />
+			<xs:enumeration value="PlayerOwnsNotBrothelInSettlement" />
+			<!-- Ignores all other events if this event is valid and is on call -->
+			<xs:enumeration value="IgnoreAllOther" />
+			<!-- Options for triggering alternative events when death, marriage or desertion would occur -->
+			<!-- DeathAlternative: Fires when a hero is about to be killed -->
+			<xs:enumeration value="DeathAlternative" />
+			<!-- DesertionAlternative: Fires when a companion is about to leave the player's clan -->
+			<xs:enumeration value="DesertionAlternative" />
+			<!-- MarriageAlternative: Fires when the player is about to get married -->
+			<xs:enumeration value="MarriageAlternative" />
+			<!-- BirthAlternative: Alternative birth events -->
+			<xs:enumeration value="BirthAlternative" />
+			<!-- Waiting Menu -->
+			<xs:enumeration value="WaitingMenu" />
+			<!-- Progress Menu -->
+			<xs:enumeration value="ProgressMenu" />
+			<!-- Party Entered Settlement Events -->
+			<xs:enumeration value="PartyEnteredSettlement" />
+			<xs:enumeration value="PartyEnteredSettlementIsTown" />
+			<xs:enumeration value="PartyEnteredSettlementIsCastle" />
+			<xs:enumeration value="PartyEnteredSettlementIsVillage" />
+			<xs:enumeration value="PartyEnteredPartyIsCaravan" />
+			<xs:enumeration value="PartyEnteredPartyIsLordParty" />
+			<xs:enumeration value="PartyEnteredPartyIsBanditParty" />
+			<xs:enumeration value="PartyEnteredPartyHasPrisoners" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:element name="RestrictedListOfFlags" type="RestrictedListOfFlagsType" />
+
+	<!-- REQUIREMENT: MultipleRestrictedListOfFlags MUST contain at least one of: Random, Captor, or Captive -->
+	<!-- NOTE: XSD 1.0 cannot enforce this requirement programmatically - it's documented only -->
+	<xs:element name="MultipleRestrictedListOfFlags">
+		<xs:annotation>
+			<xs:documentation> REQUIRED: Must contain at least ONE of the following event category flags: - Random (for random events while not captive, no prisoners required) - Captor (for random events while not captive, prisoners required) - Captive (for random events while captive) WARNING: This requirement cannot be validated by the schema and must be checked manually. </xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice>
+					<xs:element maxOccurs="unbounded" ref="RestrictedListOfFlags" />
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="StringContent" type="xs:string" />
+
+	<xs:element name="RestrictedListOfConsequences">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<!-- Give Item -->
+				<xs:enumeration value="GiveItem" />
+				<!-- Gives XP and Gives Gold -->
+				<xs:enumeration value="GiveGold" />
+				<xs:enumeration value="GiveCaptorGold" />
+				<!-- Increases and Decreases Core Skills -->
+				<xs:enumeration value="ChangeProstitutionLevel" />
+				<xs:enumeration value="ChangeSlaveryLevel" />
+				<!-- Flags -->
+				<xs:enumeration value="AddProstitutionFlag" />
+				<xs:enumeration value="RemoveProstitutionFlag" />
+				<xs:enumeration value="AddSlaveryFlag" />
+				<xs:enumeration value="RemoveSlaveryFlag" />
+				<!-- Increases and Decreases Extra Functionality -->
+				<xs:enumeration value="ChangeMorale" />
+				<xs:enumeration value="ChangeRenown" />
+				<xs:enumeration value="ChangeCaptorRenown" />
+				<xs:enumeration value="ChangeHealth" />
+				<xs:enumeration value="ChangeRelation" />
+				<!-- Random Impregnation -->
+				<xs:enumeration value="ImpregnationRisk" />
+				<!-- Captor Leader Impregnantion -->
+				<xs:enumeration value="ImpregnationHero" />
+				<!-- Player Impregnantion-->
+				<xs:enumeration value="ImpregnationByPlayer" />
+				<!-- Flags -->
+				<xs:enumeration value="CaptorLeaveSpouse" />
+				<xs:enumeration value="CaptiveLeaveSpouse" />
+				<xs:enumeration value="CaptiveMarryCaptor" />
+				<!-- Changes Player gold make sure to couple it with GoldTotal flag -->
+				<xs:enumeration value="ChangeGold" />
+				<!-- Changes Captors gold make sure to couple it with CaptorGoldTotal flag -->
+				<xs:enumeration value="ChangeCaptorGold" />
+				<!-- Menu Leave Options Logos and Some Extra Functionality -->
+				<xs:enumeration value="AttemptEscape" />
+				<xs:enumeration value="Escape" />
+				<xs:enumeration value="EscapeIcon" />
+				<xs:enumeration value="Leave" />
+				<xs:enumeration value="Continue" />
+				<xs:enumeration value="EmptyIcon" />
+				<xs:enumeration value="Wait" />
+				<xs:enumeration value="BribeAndEscape" />
+				<xs:enumeration value="Submenu" />
+				<xs:enumeration value="RansomAndBribe" />
+				<xs:enumeration value="Trade" />
+				<!-- Gives Birth -->
+				<xs:enumeration value="GiveBirth" />
+				<!-- Aborts -->
+				<xs:enumeration value="Abort" />
+				<!-- New: Hides if Disabled -->
+				<xs:enumeration value="UnavailableIsInvisible" />
+				<!-- Alternative Event Consequences -->
+				<!-- Proceeds with the pending death (hero dies) -->
+				<xs:enumeration value="ProceedWithDeath" />
+				<!-- Cancels the pending death (hero survives) -->
+				<xs:enumeration value="CancelDeath" />
+				<!-- Proceeds with the pending marriage -->
+				<xs:enumeration value="ProceedWithMarriage" />
+				<!-- Cancels the pending marriage -->
+				<xs:enumeration value="CancelMarriage" />
+				<!-- Proceeds with the companion leaving -->
+				<xs:enumeration value="ProceedWithDesertion" />
+				<!-- Cancels the desertion (companion stays) -->
+				<xs:enumeration value="CancelDesertion" />
+				<!-- Moves Player to Trade Ship make sure to couple it with VisitedByTradeShip flag -->
+				<xs:enumeration value="SoldToTradeShip" />
+				<!-- Moves Player to Caravan make sure to couple it with VisitedByCaravan flag -->
+				<xs:enumeration value="SoldToCaravan" />
+				<!-- Moves Player to Settlement make sure to couple it with any settlement town type
+				flag -->
+				<xs:enumeration value="SoldToSettlement" />
+				<!-- Moves Player to Lord make sure to couple it with VisitedByLord flag -->
+				<xs:enumeration value="SoldToLordParty" />
+				<!-- Sets the leader of the captor party as owner (captivity only) -->
+				<xs:enumeration value="AddOwner" />
+				<!-- Sets the no one as owner -->
+				<xs:enumeration value="RemoveOwner" />
+				<!-- Moves Player to Settlement make sure to couple it with any settlement town type
+				flag -->
+				<xs:enumeration value="SoldToNotable" />
+				<!-- Moves Player to a Settlement couple it with Teleport Settings or will take you to
+				the closest town -->
+				<xs:enumeration value="TeleportPlayer" />
+				<!-- New: Captured By Party -->
+				<xs:enumeration value="CapturePlayer" />
+				<!-- Flags Prisoners -->
+				<xs:enumeration value="GainRandomPrisoners" />
+				<!-- Make sure to couple it with PlayerIsNotBusy -->
+				<xs:enumeration value="RebelPrisoners" />
+				<xs:enumeration value="HuntPrisoners" />
+				<xs:enumeration value="StartBattle" />
+				<!-- Release -->
+				<xs:enumeration value="Release" />
+				<xs:enumeration value="ReleaseRandomPrisoners" />
+				<xs:enumeration value="ReleaseAllPrisoners" />
+				<!-- Kill -->
+				<xs:enumeration value="KillRandomPrisoners" />
+				<xs:enumeration value="KillAllPrisoners" />
+				<xs:enumeration value="KillPrisoner" />
+				<xs:enumeration value="KillCaptor" />
+				<xs:enumeration value="KillRandomTroops" />
+				<!-- Wound -->
+				<xs:enumeration value="WoundRandomPrisoners" />
+				<xs:enumeration value="WoundAllPrisoners" />
+				<xs:enumeration value="WoundPrisoner" />
+				<xs:enumeration value="WoundCaptor" />
+				<xs:enumeration value="WoundRandomTroops" />
+				<!-- Join Captor (doesn't work when player is captive) -->
+				<xs:enumeration value="JoinCaptor" />
+				<!-- Make Hero Companion (doesn't work when player is captive) requires captive to be a
+				hero -->
+				<xs:enumeration value="MakeHeroCompanion" />
+				<!-- Strips to default robe or random better default items (chance) for player or
+				default robe for AI as captive -->
+				<xs:enumeration value="Strip" />
+				<!-- Allows player to customize what AI is wearing -->
+				<xs:enumeration value="StripHero" />
+				<!-- StripPlayer Strips the player -->
+				<xs:enumeration value="StripPlayer" />
+				<!-- Makes sure Player isn't in an encounter -->
+				<xs:enumeration value="PlayerIsNotBusy" />
+				<!-- Companion Flag has space for another companion check -->
+				<xs:enumeration value="PlayerAllowedCompanion" />
+				<!-- Hides Banner Message -->
+				<xs:enumeration value="NoInformationMessage" />
+				<!-- Hides All Messages -->
+				<xs:enumeration value="NoMessages" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="MultipleRestrictedListOfConsequences">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" ref="RestrictedListOfConsequences" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Spawn Settings for Troop/Prisoner Option -->
+	<xs:element name="SpawnTroop">
+		<xs:complexType>
+			<xs:attribute name="Ref" type="xs:string" />
+			<xs:attribute name="Id" type="xs:string" />
+			<xs:attribute name="Number" type="xs:string" />
+			<xs:attribute name="WoundedNumber" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SpawnTroops">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" ref="SpawnTroop" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Spawn Settings for new Hero as Troop/Prisoner -->
+	<xs:element name="SpawnHero">
+		<xs:complexType>
+			<xs:sequence>
+				<!-- Skills to level -->
+				<xs:element ref="SkillsToLevel" minOccurs="0" />
+			</xs:sequence>
+			<xs:attribute name="Ref" type="xs:string" />
+			<xs:attribute name="Culture" type="xs:string" />
+			<xs:attribute name="Gender" type="xs:string" />
+			<!-- Player/Captor/Random -->
+			<xs:attribute name="Clan" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SpawnHeroes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" ref="SpawnHero" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Spawn Settings for Troop/Prisoner Option -->
+	<xs:element name="DamageParty">
+		<xs:complexType>
+			<xs:attribute name="Number" type="xs:string" />
+			<xs:attribute name="WoundedNumber" type="xs:string" />
+			<xs:attribute name="IncludeHeroes" type="xs:string" />
+			<xs:attribute name="Ref" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Teleport Settings -->
+	<xs:element name="TeleportSettings">
+		<xs:complexType>
+			<!-- 
+					Location Type
+
+					"Town" (Default) Picks a Town
+					"Village" Picks a Village
+					"Castle" Picks a Castle
+					"Hideout" Picks a Bandit Hideout
+			-->
+			<xs:attribute name="Location" type="xs:string" />
+			<!-- Optional Location Name (Ignores Above) -->
+			<xs:attribute name="LocationName" type="xs:string" />
+			<!-- 
+					Distance Ranged
+
+					"Nearest" (Default)
+					"Random" Random Distance
+			-->
+			<xs:attribute name="Distance" type="xs:string" />
+			<!-- 
+					Distance Ranged
+
+					"Any" (Any)
+					"Enemy" Enemy Settlement
+					"OtherEnemy" Enemy/Netural Settlement
+					"Netural" Netural Settlement
+					"OtherFriendly" Netural/Friendly Settlement
+					"Friendly" Friendly Settlement
+			-->
+			<xs:attribute name="Faction" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Scene Settings -->
+	<xs:element name="SceneSettings">
+		<xs:complexType>
+			<!-- Random/Captor/Captive/None -->
+			<xs:attribute name="TalkTo" type="xs:string" />
+			<xs:attribute name="SceneName" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Battle Settings -->
+	<xs:element name="BattleSettings">
+		<xs:complexType>
+			<xs:sequence>
+				<!-- 
+					Troops 
+					Use ref of (enemy/friend/temporary) 
+					(friend) will add the troop to your party 
+					(temporary) will just fight with you then leave
+				-->
+				<xs:element ref="SpawnTroops" minOccurs="0" />
+			</xs:sequence>
+			<xs:attribute name="Ref" type="xs:string" />
+			<xs:attribute name="Victory" type="xs:string" />
+			<xs:attribute name="Defeat" type="xs:string" />
+			<!-- Defaults to Bandits -->
+			<xs:attribute name="EnemyName" type="xs:string" />
+			<!-- Max Player's Troops -->
+			<xs:attribute name="PlayerTroops" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Strip Settings for Strip Options -->
+	<xs:element name="StripSettings">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice maxOccurs="unbounded" minOccurs="1">
+					<xs:element name="CustomBody" minOccurs="0" maxOccurs="1" type="xs:string" />
+					<xs:element name="CustomCape" minOccurs="0" maxOccurs="1" type="xs:string" />
+					<xs:element name="CustomGloves" minOccurs="0" maxOccurs="1" type="xs:string" />
+					<xs:element name="CustomLegs" minOccurs="0" maxOccurs="1" type="xs:string" />
+					<xs:element name="CustomHead" minOccurs="0" maxOccurs="1" type="xs:string" />
+					<!-- 
+						Captive Clothing.
+
+						"Default" use default settings (roll based on user settings)
+						"Advanced" use an upgraded clothing
+						"Basic" use basic clothing 
+						"Nude" use no clothing
+						"Slave" custom integration
+						"Custom" uses custom clothing
+					-->
+					<xs:element name="Clothing" minOccurs="0" maxOccurs="1" type="xs:string" />
+					<!-- 
+						Captive Mount.
+
+						"Default" use default settings (roll based on user settings)
+						"Basic" give player a mount
+						"None" don't give player a mount
+						"####" uses a custom mount (WORK IN PROGRESS)
+					-->
+					<xs:element name="Mount" minOccurs="0" maxOccurs="1" type="xs:string" />
+					<!-- 
+						Captive Melee 
+
+						"Default" use default settings (roll based on user settings)
+						"Advanced" use an upgrade on weapons
+						"Basic" use basic weapons
+						"None" uses no weapons
+						"Custom" uses custom weapons (WORK IN PROGRESS)
+					-->
+					<xs:element name="Melee" minOccurs="0" maxOccurs="1" type="xs:string" />
+					<!-- 
+						Captive Ranged
+
+						"Default" use default settings (roll based on user settings)
+						"Advanced" use an upgrade on ranged weapons
+						"Basic" use basic ranged weapons
+						"None" uses no ranged weapons
+						"Custom" uses custom ranged weapons (WORK IN PROGRESS)
+					-->
+					<xs:element name="Ranged" minOccurs="0" maxOccurs="1" type="xs:string" />
+				</xs:choice>
+			</xs:sequence>
+			<!-- Based on Settings if False, Dangerous to use if player doesn't want their gear lost,
+			BE CAREFUL -->
+			<xs:attribute name="Forced" type="xs:boolean" />
+			<!-- Quest Enabled for Player (Uses User settings for the chance) -->
+			<xs:attribute name="QuestEnabled" type="xs:boolean" />
+		</xs:complexType>
+	</xs:element>
+
+	<!-- WorldMapRequired -->
+	<xs:element name="TerrainType">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="Plain" />
+				<xs:enumeration value="Desert" />
+				<xs:enumeration value="Snow" />
+				<xs:enumeration value="Forest" />
+				<xs:enumeration value="Steppe" />
+				<xs:enumeration value="Fording" />
+				<xs:enumeration value="Mountain" />
+				<xs:enumeration value="Lake" />
+				<xs:enumeration value="Water" />
+				<xs:enumeration value="River" />
+				<xs:enumeration value="Canyon" />
+				<xs:enumeration value="RuralArea" />
+				<xs:enumeration value="Swamp" />
+				<xs:enumeration value="Dune" />
+				<xs:enumeration value="Bridge" />
+				<xs:enumeration value="CoastalSea" />
+				<xs:enumeration value="OpenSea" />
+				<xs:enumeration value="Beach" />
+				<xs:enumeration value="Cliff" />
+				<xs:enumeration value="NonNavigableRiver" />
+				<xs:enumeration value="LandRestriction" />
+				<xs:enumeration value="SeaRestriction" />
+				<xs:enumeration value="UnderBridge" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="TerrainTypes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TerrainType" minOccurs="1" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="TerrainTypesRequirements">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TerrainTypes" minOccurs="1" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- MenuOption -->
+	<xs:element name="MenuOption">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="Order" type="xs:string" />
+				<!-- ID Menu that option is connected to-->
+				<xs:element name="MenuID" type="xs:string" />
+				<!-- Option ID -->
+				<xs:element name="OptionID" type="xs:string" />
+				<!-- The code effect, use RestrictedListOfConsequences  -->
+				<xs:element ref="MultipleRestrictedListOfConsequences" />
+				<!-- The text result show to user .. -->
+				<xs:element name="OptionText" type="xs:string" />
+				<!-- Use conditions to disable option when condition_event does not match -->
+				<xs:element name="UseConditions" minOccurs="0" type="xs:string" />
+				<!-- Triggers another event that matches this name, make sure it catches exceptions
+				gracefully and finishes quietly to log .. -->
+				<xs:element name="TriggerEventName" minOccurs="0" type="xs:string" />
+				<!-- Sound To Play -->
+				<xs:element ref="SoundName" minOccurs="0" maxOccurs="1" />
+				<!-- Scene To Play -->
+				<xs:element ref="SceneToPlay" minOccurs="0" maxOccurs="1" />
+				<!-- moved to options overrides the one in events if one exists .. -->
+				<xs:element ref="PregnancyRiskModifier" minOccurs="0" />
+				<xs:element ref="EscapeChance" minOccurs="0" />
+				<!-- BETA: finds given item by stringid in itemroster of captive (HeroParty) or
+				captor (CaptorParty) -->
+				<xs:element ref="ReqHeroPartyHaveItem" minOccurs="0" />
+				<xs:element ref="ReqCaptorPartyHaveItem" minOccurs="0" />
+				<!-- Required Levels -->
+				<xs:element ref="ReqHeroHealthBelowPercentage" minOccurs="0" />
+				<xs:element ref="ReqHeroHealthAbovePercentage" minOccurs="0" />
+				<xs:element ref="ReqHeroCaptorRelationAbove" minOccurs="0" />
+				<xs:element ref="ReqHeroCaptorRelationBelow" minOccurs="0" />
+				<xs:element ref="ReqHeroProstituteLevelAbove" minOccurs="0" />
+				<xs:element ref="ReqHeroProstituteLevelBelow" minOccurs="0" />
+				<xs:element ref="ReqHeroSlaveLevelAbove" minOccurs="0" />
+				<xs:element ref="ReqHeroSlaveLevelBelow" minOccurs="0" />
+				<!-- ReqTroops && ReqCaptives -->
+				<xs:element ref="ReqTroopsAbove" minOccurs="0" />
+				<xs:element ref="ReqTroopsBelow" minOccurs="0" />
+				<xs:element ref="ReqCaptivesAbove" minOccurs="0" />
+				<xs:element ref="ReqCaptivesBelow" minOccurs="0" />
+				<xs:element ref="ReqFemaleTroopsAbove" minOccurs="0" />
+				<xs:element ref="ReqFemaleTroopsBelow" minOccurs="0" />
+				<xs:element ref="ReqFemaleCaptivesAbove" minOccurs="0" />
+				<xs:element ref="ReqFemaleCaptivesBelow" minOccurs="0" />
+				<xs:element ref="ReqMaleTroopsAbove" minOccurs="0" />
+				<xs:element ref="ReqMaleTroopsBelow" minOccurs="0" />
+				<xs:element ref="ReqMaleCaptivesAbove" minOccurs="0" />
+				<xs:element ref="ReqMaleCaptivesBelow" minOccurs="0" />
+				<!-- ReqHeroTroops && ReqHeroCaptives -->
+				<xs:element ref="ReqHeroTroopsAbove" minOccurs="0" />
+				<xs:element ref="ReqHeroTroopsBelow" minOccurs="0" />
+				<xs:element ref="ReqHeroCaptivesAbove" minOccurs="0" />
+				<xs:element ref="ReqHeroCaptivesBelow" minOccurs="0" />
+				<xs:element ref="ReqHeroFemaleTroopsAbove" minOccurs="0" />
+				<xs:element ref="ReqHeroFemaleTroopsBelow" minOccurs="0" />
+				<xs:element ref="ReqHeroFemaleCaptivesAbove" minOccurs="0" />
+				<xs:element ref="ReqHeroFemaleCaptivesBelow" minOccurs="0" />
+				<xs:element ref="ReqHeroMaleTroopsAbove" minOccurs="0" />
+				<xs:element ref="ReqHeroMaleTroopsBelow" minOccurs="0" />
+				<xs:element ref="ReqHeroMaleCaptivesAbove" minOccurs="0" />
+				<xs:element ref="ReqHeroMaleCaptivesBelow" minOccurs="0" />
+				<!-- Morale -->
+				<xs:element ref="ReqMoraleBelow" minOccurs="0" />
+				<xs:element ref="ReqMoraleAbove" minOccurs="0" />
+				<!-- ReqGold only for main hero -->
+				<xs:element ref="ReqGoldAbove" minOccurs="0" />
+				<xs:element ref="ReqGoldBelow" minOccurs="0" />
+				<!-- Item Specification Couple it with GiveItem -->
+				<xs:element ref="ItemToGive" minOccurs="0" />
+				<!-- Gold Specification Couple it with ChangeGold/ChangeCaptorGold -->
+				<xs:element ref="GoldTotal" minOccurs="0" />
+				<xs:element ref="CaptorGoldTotal" minOccurs="0" />
+				<!-- Number to decrease or increase based on flag -->
+				<xs:element ref="RelationTotal" minOccurs="0" />
+				<xs:element ref="MoraleTotal" minOccurs="0" />
+				<xs:element ref="HealthTotal" minOccurs="0" />
+				<xs:element ref="RenownTotal" minOccurs="0" />
+				<xs:element ref="ProstitutionTotal" minOccurs="0" />
+				<xs:element ref="SlaveryTotal" minOccurs="0" />
+				<!-- Randomized Events List -->
+				<xs:element ref="TriggerEvents" minOccurs="0" />
+				<!-- Referencing Multiple To Level -->
+				<xs:element ref="SkillsToLevel" minOccurs="0" />
+				<xs:element ref="TraitsToLevel" minOccurs="0" />
+				<!-- Requirements -->
+				<xs:element ref="SkillsRequired" minOccurs="0" />
+				<xs:element ref="TraitsRequired" minOccurs="0" />
+				<!-- Companions -->
+				<xs:element ref="Companions" minOccurs="0" />
+				<!-- StripSettings -->
+				<xs:element ref="StripSettings" minOccurs="0" />
+				<!-- BattleSettings -->
+				<xs:element ref="BattleSettings" minOccurs="0" />
+				<!-- Kingdom Options -->
+				<xs:element ref="KingdomOptions" minOccurs="0" />
+				<xs:element ref="ClanOptions" minOccurs="0" />
+				<!-- Spawn Options -->
+				<xs:element ref="SpawnTroops" minOccurs="0" />
+				<xs:element ref="SpawnHeroes" minOccurs="0" />
+				<!-- New: Delay Event -->
+				<xs:element ref="DelayEvent" minOccurs="0" />
+				<!-- New: SceneSettings -->
+				<xs:element ref="SceneSettings" minOccurs="0" />
+				<!-- New: TeleportSettings -->
+				<xs:element ref="TeleportSettings" minOccurs="0" />
+				<!-- New: DamageParty Options -->
+				<xs:element ref="DamageParty" minOccurs="0" />
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="MenuOptions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="MenuOption" minOccurs="1" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- TraitsRequired -->
+	<xs:element name="TraitRequired">
+		<xs:complexType>
+			<xs:attribute name="Id" type="xs:string" />
+			<xs:attribute name="Max" type="xs:string" />
+			<xs:attribute name="Min" type="xs:string" />
+			<!-- 
+				Captor or Hero.
+
+				"Hero" refers to Captive (In Captor/Captive Events) / Hero (In Random Events)
+				"Captive" refers to Captive (In Captor/Captive Events)
+				"Captor" refers Captor
+			-->
+			<xs:attribute name="Ref" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="TraitsRequired">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" ref="TraitRequired" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- SkillsRequired -->
+	<xs:element name="SkillRequired">
+		<xs:complexType>
+			<xs:attribute name="Id" type="xs:string" />
+			<xs:attribute name="Max" type="xs:string" />
+			<xs:attribute name="Min" type="xs:string" />
+			<!-- 
+				Captor or Hero.
+
+				"Hero" refers to Captive (In Captor/Captive Events) / Hero (In Random Events)
+				"Captive" refers to Captive (In Captor/Captive Events)
+				"Captor" refers Captor
+			-->
+			<xs:attribute name="Ref" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="SkillsRequired">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" ref="SkillRequired" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- TraitsToLevel -->
+	<xs:element name="Trait">
+		<xs:complexType>
+			<!--
+				===============================
+						HIDDEN TRAITS
+				===============================
+
+				id: Frequency
+				description: Determines how often the character may trigger certain background or passive effects.
+				hidden skill: true
+				min level: 0
+				max level: 20
+
+				id: Commander
+				description: Reflects your natural authority, battlefield leadership, and ability to coordinate troops effectively.
+				hidden skill: true
+				min level: 0
+				max level: 20
+
+				id: Surgeon
+				description: Represents your knowledge of field medicine, wound treatment, and keeping soldiers alive after battle.
+				hidden skill: true
+				min level: 0
+				max level: 20
+
+				id: Tracking
+				description: Measures your ability to read footprints, identify signs of passage, and follow individuals or groups across terrain.
+				hidden skill: true
+				min level: 0
+				max level: 20
+
+				id: Blacksmith
+				description: Represents your experience with forging weapons, repairing armor, and maintaining equipment.
+				hidden skill: true
+				min level: 0
+				max level: 20
+
+				id: SergeantCommandSkills
+				description: Indicates your capacity to train, discipline, and effectively manage small units of soldiers.
+				hidden skill: true
+				min level: 0
+				max level: 20
+
+				id: EngineerSkills
+				description: Represents your technical aptitude for siege construction, defensive works, and mechanical devices.
+				hidden skill: true
+				min level: 0
+				max level: 20
+
+				id: RogueSkills
+				description: Measures your underworld talents — stealth, deception, lockpicking, and criminal familiarity.
+				hidden skill: true
+				min level: 0
+				max level: 20
+
+				id: ScoutSkills
+				description: Reflects your ability to gather information, observe enemy movements, and navigate unknown terrain.
+				hidden skill: true
+				min level: 0
+				max level: 20
+
+				id: TraderSkills
+				description: Represents your sense for commerce — negotiation, profit margins, and evaluating goods.
+				hidden skill: true
+				min level: 0
+				max level: 20
+
+				id: Thug
+				description: Indicates a gang member specialized in extortion.
+				hidden skill: true
+				min level: 0
+				max level: 20
+
+				id: Smuggler
+				description: Indicates a gang member specialized in smuggling.
+				hidden skill: true
+				min level: 0
+				max level: 20
+
+				id: Naval Soldier
+				description: Represents your combat experience and discipline aboard ships, including boarding actions and sea-fighting techniques.
+				hidden skill: true
+				min level: 0
+				max level: 20
+
+
+				===============================
+							SHOWN TRAITS
+				===============================
+
+				id: Mercy
+				description: Mercy represents your general aversion to suffering and your willingness to help strangers or even enemies.
+				hidden skill: false
+				min level: -2
+				max level: 2
+
+				id: Valor
+				description: Valor represents your reputation for risking your life to win glory or wealth or advance your cause.
+				hidden skill: false
+				min level: -2
+				max level: 2
+
+				id: Honor
+				description: Honor represents your reputation for respecting your formal commitments, like keeping your word and obeying the law.
+				hidden skill: false
+				min level: -2
+				max level: 2
+
+				id: Generosity
+				description: Generosity represents your loyalty to your kin and those who serve you, and your gratitude to those who have done you a favor.
+				hidden skill: false
+				min level: -2
+				max level: 2
+
+				id: Calculating
+				description: Calculating represents your ability to control your emotions for the sake of your long-term interests.
+				hidden skill: false
+				min level: -2
+				max level: 2
+
+				id: PersonaCurt
+				description: Represents a terse, direct manner of speech and behavior, often perceived as blunt or impatient.
+				hidden skill: false
+				min level: -2
+				max level: 2
+
+				id: PersonaIronic
+				description: Represents a tendency toward sarcasm, wit, or mockery in dialogue and interactions.
+				hidden skill: false
+				min level: -2
+				max level: 2
+
+				id: PersonaEarnest
+				description: Represents sincerity, seriousness, and a straightforward approach to communication.
+				hidden skill: false
+				min level: -2
+				max level: 2
+
+				id: PersonaSoftspoken
+				description: Represents a gentle, quiet, and measured tone, often seen as calming or reserved.
+				hidden skill: false
+				min level: -2
+				max level: 2
+
+				id: Egalitarian
+				description: Represents a belief in power shared broadly among people, favoring fairness and equal say in governance.
+				hidden skill: false
+				min level: 0
+				max level: 20
+
+				id: Oligarchic
+				description: Reflects a preference for rule by a select group of elites, valuing stability and controlled governance.
+				hidden skill: false
+				min level: 0
+				max level: 20
+
+				id: Authoritarian
+				description: Represents a belief in strong centralized rule, strict hierarchy, and uncompromising enforcement of order.
+				hidden skill: false
+				min level: 0
+				max level: 20
+
+			-->
+			<xs:attribute name="Id" type="xs:string" />
+			<xs:attribute name="ByLevel" type="xs:string" />
+			<xs:attribute name="ByXP" type="xs:string" />
+			<!-- 
+				Captor or Hero.
+
+				"Hero" refers to Captive (In Captor/Captive Events) / Hero (In Random Events)
+				"Captive" refers to Captive (In Captor/Captive Events)
+				"Captor" refers Captor
+			-->
+			<xs:attribute name="Ref" type="xs:string" />
+			<!--
+				Default Gray
+
+				List
+				Gray
+				Black
+				White
+				Yellow
+				Magenta
+				Red
+				Green
+				Cyan
+			-->
+			<xs:attribute name="Color" type="xs:string" />
+			<xs:attribute name="HideNotification" type="xs:boolean" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="TraitsToLevel">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" ref="Trait" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- SkillsToLevel -->
+	<xs:element name="Skill">
+		<xs:complexType>
+			<!--
+				===============================
+								SKILLS
+				===============================
+
+				id: One Handed
+				description: Mastery of fighting with one-handed weapons either with a shield or without.
+				attributes: Vigor
+
+				id: Two Handed
+				description: Mastery of fighting with two-handed weapons of average length such as bigger axes and swords.
+				attributes: Vigor
+
+				id: Polearm
+				description: Mastery of the spear, lance, staff and other polearms, both one-handed and two-handed.
+				attributes: Vigor
+
+				id: Bow
+				description: Familiarity with bows and the physical conditioning required to shoot them effectively.
+				attributes: Control
+
+				id: Crossbow
+				description: Knowledge of operating and maintaining crossbows.
+				attributes: Control
+
+				id: Throwing
+				description: Mastery of throwing projectiles accurately and with power.
+				attributes: Control
+
+				id: Riding
+				description: The ability to control a horse, maintain balance during sudden movements, and general knowledge of horse care and breeding.
+				attributes: Endurance
+
+				id: Athletics
+				description: Physical fitness, speed, and balance.
+				attributes: Endurance
+
+				id: Smithing
+				description: Knowledge of forging metal, matching handles to blades, turning poles, sewing scales, and other weapon and armor construction techniques.
+				attributes: Endurance
+
+				id: Scouting
+				description: Knowledge of how to scan the wilderness for life, follow tracks, detect movement, and spot distant enemies from subtle signs.
+				attributes: Cunning
+
+				id: Tactics
+				description: Judgment of how troops will perform in contact, enabling predictions about when unconventional tactics will succeed or fail.
+				attributes: Cunning
+
+				id: Roguery
+				description: Experience with the darker side of human nature—bribery, intimidation, and knowing what you can and can't get away with.
+				attributes: Cunning
+
+				id: Charm
+				description: The ability to make people like and trust you, understand their motivations, and choose persuasive arguments.
+				attributes: Social
+
+				id: Leadership
+				description: The ability to inspire confidence in individuals and stir enthusiasm and courage in larger groups.
+				attributes: Social
+
+				id: Trade
+				description: Familiarity with common goods and their prices, spotting defective goods, and detecting shortchanging or fraud.
+				attributes: Social
+
+				id: Steward
+				description: Ability to organize groups and manage logistics, helpful for running estates, administering towns, and increasing party size.
+				attributes: Intelligence
+
+				id: Medicine
+				description: Knowledge of bleeding control, bone setting, weapon removal, wound cleaning, infection prevention, and the use of poultices.
+				attributes: Intelligence
+
+				id: Engineering
+				description: Knowledge of constructing durable structures and building siege devices capable of withstanding or delivering powerful forces.
+				attributes: Intelligence
+
+				id: Mariner
+				description: Enhances combat prowess during naval engagements and improves tactical leadership and troop effectiveness at sea.
+				attributes: Endurance, Cunning
+
+				id: Boatswain
+				description: Governs crew wellbeing and discipline and maintains ship combat readiness, including rigging and supplies.
+				attributes: Control, Social
+
+				id: Shipmaster
+				description: Improves navigation, naval siege engine effectiveness, and the quality and speed of ship repairs and upgrades.
+				attributes: Vigor, Intelligence
+			-->
+			<xs:attribute name="Id" type="xs:string" />
+			<xs:attribute name="ByLevel" type="xs:string" />
+			<xs:attribute name="ByXP" type="xs:string" />
+			<!-- 
+				Captor or Hero.
+
+				"Hero" refers to Captive (In Captor/Captive Events) / Hero (In Random Events)
+				"Captive" refers to Captive (In Captor/Captive Events)
+				"Captor" refers Captor
+			-->
+			<xs:attribute name="Ref" type="xs:string" />
+			<!--
+				Default Gray
+
+				List
+				Gray
+				Black
+				White
+				Yellow
+				Magenta
+				Red
+				Green
+				Cyan
+			-->
+			<xs:attribute name="Color" type="xs:string" />
+			<xs:attribute name="HideNotification" type="xs:boolean" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="SkillsToLevel">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" ref="Skill" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- TriggerEvents -->
+	<xs:element name="TriggerEvent">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="EventName" minOccurs="1" maxOccurs="1" type="xs:string" />
+				<!-- Overwrites the event's WeightedChanceOfOccurring if not provided uses that -->
+				<xs:element name="EventWeight" minOccurs="0" maxOccurs="1" type="xs:string" />
+				<!-- 
+						Use the event conditions of events before deciding to add it to the randomized list.
+
+						"True" to enable all conditions on the event.
+						"False" or missing to disable condition checkers.
+
+						Work in progress
+					-->
+				<xs:element
+					name="EventUseConditions"
+					minOccurs="0"
+					maxOccurs="1"
+					type="xs:string"
+				/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="TriggerEvents">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" ref="TriggerEvent" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- KingdomOptions -->
+	<xs:element name="KingdomOption">
+		<xs:complexType>
+			<!-- 
+				Captor or Hero Reference
+
+				"Hero" refers to Captive (In Captor/Captive Events) / Hero (In Random Events)
+				"Captor" refers Captor
+			-->
+			<xs:attribute name="Ref" type="xs:string" />
+			<!--
+				"Leave" ref leaves their kingdom
+				"Join" ref join a kingdom as a noble
+				"JoinAsMercenary" ref joins a kingdom as mercenary
+			-->
+			<xs:attribute name="Action" type="xs:string" />
+			<!--
+				"Random" - Random Kingdom
+				"Hero" - Hero's Kingdom
+				"Captor" - Captor's Kingdom
+				"Settlement" - Current Settlement's Kingdom
+			-->
+			<xs:attribute name="Kingdom" type="xs:string" />
+			<xs:attribute name="HideNotification" type="xs:boolean" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="KingdomOptions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" ref="KingdomOption" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- ClanOptions -->
+	<xs:element name="ClanOption">
+		<xs:complexType>
+			<!-- 
+				Captor or Hero Reference.
+
+				"Hero" refers to Captive (In Captor/Captive Events) / Hero (In Random Events)
+				"Captor" refers Captor
+			-->
+			<xs:attribute name="Ref" type="xs:string" />
+			<!--
+				"Join" ref join a Clan
+				"JoinAsLeader" ref join a Clan as Leader
+				"Adopted" ref join a Clan with Mother/Father as Leader
+				"AdoptedAsLeader" ref join a Clan as Leader with Mother/Father as previous Leader
+
+			-->
+			<xs:attribute name="Action" type="xs:string" />
+			<!--
+				"Random" - Random Clan
+				"New" - New Clan
+				"Hero" - Hero's Clan
+				"Captor" - Captor's Clan
+				"Settlement" - Current Settlement's Clan
+			-->
+			<xs:attribute name="Clan" type="xs:string" />
+			<xs:attribute name="HideNotification" type="xs:boolean" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="ClanOptions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" ref="ClanOption" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Progress Event Settings for Progress Event Option of Player -->
+	<xs:element name="ProgressEvent">
+		<xs:complexType>
+			<xs:sequence>
+				<!-- If the Party should stop Moving -->
+				<xs:element
+					name="ShouldStopMoving"
+					minOccurs="0"
+					maxOccurs="1"
+					type="xs:boolean"
+				/>
+				<!-- 
+					Display Mode 
+					0 - Show Only Progress
+					1 - Show Progress And Hours
+					2 - Hide Progress And Hours
+				-->
+				<xs:element
+					name="DisplayProgressMode"
+					minOccurs="0"
+					maxOccurs="1"
+					type="xs:string"
+				/>
+				<!-- Time in Hours it should take to complete event -->
+				<xs:element name="TimeToTake" minOccurs="0" maxOccurs="1" type="xs:string" />
+				<!-- Trigger Event After -->
+				<xs:element name="TriggerEventName" minOccurs="0" type="xs:string" />
+				<!-- Randomized Events List -->
+				<xs:element ref="TriggerEvents" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Delay Event Settings -->
+	<xs:element name="DelayEvent">
+		<xs:complexType>
+			<xs:sequence>
+				<!-- 
+					Use the event conditions of events before deciding to add it to the randomized list.
+
+					"Name of Conditional Event" to reference conditions.
+					"False" or missing to disable condition checkers.
+
+					Work in progress
+				-->
+				<xs:element name="UseConditions" minOccurs="0" maxOccurs="1" type="xs:string" />
+				<!-- Time in Hours it should take to fire this event (In Game Hours) -->
+				<xs:element name="TimeToTake" minOccurs="0" maxOccurs="1" type="xs:string" />
+				<!-- Trigger Event After -->
+				<xs:element name="TriggerEventName" minOccurs="0" type="xs:string" />
+				<!-- Randomized Events List -->
+				<xs:element ref="TriggerEvents" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!--Randomized
+	Background -->
+	<xs:element name="Background">
+		<xs:complexType>
+			<xs:attribute name="Name" type="xs:string" />
+			<!-- 
+				Overwrites the backgrounds's WeightedChanceOfOccurring if not provided uses that
+			-->
+			<xs:attribute name="Weight" type="xs:string" />
+			<!-- 
+				Use the event conditions of events before deciding to add it to the randomized list.
+
+				"Name of Conditional Event" to reference conditions.
+				"False" or missing to disable condition checkers.
+
+				Work in progress
+			-->
+			<xs:attribute name="UseConditions" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Backgrounds">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" ref="Background" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Companions  -->
+	<xs:element name="Companion">
+		<xs:complexType>
+			<!-- 
+				Apply Consquences If used in an Option
+			-->
+			<xs:all>
+				<xs:element ref="MultipleRestrictedListOfConsequences" minOccurs="0" />
+				<!-- moved to options overrides the one in events if one exists .. -->
+				<xs:element ref="PregnancyRiskModifier" minOccurs="0" />
+				<xs:element ref="EscapeChance" minOccurs="0" />
+				<!-- Gold Specification Couple it with ChangeGold/ChangeCaptorGold -->
+				<xs:element ref="GoldTotal" minOccurs="0" />
+				<xs:element ref="CaptorGoldTotal" minOccurs="0" />
+				<!-- Number to decrease or increase based on flag -->
+				<xs:element ref="RelationTotal" minOccurs="0" />
+				<xs:element ref="MoraleTotal" minOccurs="0" />
+				<xs:element ref="HealthTotal" minOccurs="0" />
+				<xs:element ref="RenownTotal" minOccurs="0" />
+				<!-- Referencing Multiple To Level -->
+				<xs:element ref="SkillsToLevel" minOccurs="0" />
+				<xs:element ref="TraitsToLevel" minOccurs="0" />
+				<!-- Kingdom Options -->
+				<xs:element ref="KingdomOptions" minOccurs="0" />
+				<xs:element ref="ClanOptions" minOccurs="0" />
+			</xs:all>
+			<!-- 
+				Custom ID
+			-->
+			<xs:attribute name="Id" type="xs:string" />
+			<!-- 
+				Captor or Hero.
+
+				"Hero" refers to Captive (In Captor/Captive Events) / Hero (In Random Events)
+				"Captor" refers Captor
+			-->
+			<xs:attribute name="Ref" type="xs:string" />
+			<!-- 
+				Will check if Ref has a spouse and a Companion
+				Indicates Type of Companion
+				"Spouse" - Ref's Spouse
+				"Companion" - Ref's Companion (Will loop through Ref's Companions if Use Conditions is found)
+				"Both" - Ref's Both Spouse and Companions
+			-->
+			<xs:attribute name="Type" type="xs:string" />
+			<!-- 
+				Will check if Ref has a spouse and a Companion
+				Indicates Type of Companion
+				"Prisoner" - Prisoner in another party
+				"Party" - In their own Party
+				"Settlement" - In Settlement
+				"Any" - Any Locations (Default)
+				"Current Prisoner" - Prisoner in current party
+				"Current" - Ref's Party
+			-->
+			<xs:attribute name="Location" type="xs:string" />
+			<!-- 
+				Use the event conditions of events before deciding to add it to the randomized list.
+
+				"Name of Conditional Event" to reference conditions.
+				"False" or missing to disable condition checkers.
+
+				Work in progress
+			-->
+			<xs:attribute name="UseOtherConditions" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Companions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" ref="Companion" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Option">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="Order" type="xs:string" />
+				<!-- The code effect, use RestrictedListOfConsequences  -->
+				<xs:element ref="MultipleRestrictedListOfConsequences" />
+				<!-- The text result show to user .. -->
+				<xs:element name="OptionText" type="xs:string" />
+				<!-- Triggers another event that matches this name, make sure it catches exceptions
+				gracefully and finishes quietly to log .. -->
+				<xs:element name="TriggerEventName" minOccurs="0" type="xs:string" />
+				<!-- Sound To Play -->
+				<xs:element ref="SoundName" minOccurs="0" maxOccurs="1" />
+				<!-- Scene To Play -->
+				<xs:element ref="SceneToPlay" minOccurs="0" maxOccurs="1" />
+				<!-- moved to options overrides the one in events if one exists .. -->
+				<xs:element ref="PregnancyRiskModifier" minOccurs="0" />
+				<xs:element ref="EscapeChance" minOccurs="0" maxOccurs="1" />
+				<!-- BETA: finds given item by stringid in itemroster of captive (HeroParty) or
+				captor (CaptorParty) -->
+				<xs:element ref="ReqHeroPartyHaveItem" minOccurs="0" />
+				<xs:element ref="ReqCaptorPartyHaveItem" minOccurs="0" />
+				<!-- Required Levels -->
+				<xs:element ref="ReqHeroHealthBelowPercentage" minOccurs="0" />
+				<xs:element ref="ReqHeroHealthAbovePercentage" minOccurs="0" />
+				<xs:element ref="ReqHeroCaptorRelationAbove" minOccurs="0" />
+				<xs:element ref="ReqHeroCaptorRelationBelow" minOccurs="0" />
+				<xs:element ref="ReqHeroProstituteLevelAbove" minOccurs="0" />
+				<xs:element ref="ReqHeroProstituteLevelBelow" minOccurs="0" />
+				<xs:element ref="ReqHeroSlaveLevelAbove" minOccurs="0" />
+				<xs:element ref="ReqHeroSlaveLevelBelow" minOccurs="0" />
+				<!-- ReqTroops && ReqCaptives -->
+				<xs:element ref="ReqTroopsAbove" minOccurs="0" />
+				<xs:element ref="ReqTroopsBelow" minOccurs="0" />
+				<xs:element ref="ReqCaptivesAbove" minOccurs="0" />
+				<xs:element ref="ReqCaptivesBelow" minOccurs="0" />
+				<xs:element ref="ReqFemaleTroopsAbove" minOccurs="0" />
+				<xs:element ref="ReqFemaleTroopsBelow" minOccurs="0" />
+				<xs:element ref="ReqFemaleCaptivesAbove" minOccurs="0" />
+				<xs:element ref="ReqFemaleCaptivesBelow" minOccurs="0" />
+				<xs:element ref="ReqMaleTroopsAbove" minOccurs="0" />
+				<xs:element ref="ReqMaleTroopsBelow" minOccurs="0" />
+				<xs:element ref="ReqMaleCaptivesAbove" minOccurs="0" />
+				<xs:element ref="ReqMaleCaptivesBelow" minOccurs="0" />
+				<!-- ReqHeroTroops && ReqHeroCaptives -->
+				<xs:element ref="ReqHeroTroopsAbove" minOccurs="0" />
+				<xs:element ref="ReqHeroTroopsBelow" minOccurs="0" />
+				<xs:element ref="ReqHeroCaptivesAbove" minOccurs="0" />
+				<xs:element ref="ReqHeroCaptivesBelow" minOccurs="0" />
+				<xs:element ref="ReqHeroFemaleTroopsAbove" minOccurs="0" />
+				<xs:element ref="ReqHeroFemaleTroopsBelow" minOccurs="0" />
+				<xs:element ref="ReqHeroFemaleCaptivesAbove" minOccurs="0" />
+				<xs:element ref="ReqHeroFemaleCaptivesBelow" minOccurs="0" />
+				<xs:element ref="ReqHeroMaleTroopsAbove" minOccurs="0" />
+				<xs:element ref="ReqHeroMaleTroopsBelow" minOccurs="0" />
+				<xs:element ref="ReqHeroMaleCaptivesAbove" minOccurs="0" />
+				<xs:element ref="ReqHeroMaleCaptivesBelow" minOccurs="0" />
+				<!-- Morale -->
+				<xs:element ref="ReqMoraleBelow" minOccurs="0" />
+				<xs:element ref="ReqMoraleAbove" minOccurs="0" />
+				<!-- ReqGold only for main hero -->
+				<xs:element ref="ReqGoldAbove" minOccurs="0" />
+				<xs:element ref="ReqGoldBelow" minOccurs="0" />
+				<!-- Item Specification Couple it with GiveItem -->
+				<xs:element ref="ItemToGive" minOccurs="0" />
+				<!-- Gold Specification Couple it with ChangeGold/ChangeCaptorGold -->
+				<xs:element ref="GoldTotal" minOccurs="0" />
+				<xs:element ref="CaptorGoldTotal" minOccurs="0" />
+				<!-- Number to decrease or increase based on flag -->
+				<xs:element ref="RelationTotal" minOccurs="0" />
+				<xs:element ref="MoraleTotal" minOccurs="0" />
+				<xs:element ref="HealthTotal" minOccurs="0" />
+				<xs:element ref="RenownTotal" minOccurs="0" />
+				<xs:element ref="ProstitutionTotal" minOccurs="0" />
+				<xs:element ref="SlaveryTotal" minOccurs="0" />
+				<!-- Randomized Events List -->
+				<xs:element ref="TriggerEvents" minOccurs="0" />
+				<!-- Referencing Multiple To Level -->
+				<xs:element ref="SkillsToLevel" minOccurs="0" />
+				<xs:element ref="TraitsToLevel" minOccurs="0" />
+				<!-- Requirements -->
+				<xs:element ref="SkillsRequired" minOccurs="0" />
+				<xs:element ref="TraitsRequired" minOccurs="0" />
+				<!-- Companions -->
+				<xs:element ref="Companions" minOccurs="0" />
+				<!-- StripSettings -->
+				<xs:element ref="StripSettings" minOccurs="0" />
+				<!-- BattleSettings -->
+				<xs:element ref="BattleSettings" minOccurs="0" />
+				<!-- Kingdom Options -->
+				<xs:element ref="KingdomOptions" minOccurs="0" />
+				<xs:element ref="ClanOptions" minOccurs="0" />
+				<!-- Spawn Options -->
+				<xs:element ref="SpawnTroops" minOccurs="0" />
+				<xs:element ref="SpawnHeroes" minOccurs="0" />
+				<!-- New: Delay Event -->
+				<xs:element ref="DelayEvent" minOccurs="0" />
+				<!-- New: SceneSettings -->
+				<xs:element ref="SceneSettings" minOccurs="0" />
+				<!-- New: TeleportSettings -->
+				<xs:element ref="TeleportSettings" minOccurs="0" />
+				<!-- New: DamageParty Options -->
+				<xs:element ref="DamageParty" minOccurs="0" />
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Options">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" ref="Option" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- <UNIMPLEMENTED> -->
+	<!-- This being false means its a 'fastgamemenu' that requires no delegate function calls -->
+	<xs:element name="ReqCustomCode" type="xs:boolean" />
+	<xs:element name="CanOnlyHappenNrOfTimes" type="xs:string" />
+	<!-- </UNIMPLEMENTED> -->
+
+	<xs:element name="SceneToPlay" type="xs:string" />
+
+	<!-- The Group Number on which to call, EX. if OrderToCall is set to 1 and there is several
+	events that meet the conditions and are also set to 1 the mod will pick from those events -->
+	<xs:element name="OrderToCall" type="xs:string" />
+
+	<!-- Aka is it adult content or not -->
+	<xs:element name="SexualContent" type="xs:boolean" />
+
+	<!-- <UNIMPLEMENTED> -->
+	<!-- If ReqCustomCode is false and the event is a 'fastgamemenu', then these are all needed to
+	generate the event -->
+	<!-- Should be short-->
+	<xs:element name="AgreeText" type="xs:string" />
+	<!-- If player can choose to avoid resulttext, triggers cancel text -->
+	<xs:element name="IsCancelOptional" type="xs:boolean" />
+	<!-- Should be short-->
+	<xs:element name="CancelText" type="xs:string" />
+	<!-- Can be longer -->
+	<xs:element name="AgreeResultText" type="xs:string" />
+	<!-- </UNIMPLEMENTED> -->
+
+
+	<!-- Optional elements of each event NOTE that some of these flags might be irrelevant if the
+	ReqCustomCode is false and the event is a simple aka 'fastgamemenu' event -->
+	<xs:element name="PregnancyRiskModifier" type="xs:string" />
+	<xs:element name="EscapeChance" type="xs:string" />
+	<xs:element name="WeightedChanceOfOccurring" type="xs:string" />
+
+	<!-- Many requirement element have been made into flags  -->
+	<xs:element name="ReqHeroMinAge" type="xs:string" />
+	<xs:element name="ReqHeroMaxAge" type="xs:string" />
+
+	<!-- Beta: Minor Issues -->
+	<xs:element name="ReqCaptorPartyHaveItem" type="xs:string" />
+	<xs:element name="ReqHeroPartyHaveItem" type="xs:string" />
+
+	<!-- Regular Requirements -->
+	<xs:element name="ReqHeroHealthBelowPercentage" type="xs:string" />
+	<xs:element name="ReqHeroHealthAbovePercentage" type="xs:string" />
+	<xs:element name="ReqHeroCaptorRelationAbove" type="xs:string" />
+	<xs:element name="ReqHeroCaptorRelationBelow" type="xs:string" />
+	<xs:element name="ReqHeroProstituteLevelAbove" type="xs:string" />
+	<xs:element name="ReqHeroProstituteLevelBelow" type="xs:string" />
+	<xs:element name="ReqHeroSlaveLevelAbove" type="xs:string" />
+	<xs:element name="ReqHeroSlaveLevelBelow" type="xs:string" />
+
+	<!-- ReqTroops && ReqCaptives -->
+	<xs:element name="ReqTroopsAbove" type="xs:string" />
+	<xs:element name="ReqTroopsBelow" type="xs:string" />
+	<xs:element name="ReqCaptivesAbove" type="xs:string" />
+	<xs:element name="ReqCaptivesBelow" type="xs:string" />
+	<xs:element name="ReqFemaleTroopsAbove" type="xs:string" />
+	<xs:element name="ReqFemaleTroopsBelow" type="xs:string" />
+	<xs:element name="ReqFemaleCaptivesAbove" type="xs:string" />
+	<xs:element name="ReqFemaleCaptivesBelow" type="xs:string" />
+	<xs:element name="ReqMaleTroopsAbove" type="xs:string" />
+	<xs:element name="ReqMaleTroopsBelow" type="xs:string" />
+	<xs:element name="ReqMaleCaptivesAbove" type="xs:string" />
+	<xs:element name="ReqMaleCaptivesBelow" type="xs:string" />
+
+	<!-- ReqHeroTroops && ReqHeroCaptives -->
+	<xs:element name="ReqHeroTroopsAbove" type="xs:string" />
+	<xs:element name="ReqHeroTroopsBelow" type="xs:string" />
+	<xs:element name="ReqHeroCaptivesAbove" type="xs:string" />
+	<xs:element name="ReqHeroCaptivesBelow" type="xs:string" />
+	<xs:element name="ReqHeroFemaleTroopsAbove" type="xs:string" />
+	<xs:element name="ReqHeroFemaleTroopsBelow" type="xs:string" />
+	<xs:element name="ReqHeroFemaleCaptivesAbove" type="xs:string" />
+	<xs:element name="ReqHeroFemaleCaptivesBelow" type="xs:string" />
+	<xs:element name="ReqHeroMaleTroopsAbove" type="xs:string" />
+	<xs:element name="ReqHeroMaleTroopsBelow" type="xs:string" />
+	<xs:element name="ReqHeroMaleCaptivesAbove" type="xs:string" />
+	<xs:element name="ReqHeroMaleCaptivesBelow" type="xs:string" />
+
+	<!-- Gold Required -->
+	<xs:element name="ReqGoldAbove" type="xs:string" />
+	<xs:element name="ReqGoldBelow" type="xs:string" />
+	<xs:element name="ReqMoraleAbove" type="xs:string" />
+	<xs:element name="ReqMoraleBelow" type="xs:string" />
+	<!-- 
+		Can be looped
+	-->
+	<xs:element name="ItemToGive" type="xs:string" />
+	<!-- 
+		RANDOMIZE 
+		<GoldTotal>R 0 10</GoldTotal> to randomize between 0 and 10
+		<SkillTotal>R -10 40</SkillTotal> to randomize between -10 and 40
+	-->
+	<xs:element name="GoldTotal" type="xs:string" />
+	<xs:element name="CaptorGoldTotal" type="xs:string" />
+	<xs:element name="RelationTotal" type="xs:string" />
+	<xs:element name="MoraleTotal" type="xs:string" />
+	<xs:element name="HealthTotal" type="xs:string" />
+	<xs:element name="RenownTotal" type="xs:string" />
+	<xs:element name="ProstitutionTotal" type="xs:string" />
+	<xs:element name="SlaveryTotal" type="xs:string" />
+
+</xs:schema>

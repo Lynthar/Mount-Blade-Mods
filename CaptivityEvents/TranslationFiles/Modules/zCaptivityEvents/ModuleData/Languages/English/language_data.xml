@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData id="English">
+  <LanguageFile xml_path="English/ModuleStrings.xml" />
+  <LanguageFile xml_path="English/ModuleBrothel.xml" />
+  <LanguageFile xml_path="English/ModuleSettings.xml" />
+  <LanguageFile xml_path="English/DefaultCaptorRequiredEventsMale.xml" />
+  <LanguageFile xml_path="English/DefaultCaptorRequiredEventsFemale.xml" />
+  <LanguageFile xml_path="English/DefaultCaptiveRequiredSFWEventsMale.xml" />
+  <LanguageFile xml_path="English/DefaultCaptiveRequiredSFWEventsFemale.xml" />
+  <LanguageFile xml_path="English/DefaultCaptiveRequiredNSFWEventsMale.xml" />
+  <LanguageFile xml_path="English/DefaultCaptiveRequiredNSFWEventsFemale.xml" />
+</LanguageData>

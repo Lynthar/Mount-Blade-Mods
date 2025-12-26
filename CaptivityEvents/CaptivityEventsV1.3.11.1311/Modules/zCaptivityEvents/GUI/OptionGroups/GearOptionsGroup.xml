@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- GearOptionsGroup.xml: Stolen gear and equipment mechanics -->
+<OptionsGroupDefinition GroupId="GearOptions">
+    <Options>
+        <OptionsItem OptionId="StolenGear" DisplayName="Stolen Gear System" Description="Enable captives losing gear when captured." DefaultValue="true" Type="Boolean" />
+        <OptionsItem OptionId="StolenGearQuest" DisplayName="Stolen Gear Quest" Description="Create quest to recover stolen gear." DefaultValue="true" Type="Boolean" />
+        <OptionsItem OptionId="StolenGearDuration" DisplayName="Gear Quest Duration (Days)" Description="Days before stolen gear quest expires." DefaultValue="10" Type="Numeric" Min="1" Max="30" />
+        <OptionsItem OptionId="StolenGearChance" DisplayName="Stolen Gear Chance (%)" Description="Percent chance (0-100) gear is stolen on capture." DefaultValue="99.9" Type="Numeric" Min="0" Max="100" Step="0.1" />
+        <OptionsItem OptionId="BetterOutFitChance" DisplayName="Better Outfit Chance (%)" Description="Percent chance (0-100) captive gets better outfit." DefaultValue="25" Type="Numeric" Min="0" Max="100" />
+        <OptionsItem OptionId="WeaponChance" DisplayName="Weapon Chance (%)" Description="Percent chance (0-100) captive gains weapon." DefaultValue="75" Type="Numeric" Min="0" Max="100" />
+        <OptionsItem OptionId="WeaponBetterChance" DisplayName="Better Weapon Chance (%)" Description="Percent chance (0-100) weapon is improved tier." DefaultValue="20" Type="Numeric" Min="0" Max="100" />
+        <OptionsItem OptionId="WeaponSkill" DisplayName="Weapon Skill Boost" Description="Captive gains weapon skill levels." DefaultValue="true" Type="Boolean" />
+        <OptionsItem OptionId="RangedBetterChance" DisplayName="Ranged Weapon Chance (%)" Description="Percent chance (0-100) ranged weapon instead of melee." DefaultValue="5" Type="Numeric" Min="0" Max="100" />
+        <OptionsItem OptionId="RangedSkill" DisplayName="Ranged Skill Boost" Description="Captive gains ranged skill levels." DefaultValue="true" Type="Boolean" />
+        <OptionsItem OptionId="HorseChance" DisplayName="Horse Chance (%)" Description="Percent chance (0-100) captive gains horse." DefaultValue="10" Type="Numeric" Min="0" Max="100" />
+        <OptionsItem OptionId="HorseSkill" DisplayName="Horse Skill Boost" Description="Captive gains horse riding skill levels." DefaultValue="true" Type="Boolean" />
+        <OptionsItem OptionId="EventCaptorGearCaptives" DisplayName="Captor Gear Captives" Description="Captives gain gear during captor events." DefaultValue="true" Type="Boolean" />
+        <OptionsItem OptionId="EventProstituteGear" DisplayName="Prostitute Gear" Description="Prostitutes gain special outfit gear." DefaultValue="true" Type="Boolean" />
+    </Options>
+</OptionsGroupDefinition>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema" type="string">
+  <tags>
+    <tag language="English" />
+  </tags>
+  <strings>
+    <string id="DefaultCaptorEventsCommon27" text="Pirate sails spotted on the horizon! Your crew prepares for combat as the enemy vessel closes in. Your prisoners could be used as hostages, or they might need to help defend the ship if the situation becomes desperate." />
+    <string id="DefaultCaptorEventsCommon28" text="Prepare for naval combat." />
+    <string id="DefaultCaptorEventsCommon29" text="Arm prisoners to help defend." />
+    <string id="DefaultCaptorEventsCommon30" text="Attempt to outrun them." />
+    <string id="DefaultCaptorEventsCommon31" text="Dense fog rolls in, reducing visibility to almost nothing. You could press forward using your navigation skills, wait it out safely, or risk having prisoners navigate using their knowledge of these waters." />
+    <string id="DefaultCaptorEventsCommon32" text="Navigate through using your skills." />
+    <string id="DefaultCaptorEventsCommon33" text="Trust a prisoner's local knowledge." />
+    <string id="DefaultCaptorEventsCommon34" text="Wait for the fog to clear." />
+    <string id="DefaultCaptorEventsCommon35" text="Your ship encounters a merchant vessel in distress. They offer valuable cargo in exchange for assistance. However, your prisoners might slow the rescue operation, and some cargo appears suspicious." />
+    <string id="DefaultCaptorEventsCommon36" text="Help them and take the reward." />
+    <string id="DefaultCaptorEventsCommon37" text="Salvage what you can quickly." />
+    <string id="DefaultCaptorEventsCommon38" text="Sail on - too risky." />
+  </strings>
+</base>

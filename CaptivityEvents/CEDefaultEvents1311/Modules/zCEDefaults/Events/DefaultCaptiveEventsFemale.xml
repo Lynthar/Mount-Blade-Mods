@@ -1,0 +1,1730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CEEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../zCaptivityEvents/ModuleLoader/CaptivityRequired/Events/CEEventsModal.xsd">
+    
+    <!-- ===================================================================== -->
+    <!-- DEFAULT CAPTIVE EVENTS - FEMALE                                      -->
+    <!-- Events that trigger when a female hero is captured                   -->
+    <!-- RECOMMEND REPLACING THIS FILE WITH YOUR OWN EVENTS                   -->
+    <!-- ===================================================================== -->
+    
+    <!-- #region All Locations -->
+    <!-- Events that can occur in any location while captured -->
+    <CEEvent>
+        <Name>CE_common_captivity_interest</Name>
+        <Text>{=DefaultCaptiveEventsFemale1}You find it difficult not to notice that your captors have been staring at you more than usual, and their lewd gestures and sinister chuckles leave little doubt as to the intent behind their attentions. You're sure they won't be content with just looking for much longer, and don't particularly fancy the sort of treatment they seem to have in mind. You need to escape soon, or suffer the fate you know quite well awaits a buxom woman helpless to resist her captors.</Text>
+        <BackgroundName></BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorGenderIsMale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale2}Accept your fate.</OptionText>
+                <HealthTotal>R 10 20</HealthTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale3}Attempt to escape.</OptionText>
+                <ReqHeroHealthAbovePercentage>20</ReqHeroHealthAbovePercentage>
+                <RelationTotal>-5</RelationTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>70</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region LocationTravellingParty -->
+    <!-- Events while traveling with captors on the road -->
+    <CEEvent>
+        <Name>CE_common_sexual_three</Name>
+        <Text>{=DefaultCaptiveEventsFemale4}Your captor's men seem particularly randy today, and though you try to stay out of their way a group of them surround you, trapping you against a nearby tree. They begin to caress every part of your body, rubbing your thighs and breasts, and one of them roughly plants a kiss on your quivering lips. The gentle caresses quickly become rough groping, and you squeal in protest as your legs are parted and one of them begins sliding a finger up and down your sex.</Text>
+        <BackgroundName></BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorGenderIsMale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale5}Just let it happen.</OptionText>
+                <TriggerEventName>CE_common_sexual_three_next</TriggerEventName>
+                <RenownTotal>R -1 0</RenownTotal>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="50" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale6}Scream and attempt to flee.</OptionText>
+                <ReqHeroHealthAbovePercentage>20</ReqHeroHealthAbovePercentage>
+                <RelationTotal>-5</RelationTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>60</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_common_sexual_three_next</Name>
+        <Text>{=DefaultCaptiveEventsFemale7}The first takes you up against a tree, briefly thrusting before he collapses, shuddering in ecstasy. You're forced down onto the second one's shaft, and his strong hands hold you there as he bucks beneath you, pouring himself deep into your flower. The last of them is near bursting, and wastes no time in shoving you to the ground, taking your pussy from behind with obscene slapping noises. It takes maybe ten seconds for him to spill his seed, and as he pulls out of you a trail of semen flows from your twitching sex.</Text>
+        <BackgroundName>CE_DCEF_female_5</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationRisk</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale8}Try to clean yourself off.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>30</PregnancyRiskModifier>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_common_sleep</Name>
+        <Text>{=DefaultCaptiveEventsFemale9}You wake up after a brief nap to the sight of a bright purple cock not six inches from your nose. You try to move, but your captor grasps your neck with his other hand and continues masturbating to the sight of your gorgeous body. Aroused by your reaction, it's not long before he emits a thunderous roar, spurting several streams of salty liquid onto your face and breasts.</Text>
+        <BackgroundName>CE_DCEF_female_13</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorGenderIsMale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale10}Silently wipe the cum off your face.</OptionText>
+                <HealthTotal>R 10 20</HealthTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>5</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_common_drunkflirt</Name>
+        <Text>{=DefaultCaptiveEventsFemale11}Your captors have procured an entire barrel of strong mead, and the group of guards next to you are celebrating by drinking themselves into a stupor. They take turns making ribald and frankly lewd suggestions to you, each of them taking the opportunity to make a poorly-concealed attempt to grope your breasts and buttocks.</Text>
+        <BackgroundName></BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorGenderIsMale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale12}Ignore them.</OptionText>
+                <HealthTotal>R 10 20</HealthTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_common_screaming</Name>
+        <Text>{=DefaultCaptiveEventsFemale13}Piercing screams fill the area as you hear another captive being brutally beaten. She's obviously not used to this abuse, crying openly as her breasts and buttocks are covered in fresh cuts and bruises. Your captors find her torment quite entertaining, and the woman's expression as she looks up into their laughing, merciless faces is one of absolute, uncompromising despair.</Text>
+        <BackgroundName>CE_DCEC_female_10</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorGenderIsMale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale14}Try to stay calm.</OptionText>
+                <HealthTotal>R 10 20</HealthTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_common_coercion</Name>
+        <Text>{=DefaultCaptiveEventsFemale15}Two of your captor's men stop by with a mouthwatering helping of beer and food, but they don't seem to be willing to give it to you just yet. One of them combs through your hair, unintentionally smearing his grime into it as he compliments your shapely body, while the other begins petting your thighs, trailing his fingers from your thighs up towards your chest, slowly lifting the rags that serve as your shirt and exposing your breasts.</Text>
+        <BackgroundName>CE_DCEF_female_8</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorGenderIsMale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationRisk</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale16}Submit to their advances.</OptionText>
+                <TriggerEventName>CE_common_coercion_continued</TriggerEventName>
+                <RenownTotal>R -1 0</RenownTotal>
+                <RelationTotal>1</RelationTotal>
+                <HealthTotal>R 10 20</HealthTotal>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="40" Ref="Hero" />
+                    <Skill Id="Medicine" ByXP="30" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale17}Order them to leave you alone.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_common_coercion_continued_next</EventName>
+                        <EventWeight>10</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_common_coercion_continued_next_success</EventName>
+                        <EventWeight>50</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+                <RelationTotal>-1</RelationTotal>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale18}Try to shake them off and flee.</OptionText>
+                <ReqHeroHealthAbovePercentage>20</ReqHeroHealthAbovePercentage>
+                <RelationTotal>-5</RelationTotal>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <EscapeChance>40</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_common_coercion_continued</Name>
+        <Text>{=DefaultCaptiveEventsFemale19}You moan sensuously, giving in to either hunger or arousal. The larger man pulls a titanic shaft from his pants and lifts you into the air, guiding your womanhood onto its tip. His companion gasps in contentment as you begin to stroke his cock, then grabs your hair, pushing it into your mouth. You wrap your tongue around it and take him between your lips. They leave you filled front and back, a river of semen pouring from your widened hole as they walk away.</Text>
+        <BackgroundName>CE_DCEF_female_15</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale20}Eat the food they provided.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_common_coercion_continued_next</Name>
+        <Text>{=DefaultCaptiveEventsFemale21}The pair angrily push you to the ground. The larger man guides his titanic manhood into your cleft, painfully tearing your defenseless insides and pushing agonizingly into your cervix. The other man takes position at your mouth and begins ravishing your throat as you try not to choke. You writhe, arms held helplessly at your side by the big man's massive hands as you are violently fucked into submission, leaving both your ends dripping with cum.</Text>
+        <BackgroundName>CE_DCEF_female_15</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationRisk</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale22}Continue.</OptionText>
+                <RenownTotal>R -1 0</RenownTotal>
+                <HealthTotal>-20</HealthTotal>
+                <SkillsToLevel>
+                    <Skill Id="Medicine" ByXP="60" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_common_coercion_continued_next_success</Name>
+        <Text>{=DefaultCaptiveEventsFemale23}Something in your tone of voice gives them pause, and they quickly stop their attentions, leaving the meal for you to enjoy without giving you any more trouble. One of them looks back wistfully as they leave, clearly infatuated with you, but sighs in dejection and turns to walk away.</Text>
+        <Backgrounds>
+            <Background Name="CE_DCEC_general_2" Weight="1" UseConditions="CE_captured_general" />
+        </Backgrounds>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale24}Eat your well-earned meal.</OptionText>
+                <RenownTotal>R 0 1</RenownTotal>
+                <HealthTotal>R 10 20</HealthTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_common_femdom</Name>
+        <Text>{=DefaultCaptiveEventsFemale25}Your captor invites you to her tent and you follow, cautiously. You find her sitting on her bed, her dress hiked up over her legs, rubbing her pussy with one hand and holding a bottle of wine in her other. You start to realize why you are here and turn to leave, but it seems the guards have moved into place behind you; though they're facing the other direction, you get the distinct impression they will not look favorably upon any attempts to escape.</Text>
+        <BackgroundName>default_female</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Femdom</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale26}Kneel down and crawl over to her.</OptionText>
+                <TriggerEventName>CE_common_femdom_continued</TriggerEventName>
+                <RenownTotal>R -1 0</RenownTotal>
+                <RelationTotal>5</RelationTotal>
+                <HealthTotal>R 10 20</HealthTotal>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="50" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale27}Attack her!</OptionText>
+                <ReqHeroHealthAbovePercentage>20</ReqHeroHealthAbovePercentage>
+                <RelationTotal>-5</RelationTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>40</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_common_femdom_continued</Name>
+        <Text>{=DefaultCaptiveEventsFemale28}Your captor smiles as you approach, spreading her legs invitingly, but as you get closer she grabs you painfully by the hair and pours half the bottle of wine down your throat. Your head begins to spin, and she guides your mouth to her cleft. You do your best to satisfy her with your tongue, and she uses her legs to pull your face tighter into her. After a bout of frenzied activity, she comes, flooding your mouth with her sweet-tasting fluid, and pushes your dripping body out the door.</Text>
+        <BackgroundName>CE_DCEF_female_6</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale29}Try to dry yourself off.</OptionText>
+                <RelationTotal>5</RelationTotal>
+                <HealthTotal>R 10 20</HealthTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_common_sexual_hardcore_two</Name>
+        <Text>{=DefaultCaptiveEventsFemale30}One of your captors orders you to hold down another captive, a half-naked young woman who has been struggling to prevent him from ravishing her. You think you've seen her before in another village, but the tears and hair scattered across her face during the struggle make it difficult to recognize her. As she struggles, the man starts to remove his breeches, exposing his hardening cock...</Text>
+        <Backgrounds>
+            <Background Name="CE_DCEF_bandit_1" Weight="1" UseConditions="CE_captured_bandit" />
+            <Background Name="CE_DCEF_general_1" Weight="1" UseConditions="CE_captured_general" />
+        </Backgrounds>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorGenderIsMale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale31}Reluctantly do as you're told.</OptionText>
+                <RelationTotal>5</RelationTotal>
+                <HealthTotal>R 10 20</HealthTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale32}Volunteer to take her place.</OptionText>
+                <TriggerEventName>CE_common_sexual_hardcore_two_continued</TriggerEventName>
+                <RelationTotal>5</RelationTotal>
+                <RenownTotal>R -1 0</RenownTotal>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="60" Ref="Hero" />
+                    <Skill Id="Medicine" ByXP="40" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale33}Escape while he's distracted.</OptionText>
+                <ReqHeroHealthAbovePercentage>20</ReqHeroHealthAbovePercentage>
+                <RelationTotal>-5</RelationTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>40</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_common_sexual_hardcore_two_continued</Name>
+        <Text>{=DefaultCaptiveEventsFemale34}He forces the other woman to watch as he penetrates you painfully. You try to stay strong as the man does his best to make you scream, but you manage to channel your fear into arousal, and soon enough your cleft grows wet around the invading member. You push against him, reveling in this strange test of wills, and he comes sooner than he'd wanted, grunting in disappointment. The feeling of power over him pushes you over the edge and you shudder in ecstasy, clenching around his softening cock. Suddenly unsure which of you is really in control, he calls you a whore, then sheepishly walks off.</Text>
+        <BackgroundName>CE_DCEF_female_12</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationRisk</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale35}Scoop the cum out of your body.</OptionText>
+                <RelationTotal>5</RelationTotal>
+                <PregnancyRiskModifier>20</PregnancyRiskModifier>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_common_sexual_two</Name>
+        <Text>{=DefaultCaptiveEventsFemale36}Two of your captors approach menacingly. Without a word one of them grabs your hair, the other hoisting your legs over his shoulder as they drag you over to where the rest of the men are waiting. You are stripped, your arms held above your head, and the sight of your luscious breasts and tender cunt elicit appreciative jeers from the crowd. They gather around you, pulling out their cocks as they push you to your knees, and thrust their angry members into your hands and mouth.</Text>
+        <Backgrounds>
+            <Background Name="CE_DCEF_bandit_2" Weight="1" UseConditions="CE_captured_bandit" />
+            <Background Name="CE_DCEF_general_2" Weight="1" UseConditions="CE_captured_general" />
+        </Backgrounds>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorGenderIsMale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale37}Try your best to please them.</OptionText>
+                <TriggerEventName>CE_common_sexual_two_next</TriggerEventName>
+                <RenownTotal>R -1 0</RenownTotal>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="50" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale38}Attempt to resist.</OptionText>
+                <EscapeChance>10</EscapeChance>
+                <RelationTotal>-5</RelationTotal>
+                <ReqHeroHealthAbovePercentage>20</ReqHeroHealthAbovePercentage>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>40</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_common_sexual_two_next</Name>
+        <Text>{=DefaultCaptiveEventsFemale39}Over the next few hours, you do your best to satisfy them as your knees grow sore and your lips cracked and parched. Your hands, face, breasts, and hair are crusted with dried semen, and it flows down your body in little rivulets as it drips from your mouth and nose. You're all but certain you'll never get the taste off your tongue, and as you collapse to the ground in exhaustion the last of them rolls you over and lays atop you, crushing you with his weight. You're too tired to do much more than struggle to breathe as you feel the tip of his manhood begin to press painfully into your butt...</Text>
+        <BackgroundName>CE_DCEF_female_9</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale40}Just let it be over...</OptionText>
+                <HealthTotal>R 10 20</HealthTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>30</PregnancyRiskModifier>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region LocationCity -->
+    <CEEvent>
+        <Name>CE_common_settlement</Name>
+        <Text>{=DefaultCaptiveEventsFemale41}The settlement's guards drag you to the center of town, where a large crowd of men and women are gathered around a small platform set with a row of wooden poles. You see a pair of manacles dangle from each of them, and it looks as though at least one other young woman has already been shackled in place, sobbing in despair. A man stands before the platform, listing prices for the benefit of the crowd - prices for each of your holes. It seems you're to be bound for the benefit of the town's coffers, sold as an unwilling whore without even the benefit of a brothel room's privacy.</Text>
+        <BackgroundName>CE_DCEF_female_1</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationRisk</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale42}Steel yourself.</OptionText>
+                <TriggerEventName>CE_common_settlement_next</TriggerEventName>
+                <RenownTotal>R -1 0</RenownTotal>
+                <SkillsToLevel>
+                    <Skill Id="Medicine" ByXP="70" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale43}Try to break free while they are moving you!</OptionText>
+                <ReqHeroHealthAbovePercentage>20</ReqHeroHealthAbovePercentage>
+                <RelationTotal>-5</RelationTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>30</PregnancyRiskModifier>
+        <EscapeChance>25</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_common_settlement_next</Name>
+        <Text>{=DefaultCaptiveEventsFemale44}The first of your rapists makes his way onto the platform, briefly grabbing pinching a nipple as he savors the view. You hear one of your fellow victims squeal in agony as your own tormentor shoves his unwashed manhood into your mouth. He fucks your face roughly, relishing the sensation before spurting the day's first load of cum into your eye, then makes his way towards the back of the line. The village's coffers slowly fill with coin as you are likewise filled with semen, and by the time the sun goes down you are far too exhausted to resist when your captor drags you back to your cell.</Text>
+        <BackgroundName>CE_DCEF_female_2</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale45}Try to rest.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>30</PregnancyRiskModifier>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region LocationDungeon -->
+    <CEEvent>
+        <Name>CE_common_prison_sexual</Name>
+        <Text>{=DefaultCaptiveEventsFemale46}The guards seem content to make suggestive comments and lewd remarks at your expense as they stand watch. You resist the urge to retaliate as they start to joke to each other about the various depraved acts they're sure you've committed, and you pale in fear at the thought when they start trying to guess the largest object they could fit up your snatch without breaking it. The overall consensus is that no woman's cunt could survive being fucked by a bull's massive tool, and you sigh in relief when they admit it'd be too difficult to fit one through the prison doors in any case.</Text>
+        <BackgroundName></BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCastle</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationDungeon</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale47}At least they're just talking...</OptionText>
+                <TriggerEventName>CE_common_prison_sexual_next</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>30</PregnancyRiskModifier>
+        <EscapeChance>5</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_common_prison_sexual_next</Name>
+        <Text>{=DefaultCaptiveEventsFemale48}You sit in silence as their conversation becomes increasingly alarming, and are relieved when the next set of guards take their shift. They stand silently at attention for several minutes before curiosity gets the better of them and they sidle over to leer at your womanly assets.</Text>
+        <BackgroundName></BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale49}Sigh in resignation.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>30</PregnancyRiskModifier>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_common_prison_sexual_two</Name>
+        <Text>{=DefaultCaptiveEventsFemale50}You wake from your reverie to the creak of your cell door opening, and a guard enters with a soup bowl, leaving it on the floor as he informs you his fellow guards wanted to give you a little gift to fill your stomach. Picking it up, you realize it's not your usual gruel; a disgustingly familiar milky substance coats the bottom of the bowl. Through the doorway, you can see the other guards are staring at you, urging you to lap up your meal like a good little cum-whore.</Text>
+        <BackgroundName>CE_DCEF_female_3</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCastle</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationDungeon</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale51}Obediently lick the bowl clean.</OptionText>
+                <TriggerEventName>CE_common_prison_sexual_two_next</TriggerEventName>
+                <RenownTotal>R -2 -1</RenownTotal>
+                <SkillsToLevel>
+                    <Skill Id="Medicine" ByXP="80" Ref="Hero" />
+                    <Skill Id="Roguery" ByXP="40" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale52}Throw the bowl at the doorway.</OptionText>
+                <TriggerEventName>CE_common_prison_sexual_two_continue</TriggerEventName>
+                <RelationTotal>-5</RelationTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>30</PregnancyRiskModifier>
+        <EscapeChance>5</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_common_prison_sexual_two_next</Name>
+        <Text>{=DefaultCaptiveEventsFemale53}It's obvious guards want to see if you'll eat their cum. It looks disgusting, but the manacles around your wrists remind you that you are at their mercy, so you force yourself to lick up glutinous substance. They laugh at your performance, and most of them leave, satisfied, but the one who brought you your 'meal' stays. You try not to choke as he violently fucks your face, finally losing consciousness when he comes, bottoming out in your throat and filling your stomach with his foul semen.</Text>
+        <BackgroundName>CE_DCEF_female_4</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale54}Try to catch your breath.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_common_prison_sexual_two_continue</Name>
+        <Text>{=DefaultCaptiveEventsFemale55}Angered by your resistance, the guards enter your cell, muttering that if you won't take their seed in your mouth, they'll just have to give it to you like a proper whore. Two of them grab hold of your legs, pulling them apart and holding you still as the others take it in turns to fill your cunt with jism. They show little mercy as they plow into you, relishing your agonized screams and spanking you when you grow silent. By the time their lust is sated, your abused sex is puffy, bruised and dripping with their seed. In the distance, you hear one of the other prisoners start wailing in terror...</Text>
+        <BackgroundName>CE_DCEF_female_15</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationRisk</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale56}Try to scoop out their cum...</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>30</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region LocationCastle -->
+    <CEEvent>
+        <Name>CE_common_castle</Name>
+        <Text>{=DefaultCaptiveEventsFemale57}A handful of mean-looking guards march into your cell and order you to strip. You've heard agonized screams and malevolent laughter echo around the prison for the past few days and swallow nervously, realizing it's your turn to be victim to their unspeakable desires. Your mind reels, trying to think of any possible way out of this horrible situation...</Text>
+        <BackgroundName>CE_DCEF_female_16</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCastle</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale58}It'll hurt less if you play along...</OptionText>
+                <TriggerEventName>CE_common_castle_next</TriggerEventName>
+                <RenownTotal>R -1 0</RenownTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale59}Rush past them to escape!</OptionText>
+                <ReqHeroHealthAbovePercentage>20</ReqHeroHealthAbovePercentage>
+                <RelationTotal>-5</RelationTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>25</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_common_castle_next</Name>
+        <Text>{=DefaultCaptiveEventsFemale60}Dropping to your knees, You crawl towards your tormentors, swallowing nervously as you unlace the first man's breeches. You take him into your mouth, wincing, and another cock in each hand, massaging their hardening members as they start making lewd jokes at your expense. The one in your mouth grabs you by the hair, shoving himself down your throat, and you hold back tears as they pinch your nipples painfully and shove their fingers into your sex. They fuck you for hours, competing to find the most degrading way to use your body, and after hours of this torment leave their cum to slowly drip from your your soiled, abused form as they lock you back in your cell.</Text>
+        <BackgroundName>CE_DCEF_female_10</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale61}Try to get some rest.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>30</PregnancyRiskModifier>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region LocationHideout -->
+    <CEEvent>
+        <Name>CE_common_hideout</Name>
+        <Text>{=DefaultCaptiveEventsFemale62}You're helping a few of the other prisoners prepare the garrison's evening meal when a group of your captors order you to strip and line up for inspection. After a brief smattering of degrading jokes, pinches, and appraising stares, they decide that you've got the rosiest lips and tits of the bunch. They drag you out towards the rest of the men and inform you that they've all taken bets on how many men you can pleasure with your mouth in a single hour. Several of them have already loosed their cocks from their trousers,and you are swiftly pushed onto your knees.</Text>
+        <BackgroundName></BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationHideout</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale63}It's only an hour, right..?</OptionText>
+                <TriggerEventName>CE_common_hideout_next</TriggerEventName>
+                <RenownTotal>R -1 0</RenownTotal>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="60" Ref="Hero" />
+                    <Skill Id="Medicine" ByXP="40" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale64}Attempt to flee.</OptionText>
+                <ReqHeroHealthAbovePercentage>20</ReqHeroHealthAbovePercentage>
+                <RelationTotal>-5</RelationTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>25</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_common_hideout_next</Name>
+        <Text>{=DefaultCaptiveEventsFemale65}Over the next hour you receive a brief and effective lesson on a whore's art, using your hands and mouth to stimulate as many men as you can while you undulate your breasts and ass to keep the others aroused, hoping to shorten your ordeal by the time you're ready for them. Stream after stream of sticky white liquid coats your face and hair, dripping down onto your breasts and ass until not an inch of your body is left undefiled. After what seems like much, much longer than an hour they declare the contest over and begin arguing over the results, discarding you like a broken toy as layers of their disgusting cum begin to harden on your quivering body.</Text>
+        <BackgroundName>CE_DCEF_female_5</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale22}Continue.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>30</PregnancyRiskModifier>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_common_settlement_village</Name>
+        <Text>{=DefaultCaptiveEventsFemale66}The village's guards drag you to the center of town, where a large crowd of men and women are gathered around a small platform set with a row of wooden poles. You see a pair of manacles dangle from each of them, and it looks as though at least one other young woman has already been shackled in place, sobbing in despair. A man stands before the platform, listing prices for the benefit of the crowd - prices for each of your holes.</Text>
+        <BackgroundName>CE_DCEF_female_1</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInVillage</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationVillage</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationRisk</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale42}Steel yourself.</OptionText>
+                <TriggerEventName>CE_common_settlement_village_next</TriggerEventName>
+                <RenownTotal>R -1 0</RenownTotal>
+                <SkillsToLevel>
+                    <Skill Id="Medicine" ByXP="70" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale43}Try to break free while they are moving you!</OptionText>
+                <ReqHeroHealthAbovePercentage>20</ReqHeroHealthAbovePercentage>
+                <RelationTotal>-5</RelationTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>30</PregnancyRiskModifier>
+        <EscapeChance>25</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_common_settlement_village_next</Name>
+        <Text>{=DefaultCaptiveEventsFemale44}The first of your rapists makes his way onto the platform, briefly grabbing pinching a nipple as he savors the view. You hear one of your fellow victims squeal in agony as your own tormentor shoves his unwashed manhood into your mouth. He fucks your face roughly, relishing the sensation before spurting the day's first load of cum into your eye, then makes his way towards the back of the line. The village's coffers slowly fill with coin as you are likewise filled with semen, and by the time the sun goes down you are far too exhausted to resist when your captor drags you back to your cell.</Text>
+        <BackgroundName>CE_DCEF_female_2</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale22}Continue.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>30</PregnancyRiskModifier>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Siege Party -->
+    <CEEvent>
+        <Name>CE_common_siege</Name>
+        <Text>{=DefaultCaptiveEventsFemale62}You're helping a few of the other prisoners prepare the garrison's evening meal when a group of your captors order you to strip and line up for inspection. After a brief smattering of degrading jokes, pinches, and appraising stares, they decide that you've got the rosiest lips and tits of the bunch. They drag you out towards the rest of the men and inform you that they've all taken bets on how many men you can pleasure with your mouth in a single hour. Several of them have already loosed their cocks from their trousers,and you are swiftly pushed onto your knees.</Text>
+        <BackgroundName></BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>DuringSiege</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale67}It's only an hour, right?</OptionText>
+                <TriggerEventName>CE_common_hideout_next</TriggerEventName>
+                <RenownTotal>R -1 0</RenownTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale64}Attempt to flee.</OptionText>
+                <ReqHeroHealthAbovePercentage>20</ReqHeroHealthAbovePercentage>
+                <RelationTotal>-5</RelationTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>25</EscapeChance>
+        <WeightedChanceOfOccurring>100</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Siege Castle -->
+    <CEEvent>
+        <Name>CE_common_siege_castle</Name>
+        <Text>{=DefaultCaptiveEventsFemale68}A handful of mean-looking guards march into your cell and order you to strip. You've heard agonized screams and malevolent laughter echo around the prison for the past few days and swallow nervously, realizing it's your turn to be victim to their unspeakable desires. Your mind reels, trying to think of any possible way out of this horrible situation... Perhaps the siege will serve as a distraction?</Text>
+        <BackgroundName>CE_DCEF_female_16</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>DuringSiege</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCastle</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale58}It'll hurt less if you play along...</OptionText>
+                <TriggerEventName>CE_common_castle_next</TriggerEventName>
+                <RenownTotal>R -1 0</RenownTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale69}Run past them to escape!</OptionText>
+                <ReqHeroHealthAbovePercentage>20</ReqHeroHealthAbovePercentage>
+                <RelationTotal>-5</RelationTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>25</EscapeChance>
+        <WeightedChanceOfOccurring>100</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Siege Extra -->
+    <CEEvent>
+        <Name>CE_common_captivity_prostitution</Name>
+        <Text>{=DefaultCaptiveEventsFemale70}One of your captors approaches you, smiling in a worryingly friendly way. He asks how much your services cost, and after a bit of negotiation you realize he's asking to pay for the pleasure of using your body. He comments offhandedly that he finds a willing whore so very much more accommodating.</Text>
+        <Backgrounds>
+            <Background Name="CE_DCEC_general_3" Weight="1" />
+        </Backgrounds>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Prostitution</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorGenderIsMale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationRisk</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>GiveGold</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale71}Might as well make some coin?</OptionText>
+                <TriggerEventName>CE_common_captivity_prostitution_accept</TriggerEventName>
+                <PregnancyRiskModifier>20</PregnancyRiskModifier>
+                <RenownTotal>-2</RenownTotal>
+                <RelationTotal>5</RelationTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale72}You're not a whore.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_common_captivity_prostitution_deny</EventName>
+                        <EventWeight>10</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_common_captivity_prostitution_deny_fine</EventName>
+                        <EventWeight>50</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+                <RelationTotal>-5</RelationTotal>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale73}Try to escape.</OptionText>
+                <EscapeChance>10</EscapeChance>
+                <RelationTotal>-5</RelationTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>10</PregnancyRiskModifier>
+        <EscapeChance>30</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroHealthAbovePercentage>10</ReqHeroHealthAbovePercentage>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_common_captivity_prostitution_deny</Name>
+        <Text>{=DefaultCaptiveEventsFemale74}The man shakes his head in disgust, telling you that he's happy to teach a delusional whore her rightful place, and after a brief scuffle he holds you down, briefly lining up his cock with your cleft before thrusting mightily into you. He pounds your body into the ground with each thrust, forcing the air out of your lungs.</Text>
+        <BackgroundName>CE_DCEF_female_7</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale22}Continue.</OptionText>
+                <TriggerEventName>CE_common_captivity_prostitution_deny_2</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>30</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_common_captivity_prostitution_deny_2</Name>
+        <Text>{=DefaultCaptiveEventsFemale75}Though his cock is hard as iron he seems distracted - it takes him hours to come, but when he does his penis pours a prodigious river of seed into your battered cunt. You gasp in agony as he climbs off of you and cough for several minutes after he walks away, struggling to pull air back into your lungs as his cum drips quietly out of your sex.</Text>
+        <BackgroundName>CE_DCEF_female_15</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationRisk</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale22}Continue.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>30</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_common_captivity_prostitution_deny_fine</Name>
+        <Text>{=DefaultCaptiveEventsFemale76}The man sneers, commenting that whores like you should know when a man is trying to do you a favor. He walks off, shaking his head in disgust.</Text>
+        <Backgrounds>
+            <Background Name="CE_DCEC_general_3" Weight="1" />
+        </Backgrounds>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale77}Bide your time.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>30</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_common_captivity_prostitution_accept</Name>
+        <Text>{=DefaultCaptiveEventsFemale78}You nod your acceptance and he gently pushes you to your knees, filling your throat with his cock. You expertly lick and suck his member you're sure he's about to come, but he pulls out of your mouth instead, gently fondling your breasts and teasing your clit. He lays down onto his back and orders his whore to mount her stallion.</Text>
+        <BackgroundName>CE_DCEF_female_11</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale22}Continue.</OptionText>
+                <TriggerEventName>CE_common_captivity_prostitution_accept_2</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_common_captivity_prostitution_accept_2</Name>
+        <Text>{=DefaultCaptiveEventsFemale79}You nervously climb on top of him, lining yourself up with his shaft. As the tip reaches your vulva he pulls your hips downwards, impaling you to the hilt. You scream in pain, pleasure, and surprise as he bores into your body with obvious relish, collapsing onto his chest. He grabs your head with one hand, roughly shoving his tongue into your mouth as he empties his balls into your womb.</Text>
+        <BackgroundName>CE_DCEF_female_10</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationRisk</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale22}Continue.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region PG Events -->
+    <CEEvent>
+        <Name>CE_common_captive_female_chores</Name>
+        <Text>{=DefaultCaptiveEventsFemale80}One of your captors assigns you to mend a pile of torn clothing and armor. You sit quietly, working the needle through the fabric, trying to make yourself as inconspicuous as possible. After a while, a group of idle men begin to gather nearby, watching you work with growing interest.</Text>
+        <BackgroundName>CE_DCEF_female_14</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale81}Ignore them and keep working.</OptionText>
+                <TriggerEventName>CE_common_captive_female_chores_ignore</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale82}Try to be friendly with them.</OptionText>
+                <TriggerEventName>CE_common_captive_female_chores_friendly</TriggerEventName>
+            </Option>
+        </Options>
+
+        
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+
+    <CEEvent>
+        <Name>CE_common_captive_female_chores_ignore</Name>
+        <Text>{=DefaultCaptiveEventsFemale91}You keep working quietly and the men slowly lose interest, moving on to other tasks. For now you remain unnoticed.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale92}Bide your time.</OptionText>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale93}Try to slip away while they're distracted.</OptionText>
+                <RelationTotal>-5</RelationTotal>
+            </Option>
+        </Options>
+
+        
+        <EscapeChance>15</EscapeChance>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_common_captive_female_chores_friendly</Name>
+        <Text>{=DefaultCaptiveEventsFemale94}You attempt to be friendly, trading a few polite words and a small smile. A couple of the men warm to you, but others watch closely.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale95}Keep them on your side.</OptionText>
+                <RelationTotal>5</RelationTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale96}Use the distraction to try to run.</OptionText>
+                <RelationTotal>-5</RelationTotal>
+            </Option>
+        </Options>
+
+        
+        <EscapeChance>15</EscapeChance>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_common_captive_female_labor</Name>
+        <Text>{=DefaultCaptiveEventsFemale84}Your captors order you to help prepare the evening meal, chopping vegetables and tending the fire alongside one of the other prisoners. The work is mundane but leaves you in a slightly better position than others - at least you're not locked in a cell. Still, being visible and accessible seems to have its own drawbacks as several of the men linger near the cookfire, watching you work.</Text>
+        <BackgroundName>CE_DCEF_female_14</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale85}Work quickly and quietly.</OptionText>
+                <TriggerEventName>CE_common_captive_female_labor_quiet</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale86}Engage them in conversation.</OptionText>
+                <TriggerEventName>CE_common_captive_female_labor_friendly</TriggerEventName>
+            </Option>
+        </Options>
+
+        
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+
+    <CEEvent>
+        <Name>CE_common_captive_female_labor_quiet</Name>
+        <Text>{=DefaultCaptiveEventsFemale97}You work quickly and quietly, hoping to remain unnoticed. Your efforts are rewarded with a brief respite when the men turn their attention elsewhere.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale98}Keep working.</OptionText>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale99}Slip away while they are distracted.</OptionText>
+                <RelationTotal>-5</RelationTotal>
+            </Option>
+        </Options>
+
+        
+        <EscapeChance>20</EscapeChance>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_common_captive_female_labor_friendly</Name>
+        <Text>{=DefaultCaptiveEventsFemale100}You try to make conversation with the men near the fire. A few respond amiably, which eases your watch for the moment.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale101}Soothe them with small talk.</OptionText>
+                <RelationTotal>5</RelationTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale102}Try to use the lull to escape.</OptionText>
+                <RelationTotal>-5</RelationTotal>
+            </Option>
+        </Options>
+
+        
+        <EscapeChance>20</EscapeChance>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_common_captive_female_water</Name>
+        <Text>{=DefaultCaptiveEventsFemale87}Your captors order you to fetch water from the nearby stream. One of the men escorts you, presumably to prevent escape. As you kneel by the water's edge, filling the buckets, you become acutely aware of your vulnerability and his lingering gaze on your back.</Text>
+        <BackgroundName>CE_DCEF_female_14</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale88}Keep your head down and hurry.</OptionText>
+                <TriggerEventName>CE_common_captive_female_water_hurry</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale89}Try to make yourself seem less attractive.</OptionText>
+                <TriggerEventName>CE_common_captive_female_water_ignore</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale90}Try to appear sympathetic and harmless.</OptionText>
+                <TriggerEventName>CE_common_captive_female_water_sympathetic</TriggerEventName>
+            </Option>
+        </Options>
+
+        
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_common_captive_female_water_hurry</Name>
+        <Text>{=DefaultCaptiveEventsFemale103}You hurry to fill the buckets and keep your head down. The escort glowers but otherwise leaves you to your task.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale104}Keep your head down and move quickly.</OptionText>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale105}Make a break for it while he's not looking.</OptionText>
+                <RelationTotal>-5</RelationTotal>
+            </Option>
+        </Options>
+
+        
+        <EscapeChance>10</EscapeChance>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_common_captive_female_water_ignore</Name>
+        <Text>{=DefaultCaptiveEventsFemale106}You deliberately try to look plain and uninteresting. The escort's attention wanes slightly, but he keeps a close enough watch to discourage foolish moves.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale107}Finish the task and move on.</OptionText>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale108}Try to slip away unnoticed.</OptionText>
+                <RelationTotal>-5</RelationTotal>
+            </Option>
+        </Options>
+
+        
+        <EscapeChance>10</EscapeChance>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_common_captive_female_water_sympathetic</Name>
+        <Text>{=DefaultCaptiveEventsFemale109}You put on a sympathetic expression, trying to seem harmless. The escort softens a little, but remains close enough to discourage any bold attempts to flee.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale110}Appeal to his kindness.</OptionText>
+                <RelationTotal>5</RelationTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale111}Try to take advantage of his leniency and run.</OptionText>
+                <RelationTotal>-5</RelationTotal>
+            </Option>
+        </Options>
+
+        
+        <EscapeChance>10</EscapeChance>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- #endregion -->
+
+    <!-- #region Birth Alternative Events -->
+    <CEEvent>
+        <Name>CE_captive_birth_alt_trail</Name>
+        <Text>{=DefaultCaptiveEventsFemale112}The time has come. As the caravan moves along a dusty trail, labor pains grip your body. Your captors notice your distress and halt the march. A gruff {?ISCAPTORFEMALE}woman{?}man{\?} approaches, crossing arms and watching as you struggle through the contractions. The birth is difficult, but eventually you hear the cries of your newborn. Now you face an impossible choice - your captors demand the child, promising it will be cared for elsewhere, or you can try to hide your baby and hope they don't discover your secret.</Text>
+        <BackgroundName>CE_birth_road</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>BirthAlternative</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Abort</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale113}Give the baby to your captors. You may never see your child again, but at least they will live.</OptionText>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>GiveBirth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale114}Hide the baby and keep them close. You will protect your child no matter what.</OptionText>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>100</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_captive_birth_alt_dungeon</Name>
+        <Text>{=DefaultCaptiveEventsFemale115}In the cold darkness of your cell, the pains of childbirth overcome you. You bite down on your sleeve to muffle your cries as you labor alone on the damp stone floor. Hours pass in agony until finally your child is born. The baby's first cries echo off the dungeon walls. Soon, a guard arrives with a {?ISCAPTORFEMALE}woman{?}man{\?} who looks over you both with calculating eyes. They extend their hands toward your newborn, offering to take the child to safety outside these walls - or you can refuse and try to raise your baby in secret within your prison.</Text>
+        <BackgroundName>CE_birth_dungeon</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationDungeon</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>BirthAlternative</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Abort</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale116}Surrender your child. A dungeon is no place to raise a baby.</OptionText>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>GiveBirth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveEventsFemale117}Refuse. You will keep your baby hidden and protect them yourself.</OptionText>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>100</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- #endregion -->
+</CEEvents>

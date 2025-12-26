@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- EscapeOptionsGroup.xml: Prisoner escape mechanics and behaviors -->
+<OptionsGroupDefinition GroupId="EscapeOptions">
+    <Options>
+        <OptionsItem OptionId="PrisonerEscapeBehavior" DisplayName="Prisoner Escape Enabled" Description="Allow prisoners to attempt escape." DefaultValue="true" Type="Boolean" />
+        <OptionsItem OptionId="PrisonerHeroEscapeParty" DisplayName="Hero Escape (Party)" Description="Allow hero prisoners to escape from traveling parties." DefaultValue="true" Type="Boolean" />
+        <OptionsItem OptionId="PrisonerHeroEscapeSettlement" DisplayName="Hero Escape (Settlement)" Description="Allow hero prisoners to escape from settlements." DefaultValue="true" Type="Boolean" />
+        <OptionsItem OptionId="PrisonerHeroEscapeOther" DisplayName="Hero Escape (Other)" Description="Allow hero prisoners to escape from other locations." DefaultValue="true" Type="Boolean" />
+        <OptionsItem OptionId="PrisonerHeroEscapeChanceParty" DisplayName="Hero Escape Chance (Party)" Description="Percent chance (0-100) hero escapes from party." DefaultValue="0" Type="Numeric" Min="0" Max="100" />
+        <OptionsItem OptionId="PrisonerHeroEscapeChanceSettlement" DisplayName="Hero Escape Chance (Settlement)" Description="Percent chance (0-100) hero escapes from settlement." DefaultValue="0" Type="Numeric" Min="0" Max="100" />
+        <OptionsItem OptionId="PrisonerHeroEscapeChanceOther" DisplayName="Hero Escape Chance (Other)" Description="Percent chance (0-100) hero escapes from other locations." DefaultValue="0" Type="Numeric" Min="0" Max="100" />
+        <OptionsItem OptionId="PrisonerNonHeroEscapeParty" DisplayName="Non-Hero Escape (Party)" Description="Allow non-hero prisoners to escape from traveling parties." DefaultValue="true" Type="Boolean" />
+        <OptionsItem OptionId="PrisonerNonHeroEscapeSettlement" DisplayName="Non-Hero Escape (Settlement)" Description="Allow non-hero prisoners to escape from settlements." DefaultValue="true" Type="Boolean" />
+        <OptionsItem OptionId="PrisonerNonHeroEscapeOther" DisplayName="Non-Hero Escape (Other)" Description="Allow non-hero prisoners to escape from other locations." DefaultValue="true" Type="Boolean" />
+        <OptionsItem OptionId="PrisonerNonHeroEscapeChanceParty" DisplayName="Non-Hero Escape Chance (Party)" Description="Percent chance (0-100) non-hero escapes from party." DefaultValue="0" Type="Numeric" Min="0" Max="100" />
+        <OptionsItem OptionId="PrisonerNonHeroEscapeChanceSettlement" DisplayName="Non-Hero Escape Chance (Settlement)" Description="Percent chance (0-100) non-hero escapes from settlement." DefaultValue="0" Type="Numeric" Min="0" Max="100" />
+        <OptionsItem OptionId="PrisonerNonHeroEscapeChanceOther" DisplayName="Non-Hero Escape Chance (Other)" Description="Percent chance (0-100) non-hero escapes from other locations." DefaultValue="0" Type="Numeric" Min="0" Max="100" />
+        <OptionsItem OptionId="HuntLetPrisonersEscape" DisplayName="Hunt Allows Escape" Description="Prisoners can escape during hunts." DefaultValue="false" Type="Boolean" />
+        <OptionsItem OptionId="HuntBegins" DisplayName="Hunt Start Day" Description="Days after capture before hunt begins." DefaultValue="7" Type="Numeric" Min="1" Max="30" />
+        <OptionsItem OptionId="AmountOfTroopsForHunt" DisplayName="Troops for Hunt" Description="Number of troops sent on hunt." DefaultValue="15" Type="Numeric" Min="5" Max="50" />
+    </Options>
+</OptionsGroupDefinition>

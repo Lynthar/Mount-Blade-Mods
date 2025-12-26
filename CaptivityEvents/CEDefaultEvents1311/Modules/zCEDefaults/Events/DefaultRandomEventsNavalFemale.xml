@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CEEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../zCaptivityEvents/ModuleLoader/CaptivityRequired/Events/CEEventsModal.xsd">
+
+    <!-- Naval Female Random Events: intimate and NSFW scenarios aboard ship -->
+
+    <!-- Primary Event: Crew Attraction at Sea -->
+    <CEEvent>
+        <Name>CE_naval_female_crew_attraction</Name>
+        <BackgroundName>CE_DRENF_female_1</BackgroundName>
+        <NotificationName>ce_naval_sexual_notification</NotificationName>
+        <Text>{=DefaultRandomEventsNavalFemale1}Confined to the ship for weeks, the monotony of sea life weighs on you. Your cabin feels cramped and lonely. A burly deckhand passes by your quarters, and you notice his lingering gaze. Perhaps a bit of companionship would ease the tedium...</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Romance</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsNavalFemale2}Invite him to your cabin for some private fun.</OptionText>
+                <MoraleTotal>8</MoraleTotal>
+                <TriggerEventName>CE_naval_female_cabin_encounter</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsNavalFemale3}Politely decline and keep your distance.</OptionText>
+                <MoraleTotal>-3</MoraleTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqCustomCode>true</ReqCustomCode>
+        <WeightedChanceOfOccurring>12</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Aftermath: Cabin Encounter -->
+    <CEEvent>
+        <Name>CE_naval_female_cabin_encounter</Name>
+        <BackgroundName>CE_DRENF_female_2</BackgroundName>
+        <Text>{=DefaultRandomEventsNavalFemale4}Behind closed cabin doors, you and your crew member find relief in each other's embrace. The gentle rocking of the ship, the sound of waves, the taste of salt on his skin—it all blends into a moment of genuine intimacy at sea. When morning comes, the crew's morale visibly brightens.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsNavalFemale5}A night well spent.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <WeightedChanceOfOccurring>100</WeightedChanceOfOccurring>
+    </CEEvent>
+
+    <!-- Naval Bath House / Bathing Scenario -->
+    <CEEvent>
+        <Name>CE_naval_female_bathing_on_deck</Name>
+        <BackgroundName>CE_DRENF_female_3</BackgroundName>
+        <NotificationName>ce_naval_notification</NotificationName>
+        <Text>{=DefaultRandomEventsNavalFemale6}The crew draws fresh water for washing. You decide to bathe on deck at dawn when few are awake. As you rinse the salt from your skin, you hear footsteps approaching. A muscular sailor appears, clearly caught off-guard by your nakedness.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Romance</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsNavalFemale7}Invite him to join you in the water.</OptionText>
+                <MoraleTotal>10</MoraleTotal>
+                <TriggerEventName>CE_naval_female_water_play</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsNavalFemale8}Quickly cover yourself and wave him away.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqCustomCode>true</ReqCustomCode>
+        <WeightedChanceOfOccurring>10</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Aftermath: Water Play -->
+    <CEEvent>
+        <Name>CE_naval_female_water_play</Name>
+        <BackgroundName>CE_DRENF_female_4</BackgroundName>
+        <Text>{=DefaultRandomEventsNavalFemale9}What begins as a playful encounter in the fresh water becomes something far more passionate. You make love under the open sky, the deck abandoned at this early hour. His hands explore every inch of your sun-kissed skin, and you lose yourself in the sensation of freedom at sea.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsNavalFemale10}A memory to treasure.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <WeightedChanceOfOccurring>100</WeightedChanceOfOccurring>
+    </CEEvent>
+
+    <!-- Galley Seduction -->
+    <CEEvent>
+        <Name>CE_naval_female_galley_seduction</Name>
+        <BackgroundName>CE_DRENF_female_5</BackgroundName>
+        <NotificationName>ce_naval_notification</NotificationName>
+        <Text>{=DefaultRandomEventsNavalFemale11}You venture into the galley at night seeking a midnight snack. The ship's cook, a charming man with weathered hands and an easy smile, is preparing provisions. He offers you fresh fruit and wine, and the two of you find yourselves alone in the dim lamplight.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Romance</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>GiveGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsNavalFemale12}Share the wine and enjoy where this leads.</OptionText>
+                <MoraleTotal>9</MoraleTotal>
+                <TriggerEventName>CE_naval_female_galley_passion</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsNavalFemale13}Politely excuse yourself and retire to bed.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqCustomCode>true</ReqCustomCode>
+        <WeightedChanceOfOccurring>8</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Aftermath: Galley Passion -->
+    <CEEvent>
+        <Name>CE_naval_female_galley_passion</Name>
+        <BackgroundName>CE_DRENF_female_6</BackgroundName>
+        <Text>{=DefaultRandomEventsNavalFemale14}Among the hanging provisions and swaying lanterns, you surrender to passion. The galley becomes your private domain as he takes you against the table, his mouth finding yours in the darkness. The thrill of being discovered makes it all the more thrilling.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsNavalFemale15}An unforgettable night.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <WeightedChanceOfOccurring>100</WeightedChanceOfOccurring>
+    </CEEvent>
+
+    <!-- Rigging Repair Flirtation -->
+    <CEEvent>
+        <Name>CE_naval_female_rigging_flirt</Name>
+        <BackgroundName>CE_DRENF_female_7</BackgroundName>
+        <NotificationName>ce_naval_notification</NotificationName>
+        <Text>{=DefaultRandomEventsNavalFemale16}You climb the rigging to inspect the sails, your body on full display as you cling to the ropes. Below, one of the ship's strongest sailors watches your every movement, his eyes tracing the curve of your legs and rear. He begins climbing up after you, rope by rope.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Romance</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsNavalFemale17}Wait for him aloft and make love suspended high above the deck.</OptionText>
+                <MoraleTotal>12</MoraleTotal>
+                <TriggerEventName>CE_naval_female_rigging_passion</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsNavalFemale18}Quickly descend and avoid him.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqCustomCode>true</ReqCustomCode>
+        <WeightedChanceOfOccurring>6</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Aftermath: Rigging Passion -->
+    <CEEvent>
+        <Name>CE_naval_female_rigging_passion</Name>
+        <BackgroundName>CE_DRENF_female_8</BackgroundName>
+        <Text>{=DefaultRandomEventsNavalFemale19}High above the sleeping crew, you make passionate love in the rigging. The swaying of the ship, the stars overhead, his strong hands holding you secure—it is exhilarating and terrifying in equal measure. When he finally releases himself inside you, you feel like you're flying.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsNavalFemale20}A thrill worth repeating.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <WeightedChanceOfOccurring>100</WeightedChanceOfOccurring>
+    </CEEvent>
+
+    <!-- Hammock Encounter -->
+    <CEEvent>
+        <Name>CE_naval_female_hammock_encounter</Name>
+        <BackgroundName>CE_DRENF_female_9</BackgroundName>
+        <NotificationName>ce_naval_notification</NotificationName>
+        <Text>{=DefaultRandomEventsNavalFemale21}You find yourself alone in the crew quarters late at night. A sailor you've had your eye on is resting in his hammock, his muscular form swaying gently with the ship. He notices you and grins, gesturing for you to join him in the confined space.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Romance</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsNavalFemale22}Climb into the hammock with him.</OptionText>
+                <MoraleTotal>7</MoraleTotal>
+                <TriggerEventName>CE_naval_female_hammock_passion</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsNavalFemale23}Too risky; you slip away quietly.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqCustomCode>true</ReqCustomCode>
+        <WeightedChanceOfOccurring>11</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Aftermath: Hammock Passion -->
+    <CEEvent>
+        <Name>CE_naval_female_hammock_passion</Name>
+        <BackgroundName>CE_DRENF_female_10</BackgroundName>
+        <Text>{=DefaultRandomEventsNavalFemale24}In the swaying hammock, your bodies intertwine as it rocks with the rhythm of the sea. The confined space forces you impossibly close, every movement deliberate and intense. His hands grip the rope as he thrusts into you, and the hammock becomes your private sanctuary amid the sleeping crew mere feet away.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsNavalFemale25}A snug fit in the rocking cradle of passion.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <WeightedChanceOfOccurring>100</WeightedChanceOfOccurring>
+    </CEEvent>
+
+</CEEvents>

@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="string">
+  <tags>
+    <tag language="English" />
+  </tags>
+  <strings>
+    <string id="CEEVENTS0999" text="Error: failed to initialize scenes" />
+    <string id="CEEVENTS1000" text="Captivity Events loaded with {EVENT_COUNT} Events ({RANDOM_EVENT_COUNT} Random Events, {CAPTOR_EVENT_COUNT} Captor Events, {CAPTIVE_EVENT_COUNT} Captive Events) ({EVENT_CALLABLE_COUNT} Callable Events, {ALTERNATIVE_EVENT_COUNT} Alternative Events) and {IMAGE_COUNT} Images. {newline}^o^ Enjoy your events. Remember to endorse!" />
+    <string id="CEEVENTS1001" text="Failed to load {FILE} for more information refer to more information refer to Modules\\zCaptivityEvents\\ModuleLogs\\LoadingFailedXML.txt" />
+    <string id="CEEVENTS1002" text="Failed to load {FILE} for more information refer to more information refer to Modules\\zCaptivityEvents\\ModuleLogs\\LoadingFailedXML.txt" />
+    <string id="CEEVENTS1003" text="Failed to load captivity events more information refer to more information refer to Modules\\zCaptivityEvents\\ModuleLogs\\LoadingFailedXML.txt" />
+    <string id="CEEVENTS1004" text="Failed to load event {NAME} : {ERROR} refer to logs in Modules\\zCaptivityEvents\\ModuleLogs for more information" />
+    <string id="CEEVENTS1005" text="Error: Captivity Events failed to load events. Please refer to logs in Modules\\zCaptivityEvents\\ModuleLogs. Mod is disabled." />
+    <string id="CEEVENTS1006" text="Error: resetting the return equipment list" />
+    <string id="CEEVENTS1007" text="Error: resetting the CE pregnancy list" />
+    <string id="CEEVENTS1008" text="Error: bad pregnancy in CE pregnancy list" />
+    <string id="CEEVENTS1009" text="Error: bad equipment in return equipment list" />
+    <string id="CEEVENTS1050" text="Brothel Assistant" />
+    <string id="CEEVENTS1051" text="Nevermind." />
+    <string id="CEEVENTS1052" text="You are coming with me." />
+    <string id="CEEVENTS1053" text="Yes you came {?PLAYER.GENDER}mistress{?}master{\?}! [ib:confident][rb:very_positive]" />
+    <string id="CEEVENTS1054" text="Yes {?PLAYER.GENDER}mistress{?}master{\?}? [ib:confident2][rb:positive]" />
+    <string id="CEEVENTS1055" text="Yes? [ib:weary][rb:unsure]" />
+    <string id="CEEVENTS1056" text="I am not your slave! [ib:aggressive][rb:very_negative]" />
+    <string id="CEEVENTS1057" text="What do you want? [ib:nervous][rb:very_negative]" />
+    <string id="CEEVENTS1058" text="Event conditions are no longer met." />
+    <string id="CEEVENTS1059" text="Random event is ready"/>
+    <string id="CEEVENTS1060" text="Random Event"/>
+    <string id="CEEVENTS1061" text="You are about to give birth..." />
+    <string id="CEEVENTS1062" text="Your baby begins kicking, you have {DAYS_REMAINING} days remaining." />
+    <string id="CEEVENTS1063" text="Your pregnant belly continues to swell, you have {DAYS_REMAINING} days remaining." />
+    <string id="CEEVENTS1064" text="You're pregnant, you have {DAYS_REMAINING} days remaining." />
+    <string id="CEEVENTS1065" text="Slave Trader" />
+    <string id="CEEVENTS1066" text="Brothel Owner" />
+    <string id="CEEVENTS1067" text="Time to strip you of your belongings." />
+    <string id="CEEVENTS1068" text="Hunt them down!" />
+    <string id="CEEVENTS1069" text="Let's allow them a brief lead before the pursuit begins." />
+    <string id="CEEVENTS1070" text="Alright. [ib:weary][rb:unsure]" />
+    <string id="CEEVENTS1071" text="Yes {?PLAYER.GENDER}mistress{?}master{\?}. [ib:confident2][rb:positive]" />
+    <string id="CEEVENTS1072" text="What?! [ib:aggressive][rb:very_negative]" />
+    <string id="CEEVENTS1073" text="Finally! [ib:confident][rb:very_positive]" />
+    <string id="CEEVENTS1074" text="You have failed to recover your equipment in time." />
+    <string id="CEEVENTS1075" text="You have failed to recover your equipment." />
+    <string id="CEEVENTS1076" text="You have recovered your equipment back from {QUEST_GIVER.LINK}." />
+    <string id="CEEVENTS1077" text="{QUEST_GIVER.LINK} of {QUEST_SETTLEMENT.LINK} has found your equipment you must find {?QUEST_GIVER.GENDER}her{?}him{\?}. Otherwise they will sell it." />
+    <string id="CEEVENTS1078" text="Here you go {?PLAYER.GENDER}milady{?}sir{\?}." />
+    <string id="CEEVENTS1079" text="Have you come here to claim your equipment?" />
+    <string id="CEEVENTS1080" text="I am serious." />
+    <string id="CEEVENTS1081" text="Missing equipment found at the village of {ISSUE_SETTLEMENT}" />
+    <string id="CEEVENTS1082" text="Missing equipment found at the town of {ISSUE_SETTLEMENT}" />
+    <string id="CEEVENTS1083" text="Missing equipment found at {ISSUE_SETTLEMENT}" />
+    <string id="CEEVENTS1084" text="Are you serious?" />
+    <string id="CEEVENTS1085" text="Well you can pay for it." />
+    <string id="CEEVENTS1086" text="Hey, that looks like my equipment!" />
+    <string id="CEEVENTS1087" text="Been looking at this equipment someone left here." />
+    <string id="CEEVENTS1088" text="Someone found some equipment that looks like yours."/>
+    <string id="CEEVENTS1089" text="Missing Equipment" />
+    <string id="CEEVENTS1090" text="Captor event is ready"/>
+    <string id="CEEVENTS1091" text="Captor Event"/>
+    <string id="CEEVENTS1092" text="Your captive {MOTHER.NAME} has given birth to {DELIVERED_CHILDREN}." />
+    <string id="CEEVENTS1093" text="Server" />
+    <string id="CEEVENTS1094" text="Slave" />
+    <string id="CEEVENTS1095" text="Prostitute" />
+    <string id="CEEVENTS1096" text="Sell all captives to the slaver ({RANSOM_AMOUNT}{GOLD_ICON})" />
+    <string id="CEEVENTS1097" text="Sell some captives to the slaver" />
+    <string id="CEEVENTS1098" text="You are in the brothel district" />
+    <string id="CEEVENTS1099" text="Brothel" />
+    <string id="CEEVENTS1100" text="Go to the brothel district" />
+    <string id="CEEVENTS1101" text="Visit the brothel" />
+    <string id="CEEVENTS1102" text="Become a prostitute at the brothel" />
+    <string id="CEEVENTS1103" text="slave" />
+    <string id="CEEVENTS1104" text="prostitute" />
+    <string id="CEEVENTS1105" text="Slavery" />
+    <string id="CEEVENTS1106" text="Prostitution" />
+    <string id="CEEVENTS1107" text="Recently Escaped Captives" />
+    <string id="CEEVENTS1108" text="Time to have some fun." />
+    <string id="CEEVENTS1109" text="Wait what?[ib:nervous][rb:very_negative]" />
+    <string id="CEEVENTS1114" text="{PLAYER_HERO} become a prostitute at the brothel" />
+    <string id="CEEVENTS1116" text="{PLAYER_HERO} managed to escape captivity" />
+    <string id="CEEVENTS1117" text="{PLAYER_HERO} managed to escape from {SETTLEMENT}" />
+    <string id="CEEVENTS1118" text="You are too busy right now" />
+    <string id="CEEVENTS1119" text="Your prostitution level is too high" />
+    <string id="CEEVENTS1120" text="Your prostitution level is too low" />
+    <string id="CEEVENTS1121" text="Your slavery level is too high" />
+    <string id="CEEVENTS1122" text="Your slavery level is too low" />
+    <string id="CEEVENTS1123" text="You have more than enough health" />
+    <string id="CEEVENTS1124" text="You are still too weak" />
+    <string id="CEEVENTS1125" text="{HERO} doesn't hate you that much." />
+    <string id="CEEVENTS1126" text="{HERO} doesn't like you that much." />
+    <string id="CEEVENTS1127" text="{HERO} has killed {AMOUNT} prisoners." />
+    <string id="CEEVENTS1128" text="{HERO} has {?NEGATIVE}lost{?}gained{\?} {SKILL_AMOUNT} {?PLURAL}levels{?}level{\?} in {SKILL} and is now {TOTAL_AMOUNT}." />
+    <string id="CEEVENTS1129" text="{HERO} has reset {SKILL} to the beginning." />
+    <string id="CEEVENTS1130" text="{HERO} is no longer a {OCCUPATION}." />
+    <string id="CEEVENTS1131" text="{HERO} is now a {OCCUPATION}." />
+    <string id="CEEVENTS1132" text="{HERO} has become a prostitute in the local brothel." />
+    <string id="CEEVENTS1133" text="{HERO} has become {?POSITIVE}more{?}less{\?} interested in the trait of {TRAIT}." />
+    <string id="CEEVENTS1134" text="{HERO} has {?POSITIVE}gained{?}lost{\?} {AMOUNT} renown." />
+    <string id="CEEVENTS1135" text="{PLAYER_HERO} relationship has {?POSITIVE}increased{?}decrease{\?} by {AMOUNT} to {TOTAL} with {HERO}." />
+    <string id="CEEVENTS1136" text="{HERO} has left {SPOUSE}." />
+    <string id="CEEVENTS1137" text="You have too much gold" />
+    <string id="CEEVENTS1138" text="You don't have enough gold" />
+    <string id="CEEVENTS1139" text="The party has too much members" />
+    <string id="CEEVENTS1140" text="The party doesn't have enough members" />
+    <string id="CEEVENTS1141" text="There is too many prisoners" />
+    <string id="CEEVENTS1142" text="There is not enough prisoners" />
+    <string id="CEEVENTS1143" text="You are {TRAIT}" />
+    <string id="CEEVENTS1144" text="You are not {TRAIT}" />
+    <string id="CEEVENTS1145" text="Your captor {HERO} is {TRAIT}" />
+    <string id="CEEVENTS1146" text="Your captor {HERO} is not {TRAIT}" />
+    <string id="CEEVENTS1147" text="Your captive {HERO} is {TRAIT}" />
+    <string id="CEEVENTS1148" text="Your captive {HERO} is not {TRAIT}" />
+    <string id="CEEVENTS1149" text="The party's morale is too high." />
+    <string id="CEEVENTS1150" text="The party's morale is too low." />
+    <string id="CEEVENTS1151" text="{HERO} was impregnated by {SPOUSE}." />
+    <string id="CEEVENTS1152" text="{PARTY} has {?POSITIVE}gained{?}lost{\?} morale." />
+    <string id="CEEVENTS1153" text="Your {SKILL} is too high" />
+    <string id="CEEVENTS1154" text="Your {SKILL} is too low" />
+    <string id="CEEVENTS1155" text="Your captor {HERO} skill in {SKILL} is too high" />
+    <string id="CEEVENTS1156" text="Your captor {HERO} skill in {SKILL} is too low" />
+    <string id="CEEVENTS1157" text="Your captive {HERO} skill in {SKILL} is too high" />
+    <string id="CEEVENTS1158" text="Your captive {HERO} skill in {SKILL} is too low" />
+    <string id="CEEVENTS1159" text="honorable" />
+    <string id="CEEVENTS1160" text="merciful" />
+    <string id="CEEVENTS1161" text="shrewd" />
+    <string id="CEEVENTS1162" text="valorous" />
+    <string id="CEEVENTS1163" text="generous" />
+    <string id="CEEVENTS1164" text="a commander" />
+    <string id="CEEVENTS1165" text="a fighter" />
+    <string id="CEEVENTS1166" text="a politician" />
+    <string id="CEEVENTS1167" text="a manager" />
+    <string id="CEEVENTS1168" text="one healthy and one stillborn baby" />
+    <string id="CEEVENTS1169" text="a healthy baby" />
+    <string id="CEEVENTS1170" text="two healthy babies" />
+    <string id="CEEVENTS1171" text="a thug" />
+    <string id="CEEVENTS1172" text="a thief" />
+    <string id="CEEVENTS1173" text="a gambler" />
+    <string id="CEEVENTS1174" text="a smuggler" />
+    <string id="CEEVENTS1175" text="Manage brothel captives" />
+    <string id="CEEVENTS1176" text="You have too many companions." />
+    <string id="CEEVENTS1177" text="You are free to go." />
+    <string id="CEEVENTS1178" text="Let's have some fun, my love." />
+    <string id="CEEVENTS1179" text="{HERO} has wounded {AMOUNT} prisoners." />
+    <string id="CEEVENTS1180" text="{HERO} has released {AMOUNT} prisoners." />
+    <string id="CEEVENTS1181" text="{HERO} has joined {CLAN} as their leader." />
+    <string id="CEEVENTS1182" text="{HERO} has joined {CLAN}." />
+    <string id="CEEVENTS1183" text="{HERO} has been adopted by {CLAN} as their leader." />
+    <string id="CEEVENTS1184" text="{HERO} has been adopted by {CLAN}." />
+    <string id="CEEVENTS1185" text="{HERO}'s party has lost {AMOUNT} troops." />
+    <string id="CEEVENTS1186" text="{AMOUNT} troops of {HERO}'s party have been wounded." />
+    <string id="CEEVENTS1187" text="You have received a {ITEM}." />
+    <string id="CEEVENTS1188" text="Option conditions are not met." />
+  </strings>
+</base>

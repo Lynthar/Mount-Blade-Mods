@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema" type="string">
+  <tags>
+    <tag language="English" />
+  </tags>
+  <strings>
+    <string id="DefaultCaptiveEventsNavalMale1" text="You're lashed belowdecks and given rudimentary tasks while the sailors jeer. The salt stings in your wounds as the ship cuts through grey water." />
+    <string id="DefaultCaptiveEventsNavalMale2" text="Do the work and avoid trouble." />
+    <string id="DefaultCaptiveEventsNavalMale3" text="Pick a fight with the nearest sailor." />
+    <string id="DefaultCaptiveEventsNavalMale4" text="A grizzled deckhand takes pity on you and offers a small knife in exchange for a favor — a chance to trade for a tool that may help you later." />
+    <string id="DefaultCaptiveEventsNavalMale5" text="Accept the trade and keep the knife." />
+    <string id="DefaultCaptiveEventsNavalMale6" text="Refuse and keep your distance." />
+    <string id="DefaultCaptiveEventsNavalMale7" text="You are forced to help furl sails high on the mast. The work is dangerous but if you prove useful the crew may treat you better — or the height may break you." />
+    <string id="DefaultCaptiveEventsNavalMale8" text="Work carefully and prove your worth." />
+    <string id="DefaultCaptiveEventsNavalMale9" text="Climb recklessly and try to jump for it." />
+  </strings>
+</base>

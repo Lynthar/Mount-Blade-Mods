@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <!--  VERSION 1.0  -->
+   <xs:element name="CECustomScenes">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element maxOccurs="unbounded" ref="CEScene" />
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+
+   <xs:element name="CEScene">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:choice maxOccurs="unbounded" minOccurs="1">
+               <xs:element ref="Name" />
+               <xs:element ref="Dialogue" minOccurs="0" />
+            </xs:choice>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+
+   <!-- Name -->
+   <xs:element name="Name" type="xs:string" />
+
+   <xs:element name="Dialogue">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element maxOccurs="unbounded" ref="Line" />
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+
+   <xs:element name="Line">
+      <xs:complexType>
+         <xs:attribute name="Id" type="xs:string" />
+         <xs:attribute name="Ref" type="xs:string" />
+         <xs:attribute name="InputToken" type="xs:string" />
+         <xs:attribute name="OutputToken" type="xs:string" />
+         <xs:attribute name="Text" type="xs:string" />
+         <xs:attribute name="NextScene" type="xs:string" />
+         <xs:attribute name="Condition" type="xs:string" />
+         <xs:attribute name="Consequence" type="xs:string" />
+      </xs:complexType>
+   </xs:element>
+
+</xs:schema>

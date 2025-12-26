@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CEEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../zCaptivityEvents/ModuleLoader/CaptivityRequired/Events/CEEventsModal.xsd">
+
+<!-- ==================================================================================================== -->
+<!-- |                                     CAPTIVE EVENTS - NAVAL - MALE                                | -->
+<!-- ==================================================================================================== -->
+
+    <!-- #region Common - Sea -->
+
+  <CEEvent>
+    <Name>CE_naval_male_101</Name>
+    <Text>{=DefaultCaptiveEventsNavalMale1}You're lashed belowdecks and given rudimentary tasks while the sailors jeer. The salt stings in your wounds as the ship cuts through grey water.</Text>
+    <BackgroundName></BackgroundName>
+    <MultipleRestrictedListOfFlags>
+        <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+        <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+        <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+        <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+    </MultipleRestrictedListOfFlags>
+    <Options>
+      <Option>
+        <Order>0</Order>
+        <MultipleRestrictedListOfConsequences>
+          <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+          <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+        </MultipleRestrictedListOfConsequences>
+        <OptionText>{=DefaultCaptiveEventsNavalMale2}Do the work and avoid trouble.</OptionText>
+        <RelationTotal>1</RelationTotal>
+      </Option>
+      <Option>
+        <Order>1</Order>
+        <MultipleRestrictedListOfConsequences>
+          <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+          <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+        </MultipleRestrictedListOfConsequences>
+        <OptionText>{=DefaultCaptiveEventsNavalMale3}Pick a fight with the nearest sailor.</OptionText>
+        <HealthTotal>-10</HealthTotal>
+      </Option>
+    </Options>
+    
+    <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+    <ReqHeroMinAge>18</ReqHeroMinAge>
+  </CEEvent>
+
+  <CEEvent>
+    <Name>CE_naval_male_102</Name>
+    <Text>{=DefaultCaptiveEventsNavalMale4}A grizzled deckhand takes pity on you and offers a small knife in exchange for a favor — a chance to trade for a tool that may help you later.</Text>
+    <BackgroundName></BackgroundName>
+    <MultipleRestrictedListOfFlags>
+        <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+        <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+        <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+        <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+    </MultipleRestrictedListOfFlags>
+    <Options>
+      <Option>
+        <Order>0</Order>
+        <MultipleRestrictedListOfConsequences>
+          <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+          <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+        </MultipleRestrictedListOfConsequences>
+        <OptionText>{=DefaultCaptiveEventsNavalMale5}Accept the trade and keep the knife.</OptionText>
+        <RelationTotal>5</RelationTotal>
+      </Option>
+      <Option>
+        <Order>1</Order>
+        <MultipleRestrictedListOfConsequences>
+          <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+          <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+        </MultipleRestrictedListOfConsequences>
+        <OptionText>{=DefaultCaptiveEventsNavalMale6}Refuse and keep your distance.</OptionText>
+        <HealthTotal>-5</HealthTotal>
+      </Option>
+    </Options>
+    
+    <WeightedChanceOfOccurring>15</WeightedChanceOfOccurring>
+    <ReqHeroMinAge>18</ReqHeroMinAge>
+  </CEEvent>
+
+  <CEEvent>
+    <Name>CE_naval_male_103</Name>
+    <Text>{=DefaultCaptiveEventsNavalMale7}You are forced to help furl sails high on the mast. The work is dangerous but if you prove useful the crew may treat you better — or the height may break you.</Text>
+    <BackgroundName></BackgroundName>
+    <MultipleRestrictedListOfFlags>
+        <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+        <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+        <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+        <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+    </MultipleRestrictedListOfFlags>
+    <Options>
+      <Option>
+        <Order>0</Order>
+        <MultipleRestrictedListOfConsequences>
+          <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+          <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+        </MultipleRestrictedListOfConsequences>
+        <OptionText>{=DefaultCaptiveEventsNavalMale8}Work carefully and prove your worth.</OptionText>
+        <RenownTotal>1</RenownTotal>
+      </Option>
+      <Option>
+        <Order>1</Order>
+        <MultipleRestrictedListOfConsequences>
+          <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+          <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+        </MultipleRestrictedListOfConsequences>
+        <OptionText>{=DefaultCaptiveEventsNavalMale9}Climb recklessly and try to jump for it.</OptionText>
+        <HealthTotal>-20</HealthTotal>
+      </Option>
+    </Options>
+    
+    <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+    <ReqHeroMinAge>18</ReqHeroMinAge>
+  </CEEvent>
+
+    <!-- #endregion -->
+
+</CEEvents>

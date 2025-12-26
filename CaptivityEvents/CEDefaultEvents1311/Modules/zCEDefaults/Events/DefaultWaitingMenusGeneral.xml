@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CEEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="..\..\zCaptivityEvents\ModuleLoader\CaptivityRequired\Events\CEEventsModal.xsd">
+    <!-- NEW TEXT TAGS ARE BUT NOT LIMITED TO 
+    nonconditionals
+    CAPTOR_NAME 
+    OWNER_NAME 
+    SETTLEMENT_NAME 
+    PARTY_NAME 
+    NUMBER_OF_DAYS
+    MONEY_AMOUNT
+    CAPTOR_MONEY_AMOUNT
+    BUYERSETTLEMENT
+    BUYERCARAVAN
+    BUYERLORDPARTY
+    
+    conditionals 
+    ISCARAVAN 
+    ISBANDITS 
+    ISLORDPARTY 
+    DAYS(IF MORE THAN ZERO NUMBER_OF_DAYS) 
+    PLURAL(IF MORE THAN ONE NUMBER_OF_DAYS)
+    -->
+    <!-- While Party outside-->
+    <CEEvent>
+        <Name>CE_waiting_menu_general_1</Name>
+        <Backgrounds>
+            <Background Name="CE_DWMG_bandit_sea_1" Weight="1" UseConditions="CE_captured_bandit_sea" />
+            <Background Name="CE_DWMG_snow_bandit_1" Weight="1" UseConditions="CE_waiting_menu_bandit_snow" />
+            <Background Name="CE_DWMG_desert_bandit_1" Weight="1" UseConditions="CE_waiting_menu_bandit_desert" />
+            <Background Name="CE_DWMG_forest_bandit_1" Weight="1" UseConditions="CE_waiting_menu_bandit_forest" />
+            <Background Name="CE_DWMG_plain_bandit_1" Weight="1" UseConditions="CE_waiting_menu_bandit_plain" />
+            <Background Name="default_female_sea" Weight="1" UseConditions="CE_waiting_menu_general_sea" />
+            <Background Name="default_female_town" Weight="1" UseConditions="CE_waiting_menu_general_town" />
+            <Background Name="default_female_snowy" Weight="1" UseConditions="CE_waiting_menu_general_snow" />
+            <Background Name="default_female_forest" Weight="1" UseConditions="CE_waiting_menu_general_forest" />
+            <Background Name="default_female_desert" Weight="1" UseConditions="CE_waiting_menu_general_desert" />
+            <Background Name="default_female" Weight="1" UseConditions="CE_waiting_menu_general_plain" />
+        </Backgrounds>
+        <Text>{=DefaultWaitingMenusGeneral1}{?DAYS}You've been a captive {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a captive {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?}.{\?}</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_waiting_menu_general_1_male</Name>
+        <Backgrounds>
+            <Background Name="CE_DWMM_bandit_sea_1" Weight="1" UseConditions="CE_captured_bandit_sea" />
+            <Background Name="CE_DWMM_snow_bandit_1" Weight="1" UseConditions="CE_waiting_menu_bandit_snow" />
+            <Background Name="CE_DWMM_desert_bandit_1" Weight="1" UseConditions="CE_waiting_menu_bandit_desert" />
+            <Background Name="CE_DWMM_forest_bandit_1" Weight="1" UseConditions="CE_waiting_menu_bandit_forest" />
+            <Background Name="CE_DWMM_plain_bandit_1" Weight="1" UseConditions="CE_waiting_menu_bandit_plain" />
+            <Background Name="default_male_sea" Weight="1" UseConditions="CE_waiting_menu_general_sea" />
+            <Background Name="default_male_town" Weight="1" UseConditions="CE_waiting_menu_general_town" />
+            <Background Name="default_male_snowy" Weight="1" UseConditions="CE_waiting_menu_general_snow" />
+            <Background Name="default_male_forest" Weight="1" UseConditions="CE_waiting_menu_general_forest" />
+            <Background Name="default_male_desert" Weight="1" UseConditions="CE_waiting_menu_general_desert" />
+            <Background Name="default_male" Weight="1" UseConditions="CE_waiting_menu_general_plain" />
+        </Backgrounds>
+        <Text>{=DefaultWaitingMenusGeneral1}{?DAYS}You've been a captive {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a captive {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?}.{\?}</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_waiting_menu_general_2</Name>
+        <Backgrounds>
+            <Background Name="CE_DWMG_hideout_1" Weight="1" UseConditions="CE_waiting_menu_general_bandit_prisoner" />
+            <Background Name="default_female_prison" Weight="1" UseConditions="CE_captured_general" />
+        </Backgrounds>
+        <Text>{=DefaultWaitingMenusGeneral2}{?DAYS}You've been a prisoner at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a prisoner at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;Waiting in captivity...</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCastle</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationDungeon</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationHideout</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTavern</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationVillage</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+     <CEEvent>
+        <Name>CE_waiting_menu_general_2_male</Name>
+        <Backgrounds>
+            <Background Name="default_male_prison" Weight="1" UseConditions="CE_captured_general" />
+        </Backgrounds>
+        <Text>{=DefaultWaitingMenusGeneral2}{?DAYS}You've been a prisoner at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a prisoner at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;Waiting in captivity...</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCastle</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationDungeon</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationHideout</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTavern</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationVillage</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+</CEEvents>

@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema" type="string">
+  <tags>
+    <tag language="English" />
+  </tags>
+  <strings>
+    <string id="DefaultRandomEventsCommon1" text="Breaking down the door to a seemingly abandoned cottage, you're surprised to find a collection of villagers hiding inside, mainly women, children, and elders. They beg for your mercy, and you decide not to kill them on the spot - after all, they may turn out to be more valuable as prisoners than as corpses." />
+    <string id="DefaultRandomEventsCommon2" text="Continue raiding!" />
+    <string id="DefaultRandomEventsCommon3" text="Making your way through an unusually well-appointed cottage, your keen eyes discover a hatch hidden under an unusually-placed carpet. Your eyes glisten with deadly sin as you discover a hidden cache of gold inside. An auspicious start to what will doubtless be a very profitable day..." />
+    <string id="DefaultRandomEventsCommon4" text="You notice a thin trail of flattened grass by the side of the road, and stepping off to investigate discover an unmarked barrel. It's a bit damaged, having apparently fallen off the back of a cart, but remains intact enough that when you pop the cork the smell of sweet wine floods your senses." />
+    <string id="DefaultRandomEventsCommon5" text="Share it with the troops to boost morale." />
+    <string id="DefaultRandomEventsCommon6" text="You hear the sound of ravens ahead, cawing and fighting each other over something hidden just over the next ridge. As you approach, you realize the birds have made an extravagant feast out of some unfortunate soul's corpse. The body appears to be that of a warrior, still wearing damaged armor." />
+    <string id="DefaultRandomEventsCommon7" text="Move on quickly." />
+    <string id="DefaultRandomEventsCommon8" text="You find an odd sack by the side of the road; it looks as though it was abandoned recently, and upon opening it you discover a sum of gold inside. Fresh tracks lead away into the distance." />
+    <string id="DefaultRandomEventsCommon9" text="Take it and move on quickly." />
+    <string id="DefaultRandomEventsCommon10" text="You reach for your money-pouch, only to find it missing from your belt. You don't recall where you saw it last - was it stolen or simply dropped?" />
+    <string id="DefaultRandomEventsCommon11" text="Accept the loss and move on." />
+    <string id="DefaultRandomEventsCommon12" text="You come upon an effervescent spring, smelling slightly of sulfur. Fanciful childhood tales of secret healing springs danced in your head." />
+    <string id="DefaultRandomEventsCommon13" text="Take a drink." />
+    <string id="DefaultRandomEventsCommon14" text="Don't touch it." />
+    <string id="DefaultRandomEventsCommon15" text="You take a drink out of the spring. Maybe it was a bad idea as you feel nauseous." />
+    <string id="DefaultRandomEventsCommon16" text="Maybe I shouldn't have drank that." />
+    <string id="DefaultRandomEventsCommon17" text="You take a drink out of the spring. It feels refreshing." />
+    <string id="DefaultRandomEventsCommon18" text="That was nice." />
+
+    <!-- Wine Event New Options -->
+    <string id="DefaultRandomEventsCommon_Wine2" text="Sell it at the next town." />
+    <string id="DefaultRandomEventsCommon_Wine3" text="Let everyone drink freely and celebrate." />
+    <string id="DefaultRandomEventsCommon_Wine4" text="Leave it, could be poisoned." />
+
+    <!-- Dead Body Event New Options -->
+    <string id="DefaultRandomEventsCommon_Dead2" text="Examine the body carefully for clues and valuables." />
+    <string id="DefaultRandomEventsCommon_Dead3" text="Loot the body quickly." />
+    <string id="DefaultRandomEventsCommon_Dead4" text="Give the warrior a proper burial." />
+
+    <!-- Found Gold Event New Options -->
+    <string id="DefaultRandomEventsCommon_Gold2" text="Search the area thoroughly for more." />
+    <string id="DefaultRandomEventsCommon_Gold3" text="Follow the tracks to find who dropped it." />
+
+    <!-- Lost Gold Event New Options -->
+    <string id="DefaultRandomEventsCommon_Lost2" text="Backtrack and search carefully." />
+    <string id="DefaultRandomEventsCommon_Lost3" text="Question the troops about suspicious behavior." />
+
+    <!-- Spring Event New Options -->
+    <string id="DefaultRandomEventsCommon_Spring2" text="Carefully test the water's properties first." />
+    <string id="DefaultRandomEventsCommon_Spring3" text="Your medical knowledge allows you to identify the spring's healing properties. You carefully bottle some of the water and share it with those who need it most." />
+    <string id="DefaultRandomEventsCommon_Spring4" text="Use the water to treat the wounded." />
+
+    <!-- Merchant Caravan Event -->
+    <string id="DefaultRandomEventsCommon_Merchant1" text="A well-guarded merchant caravan approaches on the road. The lead merchant waves cordially, offering to share the road and perhaps conduct some business." />
+    <string id="DefaultRandomEventsCommon_Merchant2" text="Negotiate a profitable trade deal." />
+    <string id="DefaultRandomEventsCommon_Merchant3" text="Gather information about the region." />
+    <string id="DefaultRandomEventsCommon_Merchant4" text="Buy some supplies." />
+    <string id="DefaultRandomEventsCommon_Merchant5" text="Continue on your way." />
+
+    <!-- Injured Traveler Event -->
+    <string id="DefaultRandomEventsCommon_Injured1" text="You come upon a wounded traveler lying by the roadside. They've been attacked by bandits and are badly hurt. They plead for your help." />
+    <string id="DefaultRandomEventsCommon_Injured2" text="Treat their wounds professionally." />
+    <string id="DefaultRandomEventsCommon_Injured3" text="Give them money and basic aid." />
+    <string id="DefaultRandomEventsCommon_Injured4" text="Question them about the bandits." />
+    <string id="DefaultRandomEventsCommon_Injured5" text="You can't spare the time." />
+
+    <!-- Wandering Minstrel Event -->
+    <string id="DefaultRandomEventsCommon_Minstrel1" text="A cheerful minstrel with a lute joins your party's rest stop. They offer to perform songs and tales in exchange for a meal and some coin." />
+    <string id="DefaultRandomEventsCommon_Minstrel2" text="Pay generously for uplifting entertainment." />
+    <string id="DefaultRandomEventsCommon_Minstrel3" text="Listen to their songs and stories." />
+    <string id="DefaultRandomEventsCommon_Minstrel4" text="Ask for news from distant lands." />
+    <string id="DefaultRandomEventsCommon_Minstrel5" text="Politely decline." />
+
+    <!-- Deserter Soldiers Event -->
+    <string id="DefaultRandomEventsCommon_Deserter1" text="You encounter a small group of deserter soldiers. They're armed but look desperate, unsure whether to beg for mercy or fight their way past you." />
+    <string id="DefaultRandomEventsCommon_Deserter2" text="Convince them to join your ranks." />
+    <string id="DefaultRandomEventsCommon_Deserter3" text="Intimidate them into fleeing." />
+    <string id="DefaultRandomEventsCommon_Deserter4" text="Give them some gold and send them away." />
+    <string id="DefaultRandomEventsCommon_Deserter5" text="Let them pass unmolested." />
+
+    <!-- Pilgrims Event -->
+    <string id="DefaultRandomEventsCommon_Pilgrim1" text="A group of pilgrims traveling to a holy site shares the road with you. They seem peaceful and offer blessings to those who aid travelers." />
+    <string id="DefaultRandomEventsCommon_Pilgrim2" text="Offer protection and supplies." />
+    <string id="DefaultRandomEventsCommon_Pilgrim3" text="Share a meal and conversation." />
+    <string id="DefaultRandomEventsCommon_Pilgrim4" text="Exchange greetings and continue." />
+
+    <!-- Ancient Ruins Event -->
+    <string id="DefaultRandomEventsCommon_Ruins1" text="You stumble upon ancient ruins hidden by overgrowth. Crumbling pillars and weathered stones hint at a civilization long forgotten. Something about this place feels significant." />
+    <string id="DefaultRandomEventsCommon_Ruins2" text="Conduct a thorough archaeological investigation." />
+    <string id="DefaultRandomEventsCommon_Ruins3" text="Search for hidden treasures." />
+    <string id="DefaultRandomEventsCommon_Ruins4" text="Quick search and move on." />
+    <string id="DefaultRandomEventsCommon_Ruins5" text="Too risky, keep moving." />
+
+    <!-- Wild Horses Event -->
+    <string id="DefaultRandomEventsCommon_Horses1" text="A magnificent herd of wild horses grazes in a nearby meadow. They're skittish but some appear strong enough to be valuable mounts if tamed." />
+    <string id="DefaultRandomEventsCommon_Horses2" text="Expertly capture and tame the finest specimens." />
+    <string id="DefaultRandomEventsCommon_Horses3" text="Attempt to catch a few horses." />
+    <string id="DefaultRandomEventsCommon_Horses4" text="Observe and appreciate their beauty." />
+
+    <!-- Herb Gathering Event -->
+    <string id="DefaultRandomEventsCommon_Herbs1" text="You notice an area rich with medicinal herbs and rare plants. With proper knowledge, these could be valuable for treating wounds or selling to apothecaries." />
+    <string id="DefaultRandomEventsCommon_Herbs2" text="Gather and prepare medicinal remedies." />
+    <string id="DefaultRandomEventsCommon_Herbs3" text="Collect valuable herbs to sell." />
+    <string id="DefaultRandomEventsCommon_Herbs4" text="Gather what you can recognize." />
+    <string id="DefaultRandomEventsCommon_Herbs5" text="No time for foraging." />
+
+    <!-- Battlefield Remnants Event -->
+    <string id="DefaultRandomEventsCommon_Battlefield1" text="You come across the aftermath of a recent battle. Broken weapons, scattered armor, and fallen soldiers litter the field. The fighting must have been fierce." />
+    <string id="DefaultRandomEventsCommon_Battlefield2" text="Analyze tactics and salvage quality equipment." />
+    <string id="DefaultRandomEventsCommon_Battlefield3" text="Loot what you can quickly." />
+    <string id="DefaultRandomEventsCommon_Battlefield4" text="Bury the dead with respect." />
+    <string id="DefaultRandomEventsCommon_Battlefield5" text="Leave this grim place quickly." />
+
+    <!-- Hidden Cache Event -->
+    <string id="DefaultRandomEventsCommon_Cache1" text="Your scouts discover what appears to be a hidden cache, possibly belonging to bandits or smugglers. It's concealed but not particularly well-protected." />
+    <string id="DefaultRandomEventsCommon_Cache2" text="Expertly disable traps and loot everything." />
+    <string id="DefaultRandomEventsCommon_Cache3" text="Search carefully for traps." />
+    <string id="DefaultRandomEventsCommon_Cache4" text="Rush in and grab what you can." />
+    <string id="DefaultRandomEventsCommon_Cache5" text="Too dangerous, leave it alone." />
+
+    <!-- Settlement Encounters -->
+    <string id="SettlementEventVillage1" text="You come across two villagers in a heated argument over land boundaries. They look to you for judgment." />
+    <string id="SettlementEventVillage1_Opt1" text="Intervene and mediate fairly." />
+    <string id="SettlementEventVillage1_Opt2" text="Ignore them." />
+
+    <string id="SettlementEventVillage2" text="The village is bustling with activity. It seems a local festival is taking place, with music, food, and dancing." />
+    <string id="SettlementEventVillage2_Opt1" text="Join in the celebrations!" />
+    <string id="SettlementEventVillage2_Opt2" text="Buy a round of drinks for everyone." />
+    <string id="SettlementEventVillage2_Opt3" text="Continue through the village." />
+
+    <string id="SettlementEventTavern1" text="A drunken argument escalates into a full-blown brawl near your table. Chairs are flying!" />
+    <string id="SettlementEventTavern1_Opt1" text="Join the fray and teach them a lesson!" />
+    <string id="SettlementEventTavern1_Opt2" text="Calm everyone down." />
+    <string id="SettlementEventTavern1_Opt3" text="Leave the tavern before things get worse." />
+
+    <string id="SettlementEventTavern2" text="A wealthy patron challenges you to a high-stakes game of dice. The pile of gold on the table is substantial." />
+    <string id="SettlementEventTavern2_Opt1" text="Play aggressively using your wits." />
+    <string id="SettlementEventTavern2_Opt2" text="Decline the offer." />
+
+
+    <string id="SettlementEventCastle1" text="The garrison soldiers are drilling in the training yard. They seem to be practicing new formations." />
+    <string id="SettlementEventCastle1_Opt1" text="Offer to instruct them." />
+    <string id="SettlementEventCastle1_Opt2" text="Spar with them." />
+    <string id="SettlementEventCastle1_Opt3" text="Continue on your way." />
+
+    <string id="SettlementEventCastle2" text="The lord of the castle is hosting a minor feast for the local notables. You are invited to join." />
+    <string id="SettlementEventCastle2_Opt1" text="Attend the feast." />
+    <string id="SettlementEventCastle2_Opt2" text="Decline politely." />
+
+    <string id="SettlementEventCity1" text="A street beggar approaches you, claiming to be a former soldier of fortune who fell on hard times." />
+    <string id="SettlementEventCity1_Opt1" text="Give him some gold." />
+    <string id="SettlementEventCity1_Opt2" text="Try to recruit him as an informant." />
+    <string id="SettlementEventCity1_Opt3" text="Politely decline and walk away." />
+
+    <string id="SettlementEventCity2" text="While walking through the market, you notice a merchant selling goods at what seems to be a suspiciously low price." />
+    <string id="SettlementEventCity2_Opt1" text="Buy and try to resell for profit." />
+    <string id="SettlementEventCity2_Opt2" text="Ignore the offer." />
+  </strings>
+</base>

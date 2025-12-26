@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<strings>
+  <string id="str_CE_quest_found" text="{=CEEVENTS1083}Missing equipment found at {ISSUE_SETTLEMENT}" />
+  <string id="str_CE_quest_found.village" text="{=CEEVENTS1081}Missing equipment found at the village of {ISSUE_SETTLEMENT}" />
+  <string id="str_CE_quest_found.town" text="{=CEEVENTS1082}Missing equipment found at the town of {ISSUE_SETTLEMENT}" />
+  <string id="str_CE_join_prostitution" text="{=CEEVENTS1114}{PLAYER_HERO} become a prostitute at the brothel" />
+  <string id="str_CE_escape_success" text="{=CEEVENTS1116}{PLAYER_HERO} managed to escape captivity" />
+  <string id="str_CE_escape_success.settlement" text="{=CEEVENTS1117}{PLAYER_HERO} managed to escape from {SETTLEMENT}" />
+  <string id="str_CE_busy_right_now" text="{=CEEVENTS1118}You are too busy right now" />
+  <string id="str_CE_prostitution_level.high" text="{=CEEVENTS1119}Your prostitution level is too high" />
+  <string id="str_CE_prostitution_level.low" text="{=CEEVENTS1120}Your prostitution level is too low" />
+  <string id="str_CE_slavery_level.high" text="{=CEEVENTS1121}Your slavery level is too high" />
+  <string id="str_CE_slavery_level.low" text="{=CEEVENTS1122}Your slavery level is too low" />
+  <string id="str_CE_health.high" text="{=CEEVENTS1123}You have more than enough health" />
+  <string id="str_CE_health.low" text="{=CEEVENTS1124}You are still too weak" />
+  <string id="str_CE_relationship.high" text="{=CEEVENTS1125}{HERO} doesn't hate you that much." />
+  <string id="str_CE_relationship.low" text="{=CEEVENTS1126}{HERO} doesn't like you that much." />
+  <string id="str_CE_level_skill" text="{=CEEVENTS1128}{HERO} has {?NEGATIVE}lost{?}gained{\?} {SKILL_AMOUNT} {?PLURAL}levels{?}level{\?} in {SKILL} and is now {TOTAL_AMOUNT}." />
+  <string id="str_CE_level_start" text="{=CEEVENTS1129}{HERO} has reset {SKILL} to the beginning." />
+  <string id="str_CE_level_leave" text="{=CEEVENTS1130}{HERO} is no longer a {OCCUPATION}." />
+  <string id="str_CE_level_enter" text="{=CEEVENTS1131}{HERO} is now a {OCCUPATION}." />
+  <string id="str_CE_prostitution_join" text="{=CEEVENTS1132}{HERO} has become a prostitute in the local brothel." />
+  <string id="str_CE_trait_level" text="{=CEEVENTS1133}{HERO} has become {?POSITIVE}more{?}less{\?} {TRAIT}." />
+  <string id="str_CE_renown_level" text="{=CEEVENTS1134}{HERO} has {?POSITIVE}gained{?}lost{\?} {AMOUNT} renown." />
+  <string id="str_CE_relationship_level" text="{=CEEVENTS1135}{PLAYER_HERO} relationship has {?POSITIVE}increased{?}decrease{\?} by {AMOUNT} to {TOTAL} with {HERO}." />
+  <string id="str_CE_spouse_leave" text="{=CEEVENTS1136}{HERO} has left {SPOUSE}." />
+  <string id="str_CE_gold_level.high" text="{=CEEVENTS1137}You have too much gold" />
+  <string id="str_CE_gold_level.low" text="{=CEEVENTS1138}You don't have enough gold" />
+  <string id="str_CE_member_level.high" text="{=CEEVENTS1139}The party has too much members" />
+  <string id="str_CE_member_level.low" text="{=CEEVENTS1140}The party doesn't have enough members" />
+  <string id="str_CE_captives_level.high" text="{=CEEVENTS1141}There is too many prisoners" />
+  <string id="str_CE_captives_level.low" text="{=CEEVENTS1142}There is not enough prisoners" />
+  <string id="str_CE_trait_level.high" text="{=CEEVENTS1143}You are {TRAIT}" />
+  <string id="str_CE_trait_level.low" text="{=CEEVENTS1144}You are not {TRAIT}" />
+  <string id="str_CE_trait_captor_level.high" text="{=CEEVENTS1145}Your captor {HERO} is {TRAIT}" />
+  <string id="str_CE_trait_captor_level.low" text="{=CEEVENTS1146}Your captor {HERO} is not {TRAIT}" />
+  <string id="str_CE_trait_captive_level.high" text="{=CEEVENTS1147}Your captive {HERO} is {TRAIT}" />
+  <string id="str_CE_trait_captive_level.low" text="{=CEEVENTS1148}Your captive {HERO} is not {TRAIT}" />
+  <string id="str_CE_morale_level" text="{=CEEVENTS1152}{PARTY} has {?POSITIVE}gained{?}lost{\?} morale." />
+  <string id="str_CE_morale_level.high" text="{=CEEVENTS1149}The party's morale is too high." />
+  <string id="str_CE_morale_level.low" text="{=CEEVENTS1150}The party's morale is too low." />
+  <string id="str_CE_impregnated" text="{=CEEVENTS1151}{HERO} was impregnated by {SPOUSE}." />
+  <string id="str_CE_skill_level.high" text="{=CEEVENTS1153}Your {SKILL} is too high" />
+  <string id="str_CE_skill_level.low" text="{=CEEVENTS1154}Your {SKILL} is too low" />
+  <string id="str_CE_skill_captor_level.high" text="{=CEEVENTS1155}Your captor {HERO} skill in {SKILL} is too high" />
+  <string id="str_CE_skill_captor_level.low" text="{=CEEVENTS1156}Your captor {HERO} skill in {SKILL} is too low" />
+  <string id="str_CE_skill_captive_level.high" text="{=CEEVENTS1157}Your captive {HERO} skill in {SKILL} is too high" />
+  <string id="str_CE_skill_captive_level.low" text="{=CEEVENTS1158}Your captive {HERO} skill in {SKILL} is too low" />
+  <string id="str_CE_traits.Honor" text="{=CEEVENTS1159}honorable" />
+  <string id="str_CE_traits.Mercy" text="{=CEEVENTS1160}merciful" />
+  <string id="str_CE_traits.Calculating" text="{=CEEVENTS1161}shrewd" />
+  <string id="str_CE_traits.Valor" text="{=CEEVENTS1162}valorous" />
+  <string id="str_CE_traits.Generosity" text="{=CEEVENTS1163}generous " />
+  <string id="str_CE_traits.Commander" text="{=CEEVENTS1164}a commander" />
+  <string id="str_CE_traits.BalancedFightingSkills" text="{=CEEVENTS1165}a fighter" />
+  <string id="str_CE_traits.Politician" text="{=CEEVENTS1166}a politician" />
+  <string id="str_CE_traits.Manager" text="{=CEEVENTS1167}a manager" />
+  <string id="str_CE_traits.Thug" text="{=CEEVENTS1171}a thug" />
+  <string id="str_CE_traits.Thief" text="{=CEEVENTS1172}a thief" />
+  <string id="str_CE_traits.Gambler" text="{=CEEVENTS1173}a gambler" />
+  <string id="str_CE_traits.Smuggler" text="{=CEEVENTS1174}a smuggler" />
+  <string id="str_CE_brothel_description" text="{=CEBROTHEL0987}From the outside it looks inviting, warm and cozy. Stacked boulders and marble details make up most of the building's outer structure.{newline}It's near impossible to see through the large, stained glass windows, but the sounds of cutlery and drinking glasses from within can be felt outside." />
+  <string id="str_CE_brothel_description.inactive" text="{=CEBROTHEL0986}From the outside it looks inviting, warm and cozy. Stacked boulders and marble details make up most of the building's outer structure.{newline}It's near impossible to see through the large, stained glass windows, but the lack of sounds of cutlery and drinking glasses suggests it is empty inside." />
+  <string id="str_CE_companions_too_many" text="{=CEEVENTS1176}You have too many companions." />
+  <string id="str_CE_properties" text="{=CEBROTHEL1076}Properties" />
+  <string id="str_CE_clan.joinasleader" text="{=CEEVENTS1181}{HERO} has joined {CLAN} as their leader." />
+  <string id="str_CE_clan.join" text="{=CEEVENTS1182}{HERO} has joined {CLAN}." />
+  <string id="str_CE_clan.adopted" text="{=CEEVENTS1183}{HERO} has been adopted by {CLAN} as their leader." />
+  <string id="str_CE_clan.adoptedasleader" text="{=CEEVENTS1184}{HERO} has been adopted by {CLAN}." />
+  <string id="str_CE_kill_prisoners" text="{=CEEVENTS1127}{HERO} has killed {AMOUNT} prisoners." />
+  <string id="str_CE_wound_prisoners" text="{=CEEVENTS1179}{HERO} has wounded {AMOUNT} prisoners." />
+  <string id="str_CE_release_prisoners" text="{=CEEVENTS1180}{HERO} has released {AMOUNT} prisoners." />
+  <string id="str_CE_kill_troops" text="{=CEEVENTS1185}{PARTY} has lost {AMOUNT} troops." />
+  <string id="str_CE_wound_troops" text="{=CEEVENTS1186}{AMOUNT} troops of {PARTY} have been wounded." />
+  
+  <string id="str_CE_item_received" text="{=CEEVENTS1187}You have received a {ITEM}." />
+  
+</strings>

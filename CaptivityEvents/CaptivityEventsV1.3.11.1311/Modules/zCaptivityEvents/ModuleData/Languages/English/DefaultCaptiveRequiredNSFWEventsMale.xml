@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema" type="string">
+  <tags>
+    <tag language="English" />
+  </tags>
+  <strings>
+    <string id="DefaultCaptiveRequiredNSFWEventsMale1" text="You fight valiantly, but as the battle concludes you find yourself surrounded. You do your best to hold your enemies at bay, but as they close in one of them knocks your weapon to the ground, and another grabs your arms, shackling them behind you. Their leader nods approvingly as you are rounded up with the rest of the captives." />
+    <string id="DefaultCaptiveRequiredNSFWEventsMale2" text="What will happen to you now?" />
+    <string id="DefaultCaptiveRequiredNSFWEventsMale3" text="Your enemies take your weapons and armor as you surrender. Their leader nods approvingly as you are rounded up with the rest of the captives." />
+    <string id="DefaultCaptiveRequiredNSFWEventsMale4" text="What will happen to you now?..." />
+    <string id="DefaultCaptiveRequiredNSFWEventsMale5" text="Your attempt to infiltrate the castle fails spectacularly, and you are quickly surrounded by guards. They take your weapons, dragging you to the dungeons where they throw you into a cell, commenting that their leader will deal with such a troublesome guest." />
+    <string id="DefaultCaptiveRequiredNSFWEventsMale6" text="What could they mean?" />
+    <string id="DefaultCaptiveRequiredNSFWEventsMale7" text="You are stripped of your clothing and weapons, left vulnerable and exposed in front of the camp. You suspect you'll be the subject of much discussion among the captives." />
+    <string id="DefaultCaptiveRequiredNSFWEventsMale8" text="Or worse..." />
+    <string id="DefaultCaptiveRequiredNSFWEventsMale9" text="You are stripped of your clothing and weapons, left vulnerable and exposed in the town square. You suspect you'll be the subject of much gossip among the townsfolk." />
+    <string id="DefaultCaptiveRequiredNSFWEventsMale10" text="You are stripped of your clothing and weapons, left vulnerable and exposed in the village center. You suspect you'll be the subject of much talk among the villagers." />
+    <string id="DefaultCaptiveRequiredNSFWEventsMale11" text="You're spotted as you attempt to escape, and the guards stop you on the deck of the ship, binding your wrists with ropes to prevent any further resistance. They decide to take your punishment into their own hands, beating you into unconsciousness.{?}You're spotted as you attempt to escape, and a group of your captors shove you to the ground, binding your wrists with ropes to prevent any further resistance. They decide to take your punishment into their own hands, beating you into unconsciousness.{/?}" />
+    <string id="DefaultCaptiveRequiredNSFWEventsMale12" text="Maybe that wasn't a great idea." />
+    <string id="DefaultCaptiveRequiredNSFWEventsMale13" text="You're almost spotted by a group of unusually wary guards as you slip over the side of the ship, but manage to give them the slip by throwing a rock in the other direction as you scurry away. You find a raft and breathe a well-earned sigh of relief when you're sure you've escaped.{?}You're almost spotted by a group of unusually wary guards as you leave camp, but manage to give them the slip by throwing a rock in the other direction as you scurry away. You breathe a well-earned sigh of relief when you're sure you've escaped.{/?}" />
+    <string id="DefaultCaptiveRequiredNSFWEventsMale14" text="Continue your journey." />
+    <string id="DefaultCaptiveRequiredNSFWEventsMale15" text="You are stripped of your clothing and weapons, left vulnerable and exposed on the ship's deck. You suspect you'll be the subject of much talk among the crew." />
+  </strings>
+</base>

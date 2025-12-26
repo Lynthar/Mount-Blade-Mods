@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CEEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="../../zCaptivityEvents/ModuleLoader/CaptivityRequired/Events/CEEventsModal.xsd">
+
+<!-- ==================================================================================================== -->
+<!-- |                                     CAPTIVE EVENTS - NAVAL - FEMALE                              | -->
+<!-- ==================================================================================================== -->
+
+   <!-- #region Original Basic Captivity Events -->
+
+   <CEEvent>
+      <Name>CE_naval_female_101</Name>
+      <Text>{=DefaultCaptiveEventsNavalFemale1}You're kept tied to the mast under watch. The crew whispers and eyes you; some look lecherous while others appear indifferent.</Text>
+      <BackgroundName></BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale2}Keep your head down.</OptionText>
+            <RelationTotal>5</RelationTotal>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale3}Act Aggressive.</OptionText>
+         </Option>
+      </Options>
+      
+      <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <CEEvent>
+      <Name>CE_naval_female_nsfw_201</Name>
+      <Text>{=DefaultCaptiveEventsNavalFemale4}Late at night a sailor forces himself on you in the dim of the hold, ignoring your pleas as the ship creaks around you.</Text>
+      <BackgroundName>CE_DCENF_female_01</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale5}Endure it and hope for mercy.</OptionText>
+            <HealthTotal>-15</HealthTotal>
+         </Option>
+      </Options>
+      
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <CEEvent>
+      <Name>CE_naval_female_102</Name>
+      <Text>{=DefaultCaptiveEventsNavalFemale6}The ship's captain asks you to assist in the galley; small kindnesses are offered if you comply.</Text>
+      <BackgroundName>CE_DCENF_female_02</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale7}Accept and work in the galley.</OptionText>
+            <RelationTotal>5</RelationTotal>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale8}Refuse and risk punishment.</OptionText>
+            <HealthTotal>-10</HealthTotal>
+         </Option>
+      </Options>
+      
+      <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <CEEvent>
+      <Name>CE_naval_female_nsfw_202</Name>
+      <Text>{=DefaultCaptiveEventsNavalFemale9}Several crewmen take turns abusing you while the rest of the ship sleeps; your body is left bruised by dawn.</Text>
+      <BackgroundName>CE_DCENF_female_04</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale5}Endure it and hope for mercy.</OptionText>
+            <HealthTotal>-20</HealthTotal>
+         </Option>
+      </Options>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>10</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <!-- #endregion -->
+
+   <!-- #region Naval Escape Outcome Events -->
+
+   <!-- Naval Captive Escape Success - Swimming to Raft -->
+   <CEEvent>
+      <Name>CE_captive_naval_escape_success_swim</Name>
+      <Text>{=DefaultCaptiveEventsNavalFemale10}Under cover of darkness, you slip over the side of the ship. The water is frigid and the waves violent, but you manage to find debris - broken planks and barrels lashed together into a makeshift raft. You haul yourself onto it, gasping and shivering. The ship continues on its course, its crew unaware of your escape. You're adrift now, exposed to the elements, but you're free. The raft bobs on the waves as you drift away. Whatever fate awaits you on these waters, it's better than remaining a captive.</Text>
+      <BackgroundName>encounter_escape</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>Escape</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale11}Survive on the raft.</OptionText>
+         </Option>
+      </Options>
+
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <!-- Naval Captive Escape Failure - Drowned -->
+   <CEEvent>
+      <Name>CE_captive_naval_escape_failure_drowned</Name>
+      <Text>{=DefaultCaptiveEventsNavalFemale12}You jump overboard in a desperate bid for freedom, but the water is rougher than it looked. The waves batter you mercilessly, dragging you under again and again. Your strength fades quickly, and just as you're about to go under for the last time, a boat hook snags your clothing. Sailors haul you back aboard like a caught fish, coughing up seawater. The captain stands over you, his expression furious. "Foolish prisoner. The sea would have killed you." He orders severe punishment. For the next several hours, you're made an example of to deter other escape attempts.</Text>
+      <BackgroundName>CE_DCENF_female_12</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale13}Survive the punishment.</OptionText>
+            <HealthTotal>-40</HealthTotal>
+         </Option>
+      </Options>
+
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <!-- #endregion -->
+
+   <!-- #region Naval Escape Attempt Events by Health Status -->
+
+   <!-- High Health Escape (60%+ health) - Best Success Rate -->
+   <CEEvent>
+      <Name>CE_captive_naval_escape_high_health</Name>
+      <Text>{=DefaultCaptiveEventsNavalFemale14}The ship is moving through rough seas during a storm. The crew is distracted by the chaos of securing cargo and manning the sails. You're relatively healthy and strong - this might be your best chance to escape. You could try to slip overboard during the confusion. The waters are treacherous, but you're in good enough condition to attempt it. Do you take the risk?</Text>
+      <BackgroundName>CE_DCENF_female_05</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale15}Make a break for freedom!</OptionText>
+            <TriggerEvents>
+               <TriggerEvent>
+                  <EventName>CE_captive_naval_escape_success_swim</EventName>
+                  <EventWeight>50</EventWeight>
+               </TriggerEvent>
+               <TriggerEvent>
+                  <EventName>CE_captive_naval_escape_success_swim</EventName>
+                  <EventWeight>15</EventWeight>
+                  <EventUseConditions>CE_captive_escape_skill_athletics</EventUseConditions>
+               </TriggerEvent>
+               <TriggerEvent>
+                  <EventName>CE_captive_naval_escape_success_swim</EventName>
+                  <EventWeight>10</EventWeight>
+                  <EventUseConditions>CE_captive_escape_skill_roguery</EventUseConditions>
+               </TriggerEvent>
+               <TriggerEvent>
+                  <EventName>CE_captive_naval_escape_failure_drowned</EventName>
+                  <EventWeight>30</EventWeight>
+               </TriggerEvent>
+            </TriggerEvents>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale16}Stay put. The risk is too great.</OptionText>
+            <HealthTotal>5</HealthTotal>
+         </Option>
+         <Option>
+            <Order>2</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale17}Wait for a better opportunity.</OptionText>
+         </Option>
+      </Options>
+
+      <WeightedChanceOfOccurring>80</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+      <ReqHeroHealthAbovePercentage>60</ReqHeroHealthAbovePercentage>
+      <EscapeChance>35</EscapeChance>
+   </CEEvent>
+
+   <!-- Medium Health Escape (40-60% health) - Moderate Success Rate -->
+   <CEEvent>
+      <Name>CE_captive_naval_escape_medium_health</Name>
+      <Text>{=DefaultCaptiveEventsNavalFemale18}A violent storm hits the ship, and in the chaos you find yourself momentarily unguarded. The ship has pulled close to a rocky coastline for shelter. You're injured and weakened from captivity, but this might be your only chance. The waters look treacherous. Your body aches, and you're not sure you have the strength for a long swim. But staying means continued imprisonment.</Text>
+      <BackgroundName>CE_DCENF_female_06</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale19}Jump into the storm-tossed sea!</OptionText>
+            <TriggerEvents>
+               <TriggerEvent>
+                  <EventName>CE_captive_naval_escape_success_swim</EventName>
+                  <EventWeight>35</EventWeight>
+               </TriggerEvent>
+               <TriggerEvent>
+                  <EventName>CE_captive_naval_escape_success_swim</EventName>
+                  <EventWeight>12</EventWeight>
+                  <EventUseConditions>CE_captive_escape_skill_athletics</EventUseConditions>
+               </TriggerEvent>
+               <TriggerEvent>
+                  <EventName>CE_captive_naval_escape_failure_drowned</EventName>
+                  <EventWeight>55</EventWeight>
+               </TriggerEvent>
+            </TriggerEvents>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale20}Stay safe. You need to recover first.</OptionText>
+            <RelationTotal>3</RelationTotal>
+         </Option>
+         <Option>
+            <Order>2</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale21}Bide your time.</OptionText>
+         </Option>
+      </Options>
+
+      <WeightedChanceOfOccurring>60</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+      <ReqHeroHealthAbovePercentage>40</ReqHeroHealthAbovePercentage>
+      <ReqHeroHealthBelowPercentage>60</ReqHeroHealthBelowPercentage>
+      <EscapeChance>25</EscapeChance>
+   </CEEvent>
+
+   <!-- Low Health Escape (25-40% health) - Low Success Rate -->
+   <CEEvent>
+      <Name>CE_captive_naval_escape_low_health</Name>
+      <Text>{=DefaultCaptiveEventsNavalFemale22}You're battered and weak from days of harsh treatment. The ship rocks in moderately rough seas. You notice the watch is thin - only a few sailors on deck. Your body screams in protest at the thought of action, but your mind whispers that you'll die if you stay. The water looks cold and uninviting. You're not sure you have the strength left, but desperation might be enough.</Text>
+      <BackgroundName>CE_DCENF_female_03</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale23}Attempt escape despite your condition.</OptionText>
+            <TriggerEvents>
+               <TriggerEvent>
+                  <EventName>CE_captive_naval_escape_success_swim</EventName>
+                  <EventWeight>20</EventWeight>
+               </TriggerEvent>
+               <TriggerEvent>
+                  <EventName>CE_captive_naval_escape_success_swim</EventName>
+                  <EventWeight>8</EventWeight>
+                  <EventUseConditions>CE_captive_escape_skill_athletics</EventUseConditions>
+               </TriggerEvent>
+               <TriggerEvent>
+                  <EventName>CE_captive_naval_escape_failure_drowned</EventName>
+                  <EventWeight>75</EventWeight>
+               </TriggerEvent>
+            </TriggerEvents>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale24}Rest and recover. You're too weak.</OptionText>
+            <HealthTotal>8</HealthTotal>
+         </Option>
+         <Option>
+            <Order>2</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale25}Negotiate with your captors instead.</OptionText>
+            <RelationTotal>5</RelationTotal>
+         </Option>
+      </Options>
+
+      <WeightedChanceOfOccurring>40</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+      <ReqHeroHealthAbovePercentage>25</ReqHeroHealthAbovePercentage>
+      <ReqHeroHealthBelowPercentage>40</ReqHeroHealthBelowPercentage>
+      <EscapeChance>15</EscapeChance>
+   </CEEvent>
+
+   <!-- #endregion -->
+
+   <!-- #region NSFW Submissive Events with Renown Loss -->
+
+   <CEEvent>
+      <Name>CE_naval_female_nsfw_submit_301</Name>
+      <Text>{=DefaultCaptiveEventsNavalFemale26}The captain summons you to his quarters late at night. He makes his intentions clear - submit willingly and you'll be treated better, or resist and face harsher conditions. His eyes gleam with expectation as he waits for your answer.</Text>
+      <BackgroundName>CE_DCENF_female_07</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale27}Submit willingly to his demands.</OptionText>
+            <RenownTotal>R -1 0</RenownTotal>
+            <RelationTotal>10</RelationTotal>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale28}Resist and accept the consequences.</OptionText>
+            <HealthTotal>-15</HealthTotal>
+         </Option>
+      </Options>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>25</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <CEEvent>
+      <Name>CE_naval_female_nsfw_submit_302</Name>
+      <Text>{=DefaultCaptiveEventsNavalFemale29}The crew has been at sea for weeks without port. Several sailors corner you below deck, their intentions unmistakable. They offer you extra rations and protection from others if you cooperate. The alternative is being taken by force with nothing gained.</Text>
+      <BackgroundName>CE_DCENF_female_08</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale30}Agree to cooperate for the benefits.</OptionText>
+            <RenownTotal>R -1 0</RenownTotal>
+            <HealthTotal>5</HealthTotal>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale31}Refuse and fight back.</OptionText>
+            <HealthTotal>-25</HealthTotal>
+         </Option>
+      </Options>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <CEEvent>
+      <Name>CE_naval_female_nsfw_submit_303</Name>
+      <Text>{=DefaultCaptiveEventsNavalFemale32}During a celebration after a successful raid, the crew is drunk and rowdy. The first mate pulls you aside and offers a deal - serve as entertainment for the men tonight willingly, and he'll ensure you get better treatment and possibly even freedom at the next port. Word of your cooperation would spread.</Text>
+      <BackgroundName>CE_DCENF_female_09</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale33}Accept the deal and serve willingly.</OptionText>
+            <RenownTotal>R -1 0</RenownTotal>
+            <RelationTotal>15</RelationTotal>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale34}Refuse and face their drunken wrath.</OptionText>
+            <HealthTotal>-30</HealthTotal>
+            <RelationTotal>-10</RelationTotal>
+         </Option>
+      </Options>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>15</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <CEEvent>
+      <Name>CE_naval_female_nsfw_submit_304</Name>
+      <Text>{=DefaultCaptiveEventsNavalFemale35}A wealthy merchant passenger aboard the ship takes interest in you. He approaches privately, offering gold to your captors for exclusive access to you. If you submit gracefully and play the role of a willing companion, he promises to purchase your freedom. Resisting would anger both him and the captain.</Text>
+      <BackgroundName>CE_DCENF_female_10</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale36}Play the willing companion for potential freedom.</OptionText>
+            <RenownTotal>R -1 0</RenownTotal>
+            <RelationTotal>20</RelationTotal>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale37}Refuse to degrade yourself this way.</OptionText>
+            <HealthTotal>-20</HealthTotal>
+            <RelationTotal>-15</RelationTotal>
+         </Option>
+      </Options>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>15</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <CEEvent>
+      <Name>CE_naval_female_nsfw_submit_305</Name>
+      <Text>{=DefaultCaptiveEventsNavalFemale38}The ship's officers hold a private gathering. You're brought before them and told you'll serve their pleasure this evening. One officer suggests that if you're enthusiastic and obedient, they'll vouch for your good behavior and reduce your captivity. Your reputation as a submissive captive would spread among the crew.</Text>
+      <BackgroundName>CE_DCENF_female_11</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale39}Be enthusiastic and obedient for better treatment.</OptionText>
+            <RenownTotal>R -1 0</RenownTotal>
+            <HealthTotal>3</HealthTotal>
+            <RelationTotal>12</RelationTotal>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale40}Show defiance despite the situation.</OptionText>
+            <HealthTotal>-35</HealthTotal>
+         </Option>
+      </Options>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>18</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <!-- #endregion -->
+
+   <!-- #region Skill-Based Escape Condition Events -->
+
+   <CEEvent>
+      <Name>CE_captive_escape_skill_athletics</Name>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>Continue</OptionText>
+         </Option>
+      </Options>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+      <SkillsRequired>
+         <SkillRequired Id="Athletics" Min="50" Ref="Hero" />
+      </SkillsRequired>
+   </CEEvent>
+
+   <CEEvent>
+      <Name>CE_captive_escape_skill_roguery</Name>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>Continue</OptionText>
+         </Option>
+      </Options>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+      <SkillsRequired>
+         <SkillRequired Id="Roguery" Min="60" Ref="Hero" />
+      </SkillsRequired>
+   </CEEvent>
+
+   <!-- #endregion -->
+
+   <!-- #region Birth Alternative Events -->
+
+   <CEEvent>
+      <Name>CE_captive_birth_alt_ship</Name>
+      <Text>{=DefaultCaptiveEventsNavalFemale42}The ship rocks gently as you go into labor in the cramped hold below deck. Your cries mix with the creaking of timber and the distant calls of sailors above. A weathered {?ISCAPTORFEMALE}woman{?}man{\?} who serves as the ship's healer assists you through the difficult birth. When your child finally arrives, the captain descends to inspect the situation. With cold practicality, they offer to have the baby taken ashore at the next port and given to a family who can care for them - or you can try to keep your newborn hidden among the cargo and shadows of the ship.</Text>
+      <BackgroundName>CE_birth_ship</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+          <RestrictedListOfFlags>BirthAlternative</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>Abort</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale43}Let them take your baby at the next port. At least your child will have a chance at a normal life.</OptionText>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>GiveBirth</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultCaptiveEventsNavalFemale44}Hide your baby in the ship's hold. You won't abandon your child.</OptionText>
+         </Option>
+      </Options>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>100</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <!-- #endregion -->
+
+</CEEvents>

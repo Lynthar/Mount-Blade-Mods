@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="string">
+  <tags>
+    <tag language="English" />
+  </tags>
+  <strings>
+    <!-- Naval Slavery Events - Female -->
+    
+    <!-- Ship Deck Inspection -->
+    <string id="DefaultSlaveryEventsNavalFemale01" text="The ship's captain approaches where you're chained to the mast, his boots heavy on the wooden deck. He circles you slowly, examining his newest acquisition with a predatory grin. The salt spray and rocking waves make it difficult to keep your balance as he runs his calloused hands across your body, commenting to his crew about your worth. He announces you'll be working below deck, where the crew can make proper use of you during the long voyage." />
+    <string id="DefaultSlaveryEventsNavalFemale02" text="Lower your eyes submissively." />
+    <string id="DefaultSlaveryEventsNavalFemale03" text="Meet his gaze defiantly." />
+    <string id="DefaultSlaveryEventsNavalFemale04" text="The captain seems pleased by your compliance. He unshackles you from the mast and leads you by a rope leash down narrow wooden stairs into the cramped quarters below deck. The smell of sweat, salt, and sex is overwhelming. He throws you onto a worn hammock and begins unlacing his breeches, explaining that obedient slaves are rewarded with the captain's personal attention. As he takes you roughly, the hammock swaying with the ship's motion, you realize this is your new reality on the open sea." />
+    <string id="DefaultSlaveryEventsNavalFemale05" text="Accept your fate." />
+    <string id="DefaultSlaveryEventsNavalFemale06" text="The captain's face darkens at your defiance. He backhands you hard enough to make your ears ring, then signals to two nearby sailors. They grab your arms roughly as the captain snarls that you need to learn your place. He orders them to take you to the cargo hold and let the entire crew know that the new slave needs breaking in. The sailors drag you away as you hear the captain announcing to the deck that there's fresh entertainment available below." />
+    <string id="DefaultSlaveryEventsNavalFemale07" text="Struggle against them." />
+    
+    <!-- Crew Entertainment -->
+    <string id="DefaultSlaveryEventsNavalFemale08" text="You're brought up from the hold and positioned near the ship's wheel, where a bench has been set up. The first mate announces it's time for the crew's morale boost, and you realize with dread what he means. One by one, sailors take their turn with you as the others cheer and make crude comments. The ocean stretches endlessly in all directions - there's nowhere to run, nowhere to hide. You are completely at their mercy." />
+    <string id="DefaultSlaveryEventsNavalFemale09" text="Endure it quietly." />
+    <string id="DefaultSlaveryEventsNavalFemale10" text="Moan and beg for more." />
+    
+    <!-- Cargo Hold Gangbang -->
+    <string id="DefaultSlaveryEventsNavalFemale11" text="You're thrown onto a pile of cargo nets in the dark hold. The sailors waste no time, surrounding you and tearing at what little clothing you have. Rough hands grab at every part of your body as they take turns violating you. The ship rocks with the waves, and your world becomes nothing but pain, the taste of salt and cum, and the cruel laughter of men using your body for their pleasure. When they finally finish, you're left bruised and leaking their seed, discarded like cargo." />
+    <string id="DefaultSlaveryEventsNavalFemale12" text="Try to survive." />
+    
+    <!-- Captain's Cabin -->
+    <string id="DefaultSlaveryEventsNavalFemale13" text="You're summoned to the captain's cabin. Unlike the rough treatment from the crew, the captain takes his time with you. He pours wine and makes you drink it, then slowly undresses you while discussing the ship's route and cargo as if you were a person, not property. But when he bends you over his desk and takes you from behind, the illusion of civility vanishes. He uses you thoroughly, possessively, marking you as his personal plaything. When he's done, he chains you to a post in his cabin, explaining you'll sleep here from now on - available whenever he desires." />
+    <string id="DefaultSlaveryEventsNavalFemale14" text="Thank him for the privilege." />
+    <string id="DefaultSlaveryEventsNavalFemale15" text="Remain silent." />
+    
+    <!-- Storm at Sea -->
+    <string id="DefaultSlaveryEventsNavalFemale16" text="A violent storm hits the ship. You're left chained below deck as water pours in and the vessel pitches wildly. The crew is too busy fighting for survival to worry about you. In the darkness and chaos, you genuinely fear you'll drown, forgotten and shackled. When the storm finally passes, a sailor comes down to check the cargo. Finding you alive, he grins and says you owe him a reward for not leaving you to drown. He unfastens his breeches before you can respond." />
+    <string id="DefaultSlaveryEventsNavalFemale17" text="Service him gratefully." />
+    <string id="DefaultSlaveryEventsNavalFemale18" text="Stay still and let him take what he wants." />
+    
+    <!-- Port Brothel -->
+    <string id="DefaultSlaveryEventsNavalFemale19" text="The ship docks at a bustling port city. Instead of staying aboard, you're taken to a waterfront brothel owned by the captain's associate. You realize you're being loaned out to pay for supplies and repairs. For the next several days, you service sailors, merchants, and dockworkers - anyone with coin. The brothel keeper tracks each customer with marks on your thigh. By the time the captain returns to collect you, you've lost count of how many men have used your body." />
+    <string id="DefaultSlaveryEventsNavalFemale20" text="Become the perfect whore." />
+    <string id="DefaultSlaveryEventsNavalFemale21" text="Try to escape in the city." />
+    
+    <!-- Broken - Naval Version -->
+    <string id="DefaultSlaveryEventsNavalFemale22" text="You no longer remember what port you sailed from or where you're going. The days blur together in an endless cycle of serving the crew's needs. You've learned to anticipate when they'll want you, learned which positions they prefer, learned to swallow without gagging. When the ship's bell rings for the changing of the watch, your body responds automatically - legs spreading, mouth opening. You are the ship's whore, and you can barely remember being anything else." />
+    <string id="DefaultSlaveryEventsNavalFemale23" text="This is who you are now." />
+    <string id="DefaultSlaveryEventsNavalFemale24" text="Remember who you were." />
+    <string id="DefaultSlaveryEventsNavalFemale25" text="A moment of clarity pierces through the fog of submission. You were someone once - a warrior, a leader. Not just a set of holes for sailors to use. The ship is docking at a port, and for the first time in what feels like forever, you see an opportunity. But the alternative... staying here where everything is decided for you, where your only purpose is to pleasure men... there's a dark comfort in that simplicity." />
+    <string id="DefaultSlaveryEventsNavalFemale26" text="Stay. This is easier." />
+    <string id="DefaultSlaveryEventsNavalFemale27" text="Fight for your freedom." />
+    <string id="DefaultSlaveryEventsNavalFemale28" text="End this nightmare permanently." />
+    
+    <!-- Sold at Port -->
+    <string id="DefaultSlaveryEventsNavalFemale29" text="The captain announces he's found a buyer at port - a wealthy merchant looking for exotic entertainment. You're paraded in front of the merchant wearing nothing but your chains, displayed like livestock. The merchant examines you thoroughly, testing your obedience by ordering you to perform various degrading acts while the captain watches and names his price. After some haggling, coin changes hands and your ownership transfers. The merchant's guards lead you away to his ship, bound for a foreign land." />
+    <string id="DefaultSlaveryEventsNavalFemale30" text="Accept your new master." />
+    
+    <!-- Tavern Kidnapping Chain -->
+    <string id="DefaultSlaveryEventsNavalFemale31" text="You're drinking alone at a tavern when you notice several rough-looking men watching you intently. Before you can react, they surround your table. Their leader, a scarred man with missing teeth, grins menacingly. &quot;You'll fetch a fine price at the slave markets,&quot; he growls. The other patrons look away nervously as the slavers close in. You need to act fast." />
+    <string id="DefaultSlaveryEventsNavalFemale32" text="Fight them off!" />
+    <string id="DefaultSlaveryEventsNavalFemale33" text="Try to talk your way out." />
+    <string id="DefaultSlaveryEventsNavalFemale34" text="Slip away through the crowd." />
+    <string id="DefaultSlaveryEventsNavalFemale35" text="Try your luck and make a run for it." />
+    <string id="DefaultSlaveryEventsNavalFemale36" text="You draw your weapon and fight with desperate fury. The tavern erupts into chaos as you clash with the slavers. Tables shatter, drinks spill, and patrons scramble for safety. Your combat skills prove superior - you down two of them quickly, and the others realize they've underestimated you. The leader curses and signals a retreat. &quot;This one's not worth the trouble!&quot; he snarls, dragging his wounded companions out. The tavern keeper thanks you nervously and offers you a free drink." />
+    <string id="DefaultSlaveryEventsNavalFemale37" text="Accept the drink and leave." />
+    <string id="DefaultSlaveryEventsNavalFemale38" text="You smile seductively at the leader, your voice smooth as honey. &quot;Gentlemen, surely we can come to a better arrangement? I'm worth far more as an ally than as merchandise.&quot; You lean in close, letting your hand trail along his arm. Your charm works - the slaver's eyes glaze over with lust. &quot;Maybe you're right,&quot; he murmurs. You continue weaving your spell, buying time. When you suggest discussing business in his private quarters, he readily agrees. Once you have him alone and distracted, you knock him unconscious with a bottle and slip away into the night." />
+    <string id="DefaultSlaveryEventsNavalFemale39" text="Take his purse before leaving." />
+    <string id="DefaultSlaveryEventsNavalFemale40" text="Your street smarts kick in immediately. You knock over your chair as a distraction, then melt into the crowd of tavern patrons. Using the chaos, you slip between bodies, duck under tables, and navigate through the kitchen. The cook yells at you, but you're already out the back door. You hear the slavers shouting behind you, but you know these alleys. Within minutes, you've lost them in the maze of back streets. Your heart pounds, but you're safe." />
+    <string id="DefaultSlaveryEventsNavalFemale41" text="Return to your camp." />
+    <string id="DefaultSlaveryEventsNavalFemale42" text="You bolt for the door with pure desperation. The slavers lunge for you, but fortune favors you - one trips over a chair, another collides with a serving wench carrying a tray of drinks. You burst out into the street just as a nobleman's carriage passes by. You leap onto the back without thinking, clinging on as it speeds away. By the time the slavers reach the street, you're already out of sight. You drop off a few blocks away, your heart racing but your freedom intact." />
+    <string id="DefaultSlaveryEventsNavalFemale43" text="Thank your lucky stars." />
+    <string id="DefaultSlaveryEventsNavalFemale44" text="You make a desperate dash for the exit, but luck isn't on your side. A slaver's hand catches your hair, yanking you back brutally. You crash into a table, dazed. Before you can recover, rough hands pin you down. &quot;Nice try, bitch,&quot; the leader snarls. They drag you struggling through the tavern as other patrons look away. Outside, they throw a sack over your head and bind your wrists. You feel yourself being thrown into a wagon. The last thing you hear before losing consciousness is the leader saying, &quot;She'll learn obedience on the ship.&quot;" />
+    <string id="DefaultSlaveryEventsNavalFemale45" text="Fade into darkness..." />
+    <string id="DefaultSlaveryEventsNavalFemale46" text="Despite your best efforts, the slavers overwhelm you. There are too many of them, and they're experienced fighters. A club strikes the back of your head, and the world spins. As you collapse, you feel hands tearing at your clothes and weapons. &quot;Got her!&quot; someone shouts triumphantly. Through fading consciousness, you feel yourself being bound and gagged. The leader's scarred face looms over you. &quot;You'll fetch an even higher price after we break that spirit.&quot; Everything goes black as they haul you away." />
+    <string id="DefaultSlaveryEventsNavalFemale47" text="Wake up on a ship..." />
+    <string id="DefaultSlaveryEventsNavalFemale48" text="You lower your weapon, realizing you're outmatched. &quot;I surrender,&quot; you say quietly. The slavers grin victoriously. &quot;Smart girl,&quot; the leader says, stepping forward. &quot;Now strip. Let's see what we've bought.&quot; Your hands shake as you obey, removing your armor and clothes piece by piece while they watch hungrily. Once you're naked, they collar you with heavy iron. &quot;Much better,&quot; the leader purrs, running his hands over your body. &quot;You'll make us rich. And maybe we'll have some fun with you on the voyage.&quot; They lead you out of the tavern by a chain, completely naked and utterly defeated." />
+    <string id="DefaultSlaveryEventsNavalFemale49" text="Accept your fate as a slave." />
+    
+    <!-- Captain's Property - New Events -->
+    <string id="DefaultSlaveryEventsNavalFemale50" text="The captain keeps you chained in his cabin now, the heavy iron collar around your neck connected to a short chain he holds. You've learned to anticipate his desires - when he wants you close, when he wants you on your knees, when he wants to remind you that you're his property. He leads you around the cabin by the chain, sometimes gently, sometimes roughly, always reinforcing that you belong to him. The crew knows you're off-limits now, marked as the captain's personal possession. He uses you whenever the mood strikes, and you've stopped resisting." />
+    <string id="DefaultSlaveryEventsNavalFemale51" text="Obey his every command." />
+    <string id="DefaultSlaveryEventsNavalFemale52" text="Accept your place at his side." />
+    <string id="DefaultSlaveryEventsNavalFemale53" text="You kneel between the captain's legs, the single shackle on your wrist a symbol of your willing bondage. You no longer need the heavy chains - you've become curious about your own submission, almost eager to please him. When he tugs the light chain attached to your wrist, you follow immediately, looking up at him with a mixture of submission and anticipation. You've started to crave his touch, his approval. The way he uses you feels natural now, and you find yourself wondering what new ways you can serve him. Your body responds to his presence automatically, and you realize with a strange thrill that you don't want to leave." />
+    <string id="DefaultSlaveryEventsNavalFemale54" text="Show him how devoted you've become." />
+    <string id="DefaultSlaveryEventsNavalFemale55" text="Beg to serve him." />
+    <string id="DefaultSlaveryEventsNavalFemale56" text="You don't need chains anymore. You follow the captain everywhere, staying close to his side without needing to be told. Your mind is completely focused on him - his needs, his desires, his pleasure. You've become the perfect slave, moving when he wants you to move, speaking only when spoken to, offering your body whenever he glances your way. The crew watches in amazement at your complete devotion. You no longer remember wanting anything else. When he takes you, your body responds with practiced perfection, every movement designed to maximize his pleasure. You exist only for him, and that thought fills you with deep contentment." />
+    <string id="DefaultSlaveryEventsNavalFemale57" text="This is perfection." />
+    <string id="DefaultSlaveryEventsNavalFemale58" text="You live to serve your master." />
+    <string id="DefaultSlaveryEventsNavalFemale59" text="The captain has grown tired of you. One morning, he simply announces to the crew that you're no longer his exclusive property. &quot;She's worn out her welcome in my cabin,&quot; he says dismissively. &quot;She's all yours now.&quot; The crew cheers as you're led out, no longer the captain's prized possession but common property for all to use. You don't protest - you can't even form the thought to protest. Your mind is so thoroughly broken that the change means nothing to you. You exist only to serve, and it doesn't matter who you serve. The crew uses you constantly, passing you between them, and you accept everything with the same vacant, submissive expression. You are completely brain dead to anything except obedience." />
+    <string id="DefaultSlaveryEventsNavalFemale60" text="Serve them all." />
+    
+    <!-- Captain's Punishment Events -->
+    <string id="DefaultSlaveryEventsNavalFemale61" text="Resist his advances." />
+    <string id="DefaultSlaveryEventsNavalFemale62" text="Hesitate and pull away." />
+    <string id="DefaultSlaveryEventsNavalFemale63" text="The captain's face darkens at your resistance. &quot;I see you need a reminder of your place,&quot; he growls. He attaches a rope leash to your collar and drags you out onto the deck. &quot;On your hands and knees,&quot; he orders. Humiliated, you drop down as he parades you around the ship like a dog, the crew laughing and jeering. He makes you crawl the entire length of the deck multiple times while sailors mock you and tug at the leash. &quot;This is what happens when you forget you're my property,&quot; the captain says coldly. When he finally brings you back to his cabin, you're exhausted and thoroughly humiliated." />
+    <string id="DefaultSlaveryEventsNavalFemale64" text="Crawl obediently." />
+    <string id="DefaultSlaveryEventsNavalFemale65" text="The captain's expression hardens when you pull away. &quot;You dare hesitate?&quot; he snarls. He drags you by your hair down to the mess hall where the crew is eating. He chains you naked to a post in the center of the room. &quot;She needs to remember what happens to disobedient slaves,&quot; he announces. For the next several hours, you're on display as the crew eats, drinks, and leers at you. Some reach out to grope you as they pass. The captain sits at his table, watching coldly. &quot;This is your place when you displease me,&quot; he says. &quot;Remember that.&quot;" />
+    <string id="DefaultSlaveryEventsNavalFemale66" text="Endure the humiliation." />
+    <string id="DefaultSlaveryEventsNavalFemale67" text="The captain is furious at your continued resistance. &quot;You need to be broken properly,&quot; he declares. He drags you up to the main deck in broad daylight and throws you down onto the wooden planks. &quot;The crew can have you today,&quot; he announces. &quot;Show her what happens to slaves who displease me.&quot; The sailors cheer and gather around. For hours under the hot sun, they take turns using your body while the captain watches from the ship's wheel. You're left sprawled on the deck, covered in sweat and cum, a public spectacle of what happens to disobedient property." />
+    <string id="DefaultSlaveryEventsNavalFemale68" text="Survive the ordeal." />
+    
+    <!-- Trade Ship Sale Events -->
+    <string id="DefaultSlaveryEventsNavalFemale69" text="A slave trader's ship has arrived at port, and your captor sees an opportunity. You're dragged before the ship's slaver, a weathered man with cold, calculating eyes. He examines you like livestock, checking your teeth, squeezing your muscles, and running his hands over your body in a clinical assessment of your worth. After brief haggling, coin changes hands and you're shackled with the rest of the slaves. The trader grins as he chains you to the mast. &quot;You'll fetch a good price at the next port,&quot; he says. &quot;But first, my crew needs entertainment for the voyage.&quot;" />
+    <string id="DefaultSlaveryEventsNavalFemale70" text="Accept your fate." />
+    <string id="DefaultSlaveryEventsNavalFemale71" text="A slave trader's ship has docked, and your owner decides to sell you. You're brought before the ship's slaver along with other merchandise. He examines you thoroughly, noting your obedience level and physical condition. &quot;This one's already broken in,&quot; he observes with satisfaction. After the transaction, you're transferred to the trader's custody, chained with the other slaves destined for distant markets. The slaver pats your head mockingly. &quot;Don't worry, we'll keep you busy during the voyage.&quot;" />
+    <string id="DefaultSlaveryEventsNavalFemale72" text="Lower your eyes submissively." />
+    
+    <!-- New Sea Escape Events (90-101) -->
+    <string id="DefaultSlaveryEventsNavalFemale90" text="A sudden storm crashes over the ship. The crew scrambles to secure the rigging and tie down cargo as waves batter the hull. In the chaos, you see opportunity - barrels and debris are breaking free, floating in the churning sea. Your chains have loosened from the violent rocking. You're still strong, your will unbroken. If you can slip over the side during this chaos, you might be able to grab floating debris and fashion a makeshift raft. The storm is dangerous, but staying enslaved is worse." />
+    <string id="DefaultSlaveryEventsNavalFemale91" text="Jump into the storm and grab debris!" />
+    <string id="DefaultSlaveryEventsNavalFemale92" text="Too dangerous. Stay aboard." />
+    <string id="DefaultSlaveryEventsNavalFemale93" text="The ship strikes something beneath the waves with a sickening crunch. Wood splinters and water pours into the hold. The crew rushes to the pumps, completely forgetting about the slaves. You wrench desperately at your bonds as cold water rises around your ankles. Large pieces of the mast and hull are breaking off, floating nearby. Just when panic threatens to overwhelm you, the chain snaps - rusted through by salt water. You could make it to the floating wreckage and cling to it, escaping while the crew fights to save the ship." />
+    <string id="DefaultSlaveryEventsNavalFemale94" text="Swim for the floating wreckage!" />
+    <string id="DefaultSlaveryEventsNavalFemale95" text="Too dangerous. Stay aboard." />
+    <string id="DefaultSlaveryEventsNavalFemale96" text="Thunder roars as massive waves crash over the deck. The ship lists dangerously, and sailors cry out in panic. You're chained in the hold, but the violence of the storm has created a gap in the hull near your shackles. Through the opening, you can see broken barrels and splintered planks floating in the churning water. Your mind is cloudier than it once was - weeks of abuse have dulled your spirit. But the storm awakens something primal. You could force your way through the gap and try to reach the floating debris before you drown. It's a desperate gamble." />
+    <string id="DefaultSlaveryEventsNavalFemale97" text="Force through the gap and swim!" />
+    <string id="DefaultSlaveryEventsNavalFemale98" text="Stay put and pray the ship holds." />
+    <string id="DefaultSlaveryEventsNavalFemale99" text="The ship rocks gently on a moonless night. Most of the crew is below deck, only a skeleton watch remains. You're chained on deck, awaiting your turn to service the night watch. But the guard has fallen asleep, his snoring loud and regular. The darkness is absolute, perfect cover. The chains are loose enough that you might be able to slip them. There's debris in the water - barrels that fell overboard earlier. You could slip over the rail silently and reach them before anyone notices. But the water is cold and dark, and the thought of drowning terrifies you." />
+    <string id="DefaultSlaveryEventsNavalFemale100" text="Slip over the side quietly." />
+    <string id="DefaultSlaveryEventsNavalFemale101" text="Stay where it's safe." />
+    
+    <!-- New Option Strings (115-128) -->
+    <string id="DefaultSlaveryEventsNavalFemale115" text="Moan softly to please him." />
+    <string id="DefaultSlaveryEventsNavalFemale116" text="Cry silently as he uses you." />
+    <string id="DefaultSlaveryEventsNavalFemale117" text="Go limp and let them drag you." />
+    <string id="DefaultSlaveryEventsNavalFemale118" text="Bite one of the sailors." />
+    <string id="DefaultSlaveryEventsNavalFemale119" text="Retreat into your mind and disconnect." />
+    <string id="DefaultSlaveryEventsNavalFemale120" text="Fight back until they beat you unconscious." />
+    <string id="DefaultSlaveryEventsNavalFemale121" text="Refuse to move." />
+    <string id="DefaultSlaveryEventsNavalFemale122" text="Bark like a dog to amuse the crew." />
+    <string id="DefaultSlaveryEventsNavalFemale123" text="Cry and beg for forgiveness." />
+    <string id="DefaultSlaveryEventsNavalFemale124" text="Glare defiantly at the crew." />
+    <string id="DefaultSlaveryEventsNavalFemale125" text="Beg each sailor for mercy." />
+    <string id="DefaultSlaveryEventsNavalFemale126" text="Spit and curse until they gag you." />
+    <string id="DefaultSlaveryEventsNavalFemale127" text="Thank each man who uses you." />
+    <string id="DefaultSlaveryEventsNavalFemale128" text="Stare blankly as they pass you around." />
+    
+    <!-- New Option Strings for Sold Events (132-137) -->
+    <string id="DefaultSlaveryEventsNavalFemale132" text="Kneel and kiss his boots to show your obedience." />
+    <string id="DefaultSlaveryEventsNavalFemale133" text="Struggle against the transfer." />
+    <string id="DefaultSlaveryEventsNavalFemale134" text="Fight back against the slavers!" />
+    <string id="DefaultSlaveryEventsNavalFemale135" text="Beg the slaver to be gentle with you." />
+    <string id="DefaultSlaveryEventsNavalFemale136" text="Demonstrate your obedience eagerly." />
+    <string id="DefaultSlaveryEventsNavalFemale137" text="Glare at the slaver defiantly." />
+    
+    <!-- New Option Strings for Tavern Chain (138-149) -->
+    <string id="DefaultSlaveryEventsNavalFemale138" text="Search the fallen slavers for valuables." />
+    <string id="DefaultSlaveryEventsNavalFemale139" text="Report the slavers to the city guard." />
+    <string id="DefaultSlaveryEventsNavalFemale140" text="Leave quickly without taking anything." />
+    <string id="DefaultSlaveryEventsNavalFemale141" text="Tie him up and take everything of value." />
+    <string id="DefaultSlaveryEventsNavalFemale142" text="Find the city guard and report the slavers." />
+    <string id="DefaultSlaveryEventsNavalFemale143" text="Lay low at a different inn until morning." />
+    <string id="DefaultSlaveryEventsNavalFemale144" text="Double back to make sure you weren't followed." />
+    <string id="DefaultSlaveryEventsNavalFemale145" text="Find a tavern and celebrate your narrow escape." />
+    <string id="DefaultSlaveryEventsNavalFemale146" text="Struggle even as consciousness fades." />
+    <string id="DefaultSlaveryEventsNavalFemale147" text="Curse them as you lose consciousness." />
+    <string id="DefaultSlaveryEventsNavalFemale148" text="Beg them to release you." />
+    <string id="DefaultSlaveryEventsNavalFemale149" text="Stay silent and glare at them." />
+    
+    <!-- New Option Strings for Escape Events (150-161) -->
+    <string id="DefaultSlaveryEventsNavalFemale150" text="Find a safe place to rest and recover." />
+    <string id="DefaultSlaveryEventsNavalFemale151" text="Seek help from authorities." />
+    <string id="DefaultSlaveryEventsNavalFemale152" text="Beg them to stop between sobs." />
+    <string id="DefaultSlaveryEventsNavalFemale153" text="Silently swear revenge." />
+    <string id="DefaultSlaveryEventsNavalFemale154" text="Give in completely and submit." />
+    <string id="DefaultSlaveryEventsNavalFemale155" text="Kick and scream until they knock you out." />
+    <string id="DefaultSlaveryEventsNavalFemale156" text="Plead with the watching crowd for help." />
+    <string id="DefaultSlaveryEventsNavalFemale157" text="Stay silent and endure with dignity." />
+    <string id="DefaultSlaveryEventsNavalFemale158" text="Accept your punishment submissively." />
+    <string id="DefaultSlaveryEventsNavalFemale159" text="Maintain hope - you'll escape next time." />
+    <string id="DefaultSlaveryEventsNavalFemale160" text="Cry and scream as the brand touches your skin." />
+    <string id="DefaultSlaveryEventsNavalFemale161" text="Meet their eyes with silent defiance." />
+    
+  </strings>
+</base>

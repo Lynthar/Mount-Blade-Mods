@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema" type="string">
+  <tags>
+    <tag language="English" />
+  </tags>
+  <strings>
+    <string id="DefaultCaptorEventsCommon1" text="Breaking down the door to a seemingly abandoned cottage, you're surprised to find a collection of villagers hiding inside, mainly women, children, and elders. They beg for your mercy, and you decide not to kill them on the spot - after all, they may turn out to be more valuable as prisoners than as corpses." />
+    <string id="DefaultCaptorEventsCommon2" text="Continue raiding!" />
+    <string id="DefaultCaptorEventsCommon3" text="Making your way through an unusually well-appointed cottage, your keen eyes discover a hatch hidden under an unusually-placed carpet. Your eyes glisten with deadly sin as you discover a hidden cache of gold inside. An auspicious start to what will doubtless be a very profitable day..." />
+    <string id="DefaultCaptorEventsCommon4" text="Continue your raid!" />
+    <string id="DefaultCaptorEventsCommon5" text="Your prisoners outnumber your party and have managed to free themselves. Unfortunately for you, their first thought is of revenge, and you find yourself in the midst of violent rebellion. Gathering your troops, you hope your battlefield experience will prove more effective than raw numbers or your positions will be reversed before the day is out." />
+    <string id="DefaultCaptorEventsCommon6" text="Get ready for battle." />
+    <string id="DefaultCaptorEventsCommon7" text="You receive word that {CAPTIVE_NAME} has managed to escape. Your guard swears up and down she just disappeared, but their embarrassed stammering tells a different story." />
+    <string id="DefaultCaptorEventsCommon8" text="Warn your guards to keep better watch." />
+    <string id="DefaultCaptorEventsCommon9" text="You receive word that {CAPTIVE_NAME} has managed to escape. Your guard swears up and down he just disappeared, but their embarrassed stammering tells a different story." />
+    <string id="DefaultCaptorEventsCommon10" text="You receive word that {CAPTIVE_NAME} has managed to escape. His chains appear to have been broken using a tool of some sort." />
+    <string id="DefaultCaptorEventsCommon11" text="You receive word that {CAPTIVE_NAME} has managed to escape. Her chains appear to have been broken using a tool of some sort." />
+    <string id="DefaultCaptorEventsCommon12" text="{CAPTIVE_NAME} approaches you, kneeling respectfully, and tells you they've been watching your leadership during their captivity and are deeply impressed. They ask if you would be willing to let them join you so that they might serve under your banner." />
+    <string id="DefaultCaptorEventsCommon13" text="Accept their fealty." />
+    <string id="DefaultCaptorEventsCommon14" text="Decline and keep them captive." />
+    <string id="DefaultCaptorEventsCommon15" text="A messenger arrives bearing a formal proposal - {CAPTIVE_NAME}'s family offers both gold and a favorable alliance in exchange for their safe return. The offer is generous, but releasing them may have strategic consequences." />
+    <string id="DefaultCaptorEventsCommon16" text="Accept the offer." />
+    <string id="DefaultCaptorEventsCommon17" text="Negotiate for more gold." />
+    <string id="DefaultCaptorEventsCommon18" text="Refuse - keep your prisoner." />
+    <string id="DefaultCaptorEventsCommon19" text="Your scouts report that one of your prisoners attempted to escape during the night but was recaptured. The prisoner stands before you, defiant despite the failure. Your troops watch to see how you'll handle this challenge to your authority." />
+    <string id="DefaultCaptorEventsCommon20" text="Punish them severely." />
+    <string id="DefaultCaptorEventsCommon21" text="Respect their courage and spare them." />
+    <string id="DefaultCaptorEventsCommon22" text="Double their chains." />
+    <string id="DefaultCaptorEventsCommon23" text="While taking inventory of your prisoners' confiscated possessions, you discover valuable contraband hidden among their belongings. This could be sold for profit, but keeping it may cause complications with local authorities." />
+    <string id="DefaultCaptorEventsCommon24" text="Sell it discreetly." />
+    <string id="DefaultCaptorEventsCommon25" text="Turn it in for a reward." />
+    <string id="DefaultCaptorEventsCommon26" text="Destroy it to avoid trouble." />
+    <string id="DefaultCaptorEventsCommon_Raid2" text="Let the elders and children go for a ransom." />
+    <string id="DefaultCaptorEventsCommon_Raid3" text="Let them go free." />
+    <string id="DefaultCaptorEventsCommon_Raid4" text="Grab what you can quickly." />
+    <string id="DefaultCaptorEventsCommon_Raid5" text="Your men discover a well-stocked armory hidden in a fortified building. Quality weapons and armor line the walls, far better than what most villagers should possess. This cache would significantly improve your troops' equipment." />
+    <string id="DefaultCaptorEventsCommon_Raid6" text="Distribute the equipment to your troops." />
+    <string id="DefaultCaptorEventsCommon_Raid7" text="Sell it at the next town." />
+    <string id="DefaultCaptorEventsCommon_Rebel2" text="Use your leadership to quell the rebellion." />
+    <string id="DefaultCaptorEventsCommon_Sick1" text="One of your captives has fallen seriously ill. The sickness is spreading among the prisoners, and if left untreated could infect your own troops. Your medic recommends immediate action." />
+    <string id="DefaultCaptorEventsCommon_Sick2" text="Treat the sick prisoners properly." />
+    <string id="DefaultCaptorEventsCommon_Sick3" text="Quarantine and provide basic care." />
+    <string id="DefaultCaptorEventsCommon_Sick4" text="Release the sick prisoners." />
+    <string id="DefaultCaptorEventsCommon_Skilled1" text="You discover that one of your prisoners, {CAPTIVE_NAME}, possesses remarkable skills as a warrior. Several of your men have taken notice and suggest that such talent could be useful if properly motivated." />
+    <string id="DefaultCaptorEventsCommon_Skilled2" text="Convince them to join your cause." />
+    <string id="DefaultCaptorEventsCommon_Skilled3" text="Ransom them for a higher price." />
+    <string id="DefaultCaptorEventsCommon_Skilled4" text="Keep them as a valuable prisoner." />
+    <string id="DefaultCaptorEventsCommon_Ransom1" text="A messenger arrives bearing a substantial ransom offer for {CAPTIVE_NAME}. It seems their family is wealthy and willing to pay handsomely for their return. The offer is generous, but you could potentially negotiate for more." />
+    <string id="DefaultCaptorEventsCommon_Ransom2" text="Negotiate for maximum payment." />
+    <string id="DefaultCaptorEventsCommon_Ransom3" text="Accept the initial offer." />
+    <string id="DefaultCaptorEventsCommon_Ransom4" text="Refuse and keep the prisoner." />
+    <string id="DefaultCaptorEventsCommon_Info1" text="During interrogation, {CAPTIVE_NAME} reveals they have valuable information about enemy troop movements and hidden supply caches. They're willing to trade this knowledge for better treatment or perhaps even freedom." />
+    <string id="DefaultCaptorEventsCommon_Info2" text="Extract all information skillfully." />
+    <string id="DefaultCaptorEventsCommon_Info3" text="Trade better conditions for information." />
+    <string id="DefaultCaptorEventsCommon_Info4" text="Release them in exchange for the information." />
+    <string id="DefaultCaptorEventsCommon_Guard1" text="You witness one of your guards treating prisoners with excessive cruelty. While harsh discipline maintains order, this level of brutality is causing unrest among both prisoners and some of your more honorable troops." />
+    <string id="DefaultCaptorEventsCommon_Guard2" text="Discipline the guard and establish fair treatment." />
+    <string id="DefaultCaptorEventsCommon_Guard3" text="Allow it - fear keeps prisoners compliant." />
+    <string id="DefaultCaptorEventsCommon_Guard4" text="Quietly warn the guard to be more discreet." />
+    <string id="DefaultCaptorEventsCommon_Fight1" text="Two prisoners get into a violent altercation. One is badly injured while the other stands over them with a makeshift weapon. Your guards are calling for you to decide their fate." />
+    <string id="DefaultCaptorEventsCommon_Fight2" text="Execute the aggressor as an example." />
+    <string id="DefaultCaptorEventsCommon_Fight3" text="Treat both and separate them." />
+    <string id="DefaultCaptorEventsCommon_Fight4" text="Punish both equally." />
+    <string id="DefaultCaptorEventsCommon_Escape2" text="Send trackers after her." />
+    <string id="DefaultCaptorEventsCommon_Escape3" text="Send trackers after him." />
+    <string id="DefaultCaptorEventsCommon_Recruit2" text="Ransom them instead." />
+    <string id="DefaultCaptorEventsCommon_Recruit3" text="Ransom them instead." />
+  </strings>
+</base>

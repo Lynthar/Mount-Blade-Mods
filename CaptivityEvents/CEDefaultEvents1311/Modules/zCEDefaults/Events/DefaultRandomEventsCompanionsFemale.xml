@@ -1,0 +1,1996 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CEEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../zCaptivityEvents/ModuleLoader/CaptivityRequired/Events/CEEventsModal.xsd">
+
+   <!-- ==================================================================================================== -->
+   <!-- |                          RANDOM EVENTS - COMPANIONS - FEMALE                                     | -->
+   <!-- ==================================================================================================== -->
+
+   <!-- #region Conditionals -->
+   <CEEvent>
+      <Name>CE_random_event_companions_female_conditionals</Name>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+   <CEEvent>
+      <Name>CE_random_event_companions_male_conditionals</Name>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+   <!-- #endregion -->
+
+   <!-- #region Female - Female -->
+   <!-- Training exercise with female companion that can lead to wrestling -->
+   <CEEvent>
+      <Name>CE_random_event_companions_female_f</Name>
+      <BackgroundName>CE_DRECF_female_2</BackgroundName>
+      <Text>{=DefaultRandomEventsCompanionsFemale1}{COMPANION_NAME_1} asks to speak with you. You invite her to your tent. {COMPANION_NAME_1} says your troops have been lazy lately and need more exercise.</Text>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale2}Agree and offer 500 gold for training.</OptionText>
+            <GoldTotal>-500</GoldTotal>
+            <ReqGoldAbove>500</ReqGoldAbove>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>10</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale3}Kick away for a waste of time.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>-5</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>2</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale4}Come up with an excuse.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>R -10 1</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>3</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale5}Challenge {COMPANION_NAME_1} to a naked fight.</OptionText>
+            <SkillsRequired>
+               <SkillRequired Id="Athletics" Min="30" Ref="Hero" />
+            </SkillsRequired>
+            <TriggerEventName>CE_random_event_companions_female_f_1</TriggerEventName>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" Type="Companion" UseOtherConditions="CE_random_event_companions_female_conditionals" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <ReqTroopsAbove>3</ReqTroopsAbove>
+      <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <!-- Wrestling challenge begins -->
+   <CEEvent>
+      <Name>CE_random_event_companions_female_f_1</Name>
+      <Text>{=DefaultRandomEventsCompanionsFemale6}{COMPANION_NAME_1} nods and takes off all her clothes, you do the same and stand in front of the companion. You walk around each other for a while, looking for weak points and admiring the bodies. Then you rush to your opponent...</Text>
+      <BackgroundName>CE_DRECF_female_8</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale7}Apply your strength.</OptionText>
+            <SkillsRequired>
+               <SkillRequired Id="OneHanded" Min="25" Ref="Hero" />
+            </SkillsRequired>
+            <TriggerEvents>
+               <TriggerEvent>
+                  <EventName>CE_random_event_companions_female_f_1_w</EventName>
+                  <EventWeight>20</EventWeight>
+               </TriggerEvent>
+               <TriggerEvent>
+                  <EventName>CE_random_event_companions_female_f_1_l</EventName>
+                  <EventWeight>20</EventWeight>
+                  <EventUseConditions>True</EventUseConditions>
+               </TriggerEvent>
+            </TriggerEvents>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale8}Apply your dexterity.</OptionText>
+            <SkillsRequired>
+               <SkillRequired Id="Athletics" Min="30" Ref="Hero" />
+            </SkillsRequired>
+            <TriggerEvents>
+               <TriggerEvent>
+                  <EventName>CE_random_event_companions_female_f_1_w</EventName>
+                  <EventWeight>20</EventWeight>
+               </TriggerEvent>
+               <TriggerEvent>
+                  <EventName>CE_random_event_companions_female_f_1_l</EventName>
+                  <EventWeight>20</EventWeight>
+               </TriggerEvent>
+            </TriggerEvents>
+         </Option>
+         <Option>
+            <Order>2</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale9}Apply your endurance.</OptionText>
+            <SkillsRequired>
+               <SkillRequired Id="Athletics" Min="25" Ref="Hero" />
+            </SkillsRequired>
+            <TriggerEvents>
+               <TriggerEvent>
+                  <EventName>CE_random_event_companions_female_f_1_w</EventName>
+                  <EventWeight>20</EventWeight>
+               </TriggerEvent>
+               <TriggerEvent>
+                  <EventName>CE_random_event_companions_female_f_1_l</EventName>
+                  <EventWeight>20</EventWeight>
+               </TriggerEvent>
+            </TriggerEvents>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" UseOtherConditions="False" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+
+   <!-- #region Female - Female Win -->
+   <!-- Hero wins wrestling match against female companion -->
+   <CEEvent>
+      <Name>CE_random_event_companions_female_f_1_w</Name>
+      <Text>{=DefaultRandomEventsCompanionsFemale10}Hours of training take its toll, {COMPANION_NAME_1} is strong, but she lacks your strength, stamina and agility. You dive under the arm of the opponent who was trying to hit you, make a grab from the back and hold the opponent until the opponent realizes that she cannot harm you, and you are able to break her neck if you need it. She is forced to admit defeat. Your opponent's warm body aroused passion in you. You can exercise your right as a winner.</Text>
+      <BackgroundName>CE_DRECF_female_13</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale11}Use the right of the winner.</OptionText>
+            <TriggerEvents>
+               <TriggerEvent>
+                  <EventName>CE_random_event_companions_female_f_2_w</EventName>
+                  <EventWeight>20</EventWeight>
+               </TriggerEvent>
+            </TriggerEvents>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale12}Thank for the sparring and let go.</OptionText>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" UseOtherConditions="False" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <!-- Alternative victory outcome -->
+   <CEEvent>
+      <Name>CE_random_event_companions_female_f_2_w</Name>
+      <Text>{=DefaultRandomEventsCompanionsFemale13}You start fondling a defeated opponent's pussy. A little tense at first, it relaxes, giving you power over yourself. You caress her for a while, then sit down opposite her and touch your pussy with hers. You start rubbing pussies, giving each other mutual pleasure. You are so addicted that the first one gets an orgasm.</Text>
+      <BackgroundName>CE_DRECF_female_10</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale14}Spend the rest of the night together.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>10</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale15}Make sure that you both climax.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>5</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>2</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale16}End the fun.</OptionText>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" UseOtherConditions="False" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+   <!-- #endregion -->
+
+   <!-- #region Female - Female Loss -->
+   <!-- Companion wins wrestling match against hero -->
+   <CEEvent>
+      <Name>CE_random_event_companions_female_f_1_l</Name>
+      <Text>{=DefaultRandomEventsCompanionsFemale17}You tried to outwit her, but {COMPANION_NAME_1} turned out to be more agile than you expected, and the blow fell straight into your forehead. While you were recovering from the blow you received, She knocked you down and pressed your head to the floor, sitting on your face, and pointedly reached out to your pussy with her hand.</Text>
+      <BackgroundName>CE_DRECF_female_12</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale18}Demand to be let go!</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>-10</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale19}Surrender to her pussy.</OptionText>
+            <TriggerEventName>CE_random_event_companions_female_f_2_l</TriggerEventName>
+         </Option>
+         <Option>
+            <Order>2</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale20}Bow to her demands.</OptionText>
+            <GoldTotal>-600</GoldTotal>
+            <ReqGoldAbove>600</ReqGoldAbove>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>10</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" UseOtherConditions="False" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <!-- Alternative defeat outcome -->
+   <CEEvent>
+      <Name>CE_random_event_companions_female_f_2_l</Name>
+      <Text>{=DefaultRandomEventsCompanionsFemale21}Not content with just hand teasing you, {COMPANION_NAME_1} starts licking your pussy. Her skill seems to know no bounds, her language does everything so elegantly and professionally that you culminate in just a few minutes, then again and again, until she gets tired.</Text>
+      <BackgroundName>CE_DRECF_female_9</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale22}Please her in return.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>5</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>2</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale23}Satisfied fall asleep.</OptionText>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" UseOtherConditions="False" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+   <!-- #endregion -->
+
+
+   <!-- #region Female - Male -->
+   <!-- Training exercise with male companion that can lead to wrestling -->
+   <CEEvent>
+      <Name>CE_random_event_companions_female_m</Name>
+      <BackgroundName>CE_DRECF_female_3</BackgroundName>
+      <Text>{=DefaultRandomEventsCompanionsFemale24}{COMPANION_NAME_1} asks to speak with you. You invite him to your tent. {COMPANION_NAME_1} says your troops are lazy lately and need more exercise.</Text>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale2}Agree and offer 500 gold for training.</OptionText>
+            <GoldTotal>-500</GoldTotal>
+            <ReqGoldAbove>500</ReqGoldAbove>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>10</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale3}Kick away for a waste of time.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>-5</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>2</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale4}Come up with an excuse.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>R -10 1</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>3</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale5}Challenge {COMPANION_NAME_1} to a naked fight.</OptionText>
+            <SkillsRequired>
+               <SkillRequired Id="Athletics" Min="30" Ref="Hero" />
+            </SkillsRequired>
+            <TriggerEventName>CE_random_event_companions_female_m_1</TriggerEventName>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" Type="Companion" UseOtherConditions="CE_random_event_companions_male_conditionals" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <ReqTroopsAbove>3</ReqTroopsAbove>
+      <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <!-- Wrestling challenge with male companion begins -->
+   <CEEvent>
+      <Name>CE_random_event_companions_female_m_1</Name>
+      <Text>{=DefaultRandomEventsCompanionsFemale25}{COMPANION_NAME_1} nods and takes off all his clothes, you do the same and stand in front of the companion. You walk around each other for a while, looking for weak points and admiring the bodies. Then you rush to your opponent...</Text>
+      <BackgroundName>CE_DRECF_female_15</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale7}Apply your strength.</OptionText>
+            <SkillsRequired>
+               <SkillRequired Id="OneHanded" Min="25" Ref="Hero" />
+            </SkillsRequired>
+            <TriggerEvents>
+               <TriggerEvent>
+                  <EventName>CE_random_event_companions_female_m_1_w</EventName>
+                  <EventWeight>20</EventWeight>
+               </TriggerEvent>
+               <TriggerEvent>
+                  <EventName>CE_random_event_companions_female_m_1_l</EventName>
+                  <EventWeight>20</EventWeight>
+                  <EventUseConditions>True</EventUseConditions>
+               </TriggerEvent>
+            </TriggerEvents>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale8}Apply your dexterity.</OptionText>
+            <SkillsRequired>
+               <SkillRequired Id="Athletics" Min="30" Ref="Hero" />
+            </SkillsRequired>
+            <TriggerEvents>
+               <TriggerEvent>
+                  <EventName>CE_random_event_companions_female_m_1_w</EventName>
+                  <EventWeight>20</EventWeight>
+               </TriggerEvent>
+               <TriggerEvent>
+                  <EventName>CE_random_event_companions_female_m_1_l</EventName>
+                  <EventWeight>20</EventWeight>
+               </TriggerEvent>
+            </TriggerEvents>
+         </Option>
+         <Option>
+            <Order>2</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale9}Apply your endurance.</OptionText>
+            <SkillsRequired>
+               <SkillRequired Id="Athletics" Min="25" Ref="Hero" />
+            </SkillsRequired>
+            <TriggerEvents>
+               <TriggerEvent>
+                  <EventName>CE_random_event_companions_female_m_1_w</EventName>
+                  <EventWeight>20</EventWeight>
+               </TriggerEvent>
+               <TriggerEvent>
+                  <EventName>CE_random_event_companions_female_m_1_l</EventName>
+                  <EventWeight>20</EventWeight>
+               </TriggerEvent>
+            </TriggerEvents>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" UseOtherConditions="False" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <!-- #region Female - Male Win -->
+   <CEEvent>
+      <Name>CE_random_event_companions_female_m_1_w</Name>
+      <Text>{=DefaultRandomEventsCompanionsFemale26}Hours of training take its toll, {COMPANION_NAME_1} is strong, but he lacks your strength, stamina and agility. You grab him by the waist and knock him over, then saddle and hold the opponent, forcing him to surrender. The sight of a naked defeated opponent makes your pussy wet, you have a desire to use the right of the winner.</Text>
+      <BackgroundName>CE_DRECF_female_17</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale11}Use the right of the winner.</OptionText>
+            <TriggerEvents>
+               <TriggerEvent>
+                  <EventName>CE_random_event_companions_female_m_2_w</EventName>
+                  <EventWeight>20</EventWeight>
+               </TriggerEvent>
+               <TriggerEvent>
+                  <EventName>CE_random_event_companions_female_m_3_w</EventName>
+                  <EventWeight>20</EventWeight>
+               </TriggerEvent>
+            </TriggerEvents>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale12}Thank for the sparring and let go.</OptionText>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" UseOtherConditions="False" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+   <CEEvent>
+      <Name>CE_random_event_companions_female_m_2_w</Name>
+      <Text>{=DefaultRandomEventsCompanionsFemale27}You sit more comfortably on the face of the defeated and grasp his penis with your hands. By jerking off his rod, you taste his head. Feeling his tongue on your labia, you surrender to the power of sensations. His tongue penetrates your vagina, fingering your clitoris, licking every corner of your pussy entrance. Squealing with pleasure, you do not forget to suck his penis, trying to swallow him deeper, to give pleasure to him. Finally, you begin to shudder in orgasm, your juices flow into his mouth, and you feel how his core hardens, after which he begins to pour out.</Text>
+      <BackgroundName>CE_DRECF_female_6</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale28}Swallow his gift.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>10</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale29}Collect semen in your mouth and spit it out into a dish.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>5</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>2</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale30}Have him cum on your face.</OptionText>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" UseOtherConditions="False" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+   <CEEvent>
+      <Name>CE_random_event_companions_female_m_3_w</Name>
+      <Text>{=DefaultRandomEventsCompanionsFemale31}You make it clear that you want to fuck him and leaving him lying down, you are attached to his penis. His stake is ready for accomplishment, you sit on it, for a while you feel that only the head is at the entrance to your pussy, and gradually descend completely, soaking his trunk with your juices. Feeling its full length, you begin to crawl on his penis, trying to feel it all. Increasing arousal makes you start to rise and fall, which degenerates into jumps on the penis. Leaning on his chest, you jump frantically, getting orgasm after orgasm. Finally, you feel his cock begin to swell and become unnaturally hard.</Text>
+      <BackgroundName>CE_DRECF_female_5</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale32}Sit on him and take as much of his semen as possible.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ImpregnationByPlayer</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <PregnancyRiskModifier>70</PregnancyRiskModifier>
+                  <RelationTotal>5</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale33}Get up and massage the head of his penis with your pussy.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ImpregnationByPlayer</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <PregnancyRiskModifier>20</PregnancyRiskModifier>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>2</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale34}Get off his penis, let him cum outside.</OptionText>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" UseOtherConditions="False" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+   <!-- #endregion -->
+
+   <!-- #region Female - Male Loss -->
+   <CEEvent>
+      <Name>CE_random_event_companions_female_m_1_l</Name>
+      <Text>{=DefaultRandomEventsCompanionsFemale35}You clearly underestimated the strength of your companion. {COMPANION_NAME_1} forcefully locks your arms and knocks you over. You try to knock each other down for a while when you miss the capture. He wringes your hand, knocks you down and, going behind your back, grabs your other hand. You are immobilized and in a humiliating position.</Text>
+      <BackgroundName>CE_DRECF_female_16</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale18}Demand to be let go!</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>-10</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale36}Surrender to his cock.</OptionText>
+            <TriggerEventName>CE_random_event_companions_female_m_2_l</TriggerEventName>
+         </Option>
+         <Option>
+            <Order>2</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale37}Bow to his demands.</OptionText>
+            <GoldTotal>-600</GoldTotal>
+            <ReqGoldAbove>600</ReqGoldAbove>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>10</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" UseOtherConditions="False" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+   <CEEvent>
+      <Name>CE_random_event_companions_female_m_2_l</Name>
+      <Text>{=DefaultRandomEventsCompanionsFemale38}{COMPANION_NAME_1} understands that you don't mind if he takes advantage of the position, his cock penetrates your pussy. You are still his boss, he begins to move carefully, but gradually accelerates. Your pussy is flowing, his stake moves well moistened, you feel all his veins, you feel the head of his penis beating into your uterus. You wriggle under it, the climax is replaced by the next climax. Having lost control, he begins to accelerate, and you realize that he is about to cum...</Text>
+      <BackgroundName>CE_DRECF_female_4</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale39}Snuggle up to him more tightly.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ImpregnationByPlayer</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <PregnancyRiskModifier>60</PregnancyRiskModifier>
+                  <RelationTotal>10</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale40}Let him finish and fall exhausted.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ImpregnationByPlayer</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <PregnancyRiskModifier>25</PregnancyRiskModifier>
+                  <RelationTotal>5</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>2</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale41}Jump off his penis, let him end up outside of the tent.</OptionText>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" UseOtherConditions="False" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+   <!-- #endregion -->
+
+   <!-- #region New Companion Events - Female Hero -->
+   
+   <!-- Bath house encounter with female companion -->
+   <CEEvent>
+      <Name>CE_random_event_companions_female_bath_f</Name>
+      <BackgroundName>CE_DRECC_1</BackgroundName>
+      <Text>{=DefaultRandomEventsCompanionsFemale42}While staying in town, {COMPANION_NAME_1} invites you to visit the local bath house. The hot water is soothing after days on the road, and you find yourselves alone in the steam-filled room. She moves closer, her wet skin glistening, and suggests you help each other wash.</Text>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale43}Accept her offer.</OptionText>
+            <SkillsRequired>
+               <SkillRequired Id="Charm" Min="40" Ref="Hero" />
+            </SkillsRequired>
+            <SkillsToLevel>
+               <Skill Id="Charm" ByXP="R 100 300" HideNotification="true" Ref="Companion1" />
+            </SkillsToLevel>
+            <TriggerEventName>CE_random_event_companions_female_bath_f_2</TriggerEventName>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale44}Politely decline and finish bathing alone.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>-5</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" Type="Companion" UseOtherConditions="CE_random_event_companions_female_conditionals" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>30</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+   
+   <CEEvent>
+      <Name>CE_random_event_companions_female_bath_f_2</Name>
+      <Text>{=DefaultRandomEventsCompanionsFemale45}{COMPANION_NAME_1} smiles and begins washing your back, her hands gentle yet firm. As she works soap across your shoulders, her touch becomes more sensual. She pulls you against her, hands sliding around to cup your breasts. You turn to face her, your lips meeting in a passionate kiss as the hot water cascades over your intertwined bodies.</Text>
+      <BackgroundName>CE_DRECF_female_11</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale46}Continue passionately.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>15</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" UseOtherConditions="False" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <!-- Male companion offers massage after battle -->
+   <CEEvent>
+      <Name>CE_random_event_companions_female_massage_m</Name>
+      <BackgroundName>CE_DRECF_female_3</BackgroundName>
+      <Text>{=DefaultRandomEventsCompanionsFemale47}After a grueling day of battle, your muscles ache terribly. {COMPANION_NAME_1} notices you wincing and offers to give you a massage in your tent. He says he learned some techniques during his travels that might help.</Text>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale48}Accept the massage.</OptionText>
+            <SkillsRequired>
+               <SkillRequired Id="Medicine" Min="25" Ref="Hero" />
+            </SkillsRequired>
+            <SkillsToLevel>
+               <Skill Id="Medicine" ByXP="R 100 300" HideNotification="true" Ref="Companion1" />
+               <Skill Id="Charm" ByXP="R 50 200" HideNotification="true" Ref="Companion1" />
+            </SkillsToLevel>
+            <TriggerEventName>CE_random_event_companions_female_massage_m_2</TriggerEventName>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale49}Decline and rest alone.</OptionText>
+            <HealthTotal>R 5 10</HealthTotal>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" Type="Companion" UseOtherConditions="CE_random_event_companions_male_conditionals" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>25</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <CEEvent>
+      <Name>CE_random_event_companions_female_massage_m_2</Name>
+      <Text>{=DefaultRandomEventsCompanionsFemale50}You lie down on your bedroll as {COMPANION_NAME_1} begins working on your shoulders. His strong hands knead out the knots expertly. As he moves lower down your back, you feel his touch become more sensual. His hands slide along your sides, and you realize you're both breathing heavier. He leans close and whispers asking if he should continue.</Text>
+      <BackgroundName>CE_DRECF_female_15</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale51}Tell him to continue.</OptionText>
+            <TriggerEvents>
+               <TriggerEvent>
+                  <EventName>CE_random_event_companions_female_massage_m_3</EventName>
+                  <EventWeight>70</EventWeight>
+               </TriggerEvent>
+               <TriggerEvent>
+                  <EventName>CE_random_event_companions_female_massage_m_awkward</EventName>
+                  <EventWeight>30</EventWeight>
+               </TriggerEvent>
+            </TriggerEvents>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale52}Thank him and end the massage.</OptionText>
+            <HealthTotal>R 10 20</HealthTotal>
+            <SkillsToLevel>
+               <Skill Id="Medicine" ByXP="R 50 150" HideNotification="true" Ref="Companion1" />
+            </SkillsToLevel>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>5</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" UseOtherConditions="False" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <CEEvent>
+      <Name>CE_random_event_companions_female_massage_m_3</Name>
+      <Text>{=DefaultRandomEventsCompanionsFemale53}{COMPANION_NAME_1} turns you over gently and his eyes roam over your body. He leans down, his lips finding yours in a heated kiss. His hands explore your curves as clothes are shed. Soon he's positioned between your legs, his hardness pressing against your entrance. He enters you slowly, both of you gasping at the sensation.</Text>
+      <BackgroundName>CE_DRECF_female_4</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale54}Let him finish inside you.</OptionText>
+            <HealthTotal>R 15 25</HealthTotal>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ImpregnationByPlayer</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <PregnancyRiskModifier>55</PregnancyRiskModifier>
+                  <RelationTotal>12</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale55}Pull him out at the last moment.</OptionText>
+            <HealthTotal>R 15 25</HealthTotal>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>8</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" UseOtherConditions="False" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <!-- Drunk night at tavern with female companion -->
+   <CEEvent>
+      <Name>CE_random_event_companions_female_drunk_f</Name>
+      <BackgroundName>CE_DRECC_2</BackgroundName>
+      <Text>{=DefaultRandomEventsCompanionsFemale56}At the tavern, you and {COMPANION_NAME_1} drink heavily after a successful raid. The ale flows freely and inhibitions lower. She becomes very touchy, her hand resting on your thigh as she leans close, whispering how beautiful you are. Other patrons start to stare.</Text>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale57}Take her back to your room.</OptionText>
+            <SkillsRequired>
+               <SkillRequired Id="Charm" Min="30" Ref="Hero" />
+            </SkillsRequired>
+            <SkillsToLevel>
+               <Skill Id="Charm" ByXP="R 100 300" HideNotification="true" Ref="Companion1" />
+               <Skill Id="Roguery" ByXP="R 50 200" HideNotification="true" Ref="Companion1" />
+            </SkillsToLevel>
+            <TriggerEvents>
+               <TriggerEvent>
+                  <EventName>CE_random_event_companions_female_drunk_f_2</EventName>
+                  <EventWeight>65</EventWeight>
+               </TriggerEvent>
+               <TriggerEvent>
+                  <EventName>CE_random_event_companions_female_drunk_f_interrupted</EventName>
+                  <EventWeight>35</EventWeight>
+               </TriggerEvent>
+            </TriggerEvents>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale58}Help her back to camp to sleep it off.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>5</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>2</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale91}Keep drinking and enjoy the celebration.</OptionText>
+            <SkillsToLevel>
+               <Skill Id="Roguery" ByXP="R 50 150" HideNotification="true" Ref="Companion1" />
+            </SkillsToLevel>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>1</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>3</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale59}Push her away and leave the tavern.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>-10</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" Type="Companion" UseOtherConditions="CE_random_event_companions_female_conditionals" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <CEEvent>
+      <Name>CE_random_event_companions_female_drunk_f_2</Name>
+      <Text>{=DefaultRandomEventsCompanionsFemale60}You barely make it through the door before {COMPANION_NAME_1} pushes you against the wall, kissing you hungrily. Clothes are shed in a frenzy as you stumble to the bed. Despite the alcohol, her touch is sure and skilled. She explores every inch of your body with her mouth and fingers, bringing you to climax multiple times before you both collapse in exhausted satisfaction.</Text>
+      <BackgroundName>CE_DRECF_female_9</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale61}Wake up entangled with her.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>18</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" UseOtherConditions="False" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <!-- Late night strategy discussion with male companion -->
+   <CEEvent>
+      <Name>CE_random_event_companions_female_strategy_m</Name>
+      <BackgroundName>CE_DRECF_female_3</BackgroundName>
+      <Text>{=DefaultRandomEventsCompanionsFemale62}Late at night, {COMPANION_NAME_1} enters your tent to discuss tomorrow's battle strategy. As you both lean over the map, you become very aware of how close he is. The tension between you is palpable.</Text>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale63}Focus on the strategy.</OptionText>
+            <SkillsRequired>
+               <SkillRequired Id="Tactics" Min="35" Ref="Hero" />
+            </SkillsRequired>
+            <SkillsToLevel>
+               <Skill Id="Tactics" ByXP="R 100 300" HideNotification="true" Ref="Companion1" />
+               <Skill Id="Leadership" ByXP="R 50 200" HideNotification="true" Ref="Companion1" />
+            </SkillsToLevel>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>5</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale64}Make the first move.</OptionText>
+            <TriggerEventName>CE_random_event_companions_female_strategy_m_2</TriggerEventName>
+         </Option>
+         <Option>
+            <Order>2</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale65}Dismiss him for the night.</OptionText>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" Type="Companion" UseOtherConditions="CE_random_event_companions_male_conditionals" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>25</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <CEEvent>
+      <Name>CE_random_event_companions_female_strategy_m_2</Name>
+      <Text>{=DefaultRandomEventsCompanionsFemale66}You close the distance between you, pressing your lips to his. He responds immediately, his strong arms pulling you tight against him. The map is forgotten as he lifts you onto the table, his hands roaming your body. He takes you right there, hard and fast, both of you trying to stay quiet so the camp doesn't hear.</Text>
+      <BackgroundName>CE_DRECF_female_16</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale67}Let him cum inside.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ImpregnationByPlayer</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <PregnancyRiskModifier>50</PregnancyRiskModifier>
+                  <RelationTotal>15</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale68}Make him pull out.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>10</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" UseOtherConditions="False" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <!-- #endregion -->
+
+   <!-- #region Safe For Work Companion Events - Female Hero -->
+   
+   <!-- Combat training session with female companion -->
+   <CEEvent>
+      <Name>CE_random_event_companions_female_training_f</Name>
+      <BackgroundName>CE_DRECF_female_2</BackgroundName>
+      <Text>{=DefaultRandomEventsCompanionsFemale69}{COMPANION_NAME_1} approaches you at dawn, suggesting a joint training session. She believes practicing together will improve both your combat techniques and help build trust between you.</Text>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale70}Accept and train together.</OptionText>
+            <SkillsRequired>
+               <SkillRequired Id="OneHanded" Min="50" Ref="Hero" />
+            </SkillsRequired>
+            <SkillsToLevel>
+               <Skill Id="OneHanded" ByXP="R 50 200" HideNotification="true" Ref="Companion1" />
+               <Skill Id="TwoHanded" ByXP="R 30 150" HideNotification="true" Ref="Companion1" />
+               <Skill Id="Polearm" ByXP="R 30 150" HideNotification="true" Ref="Companion1" />
+            </SkillsToLevel>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>8</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale71}Too tired, maybe another time.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>-2</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" Type="Companion" UseOtherConditions="CE_random_event_companions_female_conditionals" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <WeightedChanceOfOccurring>30</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <!-- Stargazing with male companion -->
+   <CEEvent>
+      <Name>CE_random_event_companions_female_stars_m</Name>
+      <BackgroundName>CE_DRECF_female_3</BackgroundName>
+      <Text>{=DefaultRandomEventsCompanionsFemale72}On a clear night, {COMPANION_NAME_1} invites you to join him away from the campfire. He points out constellations and shares stories from his homeland about the stars. The peaceful moment is a welcome respite from constant warfare.</Text>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale73}Share your own stories.</OptionText>
+            <SkillsRequired>
+               <SkillRequired Id="Leadership" Min="30" Ref="Hero" />
+            </SkillsRequired>
+            <SkillsToLevel>
+               <Skill Id="Leadership" ByXP="R 50 200" HideNotification="true" Ref="Companion1" />
+               <Skill Id="Charm" ByXP="R 40 180" HideNotification="true" Ref="Companion1" />
+            </SkillsToLevel>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>10</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale74}Listen quietly and enjoy the moment.</OptionText>
+            <SkillsToLevel>
+               <Skill Id="Charm" ByXP="R 30 120" HideNotification="true" Ref="Companion1" />
+            </SkillsToLevel>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>6</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>2</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale98}Point out additional constellations you know.</OptionText>
+            <SkillsRequired>
+               <SkillRequired Id="Scouting" Min="35" Ref="Hero" />
+            </SkillsRequired>
+            <SkillsToLevel>
+               <Skill Id="Scouting" ByXP="R 50 200" HideNotification="true" Ref="Companion1" />
+               <Skill Id="Leadership" ByXP="R 30 150" HideNotification="true" Ref="Companion1" />
+            </SkillsToLevel>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>2</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>3</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale75}Return to camp, too much to do.</OptionText>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" Type="Companion" UseOtherConditions="CE_random_event_companions_male_conditionals" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <WeightedChanceOfOccurring>25</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <!-- Shopping at city market with female companion -->
+   <CEEvent>
+      <Name>CE_random_event_companions_female_market_f</Name>
+      <BackgroundName>CE_DRECC_2</BackgroundName>
+      <Text>{=DefaultRandomEventsCompanionsFemale76}While in the city market, {COMPANION_NAME_1} asks you to help her choose between two pieces of armor. She values your opinion and wants to know which you think suits her better.</Text>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale77}Help her choose and offer to pay for it.</OptionText>
+            <GoldTotal>-300</GoldTotal>
+            <ReqGoldAbove>300</ReqGoldAbove>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>12</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale78}Give honest advice about which is better.</OptionText>
+            <SkillsRequired>
+               <SkillRequired Id="Trade" Min="35" Ref="Hero" />
+            </SkillsRequired>
+            <SkillsToLevel>
+               <Skill Id="Trade" ByXP="R 50 200" HideNotification="true" Ref="Companion1" />
+               <Skill Id="Charm" ByXP="R 30 150" HideNotification="true" Ref="Companion1" />
+            </SkillsToLevel>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>7</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>2</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale79}Tell her to decide for herself.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>-3</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" Type="Companion" UseOtherConditions="CE_random_event_companions_female_conditionals" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <!-- Campfire storytelling with male companion -->
+   <CEEvent>
+      <Name>CE_random_event_companions_female_stories_m</Name>
+      <BackgroundName>CE_DRECF_female_3</BackgroundName>
+      <Text>{=DefaultRandomEventsCompanionsFemale80}Around the evening campfire, {COMPANION_NAME_1} begins telling tales of his past adventures. The stories are entertaining and boost morale among the troops. He asks if you have any stories to share.</Text>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale81}Share an inspiring tale of your victories.</OptionText>
+            <SkillsRequired>
+               <SkillRequired Id="Charm" Min="20" Ref="Hero" />
+            </SkillsRequired>
+            <SkillsToLevel>
+               <Skill Id="Charm" ByXP="R 50 200" HideNotification="true" Ref="Companion1" />
+               <Skill Id="Roguery" ByXP="R 30 150" HideNotification="true" Ref="Companion1" />
+            </SkillsToLevel>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>9</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale82}Tell a humorous story about a mistake you made.</OptionText>
+            <SkillsRequired>
+               <SkillRequired Id="Charm" Min="20" Ref="Hero" />
+            </SkillsRequired>
+            <SkillsToLevel>
+               <Skill Id="Charm" ByXP="R 50 200" HideNotification="true" Ref="Companion1" />
+               <Skill Id="Roguery" ByXP="R 30 150" HideNotification="true" Ref="Companion1" />
+            </SkillsToLevel>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>11</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>2</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale83}Prefer to listen rather than talk.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>4</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" Type="Companion" UseOtherConditions="CE_random_event_companions_male_conditionals" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <WeightedChanceOfOccurring>25</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <!-- Tactical review with female companion -->
+   <CEEvent>
+      <Name>CE_random_event_companions_female_tactics_f</Name>
+      <BackgroundName>CE_DRECF_female_2</BackgroundName>
+      <Text>{=DefaultRandomEventsCompanionsFemale84}{COMPANION_NAME_1} suggests reviewing your recent battle strategies. She has some ideas about improving formations and troop placement that she'd like to discuss with you.</Text>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale85}Listen carefully to her suggestions.</OptionText>
+            <SkillsRequired>
+               <SkillRequired Id="Tactics" Min="30" Ref="Hero" />
+            </SkillsRequired>
+            <SkillsToLevel>
+               <Skill Id="Tactics" ByXP="R 50 200" HideNotification="true" Ref="Companion1" />
+               <Skill Id="Leadership" ByXP="R 40 180" HideNotification="true" Ref="Companion1" />
+               <Skill Id="Engineering" ByXP="R 30 150" HideNotification="true" Ref="Companion1" />
+            </SkillsToLevel>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>10</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale86}Debate the merits of different approaches.</OptionText>
+            <SkillsRequired>
+               <SkillRequired Id="Tactics" Min="30" Ref="Hero" />
+            </SkillsRequired>
+            <SkillsToLevel>
+               <Skill Id="Tactics" ByXP="R 50 200" HideNotification="true" Ref="Companion1" />
+               <Skill Id="Leadership" ByXP="R 40 180" HideNotification="true" Ref="Companion1" />
+               <Skill Id="Engineering" ByXP="R 30 150" HideNotification="true" Ref="Companion1" />
+            </SkillsToLevel>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>6</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>2</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale87}Dismiss her ideas as inexperienced.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>-8</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" Type="Companion" UseOtherConditions="CE_random_event_companions_female_conditionals" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <WeightedChanceOfOccurring>30</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <!-- Hunting expedition with male companion -->
+   <CEEvent>
+      <Name>CE_random_event_companions_female_hunting_m</Name>
+      <BackgroundName>CE_DRECF_female_3</BackgroundName>
+      <Text>{=DefaultRandomEventsCompanionsFemale88}{COMPANION_NAME_1} proposes a hunting trip to supplement the camp's food supplies. He says it would be good to get away from the army for a few hours and enjoy the wilderness.</Text>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale89}Go hunting together.</OptionText>
+            <SkillsRequired>
+               <SkillRequired Id="Bow" Min="45" Ref="Hero" />
+            </SkillsRequired>
+            <SkillsToLevel>
+               <Skill Id="Bow" ByXP="R 50 200" HideNotification="true" Ref="Companion1" />
+               <Skill Id="Scouting" ByXP="R 40 180" HideNotification="true" Ref="Companion1" />
+            </SkillsToLevel>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>9</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale90}Too busy, send him with others.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>-3</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" Type="Companion" UseOtherConditions="CE_random_event_companions_male_conditionals" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <!-- #endregion -->
+
+   <!-- #region Random Outcome Events (Failures/Interruptions) -->
+   
+   <!-- Tavern Drunk Interrupted - Female Companion -->
+   <CEEvent>
+      <Name>CE_random_event_companions_female_drunk_f_interrupted</Name>
+      <Text>{=DefaultRandomEventsCompanionsFemale92}As you head toward the stairs, {COMPANION_NAME_1} stumbles badly. She laughs too loudly, drawing stares from other patrons. Before you can steady her, she pulls away, saying she needs fresh air. She weaves through the crowd and disappears into the night, leaving you standing awkwardly in the tavern.</Text>
+      <BackgroundName>CE_DRECC_2</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale93}Make sure she gets back to camp safely.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>2</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale94}Let her find her own way back.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>-1</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" UseOtherConditions="False" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <!-- Massage Awkward - Male Companion -->
+   <CEEvent>
+      <Name>CE_random_event_companions_female_massage_m_awkward</Name>
+      <Text>{=DefaultRandomEventsCompanionsFemale95}{COMPANION_NAME_1} carefully works on your muscles. As the massage intensifies and you encourage him to continue, you feel his hesitation. When you turn to look at him, he pulls back. "I... I'm sorry," he says, looking uncomfortable. "I care about you as my leader, but this feels wrong." He continues treating your wounds with professional detachment, the moment irreparably broken.</Text>
+      <BackgroundName>CE_DRECF_female_3</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale96}Apologize and respect his boundaries.</OptionText>
+            <HealthTotal>R 10 20</HealthTotal>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>1</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultRandomEventsCompanionsFemale97}Act like nothing happened.</OptionText>
+            <HealthTotal>R 10 20</HealthTotal>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <RelationTotal>-2</RelationTotal>
+               </Companion>
+            </Companions>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" UseOtherConditions="False" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <!-- #endregion -->
+
+</CEEvents>

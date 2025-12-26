@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema" type="string">
+  <tags>
+    <tag language="English" />
+  </tags>
+  <strings>
+    <string id="DefaultCaptiveRequiredGeneral1" text="Your enemies take your weapons and armor as you surrender. Their leader briefly gropes your breast and buttocks, nodding approvingly as you are rounded up with the rest of the captives." />
+    <string id="DefaultCaptiveRequiredGeneral2" text="What will happen to you now?" />
+    <string id="DefaultCaptiveRequiredGeneral3" text="You are stripped of your clothing and weapons, your supple breasts and pert buttocks on display for every horny man in camp. You suspect you'll be the star in more than one man's nighttime fantasies." />
+    <string id="DefaultCaptiveRequiredGeneral4" text="Or worse." />
+  </strings>
+</base>

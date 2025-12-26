@@ -1,0 +1,1419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CEEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../zCaptivityEvents/ModuleLoader/CaptivityRequired/Events/CEEventsModal.xsd">
+    <!-- RECOMMEND TO REPLACING THIS FILE WITH YOUR OWN EVENTS -->
+    <!-- Events -->
+    <!-- #region In Town -->
+    <CEEvent>
+        <Name>CE_slavery_town_merchant</Name>
+        <Text>{=DefaultSlaveryEventsFemale1}A merchant approaches you, grinning mischievously, and begins to make suggestive jokes at your expense. He loudly comments that women just can't get enough of his sausage, and jokes with your captors that whores like you are really just begging for a strong man to bend them over and fuck them senseless. Your captors play along, telling him degrading stories about your subjugation that you're ashamed to admit are more true than not. He laughs, swaggering over to you, and lowers a ringed hand toward the ground, ordering you to bow and kiss it to show you know your place.</Text>
+        <BackgroundName />
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale2}Kiss the ring.</OptionText>
+                <RenownTotal>R -1 0</RenownTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale3}Refuse.</OptionText>
+                <RenownTotal>1</RenownTotal>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_slavery_town_merchant1</EventName>
+                        <EventWeight>20</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_slavery_town_merchant2</EventName>
+                        <EventWeight>4</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_slavery_town_merchant3</EventName>
+                        <EventWeight>4</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>30</WeightedChanceOfOccurring>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slavery_town_merchant1</Name>
+        <Text>{=DefaultSlaveryEventsFemale4}Your captors laugh uproariously at your refusal, and the merchant pales, frowning angrily at the realization that even a humiliated, captive whore like you would refuse him. Embarrassed, he starts kicking you angrily, bruising your legs and stomach. Chained as you are, you can't fight back, and your captors seem more than happy to let him take out his anger on your helpless body.</Text>
+        <BackgroundName />
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale5}Take their abuse.</OptionText>
+                <HealthTotal>-10</HealthTotal>
+            </Option>
+        </Options>
+        
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slavery_town_merchant3</Name>
+        <Text>{=DefaultSlaveryEventsFemale6}Your captors laugh uproariously at your refusal, and the merchant pales, frowning angrily at the realization that even a humiliated, captive whore like you would refuse him. He smiles nastily, commenting that he knows just the way to teach a bitch like you some manners, and asks your captors your price. You heart skips a beat in terror as he begins haggling with your captors, and though they take a bit to get used to the idea, he seems quite intent on buying you. After several rounds of frenzied negotiation they reach an agreement, and he turns to collect his new prize... But you are nowhere to be found - the idiots were so distracted that you managed to escape while they were haggling over your price.</Text>
+        <BackgroundName />
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Escape</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale7}That was a close call...</OptionText>
+            </Option>
+        </Options>
+        
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slavery_town_merchant2</Name>
+        <Text>{=DefaultSlaveryEventsFemale8}Your captors laugh uproariously at your refusal, and the merchant pales, frowning angrily at the realization that even a humiliated, captive whore like you would refuse him. He smiles nastily, commenting that he knows just the way to teach a bitch like you some manners, and asks your captors your price. You heart skips a beat in terror as he begins haggling with your captors, and though they take a bit to get used to the idea, he seems quite intent on buying you. After several rounds of frenzied negotiation they reach an agreement, and he turns to collect his new prize. As an iron collar clasps around your neck, your new master sneers, telling you that before the day is out you'll be begging him for mercy.</Text>
+        <BackgroundName />
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>SoldToNotable</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AddSlaveryFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>StripPlayer</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale9}Follow your new master...</OptionText>
+                <SlaveryTotal>1</SlaveryTotal>
+                <StripSettings QuestEnabled="false">
+                    <Clothing>Slave</Clothing>
+                    <Mount>None</Mount>
+                    <Melee>None</Melee>
+                    <Ranged>None</Ranged>
+                </StripSettings>
+            </Option>
+        </Options>
+        
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_market</Name>
+        <Text>{=DefaultSlaveryEventsFemale10}You're chained up naked for all to see as potential buyers grope and prod you, sticking fingers in your mouth and up your cunt and ass. A few of them even try to sample your goods before buying, but the slave trader is wise to their antics, and swats them away before they can penetrate you. As the day goes on, a finely-dressed man approaches you, looking you up and down with a practiced eye, and stops to talk to the trader. A pouch of gold changes hands and you're released from your shackles, only for a new, shiny pair to be clasped around your wrists as the man explains that one of the city's notables has been looking for a pleasure slave of your description.</Text>
+        <BackgroundName>CE_DSEF_female_5</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroNotOwnedByNotable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>SoldToNotable</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AddSlaveryFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>StripPlayer</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale11}Follow them to your new master.</OptionText>
+                <SlaveryTotal>1</SlaveryTotal>
+                <StripSettings QuestEnabled="false">
+                    <Clothing>Slave</Clothing>
+                    <Mount>None</Mount>
+                    <Melee>None</Melee>
+                    <Ranged>None</Ranged>
+                </StripSettings>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroSlaveLevelBelow>100</ReqHeroSlaveLevelBelow>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_market_slave</Name>
+        <Text>{=DefaultSlaveryEventsFemale12}{OWNER_NAME} has gotten tired of you and decides to sell you into public service. The city's clerk seems quite happy to pay for a slave of your caliber, and you are quickly introduced to your new quarters - a small cell shared with other slaves and prisoners. He indicates that you'll not be left alone long; he has just the thing in mind to improve the townsfolk's morale with your nubile body.</Text>
+        <BackgroundName>CE_DWM_13</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroOwnedByNotable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>SoldToSettlement</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale13}Continue.</OptionText>
+                <SlaveryTotal>1</SlaveryTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>50</WeightedChanceOfOccurring>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroSlaveLevelAbove>150</ReqHeroSlaveLevelAbove>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+
+    <!-- #region Slavery Regular -->
+    <CEEvent>
+        <Name>CE_slavery_escape_failure</Name>
+        <Text>{=DefaultSlaveryEventsFemale14}You're spotted as you attempt to escape, and a group of your owner's guards shove you to the ground, binding your wrists with ropes to prevent any further resistance. Seeing you so helpless, they decide to reward themselves for their vigilance with your body. Each of them takes you in turn, forcing their rods into your unwilling cleft, mouth, and ass with force and enthusiasm.</Text>
+        <BackgroundName>CE_DWM_19</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale15}Maybe that wasn't a great idea...</OptionText>
+                <HealthTotal>-40</HealthTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_escape_success</Name>
+        <Text>{=DefaultSlaveryEventsFemale16}You're almost spotted by a group of unusually wary guards as you escape, but manage to give them the slip by throwing a rock in the other direction as you scurry away. You don't allow yourself to relax until you're quite a ways from them, but the feeling of relief when you're finally sure you're free is overwhelming and very, very welcome.</Text>
+        <BackgroundName>encounter_escape</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>RemoveSlaveryFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Escape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale17}Continue your journey.</OptionText>
+                <SlaveryTotal>0</SlaveryTotal>
+                <!-- 0 to reset slavery level -->
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_part_one</Name>
+        <Text>{=DefaultSlaveryEventsFemale18}You are bathed and oiled, and an excessively handsome muscled servant gives you a painful but invigorating massage. A ratty little tailor carefully takes your measurements and fits you for a tight leather choker and a leash, and you are led to a dungeon where you are locked in told to wait for your master's pleasure.</Text>
+        <BackgroundName>CE_DSEF_female_9</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroOwnedByNotable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale19}Wait in grim anticipation...</OptionText>
+                <TriggerEventName>CE_slavery_part_one_next_obey</TriggerEventName>
+                <HealthTotal>R 10 20</HealthTotal>
+                <SlaveryTotal>R 3 7</SlaveryTotal>
+                <RelationTotal>R 1 3</RelationTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale20}Try to find something to defend yourself with.</OptionText>
+                <TriggerEventName>CE_slavery_part_one_next_resist</TriggerEventName>
+                <HealthTotal>R -10 -5</HealthTotal>
+                <SlaveryTotal>R -7 -3</SlaveryTotal>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale21}Attempt to escape.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_slavery_escape_success</EventName>
+                        <EventWeight>5</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_slavery_escape_failure</EventName>
+                        <EventWeight>5</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+                <ReqHeroHealthAbovePercentage>20</ReqHeroHealthAbovePercentage>
+                <SlaveryTotal>0</SlaveryTotal>
+                <RelationTotal>R -30 -10</RelationTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>20</EscapeChance>
+        <WeightedChanceOfOccurring>50</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelBelow>20</ReqHeroSlaveLevelBelow>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slavery_part_one_next_obey</Name>
+        <Text>{=DefaultSlaveryEventsFemale22}{OWNER_NAME} enters the dungeon, smiling as you kneel before him. He takes you by your leash to a bench. As he bends you over the bench, the gravity of the situation hits you - you're helpless, and a man you've never met is looming over you, free to do anything he likes to your body. It turns out what he likes is fucking, and lots of it; over the next several hours he penetrates your every hole, at times gently and at times more painfully than you can stand.</Text>
+        <BackgroundName>CE_DSEF_female_12</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationHero</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale23}Is this your life from now on?</OptionText>
+                <PregnancyRiskModifier>10</PregnancyRiskModifier>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slavery_part_one_next_resist</Name>
+        <Text>{=DefaultSlaveryEventsFemale24}You find a letter-opener on a table and attack as soon as {OWNER_NAME} enters, but your efforts are futile, and he backhands you to the ground. He calls his guards to remove you at once, informing them that you obviously need more training before you're worthy to be blessed with his seed.</Text>
+        <BackgroundName />
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale25}You'll never submit...</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_part_two</Name>
+        <Text>{=DefaultSlaveryEventsFemale26}You're just noticing that the tight collar around your neck no longer hurts quite as much when {OWNER_NAME} arrives, patting your naked rear possessively as he takes you by the leash and leads you to a wooden post inlaid with metal bars. Your master orders you to steady yourself on the metal frame; it seems he wants a better angle from which to fill your defenseless body with his erect manhood.</Text>
+        <BackgroundName>CE_DSEF_female_9</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroOwnedByNotable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale27}Obediently grasp the metal pole and spread your legs.</OptionText>
+                <TriggerEventName>CE_slavery_part_two_next_obey</TriggerEventName>
+                <HealthTotal>R 10 20</HealthTotal>
+                <SlaveryTotal>R 3 7</SlaveryTotal>
+                <RelationTotal>R 1 3</RelationTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale28}Refuse; you'll never be his slave.</OptionText>
+                <TriggerEventName>CE_slavery_part_two_next_resist</TriggerEventName>
+                <ReqHeroSlaveLevelBelow>120</ReqHeroSlaveLevelBelow>
+                <HealthTotal>R -10 -5</HealthTotal>
+                <SlaveryTotal>R -7 -3</SlaveryTotal>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale21}Attempt to escape.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_slavery_escape_success</EventName>
+                        <EventWeight>5</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_slavery_escape_failure</EventName>
+                        <EventWeight>5</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+                <ReqHeroHealthAbovePercentage>20</ReqHeroHealthAbovePercentage>
+                <ReqHeroSlaveLevelBelow>140</ReqHeroSlaveLevelBelow>
+                <SlaveryTotal>0</SlaveryTotal>
+                <RelationTotal>R -30 -10</RelationTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>20</EscapeChance>
+        <WeightedChanceOfOccurring>50</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelAbove>20</ReqHeroSlaveLevelAbove>
+        <ReqHeroSlaveLevelBelow>150</ReqHeroSlaveLevelBelow>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slavery_part_two_next_obey</Name>
+        <Text>{=DefaultSlaveryEventsFemale29}{OWNER_NAME} smiles as he traces a finger along your dripping sex, then grasps your hips with brutish strength and savagely shoves himself into you, whispering into your ear. He calls you his slave, his whore, and as his thrust grow more painful and desperate his comments grow still more degrading and violent. At last he spends himself into you, collapsing onto your back as you stand paralyzed with fear, and he fondles your breasts for a brief, tender moment before pulling out. He orders you to clean yourself up, then takes one last long and hungry look at your body before leaving.</Text>
+        <BackgroundName>CE_DSEF_female_10</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationHero</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale30}Is this your life from now on?</OptionText>
+                <PregnancyRiskModifier>10</PregnancyRiskModifier>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slavery_part_two_next_resist</Name>
+        <Text>{=DefaultSlaveryEventsFemale31}You try to pull away from your master, but he tightens your leash, pulling you towards him before striking you to the ground with the back of his hand. In a daze, you climb to your hands and knees but he holds your collar close, preventing you from rising. He whispers threateningly, telling you that you can either submit and beg him to bless your ungrateful body with his cock or he can see if his guards are interested in spending the night teaching your disobedient ass the price of refusal.</Text>
+        <BackgroundName>CE_DSEF_female_9</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale32}Beg him to fill you with his seed.</OptionText>
+                <TriggerEventName>CE_slavery_part_two_next_submit</TriggerEventName>
+                <SlaveryTotal>R 3 7</SlaveryTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale33}Refuse; you'll never submit to him.</OptionText>
+                <TriggerEventName>CE_slavery_part_two_next_refuse</TriggerEventName>
+                <SlaveryTotal>R -3 -7</SlaveryTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slavery_part_two_next_submit</Name>
+        <Text>{=DefaultSlaveryEventsFemale34}{OWNER_NAME} smiles cruelly, then stands you up and ties your leash to the post he mentioned earlier. He takes you more brutally than usual, tearing into your body and relishing your screams as he pounds his hardness into your cleft. He slows several times as he's about to climax, delaying your pain and his satisfaction until neither of you can bear it any longer. He lets out an immense, guttural scream as he climaxes, pouring himself into you with frantic, rhythm-less thrusts. Sated, he grabs your chin and plants a kiss on your exhausted lips before muttering that he owns you now. Now and forever. You shiver at the thought - but is it from fear or arousal?</Text>
+        <BackgroundName>CE_DSEF_female_10</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationHero</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale35}Is this where I belong?</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slavery_part_two_next_refuse</Name>
+        <Text>{=DefaultSlaveryEventsFemale36}Your owner calls for his guards, sneering as he explains his rebellious little slave needs to be taught her new place in life. They surround you, shoving you to the ground, and within moments you feel one of them thrusting his rod into your cleft. They take each of your holes in turn, hardly giving you time to breathe or think as they force their rods into your unwilling body again and again. By the time they've finished your entire body is a knot of pain, cum oozing from every orifice, and you're certain you'll never get the taste of cum out of your mouth.</Text>
+        <BackgroundName>CE_DSEF_female_2</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale37}Maybe next time you'll think twice about disobeying.</OptionText>
+                <HealthTotal>-40</HealthTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_part_three</Name>
+        <Text>{=DefaultSlaveryEventsFemale38}You begin getting used to your tight leather choker, and your master arrives. He takes you by your leash, and begins to spank your buttocks.</Text>
+        <BackgroundName>CE_DSEF_female_11</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroOwnedByNotable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale39}Moan in pleasure.</OptionText>
+                <TriggerEventName>CE_slavery_part_two_three_blowjob</TriggerEventName>
+                <HealthTotal>R 10 20</HealthTotal>
+                <SlaveryTotal>5</SlaveryTotal>
+                <RelationTotal>R 1 3</RelationTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale40}Pull away from him.</OptionText>
+                <TriggerEventName>CE_slavery_part_two_next_resist</TriggerEventName>
+                <ReqHeroSlaveLevelBelow>120</ReqHeroSlaveLevelBelow>
+                <HealthTotal>R -10 -5</HealthTotal>
+                <SlaveryTotal>R -7 -3</SlaveryTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>20</EscapeChance>
+        <WeightedChanceOfOccurring>50</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelAbove>20</ReqHeroSlaveLevelAbove>
+        <ReqHeroSlaveLevelBelow>150</ReqHeroSlaveLevelBelow>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slavery_part_two_three_blowjob</Name>
+        <Text>{=DefaultSlaveryEventsFemale40}{OWNER_NAME} seems particularly randy today. After slapping your ass a few times to get your attention, he just stands there with his impressive member between his legs. You think you get the idea. </Text>
+        <BackgroundName>CE_DWM_14</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale41}Take his dick in your hands.</OptionText>
+                <TriggerEventName>CE_slavery_part_two_three_blowjob2</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slavery_part_two_three_blowjob2</Name>
+        <Text>{=DefaultSlaveryEventsFemale42}{OWNER_NAME} takes you forcefully by the leash and places you back down against the bench you have so regularly been abused upon. You feel the familiar feel of the wood on your buttocks as he bends your head backwards, and you feel his sizeable manhood slide into your mouth.</Text>
+        <BackgroundName>CE_DSEF_female_4</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale43}Take him all the way down your throat.</OptionText>
+                <TriggerEventName>CE_slavery_part_two_three_blowjob3</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slavery_part_two_three_blowjob3</Name>
+        <Text>{=DefaultSlaveryEventsFemale44}{OWNER_NAME} pants and groans as he mouthfucks his willing whore.</Text>
+        <BackgroundName>CE_DSEF_female_4</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale45}Get ready to feel your master's cum flood your mouth.</OptionText>
+                <TriggerEventName>CE_slavery_part_two_three_blowjob4</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slavery_part_two_three_blowjob4</Name>
+        <Text>{=DefaultSlaveryEventsFemale46}{OWNER_NAME} moans in pleasure as he empties his balls into your eager mouth.</Text>
+        <BackgroundName>CE_DSEF_female_3</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale47}Dutifully swallow your master's load.</OptionText>
+                <TriggerEventName>CE_slavery_part_two_three_blowjob5</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slavery_part_two_three_blowjob5</Name>
+        <Text>{=DefaultSlaveryEventsFemale48}{OWNER_NAME} wipes some of the cum off your lips with his finger, and apologises for not having the time to fuck you properly. He leaves.</Text>
+        <BackgroundName>CE_DWM_19</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale49}You wonder how many more times your master will finish inside your mouth.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_broken</Name>
+        <Text>{=DefaultSlaveryEventsFemale50}Your daily meal arrives, and your heart leaps with anticipation to see the viscous white glaze atop the dry bread that is your mainstay. The men have thoughtfully glazed it in their seed, and you munch the treat down with gusto, licking your fingers clean as your cunt is drenched with the mental image of their cocks out for you.</Text>
+        <BackgroundName>CE_DWM_16</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale51}Oh, why won't they just fuck you?</OptionText>
+                <TriggerEventName>CE_slavery_broken_continue</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>300</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelAbove>150</ReqHeroSlaveLevelAbove>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slavery_broken_continue</Name>
+        <Text>{=DefaultSlaveryEventsFemale52}Perhaps there was a time where your behavior might have been shameful, but nowadays all you can think about is cock and cum. Your old life is a distant, unpleasant memory full of stress and danger; why would you want to return to something like that when your new life is a long, hard and salty parade of vicious fucking and delectable man-meat?</Text>
+        <BackgroundName>CE_DSEF_female_13</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale53}Could this all just be a dream?</OptionText>
+                <SlaveryTotal>1</SlaveryTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_broken_escape</Name>
+        <Text>{=DefaultSlaveryEventsFemale54}As yet another man empties his balls down your throat and slaps your ass appreciatively, you're strangely reminded of a different time, when you were someone important; a leader of armies. When you had a choice of what to do, and valorous men vied for your attention instead of just choking you with their cocks.</Text>
+        <BackgroundName>CE_DSEF_female_13</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale55}What is this memory?</OptionText>
+                <TriggerEventName>CE_slavery_broken_continue_escape</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>50</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelAbove>150</ReqHeroSlaveLevelAbove>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slavery_broken_continue_escape</Name>
+        <Text>{=DefaultSlaveryEventsFemale56}The memory surges painfully, and for a brief moment you realize the depths to which you've fallen. You're a whore now, a slut, a slave; you're nothing but an object to be used by the men who've cruelly abused you, who have trained you to forget even the memory of freedom and to associate even the most painful abuse and degradation with hedonistic pleasure. You reflect, in this moment of clarity, that you don't have to accept the fate they've chosen for you...</Text>
+        <BackgroundName>CE_DWM_19</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale57}No. My place is here.</OptionText>
+                <SlaveryTotal>R 1 6</SlaveryTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale21}Attempt to escape.</OptionText>
+                <SlaveryTotal>R -50 -10</SlaveryTotal>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>KillPrisoner</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale87}I cannot... continue...</OptionText>
+                <ReqHeroSlaveLevelAbove>200</ReqHeroSlaveLevelAbove>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>20</EscapeChance>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Caravan -->
+    <CEEvent>
+        <Name>CE_slavery_sold_caravan</Name>
+        <Text>{=DefaultSlaveryEventsFemale58}A middle-aged man, obviously the chief servant of someone important, sidles up to your captor and begins bargaining, pointing in your direction. You're quickly dragged over and stripped of your clothing as the man examines you carefully. After a time he nods, muttering that you're just the master's type, and your freedom is sold for a paltry handful of coin. As fresh irons are locked around your neck and wrists, the man explains you are now the personal sex slave of an important personage in town, and he expects you to obey every order to the letter. He reminds you that the alternative is to work in the kitchens, where the rest of the household slaves will be free to use your every hole...</Text>
+        <BackgroundName>CE_DSEF_female_5</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInTown</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AddSlaveryFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>SoldToNotable</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>StripPlayer</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale59}Swallow nervously and nod.</OptionText>
+                <HealthTotal>R 10 20</HealthTotal>
+                <SlaveryTotal>1</SlaveryTotal>
+                <StripSettings QuestEnabled="false">
+                    <Clothing>Slave</Clothing>
+                    <Mount>None</Mount>
+                    <Melee>None</Melee>
+                    <Ranged>None</Ranged>
+                </StripSettings>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>1000</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_sold_caravan_slave</Name>
+        <Text>{=DefaultSlaveryEventsFemale60}A middle-aged man, obviously the chief servant of someone important, sidles up to your master and begins bargaining, pointing in your direction. You're quickly dragged over and stripped of your clothing as the man examines you carefully. After a time he nods, muttering that you're just the master's type, and your are sold for a paltry handful of coin. As fresh irons are locked around your neck and wrists, the man explains you are now the personal sex slave of an important personage in town, and he expects you to obey every order to the letter. He reminds you that the alternative is to work in the kitchens, where the rest of the household slaves will be free to use your every hole...</Text>
+        <BackgroundName>CE_DSEF_female_5</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInTown</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroNotOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroOwnedByNotable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>SoldToNotable</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>StripPlayer</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale61}Swallow nervously and nod.</OptionText>
+                <HealthTotal>R 10 20</HealthTotal>
+                <SlaveryTotal>1</SlaveryTotal>
+                <StripSettings QuestEnabled="false">
+                    <Clothing>Slave</Clothing>
+                    <Mount>None</Mount>
+                    <Melee>None</Melee>
+                    <Ranged>None</Ranged>
+                </StripSettings>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>1000</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_sold</Name>
+        <Text>{=DefaultSlaveryEventsFemale62}Your captors notice a slave trader's caravan enter town, after some argument they decide to sell you. The trader seems skeptical at first, but after you are stripped and carefully inspected for disease or disfigurement, your teeth examined, breasts squeezed and prodded, and your legs humiliatingly spread as the man pinches your clit and spreads open your vulva, they eagerly accept.{?ISCAPTORFEMALE}She{?}He{\?} briefly haggles with your captors, and after an insultingly small sum changes hands in exchange for your freedom, you are shackled and marked, then roughly pushed onto the cart for later use.</Text>
+        <BackgroundName>CE_DSEF_female_1</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>VisitedByCaravan</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AddSlaveryFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>SoldToCaravan</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>StripPlayer</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale63}This can't be good...</OptionText>
+                <SlaveryTotal>1</SlaveryTotal>
+                <StripSettings QuestEnabled="false">
+                    <Clothing>Slave</Clothing>
+                    <Mount>None</Mount>
+                    <Melee>None</Melee>
+                    <Ranged>None</Ranged>
+                </StripSettings>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>1000</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_sold_slave</Name>
+        <Text>{=DefaultSlaveryEventsFemale64}Your master notices a slave trader's caravan enter town, and after some consideration and a parting grope they decide to sell you. The trader seems skeptical at first, but after you are stripped and carefully inspected for disease or disfigurement, your teeth examined, breasts squeezed and prodded, and your legs humiliatingly spread as the man pinches your clit and spreads open your vulva, they eagerly accept.{?ISCAPTORFEMALE}She{?}He{\?} briefly haggles with your master, and after an insultingly small sum changes hands, you are shackled and marked, then roughly pushed onto the cart for later use.</Text>
+        <BackgroundName>CE_DSEF_female_1</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>VisitedByCaravan</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroOwnedByNotable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>SoldToCaravan</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale65}What's one more owner?</OptionText>
+                <SlaveryTotal>1</SlaveryTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale66}Beg your master to keep you.</OptionText>
+                <SlaveryTotal>1</SlaveryTotal>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_slavery_sold_slave1</EventName>
+                        <EventWeight>3</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_slavery_sold_slave2</EventName>
+                        <EventWeight>10</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>100</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slavery_sold_slave1</Name>
+        <Text>{=DefaultSlaveryEventsFemale67}{OWNER_NAME} ignores your pleading and shakes their head as they count their coin. It seems they cared for you less than you thought, and the sobering realization that you really are just an object to these people wreathes your heart in sadness and resignation.</Text>
+        <BackgroundName>CE_DSEF_female_1</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>SoldToCaravan</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale68}You are dragged by a leash.</OptionText>
+                <SlaveryTotal>1</SlaveryTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>100</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slavery_sold_slave2</Name>
+        <Text>{=DefaultSlaveryEventsFemale69}{OWNER_NAME} hears your cries and watches you thoughtfully, then returns to the slave trader. They argue briefly, but something your master says gives the trader pause, and you are escorted off the cart, where you're traded back for the same sack of coin. Muttering something about a waste of time, the trader walks away as your master kisses you deeply, biting your lip and drawing blood. {OWNER_NAME}'s smile is predatory, and he makes no effort to conceal his arousal as you are led back to your place. You're going to have to pay your master back for that favor...</Text>
+        <BackgroundName>CE_DSEF_female_1</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale70}Thank your master.</OptionText>
+                <SlaveryTotal>R 1 5</SlaveryTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>100</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Outside -->
+    <CEEvent>
+        <Name>CE_slavery_caravan_slave_one</Name>
+        <Text>{=DefaultSlaveryEventsFemale71}You can hear another slave being beaten and her piercing screams amongst the laughter of the men is causing you distress.</Text>
+        <BackgroundName>CE_DSEF_female_7</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale13}Continue.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_caravan_slave_two</Name>
+        <Text>{=DefaultSlaveryEventsFemale72}One of your captors orders you to hold down another slave, a half-naked young woman who has been struggling to prevent him from ravishing her. You think you've seen her before in another village, but the tears and hair scattered across her face during the struggle make it difficult to recognize her. As she struggles, the man starts to remove his breeches, exposing his hardening cock...</Text>
+        <BackgroundName>CE_DSEF_female_8</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorGenderIsMale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale73}Reluctantly do as you're told.</OptionText>
+                <RelationTotal>5</RelationTotal>
+                <HealthTotal>R 10 20</HealthTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale74}Volunteer to take her place.</OptionText>
+                <TriggerEventName>CE_common_sexual_hardcore_two_continued</TriggerEventName>
+                <RelationTotal>5</RelationTotal>
+                <SlaveryTotal>1</SlaveryTotal>
+                <RenownTotal>R -1 0</RenownTotal>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale75}Escape while he's distracted.</OptionText>
+                <ReqHeroHealthAbovePercentage>20</ReqHeroHealthAbovePercentage>
+                <RelationTotal>-5</RelationTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <EscapeChance>40</EscapeChance>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroHealthAbovePercentage>20</ReqHeroHealthAbovePercentage>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slavery_caravan_slave_two_continued</Name>
+        <Text>{=DefaultSlaveryEventsFemale76}Your captor shrugs as the woman looks at you with grateful disbelief, and he tosses her aside, grinning cruelly as he shoves you down in her place. He penetrates you painfully as the other woman scrambles to a safe distance, tearfully watching your ordeal. You try to stay strong as the man does his best to hurt you, obviously trying to make the other woman feel guilty for your suffering, but you manage to channel your fear into arousal, and soon enough your cleft grows wet around the invading member. You push against him eagerly, reveling in this strange test of wills, and he comes sooner than he'd anticipated, aroused by the novel sensation of a willing woman beneath him. The feeling of power over him pushes you over the edge and you shudder in ecstasy, clenching around his softening cock. Suddenly unsure which of you is really in control the situation, he contents himself with slapping you in the face and calling you a whore, then sheepishly walking off as you scoop his cum out of your body.</Text>
+        <BackgroundName>CE_DSEF_female_6</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationRisk</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale13}Continue.</OptionText>
+                <RelationTotal>5</RelationTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <PregnancyRiskModifier>20</PregnancyRiskModifier>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_alt_101</Name>
+        <Text>{=DefaultSlaveryEventsFemale77}One of your captors approaches you, holding a filthy, matted shirt. A bloody tear is visible across its front where it was damaged in battle. He shoves it on your face and orders you to mend it - or face the consequences.</Text>
+        <Backgrounds>
+            <Background Name="CE_DSEF_female_16" Weight="1" UseConditions="CE_captured_general" />
+        </Backgrounds>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale78}Attempt to mend it.</OptionText>
+                <RenownTotal>R -1 0</RenownTotal>
+                <HealthTotal>R 10 20</HealthTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale3}Refuse.</OptionText>
+                <TriggerEventName>CE_slavery_alt_1011</TriggerEventName>
+            </Option>
+        </Options>
+        
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slavery_alt_1011</Name>
+        <Text>{=DefaultSlaveryEventsFemale79}The {?ISCAPTORFEMALE}woman{?}man{\?}, enraged, shoves you to the ground and begins beating you with his scabbard, leaving a pattern of dark welts across your back. He spits in your face before stepping away to find another prisoner to torment.</Text>
+        <BackgroundName>CE_DSEF_female_14</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale80}Continue biding your time.</OptionText>
+                <HealthTotal>-10</HealthTotal>
+            </Option>
+        </Options>
+        
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_alt_102</Name>
+        <Text>{=DefaultSlaveryEventsFemale81}You are approached by one of your captors at dinner. {?ISCAPTORFEMALE}She{?}He{\?} sees you eating and smiles nastily, then orders you to give up your food; you might get to thinking of ways to escape if you're not busy listening to your growling stomach.</Text>
+        <Backgrounds>
+            <Background Name="CE_DSEF_female_15" Weight="1" UseConditions="CE_captured_general" />
+        </Backgrounds>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale82}Give them your food.</OptionText>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale3}Refuse.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_slavery_alt_1021</EventName>
+                        <EventWeight>5</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_slavery_alt_1022</EventName>
+                        <EventWeight>5</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+        </Options>
+        
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slavery_alt_1021</Name>
+        <Text>{=DefaultSlaveryEventsFemale83}The {?ISCAPTORFEMALE}woman raises her hand{?}man raises his hand{\?} to strike you for your insolence, but is called away by {?ISCAPTORFEMALE}her leader. She glares at you angrily; you don't think this is the last you'll see of her...{?}his leader. He glares at you angrily; you don't think this is the last you'll see of him...{\?}</Text>
+        <Backgrounds>
+            <Background Name="CE_DSEF_female_15" Weight="1" UseConditions="CE_captured_general" />
+        </Backgrounds>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale84}Eat your rations.</OptionText>
+                <HealthTotal>R 10 20</HealthTotal>
+            </Option>
+        </Options>
+        
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_slavery_alt_1022</Name>
+        <Text>{=DefaultSlaveryEventsFemale85}The {?ISCAPTORFEMALE}man{?}woman{\?} shoves you to the ground, spilling your meal into the mud. {?ISCAPTORFEMALE}She{?}He{\?} steps heavily onto your stomach, brutally pushing the breath from your lungs, before using {?ISCAPTORFEMALE}her{?}his{\?} other boot to stomp your food into the dirt.</Text>
+        <BackgroundName>CE_DSEF_female_14</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale86}Try to catch your breath.</OptionText>
+                <HealthTotal>-10</HealthTotal>
+            </Option>
+        </Options>
+        
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Birth Alternative Events -->
+
+    <CEEvent>
+        <Name>CE_slavery_birth_alt_trail</Name>
+        <Text>{=DefaultSlaveryEventsFemale87}Your body can wait no longer. As the slave column trudges along a winding road, you collapse to your knees as childbirth begins. The slavers halt reluctantly, their eyes watching with impatience as you suffer through the pains of labor. When your baby finally arrives, crying and squirming, the head slaver approaches with a grim expression. They tell you the child cannot stay - it would slow the march and draw unwanted attention. You can give your baby to a passing merchant who promises to find the child a home, or you can try to conceal your newborn and carry them in secret.</Text>
+        <BackgroundName>CE_birth_road</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>BirthAlternative</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Abort</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale88}Hand over your baby. You cannot protect them in chains.</OptionText>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>GiveBirth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale89}Keep your baby hidden beneath your rags. You will not be separated.</OptionText>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>100</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_birth_alt_dungeon</Name>
+        <Text>{=DefaultSlaveryEventsFemale90}The slave quarters are dark and cramped when your labor begins. Other slaves watch with worried eyes as you struggle through the birth, some offering what little comfort they can. When your child is finally born, the master's representative arrives to inspect the situation. They inform you that slave children are typically sold separately - your baby would be taken and raised elsewhere. However, if you can keep the child quiet and hidden, there's a chance they might overlook your newborn's existence.</Text>
+        <BackgroundName>CE_birth_dungeon</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationDungeon</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>BirthAlternative</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Abort</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale91}Let them take your baby. You have no power to stop them anyway.</OptionText>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>GiveBirth</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultSlaveryEventsFemale92}Hide your baby and pray they remain unnoticed. You will not give up your child.</OptionText>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>100</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- #endregion -->
+</CEEvents>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema" type="string">
+  <tags>
+    <tag language="English" />
+  </tags>
+  <strings>
+    <string id="DefaultCaptorEventsCommon1" text="Breaking down the door to a seemingly abandoned cottage, you're surprised to find a collection of villagers hiding inside, mainly women, children, and elders. They beg for your mercy, and you decide not to kill them on the spot - after all, they may turn out to be more valuable as prisoners than as corpses." />
+    <string id="DefaultCaptorEventsCommon2" text="Continue raiding!" />
+    <string id="DefaultCaptorEventsCommon3" text="Making your way through an unusually well-appointed cottage, your keen eyes discover a hatch hidden under an unusually-placed carpet. Your eyes glisten with deadly sin as you discover a hidden cache of gold inside. An auspicious start to what will doubtless be a very profitable day..." />
+    <string id="DefaultCaptorEventsCommon4" text="Continue your raid!" />
+    <string id="DefaultCaptorEventsCommon5" text="Your prisoners outnumber your party and have managed to free themselves. Unfortunately for you, their first thought is of revenge, and you find yourself in the midst of violent rebellion. Gathering your troops, you hope your battlefield experience will prove more effective than raw numbers or your positions will be reversed before the day is out." />
+    <string id="DefaultCaptorEventsCommon6" text="Get ready for battle." />
+    <string id="DefaultCaptorEventsCommon7" text="You receive word that {CAPTIVE_NAME} has managed to escape. Your guard swears up and down she just disappeared, but their embarrassed stammering tells a different story." />
+    <string id="DefaultCaptorEventsCommon8" text="Warn your guards to keep better watch." />
+    <string id="DefaultCaptorEventsCommon9" text="You receive word that {CAPTIVE_NAME} has managed to escape. Your guard swears up and down he just disappeared, but their embarrassed stammering tells a different story." />
+    <string id="DefaultCaptorEventsCommon10" text="You receive word that {CAPTIVE_NAME} has managed to escape. His chains appear to have been broken using a tool of some sort." />
+    <string id="DefaultCaptorEventsCommon11" text="You receive word that {CAPTIVE_NAME} has managed to escape. Her chains appear to have been broken using a tool of some sort." />
+    <string id="DefaultCaptorEventsCommon12" text="{CAPTIVE_NAME} approaches you, kneeling respectfully, and tells you they've been watching your leadership during their captivity and are deeply impressed. They ask if you would be willing to let them join you so that they might serve under your banner." />
+    <string id="DefaultCaptorEventsCommon13" text="Accept their fealty." />
+    <string id="DefaultCaptorEventsCommon14" text="Decline and keep them captive." />
+  </strings>
+</base>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- PregnancyOptionsGroup.xml: Pregnancy system settings -->
+<OptionsGroupDefinition GroupId="PregnancyOptions">
+    <Options>
+        <OptionsItem OptionId="PregnancyToggle" DisplayName="Pregnancy System Enabled" Description="Enable pregnancy mechanic for female captives." DefaultValue="true" Type="Boolean" />
+        <OptionsItem OptionId="PregnancyChance" DisplayName="Pregnancy Chance (%)" Description="Percent chance (0-100) female becomes pregnant." DefaultValue="20" Type="Numeric" Min="0" Max="100" />
+        <OptionsItem OptionId="UsePregnancyModifiers" DisplayName="Pregnancy Modifiers" Description="Apply difficulty/age modifiers to pregnancy chance." DefaultValue="true" Type="Boolean" />
+        <OptionsItem OptionId="PregnancyDurationInDays" DisplayName="Pregnancy Duration (Days)" Description="Number of days pregnancy lasts." DefaultValue="1" Type="Numeric" Min="1" Max="100" />
+        <OptionsItem OptionId="PregnancyMessages" DisplayName="Pregnancy Messages" Description="Show pregnancy-related messages and notifications." DefaultValue="true" Type="Boolean" />
+        <OptionsItem OptionId="AttractivenessSkill" DisplayName="Attractiveness Skill" Description="Captive gains attractiveness skill levels." DefaultValue="true" Type="Boolean" />
+    </Options>
+</OptionsGroupDefinition>

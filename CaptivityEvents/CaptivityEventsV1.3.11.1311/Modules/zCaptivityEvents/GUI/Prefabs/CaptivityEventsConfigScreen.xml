@@ -1,0 +1,305 @@
+<Prefab>
+  <Constants>
+    <Constant Name="DoCell.Width" Value="300" />
+    <Constant Name="DoText.Width" Value="260" />
+  </Constants>
+  <Window>
+    <Widget
+      Id="SaveLoadScreen"
+      WidthSizePolicy="StretchToParent"
+      HeightSizePolicy="StretchToParent"
+    >
+      <Children>
+        <Standard.Background />
+
+        <ListPanel
+          Id="MainSectionListPanel"
+          WidthSizePolicy="StretchToParent"
+          HeightSizePolicy="StretchToParent"
+          MarginTop="164"
+        >
+          <Children>
+
+            <Widget
+              Id="CenterPanel"
+              WidthSizePolicy="StretchToParent"
+              HeightSizePolicy="StretchToParent"
+            >
+              <Children>
+                <ScrollablePanel
+                  Id="ScrollablePanel"
+                  WidthSizePolicy="StretchToParent"
+                  HeightSizePolicy="StretchToParent"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  AutoHideScrollBarHandle="true"
+                  AutoHideScrollBars="false"
+                  ClipRect="MyClipRect"
+                  InnerPanel="MyClipRect\TabControl"
+                  VerticalScrollbar="..\..\VerticalScrollbar"
+                >
+                  <Children>
+                    <RichTextWidget
+                      Id="WorkInProgressTitle"
+                      WidthSizePolicy="Fixed"
+                      SuggestedWidth="1000"
+                      HorizontalAlignment="Center"
+                      MarginTop="26"
+                      HeightSizePolicy="CoverChildren"
+                      Brush="SPOptions.Description.Title.Text"
+                      Text="Captivity Events Configuration"
+                    />
+                    <RichTextWidget
+                      Id="WorkInProgressSubtitle"
+                      WidthSizePolicy="Fixed"
+                      SuggestedWidth="1000"
+                      HorizontalAlignment="Center"
+                      MarginTop="80"
+                      HeightSizePolicy="CoverChildren"
+                      Brush="SPOptions.Description.Text"
+                      Text="Select a tab above to configure CESettings.xml options."
+                    />
+                    <Widget
+                      Id="MyClipRect"
+                      WidthSizePolicy="StretchToParent"
+                      HeightSizePolicy="StretchToParent"
+                      HorizontalAlignment="Center"
+                      MarginTop="130"
+                      ClipContents="true"
+                    >
+                      <Children>
+                        <TabControl
+                          Id="TabControl"
+                          WidthSizePolicy="StretchToParent"
+                          HeightSizePolicy="CoverChildren"
+                        >
+                          <Children>
+                            <!-- General Tab -->
+                            <OptionsGroupedPage Id="GeneralOptionsPage" DataSource="{GeneralOptions}" Parameter.HasCircularNavigation="false" />
+                            <!-- Capture Tab -->
+                            <OptionsGroupedPage Id="CaptureOptionsPage" DataSource="{CaptureOptions}" Parameter.HasCircularNavigation="false" />
+                            <!-- Escape Tab -->
+                            <OptionsGroupedPage Id="EscapeOptionsPage" DataSource="{EscapeOptions}" Parameter.HasCircularNavigation="false" />
+                            <!-- Gear Tab -->
+                            <OptionsGroupedPage Id="GearOptionsPage" DataSource="{GearOptions}" Parameter.HasCircularNavigation="false" />
+                            <!-- Pregnancy Tab -->
+                            <OptionsGroupedPage Id="PregnancyOptionsPage" DataSource="{PregnancyOptions}" Parameter.HasCircularNavigation="false" />
+                            <!-- Tuning Tab -->
+                            <OptionsGroupedPage Id="TuningOptionsPage" DataSource="{TuningOptions}" Parameter.HasCircularNavigation="false" />
+                          </Children>
+                        </TabControl>
+                      </Children>
+                    </Widget>
+
+                    <Widget
+                      WidthSizePolicy="StretchToParent"
+                      HeightSizePolicy="Fixed"
+                      SuggestedHeight="150"
+                      VerticalAlignment="Bottom"
+                      Sprite="StdAssets\Popup\scrollable_field_gradient"
+                      IsEnabled="false"
+                    />
+
+                  </Children>
+                </ScrollablePanel>
+
+              </Children>
+            </Widget>
+
+            <ScrollbarWidget
+              Id="VerticalScrollbar"
+              WidthSizePolicy="Fixed"
+              HeightSizePolicy="StretchToParent"
+              SuggestedWidth="8"
+              HorizontalAlignment="Right"
+              VerticalAlignment="Center"
+              MarginTop="100"
+              MarginBottom="85"
+              AlignmentAxis="Vertical"
+              Handle="VerticalScrollbarHandle"
+              MaxValue="100"
+              MinValue="0"
+            >
+              <Children>
+                <Widget
+                  WidthSizePolicy="Fixed"
+                  HeightSizePolicy="StretchToParent"
+                  SuggestedWidth="4"
+                  HorizontalAlignment="Center"
+                  Sprite="MPLobby\CustomServer\lobby_slider_bed"
+                  AlphaFactor="0.4"
+                />
+                <ImageWidget
+                  Id="VerticalScrollbarHandle"
+                  WidthSizePolicy="Fixed"
+                  HeightSizePolicy="Fixed"
+                  SuggestedWidth="8"
+                  SuggestedHeight="10"
+                  HorizontalAlignment="Center"
+                  Brush="FaceGen.Scrollbar.Handle"
+                />
+              </Children>
+            </ScrollbarWidget>
+
+            <!--Descriptions
+            Right Panel-->
+            <Widget
+              Id="DescriptionsRightPanel"
+              WidthSizePolicy="Fixed"
+              HeightSizePolicy="StretchToParent"
+              SuggestedWidth="350"
+            >
+              <Children>
+
+                <ListPanel
+                  Id="DescriptionsListPanel"
+                  WidthSizePolicy="StretchToParent"
+                  HeightSizePolicy="CoverChildren"
+                  MarginLeft="40"
+                  MarginTop="65"
+                >
+                  <Children>
+                    <RichTextWidget
+                      Id="CurrentOptionNameWidget"
+                      WidthSizePolicy="StretchToParent"
+                      HeightSizePolicy="CoverChildren"
+                      Brush="SPOptions.Description.Title.Text"
+                      Text=" "
+                    />
+                    <RichTextWidget
+                      Id="CurrentOptionDescriptionWidget"
+                      WidthSizePolicy="StretchToParent"
+                      HeightSizePolicy="CoverChildren"
+                      MarginTop="25"
+                      Brush="SPOptions.Description.Text"
+                      Text=" "
+                    />
+                    <Widget
+                      Id="CurrentOptionImageWidget"
+                      WidthSizePolicy="Fixed"
+                      HeightSizePolicy="Fixed"
+                      SuggestedWidth="576"
+                      SuggestedHeight="324"
+                      MarginTop="35"
+                    />
+                  </Children>
+                </ListPanel>
+
+              </Children>
+            </Widget>
+
+          </Children>
+        </ListPanel>
+
+        <Standard.TopPanel Id="TopPanel" Parameter.Title="Captivity Events">
+          <Children>
+            <ListPanel
+              Id="TabToggleList"
+              WidthSizePolicy="CoverChildren"
+              HeightSizePolicy="Fixed"
+              SuggestedHeight="128"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Bottom"
+              LayoutImp.LayoutMethod="HorizontalLeftToRight"
+            >
+              <Children>
+                <OptionsTabToggle
+                  DataSource="{GeneralOptions}"
+                  Parameter.ButtonBrush="Header.Tab.Left"
+                  Parameter.TabName="GeneralOptionsPage"
+                  Parameter.Text.Left.Margin="10"
+                  Parameter.Text.Right.Margin="10"
+                />
+                <OptionsTabToggle
+                  DataSource="{CaptureOptions}"
+                  PositionYOffset="2"
+                  Parameter.ButtonBrush="Header.Tab.Center"
+                  Parameter.TabName="CaptureOptionsPage"
+                  Parameter.Text.Left.Margin="10"
+                  Parameter.Text.Right.Margin="10"
+                />
+                <OptionsTabToggle
+                  DataSource="{EscapeOptions}"
+                  PositionYOffset="2"
+                  Parameter.ButtonBrush="Header.Tab.Center"
+                  Parameter.TabName="EscapeOptionsPage"
+                  Parameter.Text.Left.Margin="10"
+                  Parameter.Text.Right.Margin="10"
+                />
+                <OptionsTabToggle
+                  DataSource="{GearOptions}"
+                  PositionYOffset="2"
+                  Parameter.ButtonBrush="Header.Tab.Center"
+                  Parameter.TabName="GearOptionsPage"
+                  Parameter.Text.Left.Margin="10"
+                  Parameter.Text.Right.Margin="10"
+                />
+                <OptionsTabToggle
+                  DataSource="{PregnancyOptions}"
+                  PositionYOffset="2"
+                  Parameter.ButtonBrush="Header.Tab.Center"
+                  Parameter.TabName="PregnancyOptionsPage"
+                  Parameter.Text.Left.Margin="10"
+                  Parameter.Text.Right.Margin="10"
+                />
+                <OptionsTabToggle
+                  DataSource="{TuningOptions}"
+                  PositionYOffset="2"
+                  Parameter.ButtonBrush="Header.Tab.Right"
+                  Parameter.TabName="TuningOptionsPage"
+                  Parameter.Text.Left.Margin="10"
+                  Parameter.Text.Right.Margin="10"
+                />
+              </Children>
+            </ListPanel>
+          </Children>
+        </Standard.TopPanel>
+
+        <Widget
+          Id="WarningPanel"
+          WidthSizePolicy="CoverChildren"
+          HeightSizePolicy="CoverChildren"
+          SuggestedWidth="500"
+          SuggestedHeight="300"
+          HorizontalAlignment="Left"
+          VerticalAlignment="Bottom"
+          MarginLeft="0"
+          MarginBottom="200"
+          Sprite="stone_texture_overlay" AlphaFactor="0.2"
+        >
+          <Children>
+            <RichTextWidget
+              WidthSizePolicy="Fixed"
+              HeightSizePolicy="Fixed"
+              MarginLeft="15"
+              MarginRight="15"
+              MarginBottom="270"
+              SuggestedWidth="300"
+              SuggestedHeight="325"
+              Brush="SPOptions.Description.Title.Text"
+              Text="⚠ Warning: Numeric Sliders Disabled"
+            />
+            <RichTextWidget
+              WidthSizePolicy="Fixed"
+              HeightSizePolicy="CoverChildren"
+              MarginLeft="15"
+              MarginRight="15"
+              MarginTop="250"
+              MarginBottom="15"
+              SuggestedWidth="270"
+              SuggestedHeight="240"
+              Brush="SPOptions.Description.Text"
+              Text="To edit numeric settings, manually edit CESettings.xml at:&#xA;Modules\zCaptivityEvents\ModuleLoader\CaptivityRequired\Events\CESettings.xml&#xA;&#xA;Then reload with console command:&#xA;captivity.reload_settings"
+            />
+          </Children>
+        </Widget>
+        <Standard.DialogCloseButtons
+          Parameter.CancelButtonAction="ExecuteCancel"
+          Parameter.CancelButtonText="Cancel"
+          Parameter.DoneButtonAction="ExecuteDone"
+          Parameter.DoneButtonText="Done"
+        />
+      </Children>
+    </Widget>
+  </Window>
+</Prefab>

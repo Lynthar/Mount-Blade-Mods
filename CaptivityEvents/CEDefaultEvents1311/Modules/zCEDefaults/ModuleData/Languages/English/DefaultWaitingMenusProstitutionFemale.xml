@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema" type="string">
+  <tags>
+    <tag language="English" />
+  </tags>
+  <strings>
+    <!-- Prostitution Waiting Menus -->
+    <string id="DefaultWaitingMenusProstitutionFemale1" text="{?DAYS}You've been forced to work as a prostitute at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You're being forced to work as a prostitute at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;Waiting for a customer..." />
+    <string id="DefaultWaitingMenusProstitutionFemale2" text="{?DAYS}You've been forced to work as a prostitute at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You're being forced to work as a prostitute at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;Waiting for a customer..." />
+    <string id="DefaultWaitingMenusProstitutionFemale3" text="Request your freedom." />
+    <string id="DefaultWaitingMenusProstitutionFemale4" text="{?DAYS}You've been a prostitute at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You're working as a prostitute at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;Waiting for a customer..." />
+    <string id="DefaultWaitingMenusProstitutionFemale5" text="Leave." />
+    <string id="DefaultWaitingMenusProstitutionFemale6" text="{?DAYS}You've been a prostitute at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You're working as a prostitute at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;Waiting for a customer..." />
+    <string id="DefaultWaitingMenusProstitutionFemale7" text="{?DAYS}You've been managing the brothel at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You're managing the brothel at {SETTLEMENT_NAME}.{\?} Waiting for a customer..." />
+    <string id="DefaultWaitingMenusProstitutionFemale8" text="{?DAYS}You've been forced to work as a prostitute at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You're being forced to work as a prostitute at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;The brothel is closed due to the siege. You hope your guards don't get any ideas about taking out their stress on your ass..." />
+    <string id="DefaultWaitingMenusProstitutionFemale9" text="{?DAYS}You've been a prostitute at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a prostitute at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;The brothel is closed due to the siege. This seems distinctly unfair, as who could possibly need a bit of relaxation more than men suffering the stress of imminent combat?" />
+    <string id="DefaultWaitingMenusProstitutionFemale10" text="{?DAYS}You've been managing the brothel at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You're managing the brothel at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;The brothel is closed due to the siege. This seems distinctly unfair, as who could possibly need a bit of relaxation more than men suffering the stress of imminent combat?" />
+  </strings>
+</base>

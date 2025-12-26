@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CEEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../zCaptivityEvents/ModuleLoader/CaptivityRequired/Events/CEEventsModal.xsd">
+    <!-- Holiday Male Random NSFW Events - Winter Season -->
+    <!-- Secret Santa's Magic Gift - Complete Chain -->
+    
+    <CEEvent>
+        <Name>CE_holiday_secret_santa_male_start</Name>
+        <Text>{=HolidayRandomEventsMale1}The winter cold drives you into a warm tavern on this festive Yuletide eve. You settle at the bar with a mug of mulled wine when a stranger in a worn brown tunic approaches. He's an older fellow with a white beard, but there's something peculiar about his eyes - they twinkle with an almost magical quality. "Mind if I join you, friend?" he asks warmly. "I hate drinking alone on such a special night."</Text>
+        <BackgroundName>SantaMale01</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInTown</RestrictedListOfFlags>
+            <RestrictedListOfFlags>SeasonWinter</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=HolidayRandomEventsMale2}Welcome him to join you.</OptionText>
+                <TriggerEventName>CE_holiday_secret_santa_male_talking</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=HolidayRandomEventsMale3}Politely decline.</OptionText>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>50</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    
+    <CEEvent>
+        <Name>CE_holiday_secret_santa_male_talking</Name>
+        <Text>{=HolidayRandomEventsMale4}The old man sits beside you and orders ale. As you talk, he shares wild tales of distant lands and magical encounters. You're not sure if he's mad or drunk, but he's entertaining. After his third drink, he leans in conspiratorially. "Tell me, friend - have you been naughty or nice this year?" Before you can answer, he grins mischievously. "Actually, don't tell me. I already know. And I have something special for you. Come - I have a room upstairs. I promise you won't regret it."</Text>
+        <BackgroundName>SantaMale02</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=HolidayRandomEventsMale5}Follow him upstairs.</OptionText>
+                <TriggerEventName>CE_holiday_secret_santa_male_upstairs</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=HolidayRandomEventsMale6}This feels suspicious. Decline.</OptionText>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    
+    <CEEvent>
+        <Name>CE_holiday_secret_santa_male_upstairs</Name>
+        <Text>{=HolidayRandomEventsMale7}You follow the mysterious stranger up the creaking stairs to a rented room. He walks ahead of you with surprising energy for his age. As you climb, you notice his brown tunic seems to shimmer slightly in the candlelight. "Just through here," he says, pushing open a door to reveal a cozy bedroom with a blazing hearth. "Now, let me show you something truly magical..."</Text>
+        <BackgroundName>SantaMale03</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=HolidayRandomEventsMale8}Enter the room.</OptionText>
+                <TriggerEventName>CE_holiday_secret_santa_male_reveal</TriggerEventName>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    
+    <CEEvent>
+        <Name>CE_holiday_secret_santa_male_reveal</Name>
+        <Text>{=HolidayRandomEventsMale9}The moment you step inside, the old man's brown tunic shimmers and transforms into a magnificent red coat with white fur trim. His eyes sparkle with ancient magic. "Surprised? I am Nicholas - some call me Saint Nicholas, others call me Santa. And you, my friend, have been very good this year." With a wave of his hand, a large wrapped gift appears on the bed, decorated with red ribbons. The package shifts and you hear a soft feminine giggle from within. "Your present awaits. One gift..." He pauses with a knowing smile, "...or would you prefer the deluxe package?"</Text>
+        <BackgroundName>Santa02</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=HolidayRandomEventsMale10}Accept one gift.</OptionText>
+                <TriggerEventName>CE_holiday_secret_santa_male_single_unwrap</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=HolidayRandomEventsMale11}Ask for the deluxe package.</OptionText>
+                <TriggerEventName>CE_holiday_secret_santa_male_deluxe_unwrap</TriggerEventName>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    
+    <CEEvent>
+        <Name>CE_holiday_secret_santa_male_single_unwrap</Name>
+        <Text>{=HolidayRandomEventsMale12}Santa gestures to the gift. "Go ahead, unwrap her." You approach the large package and pull at the ribbons. They fall away to reveal a beautiful naked woman wrapped in decorative gift paper and red silk ribbons. She smiles seductively as you remove the remaining wrappings. "I'm your Yuletide gift," she purrs. "And I'm here to make all your wishes come true tonight." Santa chuckles and heads for the door. "I'll leave you two alone. Merry Christmas, my friend. Ho ho ho!" The door closes, leaving you alone with your magical present.</Text>
+        <BackgroundName>Santa03</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=HolidayRandomEventsMale13}Unwrap your gift fully.</OptionText>
+                <TriggerEventName>CE_holiday_secret_santa_male_single_fun</TriggerEventName>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    
+    <CEEvent>
+        <Name>CE_holiday_secret_santa_male_single_fun</Name>
+        <Text>{=HolidayRandomEventsMale14}You remove the last of the ribbons and the magical woman guides you to the bed. Her touch is electric, her skills beyond mortal comprehension. She knows exactly what you desire without you saying a word. She pushes you gently onto the bed and kneels between your legs, her eyes locked on yours with a seductive smile. "Let me show you what Santa's gifts can do," she purrs before taking you into her mouth. Her technique is divine - warm, wet, and impossibly skilled as she works you with her lips and tongue.</Text>
+        <BackgroundName>SantaMale04</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=HolidayRandomEventsMale15}Let her continue.</OptionText>
+                <TriggerEventName>CE_holiday_secret_santa_male_single_mount</TriggerEventName>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    
+    <CEEvent>
+        <Name>CE_holiday_secret_santa_male_single_mount</Name>
+        <Text>{=HolidayRandomEventsMale16}After bringing you to the edge with her mouth, she releases you with a teasing smile. "Not yet," she whispers. "I want to feel you inside me." She climbs onto the bed, straddling your hips. Her hands grip your shaft as she positions herself above you, the tip pressing against her entrance. She's already wet with anticipation. "Ready for your real gift?" she asks with a sultry grin, slowly lowering herself to take you inside.</Text>
+        <BackgroundName>SantaMale05</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=HolidayRandomEventsMale17}Let her ride you.</OptionText>
+                <TriggerEventName>CE_holiday_secret_santa_male_single_ride</TriggerEventName>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    
+    <CEEvent>
+        <Name>CE_holiday_secret_santa_male_single_ride</Name>
+        <Text>{=HolidayRandomEventsMale18}She takes you fully inside with a satisfied moan, her body adjusting perfectly to yours. Then she begins to move - slowly at first, rolling her hips in sensual circles. Her hands press against your chest for leverage as she picks up the pace. You watch mesmerized as she rides you with increasing intensity, her breasts bouncing with each thrust. Her moans fill the room as she takes her pleasure, and yours. "You feel so good," she gasps, moving faster and harder. The magical woman's stamina seems endless as she brings you both to new heights.</Text>
+        <BackgroundName>SantaMale06</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=HolidayRandomEventsMale19}Continue through the night.</OptionText>
+                <TriggerEventName>CE_holiday_secret_santa_male_single_continue</TriggerEventName>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    
+    <CEEvent>
+        <Name>CE_holiday_secret_santa_male_single_continue</Name>
+        <Text>{=HolidayRandomEventsMale20}The night passes in a blur of passion. Your gift shows no signs of tiring, taking you again and again in various positions. She rides you until you're both crying out in ecstasy, then switches to let you take control, then back again. By the time dawn breaks through the window, you're thoroughly exhausted and deeply satisfied. The magical woman kisses you tenderly one last time before she shimmers and fades like morning mist, leaving only the scattered ribbons as proof she was ever there. On the nightstand, you find a note: "Hope you enjoyed your gift. Remember to be good next year too! - Santa"</Text>
+        <BackgroundName>SantaMale06</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=HolidayRandomEventsMale21}Wake up refreshed.</OptionText>
+                <RelationTotal>10</RelationTotal>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    
+    <CEEvent>
+        <Name>CE_holiday_secret_santa_male_deluxe_unwrap</Name>
+        <Text>{=HolidayRandomEventsMale22}"Greedy, are we? I like that!" Santa laughs heartily and waves both hands. The single package multiplies into three large wrapped gifts on the bed, each moving and giggling. "The deluxe package it is! Go ahead, unwrap them all." You approach the packages and begin pulling ribbons. Three beautiful naked women emerge from the wrappings, each more stunning than the last. They eye you hungrily. "We're your Yuletide gifts," they say in unison, their voices like music. Santa tips his hat. "Try not to die of exhaustion, my friend. Ho ho ho!" He vanishes in a shimmer of magic.</Text>
+        <BackgroundName>Santa04</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=HolidayRandomEventsMale23}Finish unwrapping your gifts.</OptionText>
+                <TriggerEventName>CE_holiday_secret_santa_male_orgy_start</TriggerEventName>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    
+    <CEEvent>
+        <Name>CE_holiday_secret_santa_male_orgy_start</Name>
+        <Text>{=HolidayRandomEventsMale24}The three magical women guide you to the bed, stripping away your clothes as they go. They work in perfect coordination, kissing and caressing you from all sides. One mounts you while the others pleasure you with hands and mouths. They rotate positions seamlessly, ensuring you're never without stimulation. The pleasure is overwhelming as they take turns riding you, their magical stamina endless. You lose track of time as the orgy continues, the three beauties using every part of their bodies to bring you to new heights.</Text>
+        <BackgroundName>SantaMale07</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=HolidayRandomEventsMale25}Let them continue.</OptionText>
+                <TriggerEventName>CE_holiday_secret_santa_male_orgy_continue</TriggerEventName>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    
+    <CEEvent>
+        <Name>CE_holiday_secret_santa_male_orgy_continue</Name>
+        <Text>{=HolidayRandomEventsMale26}The night becomes a blur of bodies and pleasure. The three women seem to know your every desire before you think it. They move together like dancers, creating combinations and positions you never imagined possible. One rides you while another sits on your face and the third pleasures herself beside you, moaning encouragement. They switch positions again and again, ensuring you experience every possible combination. Your stamina is pushed to its absolute limits as they coax climax after climax from you.</Text>
+        <BackgroundName>SantaMale08</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=HolidayRandomEventsMale27}Push yourself further.</OptionText>
+                <TriggerEventName>CE_holiday_secret_santa_male_orgy_intense</TriggerEventName>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    
+    <CEEvent>
+        <Name>CE_holiday_secret_santa_male_orgy_intense</Name>
+        <Text>{=HolidayRandomEventsMale28}Hours pass in ecstasy. The magical women show no signs of tiring, but you're reaching your limits. They sense this and intensify their efforts, determined to give you one final unforgettable experience. All three focus on you simultaneously - one riding you hard, another grinding against your face, the third using her hands and mouth on every sensitive spot she can reach. The combined sensations push you over the edge into the most intense climax of your life. Your vision goes white with pleasure as you cry out.</Text>
+        <BackgroundName>SantaMale09</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=HolidayRandomEventsMale29}Collapse in exhaustion.</OptionText>
+                <TriggerEventName>CE_holiday_secret_santa_male_orgy_end</TriggerEventName>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    
+    <CEEvent>
+        <Name>CE_holiday_secret_santa_male_orgy_end</Name>
+        <Text>{=HolidayRandomEventsMale30}You collapse onto the bed, completely spent. The three women cuddle against you, their bodies warm and soft. You're barely conscious as exhaustion overwhelms you. The last thing you feel is them kissing your cheeks and whispering sweet nothings before darkness takes you. When you wake, the sun is high in the sky and you're alone in the rumpled bed. The women have vanished like dreams, leaving only scattered red ribbons. On the pillow is a note: "You certainly earned the deluxe package! Rest well - you've earned it. Merry Christmas! - Santa" Your body aches pleasantly, proof it wasn't all a dream.</Text>
+        <BackgroundName>SantaMale10</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=HolidayRandomEventsMale31}Eventually wake up and recover.</OptionText>
+                <RelationTotal>20</RelationTotal>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+</CEEvents>

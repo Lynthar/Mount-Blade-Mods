@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="string">
+    <tags>
+        <tag language="English" />
+    </tags>
+    <strings>
+        <string id="CEBROTHEL0973" text="Sell" />
+        <string id="CEBROTHEL0974" text="Sell this Brothel for {GOLD_AMOUNT}{GOLD_ICON}" />
+        <string id="CEBROTHEL0975" text="Manage Brothel" />
+
+        <string id="CEBROTHEL0976" text="Level" />
+        <string id="CEBROTHEL0977" text="Initial Capital" />
+        <string id="CEBROTHEL0978" text="Assist the prostitutes at your brothel" />
+        <string id="CEBROTHEL0979" text="Time to make you work at the brothel." />
+        <string id="CEBROTHEL0980" text="Of course {?PLAYER.GENDER}milady{?}my lord{\?}." />
+        <string id="CEBROTHEL0981" text="Anything else {?PLAYER.GENDER}milady{?}my lord{\?}? [ib:confident][rb:very_positive]" />
+        <string id="CEBROTHEL0982" text="I would like to manage our establishment." />
+        <string id="CEBROTHEL0983" text="The brothel of {SETTLEMENT} has been captured by the enemy, and has been requisitioned." />
+        <string id="CEBROTHEL0984" text="The brothel of {SETTLEMENT}" />
+        <string id="CEBROTHEL0985" text="Description" />
+        <string id="CEBROTHEL0986" text="From the outside it looks inviting, warm and cozy. Stacked boulders and marble details make up most of the building's outer structure.{newline}It's near impossible to see through the large, stained glass windows, but the lack of sounds of cutlery and drinking glasses suggests it is empty inside." />
+        <string id="CEBROTHEL0987" text="From the outside it looks inviting, warm and cozy. Stacked boulders and marble details make up most of the building's outer structure.{newline}It's near impossible to see through the large, stained glass windows, but the sounds of cutlery and drinking glasses from within can be felt outside." />
+        <string id="CEBROTHEL0988" text="State" />
+        <string id="CEBROTHEL0989" text="Daily Wages" />
+        <string id="CEBROTHEL0990" text="Capital" />
+        <string id="CEBROTHEL0991" text="Closed" />
+        <string id="CEBROTHEL0992" text="Normal" />
+        <string id="CEBROTHEL0993" text="None" />
+        <string id="CEBROTHEL0994" text="Notable Prostitutes" />
+        <string id="CEBROTHEL0995" text="Stop Operations" />
+        <string id="CEBROTHEL0996" text="Start Operations" />
+        <string id="CEBROTHEL0997" text="The brothel is currently {?ISRUNNING}open{?}closed, you will need {AMOUNT} denars to begin operations again{\?}." />
+        <string id="CEBROTHEL0998" text="The brothel of {SETTLEMENT} has gone bankrupted, and is no longer open." />
+        <string id="CEBROTHEL0999" text="The brothel of {SETTLEMENT} has gone bankrupted, and has been requisitioned." />
+        <string id="CEBROTHEL1000" text="You can sell this brothel for {AMOUNT} denars." />
+        <string id="CEBROTHEL1001" text="Brothel income." />
+        <string id="CEBROTHEL1002" text="Continue as you were." />
+        <string id="CEBROTHEL1003" text="Go take a break." />
+        <string id="CEBROTHEL1004" text="No, there is plenty of customers waiting, you must continue working." />
+        <string id="CEBROTHEL1005" text="Thank you {?PLAYER.GENDER}milady{?}my lord{\?}." />
+        <string id="CEBROTHEL1006" text="Hello {?PLAYER.GENDER}milady{?}my lord{\?}, I think I need a break." />
+        <string id="CEBROTHEL1007" text="I will like to have some fun." />
+        <string id="CEBROTHEL1008" text="Do you need something {?PLAYER.GENDER}milady{?}my lord{\?}? [ib:confident][rb:very_positive]" />
+        <string id="CEBROTHEL1009" text="Sorry {?PLAYER.GENDER}milady{?}my lord{\?}, I am currently very busy." />
+        <string id="CEBROTHEL1010" text="What do you want? Cannot you see that I am trying to enjoy the whores here? [ib:normal][rb:unsure]" />
+        <string id="CEBROTHEL1011" text="Uh, nevermind." />
+        <string id="CEBROTHEL1012" text="Yes? [ib:normal][rb:unsure]" />
+        <string id="CEBROTHEL1013" text="Would you like my services for {AMOUNT} denars?" />
+        <string id="CEBROTHEL1014" text="Well hello there you {?PLAYER.GENDER}fine whore{?}stud{\?}, would you like {AMOUNT} denars for your services? [ib:confident][rb:very_positive]" />
+        <string id="CEBROTHEL1015" text="Yes, my lord I can do that." />
+        <string id="CEBROTHEL1016" text="Excuse me, I don't work here!" />
+        <string id="CEBROTHEL1017" text="Sorry sir, I have to leave." />
+        <string id="CEBROTHEL1018" text="That's a fair price I'd say." />
+        <string id="CEBROTHEL1019" text="That's too much, no thanks." />
+        <string id="CEBROTHEL1020" text="Follow me sweetie. [ib:normal][rb:positive]" />
+        <string id="CEBROTHEL1021" text="Stop wasting my time then.[ib:aggressive][rb:unsure]" />
+        <string id="CEBROTHEL1022" text="Hey {?PLAYER.GENDER}beautiful{?}handsome{\?} want to have some fun? [ib:confident][rb:very_positive]" />
+        <string id="CEBROTHEL1023" text="Yeah, I could go for a bit of refreshment." />
+        <string id="CEBROTHEL1024" text="No, I am fine." />
+        <string id="CEBROTHEL1025" text="Sounds good, that'll be {AMOUNT} denars. [ib:confident][rb:very_positive]" />
+        <string id="CEBROTHEL1026" text="Hey {?PLAYER.GENDER}cutie{?}handsome{\?} you look like you need some companionship.[ib:confident][rb:very_positive]" />
+        <string id="CEBROTHEL1027" text="I have been awfully lonely..." />
+        <string id="CEBROTHEL1028" text="No thanks." />
+        <string id="CEBROTHEL1029" text="I'm sorry to hear that, let's change that tonight for {AMOUNT} denars. [ib:confident][rb:very_positive]" />
+        <string id="CEBROTHEL1030" text="Is there something I can help you with this evening?[ib:confident][rb:very_positive]" />
+        <string id="CEBROTHEL1031" text="Yeah, I think you can help me with the problem I'm having." />
+        <string id="CEBROTHEL1032" text="Maybe later." />
+        <string id="CEBROTHEL1033" text="Perfect, my \&quot;treatment\&quot; costs {AMOUNT} denars for a full dose.[ib:confident][rb:very_positive]" />
+        <string id="CEBROTHEL1034" text="Sounds like my kind of cure." />
+        <string id="CEBROTHEL1035" text="You know, my condition isn't that bad." />
+        <string id="CEBROTHEL1036" text="Let's go to the doctor's office so you can be treated.[ib:confident][rb:very_positive]" />
+        <string id="CEBROTHEL1037" text="See ya around.[ib:confident][rb:very_positive]" />
+        <string id="CEBROTHEL1038" text="What do you want?[ib:closed][rb:unsure]" />
+        <string id="CEBROTHEL1039" text="I'd like your services for the evening." />
+        <string id="CEBROTHEL1040" text="Fine, but it's going to be {AMOUNT} denars up front.[ib:closed][rb:unsure]" />
+        <string id="CEBROTHEL1041" text="Very well." />
+        <string id="CEBROTHEL1042" text="That's a bit too much." />
+        <string id="CEBROTHEL1043" text="Right this way...[ib:closed][rb:unsure]" />
+        <string id="CEBROTHEL1044" text="Thank goodness...[ib:closed][rb:unsure]" />
+        <string id="CEBROTHEL1045" text="Is there something you want?[ib:closed][rb:unsure]" />
+        <string id="CEBROTHEL1046" text="How much for your time?" />
+        <string id="CEBROTHEL1047" text="Not as this moment." />
+        <string id="CEBROTHEL1048" text="Ok well... {AMOUNT} denars sounds about right.[ib:closed][rb:unsure]" />
+        <string id="CEBROTHEL1049" text="Alright, here you go." />
+        <string id="CEBROTHEL1050" text="Nevermind." />
+        <string id="CEBROTHEL1051" text="Follow me to the back.[ib:closed][rb:unsure]" />
+        <string id="CEBROTHEL1052" text="Ugh...[ib:closed][rb:unsure]" />
+        <string id="CEBROTHEL1053" text="Oh, a valued customer, how can I help you today?[ib:confident][rb:very_positive]" />
+        <string id="CEBROTHEL1054" text="I would like to buy your establishment." />
+        <string id="CEBROTHEL1055" text="I don't need anything at the moment." />
+        <string id="CEBROTHEL1056" text="I am selling this establishment for {AMOUNT} denars." />
+        <string id="CEBROTHEL1057" text="A pleasure doing business. [ib:confident][rb:very_positive]" />
+        <string id="CEBROTHEL1058" text="Very well, I'll be here if you need anything. [ib:confident][rb:very_positive]" />
+        <string id="CEBROTHEL1059" text="Let me prepare the establishment, it will be ready for you soon." />
+        <string id="CEBROTHEL1060" text="Hello {?PLAYER.GENDER}milady{?}my lord{\?}, how can I help you today?[ib:confident][rb:very_positive]" />
+        <string id="CEBROTHEL1061" text="I would like to sell our establishment." />
+        <string id="CEBROTHEL1062" text="We can sell this establishment for {AMOUNT} denars." />
+        <string id="CEBROTHEL1063" text="It's been a pleasure working for you! [ib:confident][rb:very_positive]" />
+        <string id="CEBROTHEL1064" text="The new owner will arrive here shortly, I will just clean up things for now." />
+        <string id="CEBROTHEL1065" text="Well perhaps you should, you sure look like a {?PLAYER.GENDER}whore{?}prostitute{\?}!" />
+        <string id="CEBROTHEL1066" text="My apologies, {?PLAYER.GENDER}milady{?}my lord{\?}!" />
+        <string id="CEBROTHEL1067" text="This is no place for me, {?PLAYER.GENDER}milady{?}my lord{\?}! What do you want?[ib:closed][rb:unsure]" />
+
+        <string id="CEBROTHEL1068" text="I would like to purchase some services for my party." />
+        <string id="CEBROTHEL1069" text="Send some ladies to boost the morale of my party." />
+        <string id="CEBROTHEL1070" text="Yes, {?PLAYER.GENDER}milady{?}my lord{\?} I will send her first." />
+        <string id="CEBROTHEL1071" text="Sorry, {?PLAYER.GENDER}milady{?}my lord{\?} everyone are currently busy." />
+        <string id="CEBROTHEL1072" text="I can bring some ladies but that will be {AMOUNT} denars." />
+        <string id="CEBROTHEL1073" text="Who would you like to send first?" />
+        <string id="CEBROTHEL1074" text="Send {NAME} the regular." />
+        <string id="CEBROTHEL1075" text="Send {HERO.LINK}." />
+        <string id="CEBROTHEL1076" text="Properties" />
+        <string id="CEBROTHEL1077" text="Thank you {?PLAYER.GENDER}milady{?}my lord{\?}!" />
+
+        <string id="CEBROTHEL1078" text="Would you like something to drink, {?PLAYER.GENDER}milady{?}my lord{\?}?" />
+        <string id="CEBROTHEL1079" text="I recommend the mead, {?PLAYER.GENDER}milady{?}my lord{\?}. Finished brewing just this morning. We also have ale and wine." />
+        <string id="CEBROTHEL1080" text="I recommend the wine, {?PLAYER.GENDER}milady{?}my lord{\?}. These last few bottles've been quite popular among the other patrons. We also have ale and mead." />
+        
+        <string id="CEBROTHEL1086" text="I am looking for something to drink. What do you have?" />
+
+        <string id="CEBROTHEL1083" text="I'm looking for someone specific." />
+        <string id="CEBROTHEL1084" text="Looking for someone specific? I'm sure your assistant will be happy to direct you, {?PLAYER.GENDER}milady{?}my lord{\?}." />
+        <string id="CEBROTHEL1085" text="Looking for someone specific? I'm sure the owner will be happy to direct you, {?PLAYER.GENDER}milady{?}my lord{\?}." />
+
+        <string id="CEBROTHEL1086" text="Yes, what would you recommend?" />
+        <string id="CEBROTHEL1087" text="I will have the mead." />
+        <string id="CEBROTHEL1088" text="I will have the wine." />
+        <string id="CEBROTHEL1089" text="Care for a mug of fresh ale, {?PLAYER.GENDER}milady{?}my lord{\?}? We also have mead and wine." />
+        <string id="CEBROTHEL1090" text="I will have the ale." />
+
+        <string id="CEBROTHEL1091" text="That will be {AMOUNT} denars. [ib:confident][rb:very_positive]" />
+
+        <string id="CEBROTHEL1092" text="Would you like something else to drink, {?PLAYER.GENDER}milady{?}my lord{\?}?" />
+        <string id="CEBROTHEL1093" text="That will be {AMOUNT} denars for the whole party. [ib:confident][rb:very_positive]" />
+
+        <string id="CEBROTHEL1094" text="That will be that be for the whole party? [rb:very_positive]" />
+
+        <string id="CEBROTHEL1095" text="Yes, for everyone in my party." />
+        <string id="CEBROTHEL1096" text="No, just for me." />
+     
+        <string id="CEBROTHEL1097" text="Hello {?PLAYER.GENDER}milady{?}my lord{\?}, what can I get for you?" />
+        <string id="CEBROTHEL1098" text="You cut a fine figure, {?PLAYER.GENDER}milady{?}my lord{\?}. What can I get for you?" />
+
+        <string id="CEBROTHEL1099" text="I would like to upgrade our establishment." />
+        <string id="CEBROTHEL1100" text="We can upgrade this establishment for {AMOUNT} denars." />
+
+        <string id="CEBROTHEL1101" text="Yes, milady I can do that." />
+        <string id="CEBROTHEL1102" text="Sorry milady, I have to leave." />
+
+        <string id="CEBROTHEL1103" text="Prostitute Capacity" />
+        <string id="CEBROTHEL1104" text="Regular Prostitutes" />
+    </strings>
+</base>

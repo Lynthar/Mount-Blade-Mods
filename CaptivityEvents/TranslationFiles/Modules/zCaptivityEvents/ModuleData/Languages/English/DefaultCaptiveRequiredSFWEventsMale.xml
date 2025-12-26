@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema" type="string">
+  <tags>
+    <tag language="English" />
+  </tags>
+  <strings>
+    <string id="DefaultCaptiveRequiredSFWEventsMale1" text="You fight valiantly, but as the battle concludes you find yourself surrounded. You do your best to hold your enemies at bay, but as they close in one of them knocks your weapon to the ground, and another grabs your arms, shackling them behind you." />
+    <string id="DefaultCaptiveRequiredSFWEventsMale2" text="Continue..." />
+    <string id="DefaultCaptiveRequiredSFWEventsMale3" text="Your enemies take your weapons and armor as you surrender. Their leader briefly inspects your restraints, nodding approvingly as you are rounded up with the rest of the captives." />
+    <string id="DefaultCaptiveRequiredSFWEventsMale4" text="Bide your time." />
+    <string id="DefaultCaptiveRequiredSFWEventsMale5" text="Your attempt to infiltrate the castle fails spectacularly, and you are quickly surrounded by guards. They take your weapons, dragging you to the dungeons where they throw you into a cell, commenting that their leader will be by shortly to interrogate you." />
+    <string id="DefaultCaptiveRequiredSFWEventsMale6" text="Or more likely gloat..." />
+    <string id="DefaultCaptiveRequiredSFWEventsMale7" text="Your enemies take your armor and weapons, leaving you with only a ragged robe to cover yourself with. They bind your arms and legs, cautiously shackling you to one of their carts." />
+    <string id="DefaultCaptiveRequiredSFWEventsMale8" text="Bide your time..." />
+    <string id="DefaultCaptiveRequiredSFWEventsMale9" text="The townsfolk take your armor and weapons, leaving you with only a ragged robe to cover yourself with. They bind your arms and legs, cautiously leading you to a holding cell." />
+    <string id="DefaultCaptiveRequiredSFWEventsMale10" text="The villagers take your armor and weapons, leaving you with only a ragged robe to cover yourself with. They bind your arms and legs, cautiously leading you to a holding cell." />
+    <string id="DefaultCaptiveRequiredSFWEventsMale11" text="You're spotted as you attempt to escape, and a group of your captors shove you to the ground, binding your wrists with ropes to prevent any further resistance. They decide to take your punishment into their own hands, punching and kicking you while you're down." />
+    <string id="DefaultCaptiveRequiredSFWEventsMale12" text="You're almost spotted by a group of unusually wary guards as you leave camp, but manage to give them the slip by throwing a rock in the other direction as you scurry away. You breathe a well-earned sigh of relief when you're sure you've escaped." />
+    <string id="DefaultCaptiveRequiredSFWEventsMale13" text="Continue your journey..." />
+  </strings>
+</base>

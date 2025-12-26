@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CEEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../zCaptivityEvents/ModuleLoader/CaptivityRequired/Events/CEEventsModal.xsd">
+
+    <!-- #region Common - Sea -->
+    <CEEvent>
+        <Name>CE_captor_female_sea_storm</Name>
+        <Text>{=DefaultCaptorEventsFemale67}A violent storm strikes your vessel, waves towering over the masts. Your prisoners are secured below deck, but panic is spreading. Your crew awaits your commands as the ship struggles against the tempest's fury.</Text>
+        <BackgroundName>CE_CENF_female_1</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsFemale68}Direct your crew with calm authority.</OptionText>
+                <MoraleTotal>12</MoraleTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Leadership" Min="40" Ref="Captor" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Leadership" ByXP="R 70 220" Ref="Captor" Color="Blue" />
+                    <Skill Id="Mariner" ByXP="R 80 250" Ref="Captor" Color="Cyan" />
+                    <Skill Id="Tactics" ByXP="R 50 150" Ref="Captor" Color="Green" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsFemale69}Force prisoners to help bail water.</OptionText>
+                <HealthTotal>-10</HealthTotal>
+                <SkillsToLevel>
+                    <Skill Id="Mariner" ByXP="R 60 180" Ref="Captor" Color="Cyan" />
+                    <Skill Id="Leadership" ByXP="R 50 150" Ref="Captor" Color="Blue" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>KillRandomPrisoners</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsFemale70}Sacrifice prisoners to lighten the load.</OptionText>
+                <TraitsToLevel>
+                    <Trait Id="Mercy" ByXP="R -400 -150" Ref="Captor" Color="Cyan" />
+                </TraitsToLevel>
+                <SkillsToLevel>
+                    <Skill Id="Mariner" ByXP="R 50 150" Ref="Captor" Color="Cyan" />
+                    <Skill Id="Roguery" ByXP="R 40 120" Ref="Captor" Color="Red" />
+                </SkillsToLevel>
+            </Option>
+        </Options>
+        <ReqCaptivesAbove>3</ReqCaptivesAbove>
+        <ReqTroopsAbove>3</ReqTroopsAbove>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>35</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_captor_female_sea_mutiny_threat</Name>
+        <Text>{=DefaultCaptorEventsFemale77}Discord festers aboard your ship. Crew members are divided on your treatment of prisoners. Whispers of mutiny reach your ears through your boatswain, who warns that decisive action is needed before the situation explodes.</Text>
+        <BackgroundName>CE_CENF_female_2</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsFemale78}Command respect through strength and fairness.</OptionText>
+                <MoraleTotal>15</MoraleTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Leadership" Min="50" Ref="Captor" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Leadership" ByXP="R 90 300" Ref="Captor" Color="Blue" />
+                    <Skill Id="Boatswain" ByXP="R 70 220" Ref="Captor" Color="Orange" />
+                    <Skill Id="Charm" ByXP="R 60 180" Ref="Captor" Color="Purple" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsFemale79}Punish the troublemakers publicly.</OptionText>
+                <MoraleTotal>-10</MoraleTotal>
+                <SkillsToLevel>
+                    <Skill Id="Roguery" ByXP="R 70 220" Ref="Captor" Color="Red" />
+                    <Skill Id="Leadership" ByXP="R 60 180" Ref="Captor" Color="Blue" />
+                    <Skill Id="Boatswain" ByXP="R 50 150" Ref="Captor" Color="Orange" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ReleaseRandomPrisoners</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsFemale80}Reach a compromise by freeing some prisoners.</OptionText>
+                <MoraleTotal>8</MoraleTotal>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="R 60 180" Ref="Captor" Color="Purple" />
+                    <Skill Id="Leadership" ByXP="R 50 150" Ref="Captor" Color="Blue" />
+                </SkillsToLevel>
+            </Option>
+        </Options>
+        <ReqCaptivesAbove>5</ReqCaptivesAbove>
+        <ReqTroopsAbove>5</ReqTroopsAbove>
+        <ReqMoraleBelow>60</ReqMoraleBelow>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>25</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+</CEEvents>

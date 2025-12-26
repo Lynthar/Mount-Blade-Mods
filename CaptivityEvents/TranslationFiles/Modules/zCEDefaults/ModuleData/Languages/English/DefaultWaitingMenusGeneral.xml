@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema" type="string">
+  <tags>
+    <tag language="English" />
+  </tags>
+  <strings>
+    <string id="DefaultWaitingMenusGeneral1" text="{?DAYS}You've been a captive {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a captive {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?}.{\?}" />
+    <string id="DefaultWaitingMenusGeneral2" text="{?DAYS}You've been a prisoner at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a prisoner at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;Waiting in captivity..." />
+  </strings>
+</base>

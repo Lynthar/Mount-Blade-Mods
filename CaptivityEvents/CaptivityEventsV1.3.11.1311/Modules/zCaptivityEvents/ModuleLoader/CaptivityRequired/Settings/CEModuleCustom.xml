@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CECustom xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../zCaptivityEvents/ModuleLoader/CaptivityRequired/Events/CECustomModal.xsd">
+    <CEModuleName>Default Skills</CEModuleName>
+     <CESkills>
+        <CESkill Id="Prostitution" Name="{=CEEVENTS1106}Prostitution" MinLevel="0" />
+        <CESkill Id="IsProstitute" Name="{=CEEVENTS1104}prostitute" MinLevel="0" MaxLevel="1" SetZeroOnEscape="true" />
+        <CESkill Id="Slavery" Name="{=CEEVENTS1105}Slavery" MinLevel="0" SetZeroOnEscape="true"/>
+        <CESkill Id="IsSlave" Name="{=CEEVENTS1103}slave" MinLevel="0" MaxLevel="1" SetZeroOnEscape="true" />
+    </CESkills>
+</CECustom>

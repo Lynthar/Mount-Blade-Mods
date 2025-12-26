@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CaptureOptionsGroup.xml: Event occurrence rates and capture mechanics -->
+<OptionsGroupDefinition GroupId="CaptureOptions">
+    <Options>
+        <OptionsItem OptionId="EventOccurrenceOther" DisplayName="Event Occurrence (Other)" Description="Weighted chance (0-100) for captive events in non-settlement locations." DefaultValue="6" Type="Numeric" Min="0" Max="100" />
+        <OptionsItem OptionId="EventOccurrenceSettlement" DisplayName="Event Occurrence (Settlement)" Description="Weighted chance (0-100) for captive events in settlements." DefaultValue="6" Type="Numeric" Min="0" Max="100" />
+        <OptionsItem OptionId="EventOccurrenceLord" DisplayName="Event Occurrence (Lord)" Description="Weighted chance (0-100) for lord-specific captive events." DefaultValue="6" Type="Numeric" Min="0" Max="100" />
+        <OptionsItem OptionId="EventOccurrenceCaptor" DisplayName="Event Occurrence (Captor)" Description="Weighted chance (0-100) for captor-related events." DefaultValue="12" Type="Numeric" Min="0" Max="100" />
+        <OptionsItem OptionId="EventCaptorDialogue" DisplayName="Captor Dialogue" Description="Enable captor dialogue interactions." DefaultValue="true" Type="Boolean" />
+        <OptionsItem OptionId="EventCaptorNotifications" DisplayName="Captor Notifications" Description="Show notifications for captor events." DefaultValue="true" Type="Boolean" />
+        <OptionsItem OptionId="EventCaptorCustomTextureNotifications" DisplayName="Custom Texture Notifications" Description="Use custom textures in captor event notifications." DefaultValue="true" Type="Boolean" />
+    </Options>
+</OptionsGroupDefinition>

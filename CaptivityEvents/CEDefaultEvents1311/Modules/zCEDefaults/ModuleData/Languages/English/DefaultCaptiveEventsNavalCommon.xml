@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema" type="string">
+  <tags>
+    <tag language="English" />
+  </tags>
+  <strings>
+    <string id="DefaultCaptiveEventsNavalCommon1" text="You're held belowdecks while the ship rocks gently in the swell. The smell of tar and fish fills the air as your captors argue about rations and who will take you ashore for work." />
+    <string id="DefaultCaptiveEventsNavalCommon2" text="Keep your head down and wait." />
+    <string id="DefaultCaptiveEventsNavalCommon3" text="Look for a chance to slip overboard." />
+    <string id="DefaultCaptiveEventsNavalCommon4" text="The crew bickers about the next port while one of the sailors tosses you a stale piece of bread to quiet you. You wonder whether you'll be sold ashore or kept for the voyage." />
+    <string id="DefaultCaptiveEventsNavalCommon5" text="Accept the bread." />
+    <string id="DefaultCaptiveEventsNavalCommon6" text="Refuse and risk angering them." />
+    <string id="DefaultCaptiveEventsNavalCommon7" text="A sudden squall throws the ship about, and several crates tumble loose on deck. In the confusion a couple of guards are injured and others rush to help, leaving the hold less watched than usual." />
+    <string id="DefaultCaptiveEventsNavalCommon8" text="Use the distraction to attempt escape." />
+    <string id="DefaultCaptiveEventsNavalCommon9" text="Stay put and avoid further trouble." />
+    <string id="DefaultCaptiveEventsNavalCommon10" text="The ship docks briefly at a small fishing cove and a handful of prisoners are marched ashore to help unload. You are selected alongside them and shoved into the damp sand, the smell of seaweed thick in the air." />
+  </strings>
+</base>

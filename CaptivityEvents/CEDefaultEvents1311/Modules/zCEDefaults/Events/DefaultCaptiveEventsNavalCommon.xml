@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CEEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../zCaptivityEvents/ModuleLoader/CaptivityRequired/Events/CEEventsModal.xsd">
+
+<!-- ==================================================================================================== -->
+<!-- |                                     CAPTIVE EVENTS - NAVAL - COMMON                              | -->
+<!-- ==================================================================================================== -->
+
+    <!-- #region Common - Sea -->
+
+  <!-- Held below deck -->
+  <CEEvent>
+    <Name>CE_naval_common_101</Name>
+    <Text>{=DefaultCaptiveEventsNavalCommon1}You're held belowdecks while the ship rocks gently in the swell. The smell of tar and fish fills the air as your captors argue about rations and who will take you ashore for work.</Text>
+    <BackgroundName></BackgroundName>
+    <MultipleRestrictedListOfFlags>
+        <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+        <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+        <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+    </MultipleRestrictedListOfFlags>
+    <Options>
+      <Option>
+        <Order>0</Order>
+        <MultipleRestrictedListOfConsequences>
+          <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+          <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+        </MultipleRestrictedListOfConsequences>
+        <OptionText>{=DefaultCaptiveEventsNavalCommon2}Keep your head down and wait.</OptionText>
+        <HealthTotal>20</HealthTotal>
+      </Option>
+      <Option>
+        <Order>1</Order>
+        <MultipleRestrictedListOfConsequences>
+          <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+          <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+        </MultipleRestrictedListOfConsequences>
+        <OptionText>{=DefaultCaptiveEventsNavalCommon3}Look for a chance to slip overboard.</OptionText>
+        <ReqHeroHealthAbovePercentage>30</ReqHeroHealthAbovePercentage>
+      </Option>
+    </Options>
+        
+    <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+    <ReqHeroMinAge>18</ReqHeroMinAge>
+  </CEEvent>
+
+  <!-- Bicker about next port -->
+  <CEEvent>
+    <Name>CE_naval_common_102</Name>
+    <Text>{=DefaultCaptiveEventsNavalCommon4}The crew bickers about the next port while one of the sailors tosses you a stale piece of bread to quiet you. You wonder whether you'll be sold ashore or kept for the voyage.</Text>
+    <BackgroundName></BackgroundName>
+    <MultipleRestrictedListOfFlags>
+        <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+        <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+        <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+    </MultipleRestrictedListOfFlags>
+    <Options>
+      <Option>
+        <Order>0</Order>
+        <MultipleRestrictedListOfConsequences>
+          <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+          <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+        </MultipleRestrictedListOfConsequences>
+        <OptionText>{=DefaultCaptiveEventsNavalCommon5}Accept the bread.</OptionText>
+        <RelationTotal>5</RelationTotal>
+      </Option>
+      <Option>
+        <Order>1</Order>
+        <MultipleRestrictedListOfConsequences>
+          <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+        </MultipleRestrictedListOfConsequences>
+        <OptionText>{=DefaultCaptiveEventsNavalCommon6}Refuse and risk angering them.</OptionText>
+      </Option>
+    </Options>
+        
+    <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+    <ReqHeroMinAge>18</ReqHeroMinAge>
+  </CEEvent>
+
+  <!-- Sudden Squall - Distraction -->
+  <CEEvent>
+    <Name>CE_naval_common_103</Name>
+    <Text>{=DefaultCaptiveEventsNavalCommon7}A sudden squall throws the ship about, and several crates tumble loose on deck. In the confusion a couple of guards are injured and others rush to help, leaving the hold less watched than usual.</Text>
+    <BackgroundName></BackgroundName>
+    <MultipleRestrictedListOfFlags>
+        <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+        <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+        <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+    </MultipleRestrictedListOfFlags>
+    <Options>
+      <Option>
+        <Order>0</Order>
+        <MultipleRestrictedListOfConsequences>
+          <RestrictedListOfConsequences>AttemptEscape</RestrictedListOfConsequences>
+          <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+        </MultipleRestrictedListOfConsequences>
+        <OptionText>{=DefaultCaptiveEventsNavalCommon8}Use the distraction to attempt escape.</OptionText>
+        <ReqHeroHealthAbovePercentage>40</ReqHeroHealthAbovePercentage>
+      </Option>
+      <Option>
+        <Order>1</Order>
+        <MultipleRestrictedListOfConsequences>
+          <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+          <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+        </MultipleRestrictedListOfConsequences>
+        <OptionText>{=DefaultCaptiveEventsNavalCommon9}Stay put and avoid further trouble.</OptionText>
+        <HealthTotal>20</HealthTotal>
+      </Option>
+    </Options>
+        
+    <WeightedChanceOfOccurring>15</WeightedChanceOfOccurring>
+    <ReqHeroMinAge>18</ReqHeroMinAge>
+  </CEEvent>
+
+  <!-- Unloading duty -->
+  <CEEvent>
+    <Name>CE_naval_common_104</Name>
+    <Text>{=DefaultCaptiveEventsNavalCommon10}The ship docks briefly at a small fishing cove and a handful of prisoners are marched ashore to help unload. You are selected alongside them and shoved into the damp sand, the smell of seaweed thick in the air.</Text>
+    <BackgroundName></BackgroundName>
+    <MultipleRestrictedListOfFlags>
+        <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+        <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+        <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+    </MultipleRestrictedListOfFlags>
+    <Options>
+      <Option>
+        <Order>0</Order>
+        <MultipleRestrictedListOfConsequences>
+          <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+        </MultipleRestrictedListOfConsequences>
+        <OptionText>{=DefaultCaptiveEventsNavalCommon5}Accept the work.</OptionText>
+      </Option>
+      <Option>
+        <Order>1</Order>
+        <MultipleRestrictedListOfConsequences>
+          <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+          <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+        </MultipleRestrictedListOfConsequences>
+        <OptionText>{=DefaultCaptiveEventsNavalCommon6}Resist and face punishment.</OptionText>
+        <HealthTotal>-10</HealthTotal>
+      </Option>
+    </Options>
+        
+    <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+    <ReqHeroMinAge>18</ReqHeroMinAge>
+  </CEEvent>
+
+    <!-- #endregion -->
+
+</CEEvents>

@@ -1,0 +1,679 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CEEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../zCaptivityEvents/ModuleLoader/CaptivityRequired/Events/CEEventsModal.xsd">
+
+    <!-- Default Waiting Menus for Slavery Events - Female Specific -->
+    <!-- #region Slavery Waiting Menus -->
+
+    <!-- #region Owned -->
+    <CEEvent>
+        <Name>CE_slavery_waiting_menu</Name>
+        <Text>{=DefaultWaitingMenusSlaveryFemale1}{?DAYS}You've been a slave at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a slave at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;You wait for your tormentor to return, watching for any chance to escape...</Text>
+        <BackgroundName>CE_DWM_18</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsNotProstitute</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelBelow>20</ReqHeroSlaveLevelBelow>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_waiting_menu_naval</Name>
+        <Text>{=DefaultWaitingMenusSlaveryFemale2}{?DAYS}You've been a slave {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a slave {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?}.{\?}&#xD;&#xA;&#xD;&#xA;You wait for your tormentor to return, watching for any chance to escape...</Text>
+        <BackgroundName>CE_DWM_5</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInPort</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsNotProstitute</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelBelow>20</ReqHeroSlaveLevelBelow>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_waiting_menu_2</Name>
+        <Text>{=DefaultWaitingMenusSlaveryFemale3}{?DAYS}You've been a slave at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a slave at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;You wait for your master to return...</Text>
+        <BackgroundName>CE_DWM_17</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelAbove>20</ReqHeroSlaveLevelAbove>
+        <ReqHeroSlaveLevelBelow>70</ReqHeroSlaveLevelBelow>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_waiting_menu_2_naval</Name>
+        <Text>{=DefaultWaitingMenusSlaveryFemale4}{?DAYS}You've been a slave {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a slave {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?}.{\?}&#xD;&#xA;&#xD;&#xA;You wait for your master to return...</Text>
+        <BackgroundName>CE_DWM_22</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInPort</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelAbove>20</ReqHeroSlaveLevelAbove>
+        <ReqHeroSlaveLevelBelow>70</ReqHeroSlaveLevelBelow>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_waiting_menu_3</Name>
+        <Text>{=DefaultWaitingMenusSlaveryFemale5}{?DAYS}You've been a slave at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a slave at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;You wait obediently for your master to return...</Text>
+        <BackgroundName>CE_DWM_14</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelAbove>70</ReqHeroSlaveLevelAbove>
+        <ReqHeroSlaveLevelBelow>150</ReqHeroSlaveLevelBelow>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_waiting_menu_3_naval</Name>
+        <Text>{=DefaultWaitingMenusSlaveryFemale6}{?DAYS}You've been a slave {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a slave {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?}.{\?}&#xD;&#xA;&#xD;&#xA;You wait obediently for your master to return...</Text>
+        <BackgroundName>CE_DWM_3</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInPort</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelAbove>70</ReqHeroSlaveLevelAbove>
+        <ReqHeroSlaveLevelBelow>150</ReqHeroSlaveLevelBelow>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_waiting_menu_4</Name>
+        <Text>{=DefaultWaitingMenusSlaveryFemale7}{?DAYS}You've been a slave at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a broken slave at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;You wait obediently for your master to make use of you...</Text>
+        <BackgroundName>CE_DWM_15</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelAbove>150</ReqHeroSlaveLevelAbove>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_waiting_menu_4_naval</Name>
+        <Text>{=DefaultWaitingMenusSlaveryFemale8}{?DAYS}You've been a slave {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a broken slave {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?}.{\?}&#xD;&#xA;&#xD;&#xA;You wait obediently for your master to make use of you...</Text>
+        <BackgroundName>CE_DWM_4</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInPort</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelAbove>150</ReqHeroSlaveLevelAbove>
+    </CEEvent>
+    <!-- #endregion Owned -->
+    <!-- #region Not Owned -->
+    <CEEvent>
+        <Name>CE_slavery_waiting_menu_5_low</Name>
+        <Text>{=DefaultWaitingMenusSlaveryFemale9}{?DAYS}You've been a slave at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a slave at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;You wait at the market, your body on display like a piece of meat as passerby make lewd comments about your appearance. You watch desperately for any chance to escape...</Text>
+        <BackgroundName>CE_DWM_23</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroNotOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelBelow>20</ReqHeroSlaveLevelBelow>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_waiting_menu_5_medium</Name>
+        <Text>{=DefaultWaitingMenusSlaveryFemale10}{?DAYS}You've been a slave at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a slave at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;You wait at the market, your body on display for potential buyers. You've grown somewhat accustomed to their stares and crude comments...</Text>
+        <BackgroundName>CE_DWM_23</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroNotOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelAbove>20</ReqHeroSlaveLevelAbove>
+        <ReqHeroSlaveLevelBelow>70</ReqHeroSlaveLevelBelow>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_waiting_menu_5_high</Name>
+        <Text>{=DefaultWaitingMenusSlaveryFemale11}{?DAYS}You've been a slave at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a slave at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;You wait obediently at the market, accepting your display. You've learned to present yourself properly for potential buyers...</Text>
+        <BackgroundName>CE_DWM_24</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroNotOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelAbove>70</ReqHeroSlaveLevelAbove>
+        <ReqHeroSlaveLevelBelow>150</ReqHeroSlaveLevelBelow>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_waiting_menu_6</Name>
+        <Text>{=DefaultWaitingMenusSlaveryFemale12}{?DAYS}You've been a slave at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a broken slave at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;You wait obediently for someone to make use of you...</Text>
+        <BackgroundName>CE_DWM_15</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroNotOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelAbove>150</ReqHeroSlaveLevelAbove>
+    </CEEvent>
+    <!-- #endregion Not Owned -->
+
+    <!-- #endregion -->
+
+    <!-- #region Slavery Naval Waiting Menus -->
+
+    <!-- #region Owned Naval -->
+    <CEEvent>
+        <Name>CE_slavery_waiting_menu_naval_low</Name>
+        <Text>{=DefaultWaitingMenusSlaveryFemale13}{?DAYS}You've been a slave {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a slave {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?}.{\?}&#xD;&#xA;&#xD;&#xA;You wait for your tormentor to return, watching for any chance to escape...</Text>
+        <BackgroundName>CE_DWM_5</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInPort</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsNotProstitute</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelBelow>20</ReqHeroSlaveLevelBelow>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_waiting_menu_naval_medium</Name>
+        <Text>{=DefaultWaitingMenusSlaveryFemale14}{?DAYS}You've been a slave {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a slave {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?}.{\?}&#xD;&#xA;&#xD;&#xA;You wait for your master to return...</Text>
+        <BackgroundName>CE_DWM_22</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInPort</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelAbove>20</ReqHeroSlaveLevelAbove>
+        <ReqHeroSlaveLevelBelow>70</ReqHeroSlaveLevelBelow>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_waiting_menu_naval_high</Name>
+        <Text>{=DefaultWaitingMenusSlaveryFemale15}{?DAYS}You've been a slave {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a slave {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?}.{\?}&#xD;&#xA;&#xD;&#xA;You wait obediently for your master to return...</Text>
+        <BackgroundName>CE_DWM_3</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInPort</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelAbove>70</ReqHeroSlaveLevelAbove>
+        <ReqHeroSlaveLevelBelow>150</ReqHeroSlaveLevelBelow>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_waiting_menu_naval_broken</Name>
+        <Text>{=DefaultWaitingMenusSlaveryFemale16}{?DAYS}You've been a slave {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a broken slave {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?}.{\?}&#xD;&#xA;&#xD;&#xA;You wait obediently for your master to make use of you...</Text>
+        <BackgroundName>CE_DWM_4</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInPort</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelAbove>150</ReqHeroSlaveLevelAbove>
+    </CEEvent>
+    <!-- #endregion Owned Naval -->
+
+    <!-- #region Not Owned Naval -->
+    <CEEvent>
+        <Name>CE_slavery_waiting_menu_naval_not_owned_low</Name>
+        <Text>{=DefaultWaitingMenusSlaveryFemale17}{?DAYS}You've been a slave {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a slave {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?}.{\?}&#xD;&#xA;&#xD;&#xA;Chained on the deck, you're treated as mere cargo, exposed to the elements as you watch for any chance to escape...</Text>
+        <BackgroundName>CE_DWM_20</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInPort</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroNotOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelBelow>20</ReqHeroSlaveLevelBelow>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_waiting_menu_naval_not_owned_medium</Name>
+        <Text>{=DefaultWaitingMenusSlaveryFemale18}{?DAYS}You've been a slave {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a slave {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?}.{\?}&#xD;&#xA;&#xD;&#xA;You're kept below deck with the cargo. The crew uses you for their entertainment during the voyage...</Text>
+        <BackgroundName>CE_DWM_6</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInPort</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroNotOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelAbove>20</ReqHeroSlaveLevelAbove>
+        <ReqHeroSlaveLevelBelow>70</ReqHeroSlaveLevelBelow>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_waiting_menu_naval_not_owned_high</Name>
+        <Text>{=DefaultWaitingMenusSlaveryFemale19}{?DAYS}You've been a slave {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a slave {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?}.{\?}&#xD;&#xA;&#xD;&#xA;Below deck, you're kept chained with the other cargo. The crew uses you to relieve their boredom during the long voyage. You've learned to accept your role obediently...</Text>
+        <BackgroundName>CE_DWM_7</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInPort</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroNotOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelAbove>70</ReqHeroSlaveLevelAbove>
+        <ReqHeroSlaveLevelBelow>150</ReqHeroSlaveLevelBelow>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_waiting_menu_naval_not_owned_broken</Name>
+        <Text>{=DefaultWaitingMenusSlaveryFemale20}{?DAYS}You've been a slave {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a broken slave {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?}.{\?}&#xD;&#xA;&#xD;&#xA;You exist only to serve. The crew keeps you chained below deck, using you for their entertainment whenever the mood strikes them...</Text>
+        <BackgroundName>CE_DWM_8</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInPort</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroNotOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelAbove>150</ReqHeroSlaveLevelAbove>
+    </CEEvent>
+    <!-- #endregion Not Owned Naval -->
+
+    <!-- #endregion -->
+
+    <!-- #region Slavery Siege Events -->
+
+    <!-- #region Owned -->
+    <CEEvent>
+        <Name>CE_slavery_waiting_menu_siege</Name>
+        <Text>{=DefaultWaitingMenusSlaveryFemale21}{?DAYS}You've been a slave at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a slave at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;There is currently a siege going on so your tormentor has locked you up. You silently hope the siege succeeds so that you can be rescued, or at least escape in the confusion.</Text>
+        <BackgroundName>CE_DWM_18</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>DuringSiege</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsNotProstitute</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelBelow>20</ReqHeroSlaveLevelBelow>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_waiting_menu_2_siege</Name>
+        <Text>{=DefaultWaitingMenusSlaveryFemale22}{?DAYS}You've been a slave at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a slave at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;There is currently a siege going on so your master has locked you up. You silently hope the siege succeeds so that you can be rescued, or at least escape in the confusion.</Text>
+        <BackgroundName>CE_DWM_17</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>DuringSiege</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelAbove>20</ReqHeroSlaveLevelAbove>
+        <ReqHeroSlaveLevelBelow>70</ReqHeroSlaveLevelBelow>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_waiting_menu_3_siege</Name>
+        <Text>{=DefaultWaitingMenusSlaveryFemale23}{?DAYS}You've been a slave at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a slave at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;There is currently a siege going on so your master has locked you up. You silently hope the siege fails. Wait... What is going on?</Text>
+        <BackgroundName>CE_DWM_14</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>DuringSiege</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelAbove>70</ReqHeroSlaveLevelAbove>
+        <ReqHeroSlaveLevelBelow>150</ReqHeroSlaveLevelBelow>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_waiting_menu_4_siege</Name>
+        <Text>{=DefaultWaitingMenusSlaveryFemale24}{?DAYS}You've been a slave at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a broken slave at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;There's a siege going on, so your master has you servicing the defenders to keep up morale...</Text>
+        <BackgroundName>CE_DWM_16</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>DuringSiege</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelAbove>150</ReqHeroSlaveLevelAbove>
+    </CEEvent>
+    <!-- #endregion Owned -->
+    <!-- #region Not Owned -->
+    <CEEvent>
+        <Name>CE_slavery_waiting_menu_5_siege</Name>
+        <Text>{=DefaultWaitingMenusSlaveryFemale25}{?DAYS}You've been a slave at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a slave at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;There is currently a siege going on so the markets are closed. At least that means you're not on display anymore...</Text>
+        <BackgroundName>CE_DWM_19</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>DuringSiege</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroNotOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelBelow>150</ReqHeroSlaveLevelBelow>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_slavery_waiting_menu_6_siege</Name>
+        <Text>{=DefaultWaitingMenusSlaveryFemale26}{?DAYS}You've been a slave at {SETTLEMENT_NAME} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a broken slave at {SETTLEMENT_NAME}.{\?}&#xD;&#xA;&#xD;&#xA;There's a siege going on, and you are servicing the defenders to keep up morale...</Text>
+        <BackgroundName>CE_DWM_16</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>DuringSiege</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroNotOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqHeroSlaveLevelAbove>150</ReqHeroSlaveLevelAbove>
+    </CEEvent>
+    <!-- #endregion Not Owned -->
+
+    <!-- #endregion -->
+
+    <!-- NEW TEXT TAGS ARE BUT NOT LIMITED TO 
+    nonconditionals
+    CAPTOR_NAME 
+    OWNER_NAME 
+    SETTLEMENT_NAME 
+    PARTY_NAME 
+    NUMBER_OF_DAYS
+    MONEY_AMOUNT
+    CAPTOR_MONEY_AMOUNT
+    BUYERSETTLEMENT
+    BUYERCARAVAN
+    BUYERLORDPARTY
+    
+    conditionals 
+    ISCARAVAN 
+    ISBANDITS 
+    ISLORDPARTY 
+    DAYS(IF MORE THAN ZERO NUMBER_OF_DAYS) 
+    PLURAL(IF MORE THAN ONE NUMBER_OF_DAYS)
+    -->
+    <!-- While Party outside-->
+    <CEEvent>
+        <Name>CE_slavery_waiting_menu_7</Name>
+        <Text>{=DefaultWaitingMenusSlaveryFemale27}{?DAYS}You've been a slave {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a slave {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?}.{\?}</Text>
+        <Backgrounds>
+            <Background Name="CE_DWM_snow_1" Weight="1" UseConditions="CE_waiting_menu_slave_snow" />
+            <Background Name="CE_DWM_desert_1" Weight="1" UseConditions="CE_waiting_menu_slave_desert" />
+            <Background Name="CE_DWM_plain_1" Weight="1" UseConditions="CE_waiting_menu_slave_forest" />
+        </Backgrounds>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroNotOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- While Party is in Town -->
+    <CEEvent>
+        <Name>CE_slavery_waiting_menu_8</Name>
+        <Text>{=DefaultWaitingMenusSlaveryFemale28}{?DAYS}You've been a slave {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?} for {NUMBER_OF_DAYS} {?PLURAL}days{?}day{\?}.{?}You are a slave {?ISCARAVAN}in the {PARTY_NAME}{?}of {PARTY_NAME}{\?}.{\?}</Text>
+        <BackgroundName>CE_DWM_13</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInCastle</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInTown</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInVillage</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroIsSlave</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroNotOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroOwnedByNotable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>WaitingMenu</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+</CEEvents>

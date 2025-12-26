@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CEEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="CEEventsModal.xsd">
+   <CEEvent>
+      <Name>CE_background_sea</Name>
+      <MultipleRestrictedListOfFlags>
+         <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+         <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+         <RestrictedListOfFlags>IgnoreAllOther</RestrictedListOfFlags>
+         <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+         <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+
+      
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+   
+   <CEEvent>
+      <Name>CE_nothing_happens</Name>
+      <Text>Nothing happens.</Text>
+      <MultipleRestrictedListOfFlags>
+         <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+         <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+         <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>Continue.</OptionText>
+         </Option>
+      </Options>
+
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+      <CEEvent>
+      <Name>CE_nothing_happens_captor</Name>
+      <Text>Nothing happens.</Text>
+      <MultipleRestrictedListOfFlags>
+         <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+         <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+         <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>Continue.</OptionText>
+         </Option>
+      </Options>
+
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+      <CEEvent>
+      <Name>CE_nothing_happens_random</Name>
+      <Text>Nothing happens.</Text>
+      <MultipleRestrictedListOfFlags>
+         <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+         <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+         <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>Continue.</OptionText>
+         </Option>
+      </Options>
+
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+</CEEvents>

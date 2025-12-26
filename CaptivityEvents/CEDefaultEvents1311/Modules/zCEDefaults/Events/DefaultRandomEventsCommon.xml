@@ -1,0 +1,1575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CEEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../zCaptivityEvents/ModuleLoader/CaptivityRequired/Events/CEEventsModal.xsd">
+    <!-- RECOMMEND TO REPLACING THIS FILE WITH YOUR OWN EVENTS -->
+
+    <!-- #region Raiding -->
+    <CEEvent>
+        <Name>CE_random_event_random_villagers_raid</Name>
+        <Text>{=DefaultRandomEventsCommon1}Breaking down the door to a seemingly abandoned cottage, you're surprised to find a collection of villagers hiding inside, mainly women, children, and elders. They beg for your mercy, and you decide not to kill them on the spot - after all, they may turn out to be more valuable as prisoners than as corpses.</Text>
+        <BackgroundName>CE_DWM_21</BackgroundName>
+        <NotificationName>CE_N_RAID</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>DuringRaid</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>GainRandomPrisoners</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon2}Continue raiding!</OptionText>
+            </Option>
+        </Options>
+
+
+        <WeightedChanceOfOccurring>500</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_random_event_found_gold_raid</Name>
+        <Text>{=DefaultRandomEventsCommon3}Making your way through an unusually well-appointed cottage, your keen eyes discover a hatch hidden under an unusually-placed carpet. Your eyes glisten with deadly sin as you discover a hidden cache of gold inside. An auspicious start to what will doubtless be a very profitable day...</Text>
+        <BackgroundName>CE_DWM_21</BackgroundName>
+        <NotificationName>CE_N_RAID</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>DuringRaid</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon2}Continue raiding!</OptionText>
+                <GoldTotal>R 200 1000</GoldTotal>
+            </Option>
+        </Options>
+
+
+        <WeightedChanceOfOccurring>200</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Default -->
+    <CEEvent>
+        <Name>CE_random_event_wine</Name>
+        <Backgrounds>
+            <Background Name="CE_DREC_desert_1" Weight="1" UseConditions="CE_random_event_images_desert" />
+            <Background Name="CE_DREC_snow_1" Weight="1" UseConditions="CE_random_event_images_snow_mountain" />
+            <Background Name="CE_DREC_plain_1" Weight="1" UseConditions="CE_random_event_images_plain" />
+        </Backgrounds>
+        <Text>{=DefaultRandomEventsCommon4}You notice a thin trail of flattened grass by the side of the road, and stepping off to investigate discover an unmarked barrel. It's a bit damaged, having apparently fallen off the back of a cart, but remains intact enough that when you pop the cork the smell of sweet wine floods your senses.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon5}Share it with the troops to boost morale.</OptionText>
+                <MoraleTotal>15</MoraleTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Leadership" Min="30" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Leadership" ByXP="R 30 120" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Wine2}Sell it at the next town.</OptionText>
+                <GoldTotal>R 150 300</GoldTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Trade" Min="25" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Trade" ByXP="R 30 120" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Wine3}Let everyone drink freely and celebrate.</OptionText>
+                <MoraleTotal>8</MoraleTotal>
+            </Option>
+            <Option>
+                <Order>3</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Wine4}Leave it, could be poisoned.</OptionText>
+            </Option>
+        </Options>
+
+
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_random_event_dead</Name>
+        <Backgrounds>
+            <Background Name="CE_DREC_desert_2" Weight="1" UseConditions="CE_random_event_images_desert" />
+            <Background Name="CE_DREC_snow_2" Weight="1" UseConditions="CE_random_event_images_snow_mountain" />
+            <Background Name="CE_DREC_plain_2" Weight="1" UseConditions="CE_random_event_images_plain" />
+        </Backgrounds>
+        <Text>{=DefaultRandomEventsCommon6}You hear the sound of ravens ahead, cawing and fighting each other over something hidden just over the next ridge. As you approach, you realize the birds have made an extravagant feast out of some unfortunate soul's corpse. The body appears to be that of a warrior, still wearing damaged armor.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Dead2}Examine the body carefully for clues and valuables.</OptionText>
+                <GoldTotal>R 50 200</GoldTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Medicine" Min="30" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Medicine" ByXP="R 30 120" Ref="Hero" />
+                    <Skill Id="Scouting" ByXP="R 20 80" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Dead3}Loot the body quickly.</OptionText>
+                <GoldTotal>R 20 100</GoldTotal>
+                <MoraleTotal>-5</MoraleTotal>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Dead4}Give the warrior a proper burial.</OptionText>
+                <MoraleTotal>3</MoraleTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Charm" Min="20" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="R 20 80" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>3</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon7}Move on quickly.</OptionText>
+            </Option>
+        </Options>
+
+
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_random_event_found_gold</Name>
+        <Backgrounds>
+            <Background Name="CE_DREC_desert_3" Weight="1" UseConditions="CE_random_event_images_desert" />
+            <Background Name="CE_DREC_snow_3" Weight="1" UseConditions="CE_random_event_images_snow_mountain" />
+            <Background Name="CE_DREC_plain_3" Weight="1" UseConditions="CE_random_event_images_plain" />
+        </Backgrounds>
+        <Text>{=DefaultRandomEventsCommon8}You find an odd sack by the side of the road; it looks as though it was abandoned recently, and upon opening it you discover a sum of gold inside. Fresh tracks lead away into the distance.</Text>
+        <NotificationName>CE_N_COMMON</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Gold2}Search the area thoroughly for more.</OptionText>
+                <GoldTotal>R 200 800</GoldTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Scouting" Min="40" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Scouting" ByXP="R 40 150" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Gold3}Follow the tracks to find who dropped it.</OptionText>
+                <GoldTotal>R 300 1200</GoldTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Roguery" Min="35" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Roguery" ByXP="R 40 150" Ref="Hero" />
+                    <Skill Id="Scouting" ByXP="R 30 120" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon9}Take it and move on quickly.</OptionText>
+                <GoldTotal>R 100 500</GoldTotal>
+            </Option>
+        </Options>
+
+
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_random_event_lost_gold</Name>
+        <Backgrounds>
+            <Background Name="CE_DREC_desert_4" Weight="1" UseConditions="CE_random_event_images_desert" />
+            <Background Name="CE_DREC_snow_4" Weight="1" UseConditions="CE_random_event_images_snow_mountain" />
+            <Background Name="CE_DREC_plain_4" Weight="1" UseConditions="CE_random_event_images_plain" />
+        </Backgrounds>
+        <Text>{=DefaultRandomEventsCommon10}You reach for your money-pouch, only to find it missing from your belt. You don't recall where you saw it last - was it stolen or simply dropped?</Text>
+        <NotificationName>CE_N_COMMON</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Lost2}Backtrack and search carefully.</OptionText>
+                <GoldTotal>R -200 -50</GoldTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Scouting" Min="30" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Scouting" ByXP="R 30 120" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Lost3}Question the troops about suspicious behavior.</OptionText>
+                <GoldTotal>R -400 -100</GoldTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Roguery" Min="35" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Roguery" ByXP="R 30 120" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon11}Accept the loss and move on.</OptionText>
+                <GoldTotal>R -800 -200</GoldTotal>
+            </Option>
+        </Options>
+
+
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Spring Water -->
+    <CEEvent>
+        <Name>CE_random_event_spring</Name>
+        <Backgrounds>
+            <Background Name="CE_DREC_desert_5" Weight="1" UseConditions="CE_random_event_images_desert" />
+            <Background Name="CE_DREC_snow_5" Weight="1" UseConditions="CE_random_event_images_snow_mountain" />
+            <Background Name="CE_DREC_plain_5" Weight="1" UseConditions="CE_random_event_images_plain" />
+        </Backgrounds>
+        <Text>{=DefaultRandomEventsCommon12}You come upon an effervescent spring, smelling slightly of sulfur. Fanciful childhood tales of secret healing springs danced in your head.</Text>
+        <NotificationName>CE_N_COMMON</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Spring2}Carefully test the water's properties first.</OptionText>
+                <TriggerEventName>CE_random_event_spring_3</TriggerEventName>
+                <SkillsRequired>
+                    <SkillRequired Id="Medicine" Min="35" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Medicine" ByXP="R 40 150" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon13}Take a drink.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_random_event_spring_1</EventName>
+                        <EventWeight>50</EventWeight>
+                        <EventUseConditions>true</EventUseConditions>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_random_event_spring_2</EventName>
+                        <EventWeight>50</EventWeight>
+                        <EventUseConditions>true</EventUseConditions>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon14}Don't touch it.</OptionText>
+            </Option>
+        </Options>
+
+
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_random_event_spring_1</Name>
+        <Backgrounds>
+            <Background Name="CE_DREC_desert_5" Weight="1" UseConditions="CE_random_event_images_desert" />
+            <Background Name="CE_DREC_snow_5" Weight="1" UseConditions="CE_random_event_images_snow_mountain" />
+            <Background Name="CE_DREC_plain_5" Weight="1" UseConditions="CE_random_event_images_plain" />
+        </Backgrounds>
+        <Text>{=DefaultRandomEventsCommon15}You take a drink out of the spring. Maybe it was a bad idea as you feel nauseous.</Text>
+        <NotificationName>CE_N_COMMON</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon16}Maybe I shouldn't have drank that.</OptionText>
+                <HealthTotal>-10</HealthTotal>
+            </Option>
+        </Options>
+
+
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_random_event_spring_2</Name>
+        <Backgrounds>
+            <Background Name="CE_DREC_desert_5" Weight="1" UseConditions="CE_random_event_images_desert" />
+            <Background Name="CE_DREC_snow_5" Weight="1" UseConditions="CE_random_event_images_snow_mountain" />
+            <Background Name="CE_DREC_plain_5" Weight="1" UseConditions="CE_random_event_images_plain" />
+        </Backgrounds>
+        <Text>{=DefaultRandomEventsCommon17}You take a drink out of the spring. It feels refreshing.</Text>
+        <NotificationName>CE_N_COMMON</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon18}That was nice.</OptionText>
+                <HealthTotal>R 10 20</HealthTotal>
+            </Option>
+        </Options>
+
+
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_random_event_spring_3</Name>
+        <Backgrounds>
+            <Background Name="CE_DREC_desert_5" Weight="1" UseConditions="CE_random_event_images_desert" />
+            <Background Name="CE_DREC_snow_5" Weight="1" UseConditions="CE_random_event_images_snow_mountain" />
+            <Background Name="CE_DREC_plain_5" Weight="1" UseConditions="CE_random_event_images_plain" />
+        </Backgrounds>
+        <Text>{=DefaultRandomEventsCommon_Spring3}Your medical knowledge allows you to identify the spring's healing properties. You carefully bottle some of the water and share it with those who need it most.</Text>
+        <NotificationName>CE_N_COMMON</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Spring4}Use the water to treat the wounded.</OptionText>
+                <HealthTotal>R 20 35</HealthTotal>
+                <MoraleTotal>5</MoraleTotal>
+            </Option>
+        </Options>
+
+
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region Traveler Encounters -->
+
+    <!-- Merchant Caravan -->
+    <CEEvent>
+        <Name>CE_random_event_merchant_caravan</Name>
+        <Backgrounds>
+            <Background Name="CE_DCEC_desert_1" Weight="1" UseConditions="CE_random_event_images_desert" />
+            <Background Name="CE_DCEC_snow_1" Weight="1" UseConditions="CE_random_event_images_snow_mountain" />
+            <Background Name="CE_DCEC_plain_1" Weight="1" UseConditions="CE_random_event_images_plain" />
+        </Backgrounds>
+        <Text>{=DefaultRandomEventsCommon_Merchant1}A well-guarded merchant caravan approaches on the road. The lead merchant waves cordially, offering to share the road and perhaps conduct some business.</Text>
+        <NotificationName>CE_N_COMMON</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Merchant2}Negotiate a profitable trade deal.</OptionText>
+                <GoldTotal>R 100 400</GoldTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Trade" Min="40" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Trade" ByXP="R 50 180" Ref="Hero" />
+                    <Skill Id="Charm" ByXP="R 30 120" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Merchant3}Gather information about the region.</OptionText>
+                <SkillsRequired>
+                    <SkillRequired Id="Charm" Min="25" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="R 30 120" Ref="Hero" />
+                    <Skill Id="Scouting" ByXP="R 20 80" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Merchant4}Buy some supplies.</OptionText>
+                <GoldTotal>R -150 -50</GoldTotal>
+                <MoraleTotal>5</MoraleTotal>
+            </Option>
+            <Option>
+                <Order>3</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Merchant5}Continue on your way.</OptionText>
+            </Option>
+        </Options>
+
+
+        <WeightedChanceOfOccurring>35</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Injured Traveler -->
+    <CEEvent>
+        <Name>CE_random_event_injured_traveler</Name>
+        <Backgrounds>
+            <Background Name="CE_DREC_desert_6" Weight="1" UseConditions="CE_random_event_images_desert" />
+            <Background Name="CE_DREC_snow_6" Weight="1" UseConditions="CE_random_event_images_snow_mountain" />
+            <Background Name="CE_DREC_plain_6" Weight="1" UseConditions="CE_random_event_images_plain" />
+        </Backgrounds>
+        <Text>{=DefaultRandomEventsCommon_Injured1}You come upon a wounded traveler lying by the roadside. They've been attacked by bandits and are badly hurt. They plead for your help.</Text>
+        <NotificationName>CE_N_COMMON</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Injured2}Treat their wounds professionally.</OptionText>
+                <MoraleTotal>8</MoraleTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Medicine" Min="40" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Medicine" ByXP="R 50 200" Ref="Hero" />
+                    <Skill Id="Charm" ByXP="R 30 120" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Injured3}Give them money and basic aid.</OptionText>
+                <GoldTotal>-100</GoldTotal>
+                <MoraleTotal>5</MoraleTotal>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Injured4}Question them about the bandits.</OptionText>
+                <SkillsRequired>
+                    <SkillRequired Id="Roguery" Min="30" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Roguery" ByXP="R 40 150" Ref="Hero" />
+                    <Skill Id="Scouting" ByXP="R 30 120" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>3</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Injured5}You can't spare the time.</OptionText>
+                <MoraleTotal>-3</MoraleTotal>
+            </Option>
+        </Options>
+
+
+        <WeightedChanceOfOccurring>30</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Wandering Minstrel -->
+    <CEEvent>
+        <Name>CE_random_event_minstrel</Name>
+        <Backgrounds>
+            <Background Name="CE_DREC_desert_7" Weight="1" UseConditions="CE_random_event_images_desert" />
+            <Background Name="CE_DREC_snow_7" Weight="1" UseConditions="CE_random_event_images_snow_mountain" />
+            <Background Name="CE_DREC_plain_7" Weight="1" UseConditions="CE_random_event_images_plain" />
+        </Backgrounds>
+        <Text>{=DefaultRandomEventsCommon_Minstrel1}A cheerful minstrel with a lute joins your party's rest stop. They offer to perform songs and tales in exchange for a meal and some coin.</Text>
+        <NotificationName>CE_N_COMMON</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Minstrel2}Pay generously for uplifting entertainment.</OptionText>
+                <GoldTotal>-50</GoldTotal>
+                <MoraleTotal>12</MoraleTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Charm" Min="30" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="R 40 150" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Minstrel3}Listen to their songs and stories.</OptionText>
+                <GoldTotal>-20</GoldTotal>
+                <MoraleTotal>7</MoraleTotal>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Minstrel4}Ask for news from distant lands.</OptionText>
+                <SkillsRequired>
+                    <SkillRequired Id="Charm" Min="20" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="R 30 120" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>3</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Minstrel5}Politely decline.</OptionText>
+            </Option>
+        </Options>
+
+
+        <WeightedChanceOfOccurring>25</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Deserter Soldiers -->
+    <CEEvent>
+        <Name>CE_random_event_deserters</Name>
+        <Backgrounds>
+            <Background Name="CE_DREC_desert_8" Weight="1" UseConditions="CE_random_event_images_desert" />
+            <Background Name="CE_DREC_snow_8" Weight="1" UseConditions="CE_random_event_images_snow_mountain" />
+            <Background Name="CE_DREC_plain_8" Weight="1" UseConditions="CE_random_event_images_plain" />
+        </Backgrounds>
+        <Text>{=DefaultRandomEventsCommon_Deserter1}You encounter a small group of deserter soldiers. They're armed but look desperate, unsure whether to beg for mercy or fight their way past you.</Text>
+        <NotificationName>CE_N_COMMON</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Deserter2}Convince them to join your ranks.</OptionText>
+                <MoraleTotal>5</MoraleTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Leadership" Min="45" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Leadership" ByXP="R 50 200" Ref="Hero" />
+                    <Skill Id="Charm" ByXP="R 40 150" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Deserter3}Intimidate them into fleeing.</OptionText>
+                <SkillsRequired>
+                    <SkillRequired Id="Roguery" Min="35" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Roguery" ByXP="R 40 150" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Deserter4}Give them some gold and send them away.</OptionText>
+                <GoldTotal>-75</GoldTotal>
+            </Option>
+            <Option>
+                <Order>3</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Deserter5}Let them pass unmolested.</OptionText>
+            </Option>
+        </Options>
+
+
+        <WeightedChanceOfOccurring>25</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Pilgrims -->
+    <CEEvent>
+        <Name>CE_random_event_pilgrims</Name>
+        <Backgrounds>
+            <Background Name="CE_DREC_desert_9" Weight="1" UseConditions="CE_random_event_images_desert" />
+            <Background Name="CE_DREC_snow_9" Weight="1" UseConditions="CE_random_event_images_snow_mountain" />
+            <Background Name="CE_DREC_plain_9" Weight="1" UseConditions="CE_random_event_images_plain" />
+        </Backgrounds>
+        <Text>{=DefaultRandomEventsCommon_Pilgrim1}A group of pilgrims traveling to a holy site shares the road with you. They seem peaceful and offer blessings to those who aid travelers.</Text>
+        <NotificationName>CE_N_COMMON</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Pilgrim2}Offer protection and supplies.</OptionText>
+                <GoldTotal>-80</GoldTotal>
+                <MoraleTotal>10</MoraleTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Charm" Min="25" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="R 40 150" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Pilgrim3}Share a meal and conversation.</OptionText>
+                <MoraleTotal>5</MoraleTotal>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Pilgrim4}Exchange greetings and continue.</OptionText>
+            </Option>
+        </Options>
+
+
+        <WeightedChanceOfOccurring>25</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- #endregion -->
+
+    <!-- #region Discovery Events -->
+
+    <!-- Ancient Ruins -->
+    <CEEvent>
+        <Name>CE_random_event_ancient_ruins</Name>
+        <Backgrounds>
+            <Background Name="CE_DREC_desert_10" Weight="1" UseConditions="CE_random_event_images_desert" />
+            <Background Name="CE_DREC_snow_10" Weight="1" UseConditions="CE_random_event_images_snow_mountain" />
+            <Background Name="CE_DREC_plain_10" Weight="1" UseConditions="CE_random_event_images_plain" />
+        </Backgrounds>
+        <Text>{=DefaultRandomEventsCommon_Ruins1}You stumble upon ancient ruins hidden by overgrowth. Crumbling pillars and weathered stones hint at a civilization long forgotten. Something about this place feels significant.</Text>
+        <NotificationName>CE_N_COMMON</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Ruins2}Conduct a thorough archaeological investigation.</OptionText>
+                <GoldTotal>R 200 600</GoldTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Engineering" Min="40" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Engineering" ByXP="R 50 200" Ref="Hero" />
+                    <Skill Id="Scouting" ByXP="R 40 150" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Ruins3}Search for hidden treasures.</OptionText>
+                <GoldTotal>R 100 400</GoldTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Roguery" Min="35" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Roguery" ByXP="R 40 150" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Ruins4}Quick search and move on.</OptionText>
+                <GoldTotal>R 50 200</GoldTotal>
+            </Option>
+            <Option>
+                <Order>3</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Ruins5}Too risky, keep moving.</OptionText>
+            </Option>
+        </Options>
+
+
+        <WeightedChanceOfOccurring>15</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Wild Horses -->
+    <CEEvent>
+        <Name>CE_random_event_wild_horses</Name>
+        <Backgrounds>
+            <Background Name="CE_DREC_desert_11" Weight="1" UseConditions="CE_random_event_images_desert" />
+            <Background Name="CE_DREC_snow_11" Weight="1" UseConditions="CE_random_event_images_snow_mountain" />
+            <Background Name="CE_DREC_plain_11" Weight="1" UseConditions="CE_random_event_images_plain" />
+        </Backgrounds>
+        <Text>{=DefaultRandomEventsCommon_Horses1}A magnificent herd of wild horses grazes in a nearby meadow. They're skittish but some appear strong enough to be valuable mounts if tamed.</Text>
+        <NotificationName>CE_N_COMMON</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Horses2}Expertly capture and tame the finest specimens.</OptionText>
+                <GoldTotal>R 300 700</GoldTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Riding" Min="50" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Riding" ByXP="R 60 250" Ref="Hero" />
+                    <Skill Id="Scouting" ByXP="R 40 150" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Horses3}Attempt to catch a few horses.</OptionText>
+                <GoldTotal>R 100 350</GoldTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Riding" Min="30" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Riding" ByXP="R 40 150" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Horses4}Observe and appreciate their beauty.</OptionText>
+            </Option>
+        </Options>
+
+
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Herb Gathering -->
+    <CEEvent>
+        <Name>CE_random_event_herbs</Name>
+        <Backgrounds>
+            <Background Name="CE_DREC_desert_12" Weight="1" UseConditions="CE_random_event_images_desert" />
+            <Background Name="CE_DREC_snow_12" Weight="1" UseConditions="CE_random_event_images_snow_mountain" />
+            <Background Name="CE_DREC_plain_12" Weight="1" UseConditions="CE_random_event_images_plain" />
+        </Backgrounds>
+        <Text>{=DefaultRandomEventsCommon_Herbs1}You notice an area rich with medicinal herbs and rare plants. With proper knowledge, these could be valuable for treating wounds or selling to apothecaries.</Text>
+        <NotificationName>CE_N_COMMON</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Herbs2}Gather and prepare medicinal remedies.</OptionText>
+                <HealthTotal>R 15 30</HealthTotal>
+                <MoraleTotal>5</MoraleTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Medicine" Min="45" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Medicine" ByXP="R 50 200" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Herbs3}Collect valuable herbs to sell.</OptionText>
+                <GoldTotal>R 150 400</GoldTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Trade" Min="30" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Trade" ByXP="R 40 150" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Herbs4}Gather what you can recognize.</OptionText>
+                <HealthTotal>R 5 15</HealthTotal>
+            </Option>
+            <Option>
+                <Order>3</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Herbs5}No time for foraging.</OptionText>
+            </Option>
+        </Options>
+
+
+        <WeightedChanceOfOccurring>25</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Battlefield Remnants -->
+    <CEEvent>
+        <Name>CE_random_event_battlefield</Name>
+        <Backgrounds>
+            <Background Name="CE_DREC_desert_2" Weight="1" UseConditions="CE_random_event_images_desert" />
+            <Background Name="CE_DREC_snow_2" Weight="1" UseConditions="CE_random_event_images_snow_mountain" />
+            <Background Name="CE_DREC_plain_2" Weight="1" UseConditions="CE_random_event_images_plain" />
+        </Backgrounds>
+        <Text>{=DefaultRandomEventsCommon_Battlefield1}You come across the aftermath of a recent battle. Broken weapons, scattered armor, and fallen soldiers litter the field. The fighting must have been fierce.</Text>
+        <NotificationName>CE_N_COMMON</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Battlefield2}Analyze tactics and salvage quality equipment.</OptionText>
+                <GoldTotal>R 200 500</GoldTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Tactics" Min="45" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Tactics" ByXP="R 50 200" Ref="Hero" />
+                    <Skill Id="Engineering" ByXP="R 30 120" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Battlefield3}Loot what you can quickly.</OptionText>
+                <GoldTotal>R 100 300</GoldTotal>
+                <MoraleTotal>-3</MoraleTotal>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Battlefield4}Bury the dead with respect.</OptionText>
+                <MoraleTotal>5</MoraleTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Leadership" Min="30" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Leadership" ByXP="R 40 150" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>3</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Battlefield5}Leave this grim place quickly.</OptionText>
+            </Option>
+        </Options>
+
+
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Hidden Cache -->
+    <CEEvent>
+        <Name>CE_random_event_hidden_cache</Name>
+        <Backgrounds>
+            <Background Name="CE_DREC_desert_13" Weight="1" UseConditions="CE_random_event_images_desert" />
+            <Background Name="CE_DREC_snow_13" Weight="1" UseConditions="CE_random_event_images_snow_mountain" />
+            <Background Name="CE_DREC_plain_13" Weight="1" UseConditions="CE_random_event_images_plain" />
+        </Backgrounds>
+        <Text>{=DefaultRandomEventsCommon_Cache1}Your scouts discover what appears to be a hidden cache, possibly belonging to bandits or smugglers. It's concealed but not particularly well-protected.</Text>
+        <NotificationName>CE_N_COMMON</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Cache2}Expertly disable traps and loot everything.</OptionText>
+                <GoldTotal>R 300 800</GoldTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Roguery" Min="50" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Roguery" ByXP="R 60 250" Ref="Hero" />
+                    <Skill Id="Scouting" ByXP="R 40 150" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Cache3}Search carefully for traps.</OptionText>
+                <GoldTotal>R 200 500</GoldTotal>
+                <HealthTotal>R -10 0</HealthTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Scouting" Min="35" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Scouting" ByXP="R 40 150" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Cache4}Rush in and grab what you can.</OptionText>
+                <GoldTotal>R 100 350</GoldTotal>
+                <HealthTotal>R -20 -5</HealthTotal>
+            </Option>
+            <Option>
+                <Order>3</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsCommon_Cache5}Too dangerous, leave it alone.</OptionText>
+            </Option>
+        </Options>
+
+
+        <WeightedChanceOfOccurring>18</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- #endregion -->
+
+    <!-- #region Settlement Encounters -->
+
+    <!-- Village: Dispute -->
+    <CEEvent>
+        <Name>CE_random_event_village_dispute</Name>
+        <Text>{=SettlementEventVillage1}You come across two villagers in a heated argument over land boundaries. They look to you for judgment.</Text>
+        <Backgrounds>
+            <Background Name="CE_DREC_desert_14" Weight="1" UseConditions="CE_random_event_images_desert" />
+            <Background Name="CE_DREC_snow_14" Weight="1" UseConditions="CE_random_event_images_snow_mountain" />
+            <Background Name="CE_DREC_plain_14" Weight="1" UseConditions="CE_random_event_images_plain" />
+        </Backgrounds>
+        <NotificationName>CE_N_COMMON</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationVillage</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=SettlementEventVillage1_Opt1}Intervene and mediate fairly.</OptionText>
+                <RelationTotal>R 2 5</RelationTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Charm" Min="30" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="R 50 150" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=SettlementEventVillage1_Opt2}Ignore them.</OptionText>
+            </Option>
+        </Options>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Village: Festival -->
+    <CEEvent>
+        <Name>CE_random_event_village_festival</Name>
+        <Backgrounds>
+            <Background Name="CE_DREC_desert_14" Weight="1" UseConditions="CE_random_event_images_desert" />
+            <Background Name="CE_DREC_snow_14" Weight="1" UseConditions="CE_random_event_images_snow_mountain" />
+            <Background Name="CE_DREC_plain_14" Weight="1" UseConditions="CE_random_event_images_plain" />
+        </Backgrounds>
+        <Text>{=SettlementEventVillage2}The village is bustling with activity. It seems a local festival is taking place, with music, food, and dancing.</Text>
+        <NotificationName>CE_VILLAGE_FESTIVAL</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationVillage</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=SettlementEventVillage2_Opt1}Join in the celebrations!</OptionText>
+                <MoraleTotal>R 5 10</MoraleTotal>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=SettlementEventVillage2_Opt2}Buy a round of drinks for everyone.</OptionText>
+                <GoldTotal>R -100 -200</GoldTotal>
+                <ReqGoldAbove>200</ReqGoldAbove>
+                <RelationTotal>R 3 8</RelationTotal>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=SettlementEventVillage2_Opt3}Continue through the village.</OptionText>
+            </Option>
+        </Options>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Tavern: Brawl -->
+    <CEEvent>
+        <Name>CE_random_event_tavern_brawl</Name>
+        <BackgroundName>CE_REC_2</BackgroundName>
+        <Text>{=SettlementEventTavern1}A drunken argument escalates into a full-blown brawl near your table. Chairs are flying!</Text>
+        <NotificationName>CE_TAVERN_BRAWL</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTavern</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=SettlementEventTavern1_Opt1}Join the fray and teach them a lesson!</OptionText>
+                <RenownTotal>R 1 3</RenownTotal>
+                <HealthTotal>R -10 -5</HealthTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Athletics" Min="30" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Athletics" ByXP="R 50 150" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=SettlementEventTavern1_Opt2}Calm everyone down.</OptionText>
+                <RelationTotal>R 2 5</RelationTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Charm" Min="40" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="R 50 150" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=SettlementEventTavern1_Opt3}Leave the tavern before things get worse.</OptionText>
+            </Option>
+        </Options>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Tavern: High Stakes Gambler -->
+    <CEEvent>
+        <Name>CE_random_event_high_stakes_gambler</Name>
+        <BackgroundName>CE_REC_2</BackgroundName>
+        <Text>{=SettlementEventTavern2}A wealthy patron challenges you to a high-stakes game of dice. The pile of gold on the table is substantial.</Text>
+        <NotificationName>CE_N_COMMON</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTavern</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=SettlementEventTavern2_Opt1}Play aggressively using your wits.</OptionText>
+                <GoldTotal>R 300 1000</GoldTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Roguery" Min="50" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Roguery" ByXP="R 60 200" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=SettlementEventTavern2_Opt2}Decline the offer.</OptionText>
+            </Option>
+        </Options>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Castle: Training Yard -->
+    <CEEvent>
+        <Name>CE_random_event_training_yard</Name>
+        <Backgrounds>
+            <Background Name="CE_DREC_desert_16" Weight="1" UseConditions="CE_random_event_images_desert" />
+            <Background Name="CE_DREC_snow_16" Weight="1" UseConditions="CE_random_event_images_snow_mountain" />
+            <Background Name="CE_DREC_plain_16" Weight="1" UseConditions="CE_random_event_images_plain" />
+        </Backgrounds>
+        <Text>{=SettlementEventCastle1}The garrison soldiers are drilling in the training yard. They seem to be practicing new formations.</Text>
+        <NotificationName>CE_N_COMMON</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCastle</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=SettlementEventCastle1_Opt1}Offer to instruct them.</OptionText>
+                <RenownTotal>R 2 5</RenownTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Leadership" Min="40" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Leadership" ByXP="R 50 150" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=SettlementEventCastle1_Opt2}Spar with them.</OptionText>
+                <RenownTotal>R 1 3</RenownTotal>
+                <HealthTotal>R -5 -2</HealthTotal>
+                <SkillsToLevel>
+                    <Skill Id="OneHanded" ByXP="R 30 100" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=SettlementEventCastle1_Opt3}Continue on your way.</OptionText>
+            </Option>
+        </Options>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Castle: Minor Feast -->
+    <CEEvent>
+        <Name>CE_random_event_minor_feast</Name>
+        <BackgroundName>CE_REC_1</BackgroundName>
+        <Text>{=SettlementEventCastle2}The lord of the castle is hosting a minor feast for the local notables. You are invited to join.</Text>
+        <NotificationName>CE_N_COMMON</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCastle</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=SettlementEventCastle2_Opt1}Attend the feast.</OptionText>
+                <RelationTotal>R 3 7</RelationTotal>
+                <RenownTotal>R 2 5</RenownTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Charm" Min="35" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="R 50 150" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=SettlementEventCastle2_Opt2}Decline politely.</OptionText>
+            </Option>
+        </Options>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- City: Street Beggar -->
+    <CEEvent>
+        <Name>CE_random_event_street_beggar</Name>
+        <Backgrounds>
+            <Background Name="CE_DREC_desert_15" Weight="1" UseConditions="CE_random_event_images_desert" />
+            <Background Name="CE_DREC_snow_15" Weight="1" UseConditions="CE_random_event_images_snow_mountain" />
+            <Background Name="CE_DREC_plain_15" Weight="1" UseConditions="CE_random_event_images_plain" />
+        </Backgrounds>
+        <Text>{=SettlementEventCity1}A street beggar approaches you, claiming to be a former soldier of fortune who fell on hard times.</Text>
+        <NotificationName>CE_STREET_BEGGAR</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=SettlementEventCity1_Opt1}Give him some gold.</OptionText>
+                <GoldTotal>R -50 -10</GoldTotal>
+                <ReqGoldAbove>50</ReqGoldAbove>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="R 20 60" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=SettlementEventCity1_Opt2}Try to recruit him as an informant.</OptionText>
+                <SkillsRequired>
+                    <SkillRequired Id="Roguery" Min="30" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Roguery" ByXP="R 30 100" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=SettlementEventCity1_Opt3}Politely decline and walk away.</OptionText>
+            </Option>
+        </Options>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- City: Market Opportunity -->
+    <CEEvent>
+        <Name>CE_random_event_market_opportunity</Name>
+        <Backgrounds>
+            <Background Name="CE_DREC_desert_15" Weight="1" UseConditions="CE_random_event_images_desert" />
+            <Background Name="CE_DREC_snow_15" Weight="1" UseConditions="CE_random_event_images_snow_mountain" />
+            <Background Name="CE_DREC_plain_15" Weight="1" UseConditions="CE_random_event_images_plain" />
+        </Backgrounds>
+        <Text>{=SettlementEventCity2}While walking through the market, you notice a merchant selling goods at what seems to be a suspiciously low price.</Text>
+        <NotificationName>CE_N_COMMON</NotificationName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=SettlementEventCity2_Opt1}Buy and try to resell for profit.</OptionText>
+                <GoldTotal>R 200 500</GoldTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Trade" Min="40" Ref="Hero" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Trade" ByXP="R 60 200" Ref="Hero" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=SettlementEventCity2_Opt2}Ignore the offer.</OptionText>
+            </Option>
+        </Options>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- #endregion -->
+
+</CEEvents>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CEEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../zCaptivityEvents/ModuleLoader/CaptivityRequired/Events/CEEventsModal.xsd">
+
+   <!-- Outside -->
+   <CEEvent>
+      <Name>CE_spouse_event_male_1</Name>
+      <Text>{=DefaultSpouseEventsMale1}Your spouse joins you in your tent. She begins to lovingly touch you, trying to arouse your phallus. She asks you to join her in bed.</Text>
+      <BackgroundName>CE_DSPEF_female_1</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Romance</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultSpouseEventsMale2}Accept.</OptionText>
+            <TriggerEventName>CE_spouse_event_male_2</TriggerEventName>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultSpouseEventsMale3}Refuse.</OptionText>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" Type="Spouse" UseOtherConditions="False" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+   <CEEvent>
+      <Name>CE_spouse_event_male_2</Name>
+      <Text>{=DefaultSpouseEventsMale4}You playfully undress each other as she pushes you onto the bed, you begin to kiss as she climbs onto your lap. She teases your cock by grinding it between her pussy lips.</Text>
+      <BackgroundName>CE_DSPEF_female_2</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultSpouseEventsMale5}Continue.</OptionText>
+            <TriggerEventName>CE_spouse_event_male_3</TriggerEventName>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" Type="Spouse" UseOtherConditions="False" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+   <CEEvent>
+      <Name>CE_spouse_event_male_3</Name>
+      <Text>{=DefaultSpouseEventsMale6}Having had enough teasing, she guides your dick into her pussy and sensually penetrates herself with it, and then begins to bounce up and down while holding onto you.</Text>
+      <BackgroundName>CE_DSPEF_female_3</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultSpouseEventsMale5}Continue.</OptionText>
+            <TriggerEventName>CE_spouse_event_male_4</TriggerEventName>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" Type="Spouse" UseOtherConditions="False" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+   <CEEvent>
+      <Name>CE_spouse_event_male_4</Name>
+      <Text>{=DefaultSpouseEventsMale7}Deciding to take charge you lift her up and turn her over. Looming over her backside, you slide your cock in and begin to rhythmically thrust. You both moan in ecstasy as you finish inside her, giving her one more kiss before you return to your duties.</Text>
+      <BackgroundName>CE_DSPEF_female_4</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultSpouseEventsMale5}Continue.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ImpregnationByPlayer</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <PregnancyRiskModifier>25</PregnancyRiskModifier>
+               </Companion>
+            </Companions>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" Type="Spouse" UseOtherConditions="False" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+   <!-- Castle/Town -->
+   <CEEvent>
+      <Name>CE_spouse_event_male_city_1</Name>
+      <Text>{=DefaultSpouseEventsMale8}Your spouse joins you in your room. She begins to playfully touch you, trying to arouse your phallus. She asks you to join her in bed.</Text>
+      <BackgroundName>CE_DSPEF_female_5</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Romance</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationPartyInCastle</RestrictedListOfFlags>
+          <RestrictedListOfFlags>LocationPartyInTown</RestrictedListOfFlags>
+          <RestrictedListOfFlags>HeroGenderIsMale</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>0</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultSpouseEventsMale2}Accept.</OptionText>
+            <TriggerEventName>CE_spouse_event_male_city_2</TriggerEventName>
+         </Option>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultSpouseEventsMale3}Refuse.</OptionText>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" Type="Spouse" UseOtherConditions="False" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+   <CEEvent>
+      <Name>CE_spouse_event_male_city_2</Name>
+      <Text>{=DefaultSpouseEventsMale9}You quickly undress each other and lift her up and sit her down underneath yourself on the bed. You guide yourself in and thrust into her.</Text>
+      <BackgroundName>CE_DSPEF_female_6</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultSpouseEventsMale5}Continue.</OptionText>
+            <TriggerEventName>CE_spouse_event_male_city_3</TriggerEventName>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" Type="Spouse" UseOtherConditions="False" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+   <CEEvent>
+      <Name>CE_spouse_event_male_city_3</Name>
+      <Text>{=DefaultSpouseEventsMale10}You pick up the pace, pounding away at your wife, hilting your way each thrust, making her orgasmically moan with each full thrust.</Text>
+      <BackgroundName>CE_DSPEF_female_7</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultSpouseEventsMale5}Continue.</OptionText>
+            <TriggerEventName>CE_spouse_event_male_city_4</TriggerEventName>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" Type="Spouse" UseOtherConditions="False" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+   <CEEvent>
+      <Name>CE_spouse_event_male_city_4</Name>
+      <Text>{=DefaultSpouseEventsMale11}Changing technique, she lifts her legs up to allow you to thrust down into her, allowing you to slide your dick against her G-spot. This action causes her to cry out in pleasure, flexing her feet and toes in time with your thrusts..</Text>
+      <BackgroundName>CE_DSPEF_female_8</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultSpouseEventsMale5}Continue.</OptionText>
+            <TriggerEventName>CE_spouse_event_male_city_5</TriggerEventName>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" Type="Spouse" UseOtherConditions="False" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+   <CEEvent>
+      <Name>CE_spouse_event_male_city_5</Name>
+      <Text>{=DefaultSpouseEventsMale12}You cum inside her, and slump back. You are exhausted, despite your best efforts and multiple orgasms, your wife is insatiable tonight. She climbs on top of you and slides your cock inside of her, it's going to be a long night.</Text>
+      <BackgroundName>CE_DSPEF_female_9</BackgroundName>
+      <MultipleRestrictedListOfFlags>
+          <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+          <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+      </MultipleRestrictedListOfFlags>
+      <Options>
+         <Option>
+            <Order>1</Order>
+            <MultipleRestrictedListOfConsequences>
+               <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+            </MultipleRestrictedListOfConsequences>
+            <OptionText>{=DefaultSpouseEventsMale13}It's going to be a long night.</OptionText>
+            <Companions>
+               <Companion Id="1">
+                  <MultipleRestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                     <RestrictedListOfConsequences>ImpregnationByPlayer</RestrictedListOfConsequences>
+                  </MultipleRestrictedListOfConsequences>
+                  <PregnancyRiskModifier>25</PregnancyRiskModifier>
+               </Companion>
+            </Companions>
+         </Option>
+      </Options>
+
+      <Companions>
+         <Companion Id="1" Ref="Hero" Location="Current" Type="Spouse" UseOtherConditions="False" />
+      </Companions>
+      <ReqCustomCode>true</ReqCustomCode>
+      <SexualContent>true</SexualContent>
+      <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+      <ReqHeroMinAge>18</ReqHeroMinAge>
+   </CEEvent>
+
+</CEEvents>

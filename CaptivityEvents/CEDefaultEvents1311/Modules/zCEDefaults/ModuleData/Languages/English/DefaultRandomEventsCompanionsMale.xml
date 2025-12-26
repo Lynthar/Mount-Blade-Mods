@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema" type="string">
+  <tags>
+    <tag language="English" />
+  </tags>
+  <strings>
+    <string id="DefaultRandomEventsCompanionsMale1" text="{COMPANION_NAME_1} asks to speak with you. You invite her to your tent. {COMPANION_NAME_1} says your troops are lazy lately and need more exercise." />
+    <string id="DefaultRandomEventsCompanionsMale2" text="Agree and offer 500 gold for training." />
+    <string id="DefaultRandomEventsCompanionsMale3" text="Kick away for a waste of time." />
+    <string id="DefaultRandomEventsCompanionsMale4" text="Come up with an excuse." />
+    
+    <!-- New Companion Events -->
+    <string id="DefaultRandomEventsCompanionsMale5" text="While staying in town, {COMPANION_NAME_1} suggests visiting the bath house together. The attendants lead you to a private room with a large pool. She begins undressing without hesitation, her curves revealed as steam fills the air. She beckons you to join her." />
+    <string id="DefaultRandomEventsCompanionsMale6" text="Join her in the water." />
+    <string id="DefaultRandomEventsCompanionsMale7" text="Bathe separately to maintain propriety." />
+    <string id="DefaultRandomEventsCompanionsMale8" text="As you enter the water, {COMPANION_NAME_1} swims close, her wet body pressing against yours. She wraps her arms around your neck, kissing you deeply. Her hand finds your hardening cock beneath the water, stroking it as you fondle her breasts. Unable to resist, you lift her up and she wraps her legs around you as you enter her, the warm water adding to the sensation." />
+    <string id="DefaultRandomEventsCompanionsMale9" text="Finish inside her." />
+    <string id="DefaultRandomEventsCompanionsMale10" text="Pull out before climax." />
+    <string id="DefaultRandomEventsCompanionsMale11" text="You're on night watch with {COMPANION_NAME_1}. The camp is quiet, everyone else asleep. She sits close to you by the fire, her hand resting on your thigh. She whispers that she's been thinking about you, unable to get you out of her mind." />
+    <string id="DefaultRandomEventsCompanionsMale12" text="Kiss her passionately." />
+    <string id="DefaultRandomEventsCompanionsMale13" text="Tell her to focus on the watch." />
+    <string id="DefaultRandomEventsCompanionsMale14" text="{COMPANION_NAME_1} responds eagerly, her hands fumbling with your breeches. She pushes you back against a tree, dropping to her knees. Her warm mouth envelops your cock as she looks up at you with lustful eyes. After bringing you to the edge with her skilled tongue, she stands and turns around, pressing her ass against you. You enter her from behind, trying to stay quiet as you take her under the stars." />
+    <string id="DefaultRandomEventsCompanionsMale15" text="Cum inside her pussy." />
+    <string id="DefaultRandomEventsCompanionsMale16" text="Finish on her back." />
+    <string id="DefaultRandomEventsCompanionsMale17" text="At the tavern, {COMPANION_NAME_1} gets increasingly drunk and flirtatious. She starts dancing provocatively, drawing attention from other patrons. She pulls you up to dance with her, grinding against you as the crowd cheers. Her hand boldly gropes your crotch as she whispers a lewd suggestion in your ear." />
+    <string id="DefaultRandomEventsCompanionsMale18" text="Take her upstairs to a room." />
+    <string id="DefaultRandomEventsCompanionsMale19" text="Take her back to camp." />
+    <string id="DefaultRandomEventsCompanionsMale20" text="Reject her advances publicly." />
+    <string id="DefaultRandomEventsCompanionsMale21" text="The moment the door closes, {COMPANION_NAME_1} attacks you with passionate kisses. She tears at your clothes desperately, pushing you onto the bed. She straddles you, guiding your cock inside her as she rides you wildly. The sounds of your coupling mix with the music from downstairs. She climaxes loudly, not caring who hears, before you reach your own peak." />
+    <string id="DefaultRandomEventsCompanionsMale22" text="Fill her with your seed." />
+    <string id="DefaultRandomEventsCompanionsMale23" text="Pull her off at the last second." />
+    <string id="DefaultRandomEventsCompanionsMale24" text="After a brutal battle, {COMPANION_NAME_1} notices you're injured and insists on treating your wounds. In your tent, she carefully tends to your cuts, her touch gentle and caring. As she works, her hands linger on your muscles longer than necessary, and you notice her breathing has changed." />
+    <string id="DefaultRandomEventsCompanionsMale25" text="Pull her close and kiss her." />
+    <string id="DefaultRandomEventsCompanionsMale26" text="Thank her and rest." />
+    <string id="DefaultRandomEventsCompanionsMale27" text="{COMPANION_NAME_1} melts into your embrace, returning your kiss with fervor. Her hands explore your chest as you undress each other. Despite your injuries, desire overtakes caution. She straddles you carefully, lowering herself onto your hard cock. She rides you slowly, mindful of your wounds, her breasts bouncing as she takes her pleasure. The combination of pain and pleasure is intoxicating." />
+    <string id="DefaultRandomEventsCompanionsMale28" text="Let her milk your cock dry." />
+    <string id="DefaultRandomEventsCompanionsMale29" text="Have her finish you with her mouth." />
+    <string id="DefaultRandomEventsCompanionsMale30" text="After a decisive victory, the camp celebrates. {COMPANION_NAME_1} finds you by the fire, flushed with adrenaline and wine. She tells you how impressed she was watching you fight, how powerful and commanding you looked. Her eyes are filled with desire as she presses against you." />
+    <string id="DefaultRandomEventsCompanionsMale31" text="Take her to your tent." />
+    <string id="DefaultRandomEventsCompanionsMale32" text="Celebrate with the troops instead." />
+    <string id="DefaultRandomEventsCompanionsMale33" text="The battle lust still courses through your veins as you claim {COMPANION_NAME_1}. You take her hard and fast, both of you desperate for release. She screams your name as you pound into her, her nails raking down your back. The primal coupling is intense and savage, both of you releasing the tension of battle through raw, animalistic sex. You finish together, collapsing in a tangle of sweaty limbs." />
+    <string id="DefaultRandomEventsCompanionsMale34" text="Breed her like a conqueror." />
+    <string id="DefaultRandomEventsCompanionsMale35" text="Spill your seed on her body." />
+    
+    <!-- Safe For Work Events -->
+    <string id="DefaultRandomEventsCompanionsMale36" text="{COMPANION_NAME_1} asks you to help her improve her swordsmanship. She admires your skill and wants to learn from your experience." />
+    <string id="DefaultRandomEventsCompanionsMale37" text="Spend time teaching her." />
+    <string id="DefaultRandomEventsCompanionsMale38" text="Too busy right now." />
+    <string id="DefaultRandomEventsCompanionsMale39" text="{COMPANION_NAME_1} has been studying maps of the region and wants to discuss potential routes and targets with you. She's prepared several strategic options for your consideration." />
+    <string id="DefaultRandomEventsCompanionsMale40" text="Review her plans carefully." />
+    <string id="DefaultRandomEventsCompanionsMale41" text="Glance briefly and make your own decision." />
+    <string id="DefaultRandomEventsCompanionsMale42" text="{COMPANION_NAME_1} notices your horse needs attention and offers to help you tend to it. She mentions she has experience with horse care from her youth." />
+    <string id="DefaultRandomEventsCompanionsMale43" text="Work together on the horses." />
+    <string id="DefaultRandomEventsCompanionsMale44" text="Decline, you know what you're doing." />
+    <string id="DefaultRandomEventsCompanionsMale45" text="A festival is happening in the city. {COMPANION_NAME_1} suggests attending together to boost morale and enjoy some entertainment. The troops could use the break." />
+    <string id="DefaultRandomEventsCompanionsMale46" text="Attend and enjoy the festival." />
+    <string id="DefaultRandomEventsCompanionsMale47" text="Too much work to do." />
+    <string id="DefaultRandomEventsCompanionsMale48" text="By the campfire, {COMPANION_NAME_1} begins singing folk songs from her homeland. Her voice is beautiful and the troops gather to listen. She encourages you to join in." />
+    <string id="DefaultRandomEventsCompanionsMale49" text="Sing along with her." />
+    <string id="DefaultRandomEventsCompanionsMale50" text="Listen and applaud." />
+    <string id="DefaultRandomEventsCompanionsMale51" text="Walk away, not interested." />
+    <string id="DefaultRandomEventsCompanionsMale52" text="{COMPANION_NAME_1} sits down with her weapons for maintenance and notices your gear needs work too. She offers to help you sharpen and oil your equipment." />
+    <string id="DefaultRandomEventsCompanionsMale53" text="Work together on maintenance." />
+    <string id="DefaultRandomEventsCompanionsMale54" text="Handle it yourself." />
+    
+    <!-- Random Outcome Event Strings -->
+    <string id="DefaultRandomEventsCompanionsMale55" text="As you head toward the stairs, {COMPANION_NAME_1} stumbles badly. She laughs too loudly, drawing stares from other patrons. Before you can steady her, she pulls away, saying she needs fresh air. She weaves through the crowd and disappears into the night, leaving you standing awkwardly in the tavern." />
+    <string id="DefaultRandomEventsCompanionsMale56" text="Make sure she gets back to camp safely." />
+    <string id="DefaultRandomEventsCompanionsMale57" text="Let her find her own way back." />
+    <string id="DefaultRandomEventsCompanionsMale58" text="{COMPANION_NAME_1} carefully cleans and bandages your wounds. When you lean in to kiss her, she gently but firmly pulls back. &quot;I... I'm sorry,&quot; she says, looking uncomfortable. &quot;I care about you, but not in that way.&quot; She continues treating your injuries with professional detachment, the moment irreparably broken." />
+    <string id="DefaultRandomEventsCompanionsMale59" text="Apologize and respect her boundaries." />
+    <string id="DefaultRandomEventsCompanionsMale60" text="Act like nothing happened." />
+    
+    <!-- Wrestling Challenge Strings -->
+    <string id="DefaultRandomEventsCompanionsMale61" text="Challenge her to a naked fight." />
+    <string id="DefaultRandomEventsCompanionsMale62" text="{COMPANION_NAME_1} accepts your challenge with a competitive grin. You both strip down and face each other on the training ground. She asks how you want to approach this." />
+    <string id="DefaultRandomEventsCompanionsMale63" text="Apply your strength." />
+    <string id="DefaultRandomEventsCompanionsMale64" text="Apply your dexterity." />
+    <string id="DefaultRandomEventsCompanionsMale65" text="Apply your endurance." />
+    <string id="DefaultRandomEventsCompanionsMale66" text="Give up and take the loss." />
+    <string id="DefaultRandomEventsCompanionsMale67" text="You manage to pin {COMPANION_NAME_1} to the ground. Without hesitation, she drops to her knees before you. &quot;Well done,&quot; she breathes, taking your cock in her hand. Her warm mouth envelops you as she looks up with admiring eyes, eagerly accepting her reward as the defeated." />
+    <string id="DefaultRandomEventsCompanionsMale68" text="Let her finish you." />
+    <string id="DefaultRandomEventsCompanionsMale69" text="{COMPANION_NAME_1} manages to take you down, pinning you beneath her. She grins triumphantly. &quot;Looks like I win. Time for my reward,&quot; she says, positioning herself over you." />
+    <string id="DefaultRandomEventsCompanionsMale70" text="Let her take her prize." />
+  </strings>
+</base>

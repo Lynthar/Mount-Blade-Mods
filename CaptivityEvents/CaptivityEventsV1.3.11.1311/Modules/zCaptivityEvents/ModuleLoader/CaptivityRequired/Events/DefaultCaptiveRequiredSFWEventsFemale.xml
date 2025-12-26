@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CEEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CEEventsModal.xsd">
+    <!-- REQUIRED EVENTS CALLED FROM CODE -->
+    <!-- Female -->
+    <!-- Defeated Events -->
+    <CEEvent>
+        <Name>CE_defeated_and_taken_prisoner</Name>
+        <Text>{=DefaultCaptiveRequiredSFWEventsFemale1}You fight valiantly, but as the battle concludes you find yourself surrounded. You do your best to hold your enemies at bay, but as they close in one of them knocks your weapon to the ground, and another grabs your arms, shackling them behind you.</Text>
+        <Backgrounds>
+            <Background Name="encounter_lose_sea" Weight="1" UseConditions="CE_background_sea" />
+            <Background Name="encounter_lose" Weight="1" />
+        </Backgrounds>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveRequiredSFWEventsFemale2}Continue...</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_advanced_capture</EventName>
+                        <EventWeight>1</EventWeight>
+                        <EventUseConditions>True</EventUseConditions>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_advanced_capture_sea</EventName>
+                        <EventWeight>1</EventWeight>
+                        <EventUseConditions>True</EventUseConditions>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_advanced_capture_settlement</EventName>
+                        <EventWeight>1</EventWeight>
+                        <EventUseConditions>True</EventUseConditions>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_advanced_capture_village</EventName>
+                        <EventWeight>1</EventWeight>
+                        <EventUseConditions>True</EventUseConditions>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+        </Options>
+
+
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_taken_prisoner</Name>
+        <Text>{=DefaultCaptiveRequiredSFWEventsFemale3}Your enemies take your weapons and armor as you surrender. Their leader briefly inspects your restraints, nodding approvingly as you are rounded up with the rest of the captives.</Text>
+        <BackgroundName>default_female</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveRequiredSFWEventsFemale4}Bide your time.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_advanced_capture</EventName>
+                        <EventWeight>1</EventWeight>
+                        <EventUseConditions>True</EventUseConditions>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_advanced_capture_sea</EventName>
+                        <EventWeight>1</EventWeight>
+                        <EventUseConditions>True</EventUseConditions>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_advanced_capture_settlement</EventName>
+                        <EventWeight>1</EventWeight>
+                        <EventUseConditions>True</EventUseConditions>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_advanced_capture_village</EventName>
+                        <EventWeight>1</EventWeight>
+                        <EventUseConditions>True</EventUseConditions>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+        </Options>
+
+
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_menu_captivity_castle_taken_prisoner</Name>
+        <Text>{=DefaultCaptiveRequiredSFWEventsFemale5}Your attempt to infiltrate the castle fails spectacularly, and you are quickly surrounded by guards. They take your weapons, dragging you to the dungeons where they throw you into a cell, commenting that their leader will be by shortly to interrogate you.</Text>
+        <BackgroundName>encounter_guards</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>SoldToSettlement</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveRequiredSFWEventsFemale6}Or more likely gloat...</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_advanced_capture</EventName>
+                        <EventWeight>1</EventWeight>
+                        <EventUseConditions>True</EventUseConditions>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_advanced_capture_settlement</EventName>
+                        <EventWeight>1</EventWeight>
+                        <EventUseConditions>True</EventUseConditions>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_advanced_capture_village</EventName>
+                        <EventWeight>1</EventWeight>
+                        <EventUseConditions>True</EventUseConditions>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+        </Options>
+
+
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Capture Strip Events -->
+    <CEEvent>
+        <Name>CE_advanced_capture</Name>
+        <Text>{=DefaultCaptiveRequiredSFWEventsFemale7}Your enemies take your armor and weapons, leaving you with only a ragged robe to cover yourself with. They bind your arms and legs, cautiously shackling you to one of their carts.</Text>
+        <BackgroundName>default_female</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>StripEnabled</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveRequiredSFWEventsFemale8}Bide your time...</OptionText>
+            </Option>
+        </Options>
+
+
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_advanced_capture_settlement</Name>
+        <Text>{=DefaultCaptiveRequiredSFWEventsFemale9}The townsfolk take your armor and weapons, leaving you with only a ragged robe to cover yourself with. They bind your arms and legs, cautiously leading you to a holding cell.</Text>
+        <BackgroundName>default_female_prison</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>StripEnabled</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCity</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationDungeon</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationCastle</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInTown</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInCastle</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveRequiredSFWEventsFemale8}Bide your time...</OptionText>
+            </Option>
+        </Options>
+
+
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_advanced_capture_village</Name>
+        <Text>{=DefaultCaptiveRequiredSFWEventsFemale10}The villagers take your armor and weapons, leaving you with only a ragged robe to cover yourself with. They bind your arms and legs, cautiously leading you to a holding cell.</Text>
+        <BackgroundName>default_female_prison</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>StripEnabled</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationVillage</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInVillage</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveRequiredSFWEventsFemale8}Bide your time...</OptionText>
+            </Option>
+        </Options>
+
+
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_advanced_capture_sea</Name>
+        <Text>{=DefaultCaptiveRequiredSFWEventsFemale15}The sailors take your armor and weapons aboard the ship, leaving you with only a ragged robe to cover yourself with. They bind your arms and legs, cautiously securing you above deck.</Text>
+        <BackgroundName>default_female_sea</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>StripEnabled</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveRequiredSFWEventsFemale8}Bide your time...</OptionText>
+            </Option>
+        </Options>
+
+
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- Attempt Escape Events -->
+    <CEEvent>
+        <Name>CE_captivity_escape_failure</Name>
+        <Text>{=DefaultCaptiveRequiredSFWEventsFemale11}{?ISONSEA}You're spotted as you attempt to escape, and the guards stop you on the deck of the ship, binding your wrists with ropes to prevent any further resistance. They decide to take your punishment into their own hands, punching and kicking you while you're down.{?}You're spotted as you attempt to escape, and a group of your captors shove you to the ground, binding your wrists with ropes to prevent any further resistance. They decide to take your punishment into their own hands, punching and kicking you while you're down.{\?}</Text>
+        <Backgrounds>
+            <Background Name="encounter_escape_fail_sfw_naval" Weight="1" UseConditions="CE_background_sea" />
+            <Background Name="encounter_escape_fail_sfw" Weight="1" />
+        </Backgrounds>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeHealth</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveRequiredSFWEventsFemale12}Maybe that wasn't a great idea...</OptionText>
+                <HealthTotal>-40</HealthTotal>
+            </Option>
+        </Options>
+
+
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_captivity_escape_success</Name>
+        <Text>{=DefaultCaptiveRequiredSFWEventsFemale13}{?ISONSEA}You're almost spotted by a group of unusually wary guards as you slip over the side of the ship, but manage to give them the slip by throwing a rock in the other direction as you scurry away. You find a raft and breathe a well-earned sigh of relief when you're sure you've escaped.{?}You're almost spotted by a group of unusually wary guards as you leave camp, but manage to give them the slip by throwing a rock in the other direction as you scurry away. You breathe a well-earned sigh of relief when you're sure you've escaped.{\?}</Text>
+        <Backgrounds>
+            <Background Name="default_raft" Weight="1" UseConditions="CE_background_sea" />
+            <Background Name="encounter_escape" Weight="1" />
+        </Backgrounds>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>RemoveSlaveryFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Escape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptiveRequiredSFWEventsFemale2}Continue...</OptionText>
+                <SlaveryTotal>0</SlaveryTotal>
+                <!-- 0 to reset slavery level -->
+            </Option>
+        </Options>
+
+
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+</CEEvents>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema" type="string">
+  <tags>
+    <tag language="English" />
+  </tags>
+  <strings>
+    <string id="DefaultRandomEventsNavalCommon1" text="Your crew spots a small fishing boat. The fishermen wave; perhaps trade is possible." />
+    <string id="DefaultRandomEventsNavalCommon2" text="Trade some provisions." />
+    <string id="DefaultRandomEventsNavalCommon3" text="Ignore them and sail on." />
+    <string id="DefaultRandomEventsNavalCommon4" text="Floating debris and a half-submerged crate drift nearby. Someone may have been shipwrecked — do you investigate?" />
+    <string id="DefaultRandomEventsNavalCommon5" text="Pull survivors and salvage supplies." />
+    <string id="DefaultRandomEventsNavalCommon6" text="Leave the wreck to the sea; keep watch instead." />
+    <string id="DefaultRandomEventsNavalCommon7" text="A huge shape breaks the surface nearby — a whale breaches, spraying water and awe across the deck." />
+    <string id="DefaultRandomEventsNavalCommon8" text="Enjoy the spectacle." />
+    <string id="DefaultRandomEventsNavalCommon9" text="Attempt to harvest a sample for the ship's stores." />
+  </strings>
+</base>

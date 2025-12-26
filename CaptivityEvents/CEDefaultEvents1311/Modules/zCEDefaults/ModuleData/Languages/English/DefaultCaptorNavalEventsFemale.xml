@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema" type="string">
+  <tags>
+    <tag language="English" />
+  </tags>
+  <strings>
+    <string id="DefaultCaptorEventsFemale67" text="A violent storm strikes your vessel, waves towering over the masts. Your prisoners are secured below deck, but panic is spreading. Your crew awaits your commands as the ship struggles against the tempest's fury." />
+    <string id="DefaultCaptorEventsFemale68" text="Direct your crew with calm authority." />
+    <string id="DefaultCaptorEventsFemale69" text="Force prisoners to help bail water." />
+    <string id="DefaultCaptorEventsFemale70" text="Sacrifice prisoners to lighten the load." />
+    <string id="DefaultCaptorEventsFemale77" text="Discord festers aboard your ship. Crew members are divided on your treatment of prisoners. Whispers of mutiny reach your ears through your boatswain, who warns that decisive action is needed before the situation explodes." />
+    <string id="DefaultCaptorEventsFemale78" text="Command respect through strength and fairness." />
+    <string id="DefaultCaptorEventsFemale79" text="Punish the troublemakers publicly." />
+    <string id="DefaultCaptorEventsFemale80" text="Reach a compromise by freeing some prisoners." />
+  </strings>
+</base>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CECustom xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="file://CECustomModal.xsd">
+    <CEModuleName>Arena Fighter Expansion</CEModuleName>
+    <CESkills>
+        <CESkill Id="ArenaFighter" Name="Arena Fighter" MinLevel="0" MaxLevel="1"
+            SetZeroOnEscape="true" />
+        <CESkill Id="ArenaSlave" Name="Arena Slave Fighter" MinLevel="0" MaxLevel="1"
+            SetZeroOnEscape="true" />
+        <CESkill Id="ArenaFightOne" Name="Arena Fight One" MinLevel="0" MaxLevel="1" />
+        <CESkill Id="ArenaFightTwo" Name="Arena Fight One" MinLevel="0" MaxLevel="1" />
+        <CESkill Id="ArenaBrawlFightOne" Name="Arena Fight Brawl Fight One" MinLevel="0"
+            MaxLevel="1" />
+        <CESkill Id="ArenaSwordFightOne" Name="Arena Fight Sword Fight One" MinLevel="0"
+            MaxLevel="1" />
+        <CESkill Id="ArenaSwordFightTwo" Name="Arena Fight Sword Fight One" MinLevel="0"
+            MaxLevel="1" />
+        <CESkill Id="DinnerOption" Name="DinnerOption" MinLevel="0" MaxLevel="3"
+            SetZeroOnEscape="true" />
+    </CESkills>
+</CECustom>

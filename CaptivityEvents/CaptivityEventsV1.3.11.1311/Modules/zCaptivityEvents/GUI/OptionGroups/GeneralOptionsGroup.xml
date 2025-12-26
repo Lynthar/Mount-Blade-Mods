@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- GeneralOptionsGroup.xml: General event system toggles -->
+<OptionsGroupDefinition GroupId="GeneralOptions">
+    <Options>
+        <OptionsItem OptionId="EventCaptiveOn" DisplayName="Captive Events Enabled" Description="Enable or disable all captive-related events." DefaultValue="true" Type="Boolean" />
+        <OptionsItem OptionId="EventCaptorOn" DisplayName="Captor Events Enabled" Description="Enable or disable all captor-related events." DefaultValue="true" Type="Boolean" />
+        <OptionsItem OptionId="EventRandomEnabled" DisplayName="Random Events Enabled" Description="Enable or disable random events system." DefaultValue="true" Type="Boolean" />
+        <OptionsItem OptionId="CommonControl" DisplayName="Common Events" Description="Toggle common/non-sexual events." DefaultValue="true" Type="Boolean" />
+        <OptionsItem OptionId="NonSexualContent" DisplayName="Non-Sexual Content" Description="Include non-sexual event variants." DefaultValue="true" Type="Boolean" />
+        <OptionsItem OptionId="SexualContent" DisplayName="Sexual Content" Description="Include sexual event variants." DefaultValue="true" Type="Boolean" />
+    </Options>
+</OptionsGroupDefinition>

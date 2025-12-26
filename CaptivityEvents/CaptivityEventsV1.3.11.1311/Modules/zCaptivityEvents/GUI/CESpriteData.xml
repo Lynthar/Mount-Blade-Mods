@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SpriteData>
+    <SpriteCategories>
+        <SpriteCategory>
+            <Name>ce_notification_icons</Name>
+            <SpriteSheetCount>2</SpriteSheetCount>
+            <SpriteSheetSize ID="1" Width="75" Height="75" />
+            <SpriteSheetSize ID="2" Width="75" Height="75" />
+        </SpriteCategory>
+    </SpriteCategories>
+    <SpriteParts>
+        <SpritePart>
+            <SheetID>1</SheetID>
+            <Name>CEEventNotification\notification_captor</Name>
+            <Width>75</Width>
+            <Height>75</Height>
+            <SheetX>0</SheetX>
+            <SheetY>0</SheetY>
+            <CategoryName>ce_notification_icons</CategoryName>
+        </SpritePart>
+        <SpritePart>
+            <SheetID>2</SheetID>
+            <Name>CEEventNotification\notification_event</Name>
+            <Width>75</Width>
+            <Height>75</Height>
+            <SheetX>0</SheetX>
+            <SheetY>0</SheetY>
+            <CategoryName>ce_notification_icons</CategoryName>
+        </SpritePart>
+    </SpriteParts>
+    <Sprites>
+        <GenericSprite>
+            <Name>CEEventNotification\notification_captor</Name>
+            <SpritePartName>CEEventNotification\notification_captor</SpritePartName>
+        </GenericSprite>
+        <GenericSprite>
+            <Name>CEEventNotification\notification_event</Name>
+            <SpritePartName>CEEventNotification\notification_event</SpritePartName>
+        </GenericSprite>
+    </Sprites>
+</SpriteData>

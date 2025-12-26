@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CEEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../zCaptivityEvents/ModuleLoader/CaptivityRequired/Events/CEEventsModal.xsd">
+
+    <!-- #region Common - Sea -->
+    <CEEvent>
+        <Name>CE_captor_common_sea_pirates</Name>
+        <Text>{=DefaultCaptorEventsCommon27}Pirate sails spotted on the horizon! Your crew prepares for combat as the enemy vessel closes in. Your prisoners could be used as hostages, or they might need to help defend the ship if the situation becomes desperate.</Text>
+        <BackgroundName>CE_CENC_2</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon28}Prepare for naval combat.</OptionText>
+                <MoraleTotal>12</MoraleTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Tactics" Min="40" Ref="Captor" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Tactics" ByXP="R 80 250" Ref="Captor" Color="Green" />
+                    <Skill Id="Mariner" ByXP="R 70 220" Ref="Captor" Color="Cyan" />
+                    <Skill Id="Leadership" ByXP="R 60 180" Ref="Captor" Color="Blue" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon29}Arm prisoners to help defend.</OptionText>
+                <RelationTotal>10</RelationTotal>
+                <SkillsToLevel>
+                    <Skill Id="Leadership" ByXP="R 70 200" Ref="Captor" Color="Blue" />
+                    <Skill Id="Mariner" ByXP="R 60 180" Ref="Captor" Color="Cyan" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon30}Attempt to outrun them.</OptionText>
+                <SkillsRequired>
+                    <SkillRequired Id="Mariner" Min="35" Ref="Captor" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Mariner" ByXP="R 80 250" Ref="Captor" Color="Cyan" />
+                    <Skill Id="Tactics" ByXP="R 50 150" Ref="Captor" Color="Green" />
+                </SkillsToLevel>
+            </Option>
+        </Options>
+        <ReqCaptivesAbove>2</ReqCaptivesAbove>
+        <ReqTroopsAbove>3</ReqTroopsAbove>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>35</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_captor_common_sea_weather</Name>
+        <Text>{=DefaultCaptorEventsCommon31}Dense fog rolls in, reducing visibility to almost nothing. You could press forward using your navigation skills, wait it out safely, or risk having prisoners navigate using their knowledge of these waters.</Text>
+        <BackgroundName>CE_CENC_1</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon32}Navigate through using your skills.</OptionText>
+                <SkillsRequired>
+                    <SkillRequired Id="Mariner" Min="45" Ref="Captor" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Mariner" ByXP="R 90 280" Ref="Captor" Color="Cyan" />
+                    <Skill Id="Scouting" ByXP="R 60 180" Ref="Captor" Color="Green" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRelation</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon33}Trust a prisoner's local knowledge.</OptionText>
+                <RelationTotal>15</RelationTotal>
+                <SkillsToLevel>
+                    <Skill Id="Charm" ByXP="R 70 200" Ref="Captor" Color="Purple" />
+                    <Skill Id="Mariner" ByXP="R 60 180" Ref="Captor" Color="Cyan" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon34}Wait for the fog to clear.</OptionText>
+                <MoraleTotal>-5</MoraleTotal>
+                <SkillsToLevel>
+                    <Skill Id="Leadership" ByXP="R 40 120" Ref="Captor" Color="Blue" />
+                </SkillsToLevel>
+            </Option>
+        </Options>
+        <ReqCaptivesAbove>1</ReqCaptivesAbove>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>30</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_captor_common_sea_cargo</Name>
+        <Text>{=DefaultCaptorEventsCommon35}Your ship encounters a merchant vessel in distress. They offer valuable cargo in exchange for assistance. However, your prisoners might slow the rescue operation, and some cargo appears suspicious.</Text>
+        <BackgroundName>CE_CENC_3</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Captor</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Common</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationSea</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeCaptorGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon36}Help them and take the reward.</OptionText>
+                <CaptorGoldTotal>R 600 1500</CaptorGoldTotal>
+                <SkillsRequired>
+                    <SkillRequired Id="Mariner" Min="40" Ref="Captor" />
+                </SkillsRequired>
+                <SkillsToLevel>
+                    <Skill Id="Mariner" ByXP="R 80 250" Ref="Captor" Color="Cyan" />
+                    <Skill Id="Trade" ByXP="R 60 180" Ref="Captor" Color="Yellow" />
+                    <Skill Id="Boatswain" ByXP="R 50 150" Ref="Captor" Color="Orange" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeCaptorGold</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon37}Salvage what you can quickly.</OptionText>
+                <CaptorGoldTotal>R 300 800</CaptorGoldTotal>
+                <SkillsToLevel>
+                    <Skill Id="Roguery" ByXP="R 70 200" Ref="Captor" Color="Red" />
+                    <Skill Id="Mariner" ByXP="R 50 150" Ref="Captor" Color="Cyan" />
+                </SkillsToLevel>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Continue</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultCaptorEventsCommon38}Sail on - too risky.</OptionText>
+                <SkillsToLevel>
+                    <Skill Id="Leadership" ByXP="R 40 120" Ref="Captor" Color="Blue" />
+                </SkillsToLevel>
+            </Option>
+        </Options>
+        <EscapeChance>10</EscapeChance>
+        <WeightedChanceOfOccurring>25</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+</CEEvents>

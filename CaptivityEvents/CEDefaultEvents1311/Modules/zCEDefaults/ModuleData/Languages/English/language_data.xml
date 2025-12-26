@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData id="English">
+  <LanguageFile xml_path="English/DefaultCaptiveEventsCommon.xml" />
+  <LanguageFile xml_path="English/DefaultCaptiveEventsFemale.xml" />
+  <LanguageFile xml_path="English/DefaultCaptiveEventsMale.xml" />
+  
+  <LanguageFile xml_path="English/DefaultCaptiveEventsNavalCommon.xml" />
+  <LanguageFile xml_path="English/DefaultCaptiveEventsNavalFemale.xml" />
+  <LanguageFile xml_path="English/DefaultCaptiveEventsNavalMale.xml" />
+
+  <LanguageFile xml_path="English/DefaultCaptiveRequiredGeneral.xml" />
+
+  <LanguageFile xml_path="English/DefaultCaptorEventsCommon.xml" />
+  <LanguageFile xml_path="English/DefaultCaptorEventsFemale.xml" />
+  <LanguageFile xml_path="English/DefaultCaptorEventsMale.xml" />
+
+  <LanguageFile xml_path="English/DefaultCatcherEvents.xml" />
+
+  <LanguageFile xml_path="English/DefaultProstitutionEventsFemale.xml" />
+
+  <LanguageFile xml_path="English/DefaultRandomEventsCommon.xml" />
+  <LanguageFile xml_path="English/DefaultRandomEventsCompanionsFemale.xml" />
+  <LanguageFile xml_path="English/DefaultRandomEventsCompanionsMale.xml" />
+
+  <LanguageFile xml_path="English/DefaultRandomEventsFemale.xml" />
+  <LanguageFile xml_path="English/DefaultRandomEventsNavalCommon.xml" />
+  <LanguageFile xml_path="English/DefaultRandomEventsNavalFemale.xml" />
+
+  <LanguageFile xml_path="English/DefaultSlaveryEventsFemale.xml" />
+  <LanguageFile xml_path="English/DefaultSlaveryEventsNavalFemale.xml" />
+  
+  <LanguageFile xml_path="English/DefaultSpouseEventsFemale.xml" />
+  <LanguageFile xml_path="English/DefaultSpouseEventsMale.xml" />
+
+  <LanguageFile xml_path="English/DefaultWaitingMenus.xml" />
+  <LanguageFile xml_path="English/DefaultWaitingMenusGeneral.xml" />
+  
+</LanguageData>

@@ -1,0 +1,1195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CEEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../zCaptivityEvents/ModuleLoader/CaptivityRequired/Events/CEEventsModal.xsd">
+
+    <!-- ==================================================================================================== -->
+    <!-- |                          RANDOM EVENTS - FEMALE                                                   | -->
+    <!-- ==================================================================================================== -->
+
+    <!-- #region NSFW Event -->
+    <CEEvent>
+        <Name>CE_random_event_female_E1</Name>
+        <BackgroundName>CE_DREF_female_7</BackgroundName>
+        <Text>{=DefaultRandomEventsFemale1}You find yourself bored after a long day's march, your eyes drawn to your men's broad shoulders and shapely rears. It occurs to you you could use a bit of fun...</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationLand</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale2}Challenge one them to a naked brawl.</OptionText>
+                <MoraleTotal>R 1 10</MoraleTotal>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_random_event_female_E1_C1_S</EventName>
+                        <EventWeight>20</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_random_event_female_E1_C1_F_FEW</EventName>
+                        <EventWeight>20</EventWeight>
+                        <EventUseConditions>True</EventUseConditions>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_random_event_female_E1_C1_F_MANY</EventName>
+                        <EventWeight>20</EventWeight>
+                        <EventUseConditions>True</EventUseConditions>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale3}Ask them if they'd be interested in a bit of fun.</OptionText>
+                <TriggerEventName>CE_random_event_female_E1_C1_SEX</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale4}Nevermind.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqMaleTroopsAbove>2</ReqMaleTroopsAbove>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- #region OTHER -->
+    <CEEvent>
+        <Name>CE_random_event_female_E1_C1_S</Name>
+        <Text>{=DefaultRandomEventsFemale5}The fight is brisk but exciting, and you feel it could have gone either way, but it ends with your hands around the strongest man's throat as he begs for mercy. You can't help but notice that in all the commotion his shaft has grown tantalizingly erect.</Text>
+        <BackgroundName>CE_DREF_female_1</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale6}Let him up.</OptionText>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale7}Claim his manhood as your reward.</OptionText>
+                <TriggerEventName>CE_random_event_female_E1_C1_SEX</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region FEW -->
+    <CEEvent>
+        <Name>CE_random_event_female_E1_C1_F_FEW</Name>
+        <Text>{=DefaultRandomEventsFemale8}The fight is brisk but exciting, and you feel it could have gone either way, but it ends with you pinned against a nearby cart, gasping for breath. You feel the man's hardness against your groin, and he demands your womanhood as his reward.</Text>
+        <BackgroundName>CE_DREF_female_4</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale9}Refuse, and pay him gold instead.</OptionText>
+                <GoldTotal>50</GoldTotal>
+                <ReqGoldAbove>50</ReqGoldAbove>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale10}He had only to ask...</OptionText>
+                <TriggerEventName>CE_random_event_female_E1_C1_SEX</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale11}Push him off you.</OptionText>
+                <RenownTotal>R -1 0</RenownTotal>
+                <MoraleTotal>R -20 -10</MoraleTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqMaleTroopsAbove>2</ReqMaleTroopsAbove>
+        <ReqMaleTroopsBelow>4</ReqMaleTroopsBelow>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_random_event_female_E1_C1_SEX</Name>
+        <BackgroundName>CE_DREF_female_5</BackgroundName>
+        <Text>{=DefaultRandomEventsFemale12}You steady yourself on a cart, your rear in full, tantalizing view of your troops, and the man claims you ardently, pounding his pleasure into you as you squeal and moan in ecstasy. He doesn't last long, but the strength and pressure of his lust bursting inside you brings you to your own climax, and your walls clench around his cock, milking his balls until he collapses.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationRisk</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <MoraleTotal>R 1 10</MoraleTotal>
+                <RenownTotal>R -1 0</RenownTotal>
+                <OptionText>{=DefaultRandomEventsFemale13}Clean yourself off.</OptionText>
+                <PregnancyRiskModifier>7</PregnancyRiskModifier>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqMaleTroopsAbove>2</ReqMaleTroopsAbove>
+        <ReqMaleTroopsBelow>4</ReqMaleTroopsBelow>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region MANY -->
+    <CEEvent>
+        <Name>CE_random_event_female_E1_C1_F_MANY</Name>
+        <Text>{=DefaultRandomEventsFemale14}The fight is brisk but exciting, and you feel it could have gone either way, but it ends with you pinned against a nearby cart, gasping for breath. You feel the man's hardness against your groin, and he demands you join them in a more pleasurable pursuit as his reward.</Text>
+        <BackgroundName>CE_DREF_female_4</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeGold</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale9}Refuse, and pay him gold instead.</OptionText>
+                <GoldTotal>50</GoldTotal>
+                <ReqGoldAbove>50</ReqGoldAbove>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale15}Lick your lips in anticipation.</OptionText>
+                <TriggerEventName>CE_random_event_female_E1_C1_SEX_MANY</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale11}Push him off you.</OptionText>
+                <RenownTotal>R -1 0</RenownTotal>
+                <MoraleTotal>R -30 -20</MoraleTotal>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+        <ReqMaleTroopsAbove>4</ReqMaleTroopsAbove>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_random_event_female_E1_C1_SEX_MANY</Name>
+        <BackgroundName>CE_DREF_female_9</BackgroundName>
+        <Text>{=DefaultRandomEventsFemale16}Your men surround you as the victor disrobes, gently stripping you as he leans back onto the ground. You slowly lower yourself onto his shaft, moaning gently as it pushes into your cleft, and he thrusts upwards suddenly, pushing the breath from your body. You squeal in need and surprise, your womanhood dripping with arousal, and the rest of your men begin to disrobe as well.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale17}Lose yourself to pleasure.</OptionText>
+                <TriggerEventName>CE_random_event_female_E1_C1_SEX_MANY_2</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqMaleTroopsAbove>4</ReqMaleTroopsAbove>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_random_event_female_E1_C1_SEX_MANY_2</Name>
+        <BackgroundName>CE_DREF_female_11</BackgroundName>
+        <Text>{=DefaultRandomEventsFemale18}You take your men's shafts in each hand, eagerly rubbing them to full hardness as you are ravished, relishing the delicious friction as your lover's balls slap against your clit. You hear him moan in ecstasy as his warm seed floods your womb, dripping down his shaft, and another of your men swiftly moves to replace him...</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale19}They look so delicious...</OptionText>
+                <TriggerEventName>CE_random_event_female_E1_C1_SEX_MANY_3</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqMaleTroopsAbove>4</ReqMaleTroopsAbove>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_random_event_female_E1_C1_SEX_MANY_3</Name>
+        <BackgroundName>CE_DREF_female_10</BackgroundName>
+        <Text>{=DefaultRandomEventsFemale20}The scent of sex fills your senses as your men share their pleasure with you. Unbidden, you wrap your lips around one of their cocks, taking in its musky scent as its owner gasps in rapturous pleasure. The feel of your full, soft lips around him is too much for him to stand, and your mouth is instantly filled with salty warmth.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <MoraleTotal>R 10 20</MoraleTotal>
+                <RenownTotal>R -2 0</RenownTotal>
+                <OptionText>{=DefaultRandomEventsFemale21}Swallow his cum.</OptionText>
+                <TriggerEventName>CE_random_event_female_E1_C1_SEX_MANY_4</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeMorale</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <MoraleTotal>R 1 10</MoraleTotal>
+                <RenownTotal>R -2 0</RenownTotal>
+                <OptionText>{=DefaultRandomEventsFemale22}Let it drip from your mouth.</OptionText>
+                <TriggerEventName>CE_random_event_female_E1_C1_SEX_MANY_4</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqMaleTroopsAbove>4</ReqMaleTroopsAbove>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_random_event_female_E1_C1_SEX_MANY_4</Name>
+        <BackgroundName>CE_DREF_female_2</BackgroundName>
+        <Text>{=DefaultRandomEventsFemale23}It doesn't take long for the rest of your men to follow suit, spurting their pleasure into your mouth or onto your breasts. By the time they all finish your body is coated in slime, and you bask in its comforting warmth. They won't forget today's activities anytime soon.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale13}Clean yourself off.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_random_event_female_E2_WHORE</EventName>
+                        <EventWeight>R -20 1</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqMaleTroopsAbove>4</ReqMaleTroopsAbove>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+
+    <!-- #endregion -->
+
+    <!-- #endregion -->
+
+    <!-- #region NSFW Low Moral Event -->
+    <CEEvent>
+        <Name>CE_random_event_female_E2</Name>
+        <BackgroundName>CE_DREF_female_6</BackgroundName>
+        <Text>{=DefaultRandomEventsFemale24}You wake groggily to the unpleasant sensation of the bright sun in your eyes and the more pleasant sensation of a cock stuffed deep in your cleft. You're having trouble controlling your movements, and your arms feel strangely heavy as the man pounds his pleasure from you. Have you been drugged? What's going on?</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationTravellingParty</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>CapturePlayer</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale25}Demand he let you go.</OptionText>
+                <TriggerEventName>CE_random_event_female_E2_C1</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>CapturePlayer</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale26}Thrust back against him.</OptionText>
+                <TriggerEventName>CE_random_event_female_E2_C2</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqMaleTroopsAbove>2</ReqMaleTroopsAbove>
+        <ReqMoraleBelow>20</ReqMoraleBelow>
+        <WeightedChanceOfOccurring>100</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_random_event_female_E2_C1</Name>
+        <BackgroundName>CE_DREF_female_6</BackgroundName>
+        <Text>{=DefaultRandomEventsFemale27}You slur your words, and for a moment think perhaps he hasn't understood, but his response is clear: Your troops, tired of catering to your every whim for low pay and bad food, have decided to take their payment from your cunt instead. As you ponder what to do next, you see a shadow fall across your face. More of them?</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale28}Try to flee.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_random_event_female_E2_C3</EventName>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_random_event_female_E3_C3</EventName>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqMaleTroopsAbove>4</ReqMaleTroopsAbove>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_random_event_female_E2_C3</Name>
+        <BackgroundName>CE_DREF_female_9</BackgroundName>
+        <Text>{=DefaultRandomEventsFemale29}He grabs you by the arms and pulls you back. You hear him laugh, savoring the sensation of your walls against his shaft. He shouts to someone else - your other troops, perhaps - that such an eager whore will be worth quite a bit of coin. Are they planning to sell you?</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale30}You have to get out of here.</OptionText>
+                <TriggerEventName>CE_random_event_female_E2_GANG</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqMaleTroopsAbove>4</ReqMaleTroopsAbove>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_random_event_female_E3_C3</Name>
+        <BackgroundName>CE_DREF_female_3</BackgroundName>
+        <Text>{=DefaultRandomEventsFemale31}You manage to escape his grasp and knock him over. You run to your tent to grab your things and you hear voices in the camp demanding your capture.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Captive</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>Escape</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale32}Escape the traitors.</OptionText>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale33}Perhaps you deserve your punishment?</OptionText>
+                <TriggerEventName>CE_random_event_female_E2_GANG</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqMaleTroopsAbove>4</ReqMaleTroopsAbove>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_random_event_female_E2_C2</Name>
+        <BackgroundName>CE_DREF_female_6</BackgroundName>
+        <Text>{=DefaultRandomEventsFemale34}Lost in the act of coitus, you thrust back against him and hear him laugh, savoring the sensation of your walls against his shaft. He shouts to someone else - your other troops, perhaps - that such an eager whore will be worth quite a bit of coin. Are they planning to sell you?</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale30}You have to get out of here.</OptionText>
+                <TriggerEventName>CE_random_event_female_E2_GANG</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqMaleTroopsAbove>4</ReqMaleTroopsAbove>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_random_event_female_E2_GANG</Name>
+        <BackgroundName>CE_DREF_female_11</BackgroundName>
+        <Text>{=DefaultRandomEventsFemale35}You quickly realize you have no chance of escape - you're surrounded by a parade of stiff manhoods, eager to ravish your drugged and shamefully willing body. You are roughly and thoroughly taken, your mind addled with narcotics and lust as you absentmindedly pleasure your captors.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale36}Collapse from exhaustion.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_random_event_female_E2_CARTED</EventName>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_random_event_female_E2_WHORE</EventName>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_random_event_female_E2_BANDIT_WHORE</EventName>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <ReqMaleTroopsAbove>4</ReqMaleTroopsAbove>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <!-- #endregion  -->
+
+    <!-- #region Endings -->
+    <CEEvent>
+        <Name>CE_random_event_female_E2_CARTED</Name>
+        <BackgroundName>CE_DREF_female_8</BackgroundName>
+        <Text>{=DefaultRandomEventsFemale37}You're fucked into unconsciousness, only to wake to the jarring sensations of a poorly-maintained cart. It seems your mutinous defilers have sold you to a passing slave trader. Naked, and chained to the bars of a small cage, you are carted off to a nearby town and sold.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>StripPlayer</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>TeleportPlayer</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AddSlaveryFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale38}Continue.</OptionText>
+                <RenownTotal>R -1 0</RenownTotal>
+                <SlaveryTotal>0</SlaveryTotal>
+                <SceneSettings TalkTo="random" SceneName="TheSlaveryScene" />
+                <TeleportSettings Location="Town" Distance="nearest" Faction="otherenemy" />
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqMoraleBelow>20</ReqMoraleBelow>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_random_event_female_E2_BANDIT_WHORE</Name>
+        <BackgroundName>CE_DREF_female_8</BackgroundName>
+        <Text>{=DefaultRandomEventsFemale39}You're fucked into unconsciousness, only to wake to the jarring sensations of a poorly-maintained cart. It seems your mutinous defilers have sold you to some bandit group. Naked, and chained to the bars of a small cage, you are carted off to the nearby hideout.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>StripPlayer</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>TeleportPlayer</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale38}Continue.</OptionText>
+                <RenownTotal>R -1 0</RenownTotal>
+                <TeleportSettings Location="Hideout" Distance="nearest" />
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_random_event_female_E2_WHORE</Name>
+        <BackgroundName>CE_DREF_female_8</BackgroundName>
+        <Text>{=DefaultRandomEventsFemale40}You're collapse from the exhaustion, only to wake to the jarring sensations of a poorly-maintained cart. It seems your mutinous defilers have decided to use you as their personal whore.</Text>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Slavery</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>StripPlayer</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>CapturePlayer</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeRenown</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>AddSlaveryFlag</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ChangeSlaveryLevel</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale38}Continue.</OptionText>
+                <RenownTotal>R -1 0</RenownTotal>
+                <SlaveryTotal>0</SlaveryTotal>
+            </Option>
+        </Options>
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>20</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+
+    <!-- #region NSFW Bar Event -->
+    <CEEvent>
+        <Name>CE_random_event_female_town_bar</Name>
+        <Text>{=DefaultRandomEventsFemale41}You find yourself in the local tavern enjoying the music and the alcohol. Various men have been seeking your attention and there is a small gathering in the corner of the tavern. You wonder what could that be?</Text>
+        <BackgroundName>CE_DREF_female_26</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInTown</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale42}Attempt to talk with a handsome man.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_random_event_female_town_bar_1</EventName>
+                        <EventWeight>5</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_random_event_female_town_bar_jailed</EventName>
+                        <EventWeight>R -5 10</EventWeight>
+                        <EventUseConditions>True</EventUseConditions>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale43}Just enjoy yourself at the tavern and ignore the men.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_random_event_female_town_bar_jailed</EventName>
+                        <EventWeight>R -5 5</EventWeight>
+                        <EventUseConditions>True</EventUseConditions>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+            <Option>
+                <Order>2</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale44}Investigate the small gathering.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>ce_wizard_1f</EventName>
+                        <EventWeight>15</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>ce_witch_1f</EventName>
+                        <EventWeight>5</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_random_event_female_town_bar_jailed</EventName>
+                        <EventWeight>R -5 10</EventWeight>
+                        <EventUseConditions>True</EventUseConditions>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>50</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_random_event_female_town_bar_1</Name>
+        <Text>{=DefaultRandomEventsFemale45}The handsome man makes you laugh and helps wave off any other men. You find yourself enjoying the company and the drinks. Perhaps you should take it to the next step?</Text>
+        <BackgroundName>CE_DREF_female_12</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale46}Invite him upstairs.</OptionText>
+                <TriggerEventName>CE_random_event_female_town_bar_sex</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale47}Continue to enjoy yourself.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>ce_witch_1f</Name>
+        <Text>{=DefaultRandomEventsFemale48}You are relaxing in a bar, when a woman leans over to you and quietly murmurs, "look into my eyes."</Text>
+        <BackgroundName>CE_DREF_female_14</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInTown</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale49}Look at her eyes.</OptionText>
+                <TriggerEventName>CE_witch_mezzed_1</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale50}Just enjoy yourself at the tavern and ignore the woman.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_random_event_female_town_bar_jailed</EventName>
+                        <EventWeight>R -5 5</EventWeight>
+                        <EventUseConditions>True</EventUseConditions>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>10</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>ce_wizard_1f</Name>
+        <Text>{=DefaultRandomEventsFemale51}You are relaxing in a bar, when a man leans over to you and quietly murmurs, "look into my eyes."</Text>
+        <BackgroundName>CE_DREF_female_18</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>LocationPartyInTown</RestrictedListOfFlags>
+            <RestrictedListOfFlags>HeroGenderIsFemale</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale52}Glance into his eyes.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_wizard_gangbang_mezzed</EventName>
+                        <EventWeight>2</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_wizard_mezzed_1</EventName>
+                        <EventWeight>5</EventWeight>
+                    </TriggerEvent>
+                    <TriggerEvent>
+                        <EventName>CE_wizard_failed_1</EventName>
+                        <EventWeight>2</EventWeight>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale53}Just enjoy yourself at the tavern and ignore the man.</OptionText>
+                <TriggerEvents>
+                    <TriggerEvent>
+                        <EventName>CE_random_event_female_town_bar_jailed</EventName>
+                        <EventWeight>R -5 5</EventWeight>
+                        <EventUseConditions>True</EventUseConditions>
+                    </TriggerEvent>
+                </TriggerEvents>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>30</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_wizard_failed_1</Name>
+        <Text>{=DefaultRandomEventsFemale54}Nothing happens as you seem to be immune to his charms and tricks. Nonetheless the wizard has not yet noticed that you are not under his spell.</Text>
+        <BackgroundName>CE_DREF_female_18</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale55}Go along with it.</OptionText>
+                <TriggerEventName>CE_wizard_fake_1</TriggerEventName>
+            </Option>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale56}Get away from him.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_wizard_mezzed_1</Name>
+        <Text>{=DefaultRandomEventsFemale57}You follow the man to a private room, he orders you to undress and you do as he commands. Next he shouts "On your knees!" you comply and get down, and are greeted by his erect shaft. Without saying anything you already know what to do, and begin to lick his cock before taking it in your mouth.</Text>
+        <BackgroundName>CE_DREF_female_19</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale58}Command me, Master!</OptionText>
+                <TriggerEventName>CE_wizard_mezzed_2</TriggerEventName>
+            </Option>
+        </Options>
+
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_wizard_mezzed_2</Name>
+        <Text>{=DefaultRandomEventsFemale59}Satisfied, he commands you to get on the bed and bend over, making you present your pussy to him. "Now take it slut!" He yells as he lines up behind you and thrusts in, fucking you roughly.</Text>
+        <BackgroundName>CE_DREF_female_20</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale60}Oh, yes Master!</OptionText>
+                <TriggerEventName>CE_wizard_mezzed_end</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_wizard_mezzed_end</Name>
+        <Text>{=DefaultRandomEventsFemale61}He viciously thrusts a few more times before cumming deep inside you. He lays down and commands you to spend the night with him, leaking his cum as he kisses you good night.</Text>
+        <BackgroundName>CE_DREF_female_23</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationRisk</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale62}Thank you master!</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_wizard_fake_1</Name>
+        <Text>{=DefaultRandomEventsFemale63}He takes you back to a private room. "You are feeling very hot and you need to strip naked." You comply, but give him a show, teasing him as you remove your panties making him second guess his control over you. "You are feeling very sleepy," once again you comply and lay down on the bed. You wait in anticipation as you feel his tip touch your entrance, and gasp as he thrusts inside.</Text>
+        <BackgroundName>CE_DREF_female_21</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale64}This fool is giving you exactly what you want.</OptionText>
+                <TriggerEventName>CE_wizard_fake_2</TriggerEventName>
+            </Option>
+        </Options>
+
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_wizard_fake_2</Name>
+        <Text>{=DefaultRandomEventsFemale65}While stimulating, you decide to take it a bit further. "Let me help you master," you flip over and lift up your hips, allowing him between your legs to hammer down into you.</Text>
+        <BackgroundName>CE_DREF_female_22</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale66}Much better.</OptionText>
+                <TriggerEventName>CE_wizard_fake_end</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_wizard_fake_end</Name>
+        <Text>{=DefaultRandomEventsFemale67}His thrusts get slower and deeper, both of you climaxing as he pours his cum into you. As you lay down you say, "you need to work on your spells."</Text>
+        <BackgroundName>CE_DREF_female_23</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationRisk</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale68}You give him a kiss on his bewildered face.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_witch_mezzed_1</Name>
+        <Text>{=DefaultRandomEventsFemale69}She commands you to follow her into a private room, which you absentmindedly comply. She slowly undresses you, taking delight in listening to you gasp and moan as she plays with your nipples and clit as she strips you. Satisfied, she undresses herself, and pushes you onto the bed, kissing and groping you as you respond in kind.</Text>
+        <BackgroundName>CE_DREF_female_17</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale70}Feels... Good</OptionText>
+                <TriggerEventName>CE_witch_mezzed_2</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_witch_mezzed_2</Name>
+        <Text>{=DefaultRandomEventsFemale71}The witch straddles your face, and commands you to pleasure her. You greedily lick at her opening, and suck on her clit, causing her to moan. She rocks and grinds on your face, taking no concern for your wellbeing. She edges closer, and grabs your head and shoves it into her pussy, forcing you to put all your effort into making her cum.</Text>
+        <BackgroundName>CE_DREF_female_15</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale72}Need... Air</OptionText>
+                <TriggerEventName>CE_witch_mezzed_end</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_witch_mezzed_end</Name>
+        <Text>{=DefaultRandomEventsFemale73}Her actions worked as she quivers and gives you a taste of her cum. She falls down next to you, but evidently not completely, as she begins to grind her slit against your thigh as you try to regain your breath. Eventually her grinding stops and your consciousness fades.</Text>
+        <BackgroundName>CE_DREF_female_16</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale74}Need... Sleep</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_wizard_gangbang_mezzed</Name>
+        <Text>{=DefaultRandomEventsFemale75}You fall completely under his control, and soon the whole bar is as well. He orders everyone to undress, and for everyone to begin to fuck immediately. You are quickly beset upon by two men, one bending you over while the other thrusts into your mouth. The spit-roast session has you sliding back and forth between each cock, frantically attempting to cum as many times on each as possible.</Text>
+        <BackgroundName>CE_DREF_female_24</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale76}More! More!</OptionText>
+                <TriggerEventName>CE_wizard_gangbang_mezzed_end</TriggerEventName>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_wizard_gangbang_mezzed_end</Name>
+        <Text>{=DefaultRandomEventsFemale77}As each man finishes inside you, another takes his place, pumping cum down your throat and in your pussy, both of which you accept greedily. As the night wears on, you find yourself on your knees with a couple of other women, taking the last few cumshots of the night. You can no longer stay upright, and feel a few more sticky strands hitting your upper back and ass as your consciousness fades.</Text>
+        <BackgroundName>CE_DREF_female_25</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>1</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationRisk</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale38}Continue.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+
+    <CEEvent>
+        <Name>CE_random_event_female_town_bar_sex</Name>
+        <Text>{=DefaultRandomEventsFemale78}You invite the man upstairs. Soon you are panting with arousal, your cleft grows wet around his member. Another thurst pushes you over the edge and you shudder in ecstasy, clenching around his softening cock, as he cums inside of you.</Text>
+        <BackgroundName>CE_DREF_female_13</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>ImpregnationHero</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <PregnancyRiskModifier>10</PregnancyRiskModifier>
+                <OptionText>{=DefaultRandomEventsFemale38}Continue.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <CEEvent>
+        <Name>CE_random_event_female_town_bar_jailed</Name>
+        <Text>{=DefaultRandomEventsFemale79}Some guards suddently enter the tavern and grab a hold of you. You are dragged out of the tavern and thrown into prison.</Text>
+        <BackgroundName>CE_DREF_female_27</BackgroundName>
+        <MultipleRestrictedListOfFlags>
+            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Random</RestrictedListOfFlags>
+            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>
+            <RestrictedListOfFlags>CaptorEnemyFactionOwnsSettlement</RestrictedListOfFlags>
+        </MultipleRestrictedListOfFlags>
+        <Options>
+            <Option>
+                <Order>0</Order>
+                <MultipleRestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>EmptyIcon</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>SoldToSettlement</RestrictedListOfConsequences>
+                    <RestrictedListOfConsequences>StripPlayer</RestrictedListOfConsequences>
+                </MultipleRestrictedListOfConsequences>
+                <OptionText>{=DefaultRandomEventsFemale38}Continue.</OptionText>
+            </Option>
+        </Options>
+
+        <SexualContent>true</SexualContent>
+        <WeightedChanceOfOccurring>0</WeightedChanceOfOccurring>
+        <ReqHeroMinAge>18</ReqHeroMinAge>
+    </CEEvent>
+    <!-- #endregion -->
+</CEEvents>
