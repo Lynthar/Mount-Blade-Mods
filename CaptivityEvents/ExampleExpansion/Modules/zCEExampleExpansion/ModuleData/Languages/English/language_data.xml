@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    语言配置文件
+    定义模块支持的语言及对应的字符串文件
+-->
+<LanguageData id="English">
+    <LanguageFile xml_path="ExampleStrings.xml"/>
+</LanguageData>

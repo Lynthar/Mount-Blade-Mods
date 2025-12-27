@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    自定义模块设置文件
+    用于定义自定义技能和标志
+-->
+<CECustom xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../CaptivityEventsV1.3.11.1311/Modules/zCaptivityEvents/ModuleLoader/CaptivityRequired/Events/CECustomModal.xsd">
+
+    <!-- 模块名称 -->
+    <CEModuleName>Example Expansion</CEModuleName>
+
+    <!-- 自定义技能定义（可选）
+         这些技能会被mod追踪，可以在事件中使用
+    -->
+    <CESkills>
+        <!-- 示例：声望等级技能 -->
+        <CESkill
+            Id="ExampleReputation"
+            Name="{=EXSKILL001}示例声望"
+            MinLevel="0"
+            MaxLevel="100"
+            SetZeroOnEscape="false"/>
+
+        <!-- 示例：临时状态（逃跑后重置） -->
+        <CESkill
+            Id="ExampleTempStatus"
+            Name="{=EXSKILL002}临时状态"
+            MinLevel="0"
+            MaxLevel="10"
+            SetZeroOnEscape="true"/>
+    </CESkills>
+
+    <!-- 自定义标志定义（可选）
+         这些是布尔值标志，可以在事件条件中使用
+    -->
+    <CEFlags>
+        <CEFlag
+            Id="ExampleFlag1"
+            Name="{=EXFLAG001}示例标志1"
+            HintText="这是一个示例标志"
+            DefaultValue="false"/>
+
+        <CEFlag
+            Id="ExampleFlag2"
+            Name="{=EXFLAG002}示例标志2"
+            HintText="另一个示例标志"
+            DefaultValue="true"/>
+    </CEFlags>
+
+</CECustom>

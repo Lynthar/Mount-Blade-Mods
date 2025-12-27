@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    字符串本地化文件
+    所有事件文本的翻译都在这里定义
+    格式：{=StringID} 在事件XML中使用，这里定义对应的文本
+-->
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="string">
+    <tags>
+        <tag language="English"/>
+    </tags>
+    <strings>
+        <!-- ========== 示例1：商人事件 ========== -->
+        <string id="EXAMPLE001" text="You encounter a mysterious merchant on the roadside. He opens a worn chest, and a strange glow emanates from within. 'Only 100 gold, and this treasure is yours,' he says, a cunning glint in his eyes."/>
+        <string id="EXAMPLE002" text="Pay 100 gold to purchase"/>
+        <string id="EXAMPLE003" text="[Charm 50+] Try to haggle down to 50 gold"/>
+        <string id="EXAMPLE004" text="Politely decline and leave"/>
+        <string id="EXAMPLE005" text="You open the package to find a treasure map! Following its directions, you discover a small fortune nearby."/>
+        <string id="EXAMPLE006" text="Collect the loot"/>
+        <string id="EXAMPLE007" text="You open the package to find nothing but rocks and a mocking note. The merchant has vanished without a trace..."/>
+        <string id="EXAMPLE008" text="Sigh and move on..."/>
+
+        <!-- ========== 示例2：逃跑事件 ========== -->
+        <string id="EXAMPLE010" text="Deep into the night, you notice the guard seems to be dozing off. The keys hang from their belt, swaying gently with each breath. This might be your chance to escape..."/>
+        <string id="EXAMPLE011" text="[Roguery 60+] Quietly steal the keys"/>
+        <string id="EXAMPLE012" text="Create a distraction and attempt to escape"/>
+        <string id="EXAMPLE013" text="Too risky, wait for a better opportunity"/>
+
+        <!-- ========== 示例3：俘虏事件 ========== -->
+        <string id="EXAMPLE020" text="One of the prisoners in your party falls to their knees before you, begging: 'Please let me go! I'll serve you, I'll do anything!'"/>
+        <string id="EXAMPLE021" text="Release this prisoner"/>
+        <string id="EXAMPLE022" text="[Leadership 40+] Accept their pledge of loyalty"/>
+        <string id="EXAMPLE023" text="Beat them as an example to others"/>
+        <string id="EXAMPLE024" text="Ignore them"/>
+
+        <!-- ========== 示例4：休息事件 ========== -->
+        <string id="EXAMPLE030" text="You discover a hidden campsite that looks like a good place to rest. You could take a break here to recover your strength."/>
+        <string id="EXAMPLE031" text="Rest here for a few hours"/>
+        <string id="EXAMPLE032" text="No time to rest, keep moving"/>
+        <string id="EXAMPLE033" text="After a few hours of rest, you feel energized and ready to continue your journey."/>
+        <string id="EXAMPLE034" text="Begin resting..."/>
+        <string id="EXAMPLE035" text="You feel refreshed!"/>
+        <string id="EXAMPLE036" text="Continue the journey"/>
+
+        <!-- ========== 示例5：土匪伏击事件 ========== -->
+        <string id="EXAMPLE040" text="Battle cries erupt ahead! A group of bandits bursts from the bushes, surrounding your party. 'Leave your money and you can go!' the lead bandit roars."/>
+        <string id="EXAMPLE041" text="Draw your sword and fight!"/>
+        <string id="EXAMPLE042" text="Pay 200 gold for safe passage"/>
+        <string id="EXAMPLE043" text="[Scouting 50+] Use the terrain to escape"/>
+        <string id="EXAMPLE044" text="You successfully repelled the bandit ambush! While searching the battlefield, you find some loot."/>
+        <string id="EXAMPLE045" text="Collect the spoils"/>
+        <string id="EXAMPLE046" text="You were defeated by the bandits... They looted your belongings and left you on the roadside."/>
+        <string id="EXAMPLE047" text="Struggle to get up..."/>
+
+        <!-- ========== 自定义技能/标志 ========== -->
+        <string id="EXSKILL001" text="Example Reputation"/>
+        <string id="EXSKILL002" text="Temporary Status"/>
+        <string id="EXFLAG001" text="Example Flag 1"/>
+        <string id="EXFLAG002" text="Example Flag 2"/>
+    </strings>
+</base>

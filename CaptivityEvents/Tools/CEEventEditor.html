@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CE Event Editor - CaptivityEvents 可视化事件编辑器</title>
+    <style>
+        :root {
+            --bg-primary: #1a1a2e;
+            --bg-secondary: #16213e;
+            --bg-tertiary: #0f3460;
+            --accent: #e94560;
+            --accent-hover: #ff6b6b;
+            --text-primary: #eaeaea;
+            --text-secondary: #a0a0a0;
+            --border: #2a2a4a;
+            --success: #4ade80;
+            --warning: #fbbf24;
+            --error: #f87171;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: var(--bg-secondary);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header h1 {
+            font-size: 1.4rem;
+            color: var(--accent);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+        }
+
+        .btn-secondary {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: var(--border);
+        }
+
+        .btn-success {
+            background: var(--success);
+            color: #1a1a2e;
+        }
+
+        .btn-danger {
+            background: var(--error);
+            color: white;
+        }
+
+        /* Main Layout */
+        .main-container {
+            display: flex;
+            height: calc(100vh - 52px);
+        }
+
+        /* Left Panel - Event List */
+        .panel-left {
+            width: 280px;
+            background: var(--bg-secondary);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .panel-header {
+            padding: 15px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .panel-header h3 {
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .event-search {
+            padding: 10px 15px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .event-search input {
+            width: 100%;
+            padding: 8px 12px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+        }
+
+        .event-search input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .event-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        .event-item {
+            padding: 12px;
+            background: var(--bg-primary);
+            border-radius: 8px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .event-item:hover {
+            border-color: var(--border);
+        }
+
+        .event-item.active {
+            border-color: var(--accent);
+        }
+
+        .event-item .event-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+            word-break: break-all;
+        }
+
+        .event-item .event-type {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .event-type-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            margin-right: 4px;
+        }
+
+        .tag-random { background: #3b82f6; }
+        .tag-captor { background: #f59e0b; }
+        .tag-captive { background: #8b5cf6; }
+        .tag-chain { background: #6b7280; }
+
+        /* Center Panel - Editor */
+        .panel-center {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .editor-tabs {
+            display: flex;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .editor-tab {
+            padding: 12px 24px;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+        }
+
+        .editor-tab:hover {
+            color: var(--text-primary);
+        }
+
+        .editor-tab.active {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        .editor-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px 14px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-section {
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-section h4 {
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+            color: var(--accent);
+        }
+
+        /* Flags Section */
+        .flags-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+        }
+
+        .flag-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px;
+            background: var(--bg-primary);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .flag-item:hover {
+            background: var(--bg-tertiary);
+        }
+
+        .flag-item input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--accent);
+        }
+
+        .flag-item label {
+            font-size: 0.85rem;
+            cursor: pointer;
+            margin: 0;
+        }
+
+        /* Options Section */
+        .options-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .option-card {
+            background: var(--bg-primary);
+            border-radius: 8px;
+            padding: 15px;
+            border: 1px solid var(--border);
+        }
+
+        .option-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .option-header h5 {
+            color: var(--accent);
+        }
+
+        .option-card .form-group {
+            margin-bottom: 12px;
+        }
+
+        /* Right Panel - Event Chain Visualizer */
+        .panel-right {
+            width: 350px;
+            background: var(--bg-secondary);
+            border-left: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chain-visualizer {
+            flex: 1;
+            padding: 15px;
+            overflow: auto;
+        }
+
+        .chain-node {
+            background: var(--bg-primary);
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .chain-node.current {
+            border-color: var(--accent);
+        }
+
+        .chain-node .node-name {
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 6px;
+        }
+
+        .chain-node .node-options {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .chain-arrow {
+            text-align: center;
+            color: var(--text-secondary);
+            padding: 5px 0;
+        }
+
+        .chain-children {
+            margin-left: 20px;
+            padding-left: 15px;
+            border-left: 2px dashed var(--border);
+        }
+
+        /* Empty State */
+        .empty-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: var(--text-secondary);
+            text-align: center;
+            padding: 40px;
+        }
+
+        .empty-state h3 {
+            margin-bottom: 10px;
+        }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            display: none;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 24px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .modal h3 {
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        .modal-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        /* XML Preview */
+        .xml-preview {
+            background: var(--bg-primary);
+            border-radius: 8px;
+            padding: 15px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.85rem;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        /* Toast */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 12px 20px;
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+            border-left: 4px solid var(--success);
+            display: none;
+            z-index: 1001;
+        }
+
+        .toast.show {
+            display: block;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--text-secondary);
+        }
+
+        /* Help tooltip */
+        .help-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px;
+            height: 18px;
+            background: var(--bg-tertiary);
+            border-radius: 50%;
+            font-size: 0.7rem;
+            cursor: help;
+            margin-left: 6px;
+        }
+
+        .consequence-select {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .consequence-tag {
+            padding: 4px 10px;
+            background: var(--bg-primary);
+            border-radius: 4px;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .consequence-tag .remove {
+            cursor: pointer;
+            color: var(--error);
+        }
+
+        .add-consequence {
+            position: relative;
+        }
+
+        .consequence-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            max-height: 200px;
+            overflow-y: auto;
+            width: 250px;
+            display: none;
+            z-index: 100;
+        }
+
+        .consequence-dropdown.show {
+            display: block;
+        }
+
+        .consequence-dropdown-item {
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+
+        .consequence-dropdown-item:hover {
+            background: var(--bg-tertiary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1>CE Event Editor - CaptivityEvents 可视化事件编辑器</h1>
+        <div class="header-actions">
+            <button class="btn btn-secondary" onclick="importXML()">
+                <span>📂</span> 导入XML
+            </button>
+            <button class="btn btn-secondary" onclick="exportXML()">
+                <span>💾</span> 导出XML
+            </button>
+            <button class="btn btn-primary" onclick="previewXML()">
+                <span>👁</span> 预览XML
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Left Panel - Event List -->
+        <div class="panel-left">
+            <div class="panel-header">
+                <h3>事件列表</h3>
+                <button class="btn btn-primary" onclick="createNewEvent()">+ 新建</button>
+            </div>
+            <div class="event-search">
+                <input type="text" id="eventSearch" placeholder="搜索事件..." oninput="filterEvents()">
+            </div>
+            <div class="event-list" id="eventList">
+                <!-- Events will be rendered here -->
+            </div>
+        </div>
+
+        <!-- Center Panel - Editor -->
+        <div class="panel-center">
+            <div class="editor-tabs">
+                <div class="editor-tab active" data-tab="basic" onclick="switchTab('basic')">基本信息</div>
+                <div class="editor-tab" data-tab="flags" onclick="switchTab('flags')">条件标志</div>
+                <div class="editor-tab" data-tab="options" onclick="switchTab('options')">选项配置</div>
+                <div class="editor-tab" data-tab="advanced" onclick="switchTab('advanced')">高级设置</div>
+            </div>
+            <div class="editor-content" id="editorContent">
+                <div class="empty-state" id="emptyState">
+                    <h3>👋 欢迎使用 CE Event Editor</h3>
+                    <p>点击左侧"新建"按钮创建事件<br>或"导入XML"加载现有事件文件</p>
+                </div>
+
+                <!-- Basic Tab -->
+                <div id="tab-basic" class="tab-content" style="display: none;">
+                    <div class="form-section">
+                        <h4>📝 基本信息</h4>
+                        <div class="form-group">
+                            <label>事件名称 (唯一标识符) <span class="help-icon" title="用于识别和引用此事件">?</span></label>
+                            <input type="text" id="eventName" placeholder="例如: MY_custom_event_001" oninput="updateCurrentEvent()">
+                        </div>
+                        <div class="form-group">
+                            <label>事件文本 <span class="help-icon" title="事件发生时显示的描述文字">?</span></label>
+                            <textarea id="eventText" placeholder="描述事件发生的情景..." oninput="updateCurrentEvent()"></textarea>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>背景图片名称</label>
+                                <input type="text" id="eventBackground" placeholder="default_random" oninput="updateCurrentEvent()">
+                            </div>
+                            <div class="form-group">
+                                <label>触发权重 <span class="help-icon" title="数值越大，事件越容易被触发">?</span></label>
+                                <input type="number" id="eventWeight" value="10" min="1" max="100" oninput="updateCurrentEvent()">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>最小年龄限制</label>
+                                <input type="number" id="eventMinAge" value="18" min="0" oninput="updateCurrentEvent()">
+                            </div>
+                            <div class="form-group">
+                                <label>最大年龄限制</label>
+                                <input type="number" id="eventMaxAge" placeholder="无限制" min="0" oninput="updateCurrentEvent()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flags Tab -->
+                <div id="tab-flags" class="tab-content" style="display: none;">
+                    <div class="form-section">
+                        <h4>🎯 事件类型 (必选其一)</h4>
+                        <div class="flags-grid">
+                            <div class="flag-item">
+                                <input type="radio" id="flagRandom" name="eventType" value="Random" onchange="updateCurrentEvent()">
+                                <label for="flagRandom">Random (随机事件)</label>
+                            </div>
+                            <div class="flag-item">
+                                <input type="radio" id="flagCaptor" name="eventType" value="Captor" onchange="updateCurrentEvent()">
+                                <label for="flagCaptor">Captor (俘虏者事件)</label>
+                            </div>
+                            <div class="flag-item">
+                                <input type="radio" id="flagCaptive" name="eventType" value="Captive" onchange="updateCurrentEvent()">
+                                <label for="flagCaptive">Captive (被俘事件)</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>📍 位置条件</h4>
+                        <div class="flags-grid" id="locationFlags">
+                            <!-- Location flags will be rendered here -->
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>⏰ 时间条件</h4>
+                        <div class="flags-grid" id="timeFlags">
+                            <!-- Time flags will be rendered here -->
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>👤 角色条件</h4>
+                        <div class="flags-grid" id="characterFlags">
+                            <!-- Character flags will be rendered here -->
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>⚙️ 其他标志</h4>
+                        <div class="flags-grid" id="otherFlags">
+                            <!-- Other flags will be rendered here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Options Tab -->
+                <div id="tab-options" class="tab-content" style="display: none;">
+                    <div class="form-section">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                            <h4 style="margin: 0; border: none; padding: 0;">🎮 玩家选项</h4>
+                            <button class="btn btn-primary" onclick="addOption()">+ 添加选项</button>
+                        </div>
+                        <div class="options-list" id="optionsList">
+                            <!-- Options will be rendered here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advanced Tab -->
+                <div id="tab-advanced" class="tab-content" style="display: none;">
+                    <div class="form-section">
+                        <h4>🔗 事件链设置</h4>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="isChainOnly" onchange="updateCurrentEvent()">
+                                只能被其他事件触发 (CanOnlyBeTriggeredByOtherEvent)
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="isOverwritable" onchange="updateCurrentEvent()">
+                                允许被覆写 (Overwritable)
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>📊 数值要求</h4>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>需要金币 ></label>
+                                <input type="number" id="reqGoldAbove" placeholder="无要求" oninput="updateCurrentEvent()">
+                            </div>
+                            <div class="form-group">
+                                <label>需要金币 &lt;</label>
+                                <input type="number" id="reqGoldBelow" placeholder="无要求" oninput="updateCurrentEvent()">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>需要俘虏数 ></label>
+                                <input type="number" id="reqCaptivesAbove" placeholder="无要求" oninput="updateCurrentEvent()">
+                            </div>
+                            <div class="form-group">
+                                <label>需要士兵数 ></label>
+                                <input type="number" id="reqTroopsAbove" placeholder="无要求" oninput="updateCurrentEvent()">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>🎲 逃跑与怀孕设置</h4>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>逃跑几率 (%)</label>
+                                <input type="number" id="escapeChance" placeholder="无" min="0" max="100" oninput="updateCurrentEvent()">
+                            </div>
+                            <div class="form-group">
+                                <label>怀孕风险修正</label>
+                                <input type="number" id="pregnancyRisk" placeholder="无" oninput="updateCurrentEvent()">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>🗑️ 危险操作</h4>
+                        <button class="btn btn-danger" onclick="deleteCurrentEvent()">删除此事件</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel - Event Chain -->
+        <div class="panel-right">
+            <div class="panel-header">
+                <h3>事件链可视化</h3>
+            </div>
+            <div class="chain-visualizer" id="chainVisualizer">
+                <div class="empty-state">
+                    <p>选择一个事件<br>查看其事件链</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Import Modal -->
+    <div class="modal-overlay" id="importModal">
+        <div class="modal">
+            <h3>📂 导入 XML 文件</h3>
+            <div class="form-group">
+                <label>选择 XML 文件</label>
+                <input type="file" id="xmlFileInput" accept=".xml">
+            </div>
+            <div class="form-group">
+                <label>或粘贴 XML 内容</label>
+                <textarea id="xmlPasteInput" placeholder="粘贴 XML 内容..." style="min-height: 200px;"></textarea>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" onclick="closeModal('importModal')">取消</button>
+                <button class="btn btn-primary" onclick="doImport()">导入</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preview Modal -->
+    <div class="modal-overlay" id="previewModal">
+        <div class="modal" style="max-width: 900px;">
+            <h3>👁 XML 预览</h3>
+            <div class="xml-preview" id="xmlPreviewContent">
+                <!-- XML content will be shown here -->
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" onclick="closeModal('previewModal')">关闭</button>
+                <button class="btn btn-primary" onclick="copyXML()">复制到剪贴板</button>
+                <button class="btn btn-success" onclick="downloadXML()">下载文件</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // ==================== Data Definitions ====================
+        const FLAG_CATEGORIES = {
+            location: [
+                { id: 'LocationLand', label: '陆地' },
+                { id: 'LocationSea', label: '海上' },
+                { id: 'LocationTravellingParty', label: '行军途中' },
+                { id: 'LocationCity', label: '城市' },
+                { id: 'LocationCastle', label: '城堡' },
+                { id: 'LocationVillage', label: '村庄' },
+                { id: 'LocationDungeon', label: '地牢' },
+                { id: 'LocationTavern', label: '酒馆' },
+                { id: 'LocationHideout', label: '匪窝' },
+                { id: 'LocationPartyInTown', label: '队伍在城镇' },
+                { id: 'LocationPartyInCastle', label: '队伍在城堡' },
+                { id: 'LocationPartyInVillage', label: '队伍在村庄' },
+            ],
+            time: [
+                { id: 'TimeDay', label: '白天' },
+                { id: 'TimeNight', label: '夜晚' },
+                { id: 'SeasonSpring', label: '春季' },
+                { id: 'SeasonSummer', label: '夏季' },
+                { id: 'SeasonFall', label: '秋季' },
+                { id: 'SeasonWinter', label: '冬季' },
+            ],
+            character: [
+                { id: 'HeroGenderIsFemale', label: '主角是女性' },
+                { id: 'HeroGenderIsMale', label: '主角是男性' },
+                { id: 'CaptorGenderIsFemale', label: '俘虏者是女性' },
+                { id: 'CaptorGenderIsMale', label: '俘虏者是男性' },
+                { id: 'HeroIsPregnant', label: '主角怀孕' },
+                { id: 'HeroIsNotPregnant', label: '主角未怀孕' },
+                { id: 'HeroHaveSpouse', label: '主角有配偶' },
+                { id: 'HeroNotHaveSpouse', label: '主角无配偶' },
+                { id: 'CaptorIsHero', label: '俘虏者是英雄' },
+                { id: 'CaptorIsNonHero', label: '俘虏者非英雄' },
+            ],
+            other: [
+                { id: 'Common', label: '通用事件' },
+                { id: 'BanditParty', label: '土匪队伍' },
+                { id: 'LordParty', label: '领主队伍' },
+                { id: 'CaravanParty', label: '商队' },
+                { id: 'PlayerIsNotBusy', label: '玩家不忙碌' },
+                { id: 'StripEnabled', label: '启用剥夺' },
+                { id: 'DuringSiege', label: '围城期间' },
+                { id: 'DuringRaid', label: '劫掠期间' },
+            ]
+        };
+
+        const CONSEQUENCES = [
+            { id: 'Continue', label: '继续' },
+            { id: 'Leave', label: '离开' },
+            { id: 'Escape', label: '逃跑成功' },
+            { id: 'AttemptEscape', label: '尝试逃跑' },
+            { id: 'ChangeGold', label: '改变金币' },
+            { id: 'GiveGold', label: '给予金币' },
+            { id: 'ChangeHealth', label: '改变生命' },
+            { id: 'ChangeRenown', label: '改变声望' },
+            { id: 'ChangeMorale', label: '改变士气' },
+            { id: 'ChangeRelation', label: '改变关系' },
+            { id: 'ReleaseRandomPrisoners', label: '释放随机俘虏' },
+            { id: 'ReleaseAllPrisoners', label: '释放全部俘虏' },
+            { id: 'KillPrisoner', label: '杀死俘虏' },
+            { id: 'WoundPrisoner', label: '伤害俘虏' },
+            { id: 'JoinCaptor', label: '加入俘虏者' },
+            { id: 'Strip', label: '剥夺装备' },
+            { id: 'StartBattle', label: '开始战斗' },
+            { id: 'Wait', label: '等待' },
+            { id: 'EmptyIcon', label: '空图标' },
+            { id: 'GainRandomPrisoners', label: '获得随机俘虏' },
+            { id: 'ImpregnationRisk', label: '怀孕风险' },
+            { id: 'TeleportPlayer', label: '传送玩家' },
+        ];
+
+        // ==================== State Management ====================
+        let events = [];
+        let currentEventIndex = -1;
+
+        // ==================== Initialization ====================
+        function init() {
+            renderFlagCheckboxes();
+            renderEventList();
+        }
+
+        function renderFlagCheckboxes() {
+            renderFlagCategory('locationFlags', FLAG_CATEGORIES.location);
+            renderFlagCategory('timeFlags', FLAG_CATEGORIES.time);
+            renderFlagCategory('characterFlags', FLAG_CATEGORIES.character);
+            renderFlagCategory('otherFlags', FLAG_CATEGORIES.other);
+        }
+
+        function renderFlagCategory(containerId, flags) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = flags.map(flag => `
+                <div class="flag-item">
+                    <input type="checkbox" id="flag_${flag.id}" value="${flag.id}" onchange="updateCurrentEvent()">
+                    <label for="flag_${flag.id}">${flag.label}</label>
+                </div>
+            `).join('');
+        }
+
+        // ==================== Event Management ====================
+        function createNewEvent() {
+            const newEvent = {
+                name: `NEW_event_${Date.now()}`,
+                text: '',
+                background: 'default_random',
+                weight: 10,
+                minAge: 18,
+                maxAge: null,
+                eventType: 'Random',
+                flags: [],
+                options: [createDefaultOption(0)],
+                isChainOnly: false,
+                isOverwritable: true,
+                reqGoldAbove: null,
+                reqGoldBelow: null,
+                reqCaptivesAbove: null,
+                reqTroopsAbove: null,
+                escapeChance: null,
+                pregnancyRisk: null
+            };
+            events.push(newEvent);
+            currentEventIndex = events.length - 1;
+            renderEventList();
+            selectEvent(currentEventIndex);
+            showToast('新事件已创建');
+        }
+
+        function createDefaultOption(order) {
+            return {
+                order: order,
+                text: '继续...',
+                consequences: ['Continue'],
+                triggerEventName: '',
+                triggerEvents: [],
+                goldTotal: null,
+                healthTotal: null,
+                renownTotal: null,
+                moraleTotal: null,
+                escapeChance: null,
+                skillsRequired: [],
+                traitsRequired: []
+            };
+        }
+
+        function selectEvent(index) {
+            currentEventIndex = index;
+            document.querySelectorAll('.event-item').forEach((el, i) => {
+                el.classList.toggle('active', i === index);
+            });
+
+            if (index >= 0 && index < events.length) {
+                document.getElementById('emptyState').style.display = 'none';
+                document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
+                document.getElementById('tab-basic').style.display = 'block';
+                loadEventToForm(events[index]);
+                renderEventChain();
+            }
+        }
+
+        function loadEventToForm(event) {
+            document.getElementById('eventName').value = event.name || '';
+            document.getElementById('eventText').value = event.text || '';
+            document.getElementById('eventBackground').value = event.background || '';
+            document.getElementById('eventWeight').value = event.weight || 10;
+            document.getElementById('eventMinAge').value = event.minAge || 18;
+            document.getElementById('eventMaxAge').value = event.maxAge || '';
+
+            // Event type
+            document.querySelectorAll('input[name="eventType"]').forEach(el => {
+                el.checked = el.value === event.eventType;
+            });
+
+            // Flags
+            document.querySelectorAll('.flags-grid input[type="checkbox"]').forEach(el => {
+                el.checked = event.flags && event.flags.includes(el.value);
+            });
+
+            // Chain settings
+            document.getElementById('isChainOnly').checked = event.isChainOnly || false;
+            document.getElementById('isOverwritable').checked = event.isOverwritable || false;
+
+            // Requirements
+            document.getElementById('reqGoldAbove').value = event.reqGoldAbove || '';
+            document.getElementById('reqGoldBelow').value = event.reqGoldBelow || '';
+            document.getElementById('reqCaptivesAbove').value = event.reqCaptivesAbove || '';
+            document.getElementById('reqTroopsAbove').value = event.reqTroopsAbove || '';
+            document.getElementById('escapeChance').value = event.escapeChance || '';
+            document.getElementById('pregnancyRisk').value = event.pregnancyRisk || '';
+
+            // Options
+            renderOptions(event.options || []);
+        }
+
+        function updateCurrentEvent() {
+            if (currentEventIndex < 0) return;
+
+            const event = events[currentEventIndex];
+            event.name = document.getElementById('eventName').value;
+            event.text = document.getElementById('eventText').value;
+            event.background = document.getElementById('eventBackground').value;
+            event.weight = parseInt(document.getElementById('eventWeight').value) || 10;
+            event.minAge = parseInt(document.getElementById('eventMinAge').value) || 18;
+            event.maxAge = parseInt(document.getElementById('eventMaxAge').value) || null;
+
+            // Event type
+            const typeEl = document.querySelector('input[name="eventType"]:checked');
+            event.eventType = typeEl ? typeEl.value : 'Random';
+
+            // Flags
+            event.flags = [];
+            document.querySelectorAll('.flags-grid input[type="checkbox"]:checked').forEach(el => {
+                event.flags.push(el.value);
+            });
+
+            // Chain settings
+            event.isChainOnly = document.getElementById('isChainOnly').checked;
+            event.isOverwritable = document.getElementById('isOverwritable').checked;
+
+            // Requirements
+            event.reqGoldAbove = parseInt(document.getElementById('reqGoldAbove').value) || null;
+            event.reqGoldBelow = parseInt(document.getElementById('reqGoldBelow').value) || null;
+            event.reqCaptivesAbove = parseInt(document.getElementById('reqCaptivesAbove').value) || null;
+            event.reqTroopsAbove = parseInt(document.getElementById('reqTroopsAbove').value) || null;
+            event.escapeChance = parseInt(document.getElementById('escapeChance').value) || null;
+            event.pregnancyRisk = parseInt(document.getElementById('pregnancyRisk').value) || null;
+
+            renderEventList();
+            renderEventChain();
+        }
+
+        function deleteCurrentEvent() {
+            if (currentEventIndex < 0) return;
+            if (!confirm('确定要删除这个事件吗？')) return;
+
+            events.splice(currentEventIndex, 1);
+            currentEventIndex = -1;
+            renderEventList();
+            document.getElementById('emptyState').style.display = 'flex';
+            document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
+            showToast('事件已删除');
+        }
+
+        // ==================== Options Management ====================
+        function renderOptions(options) {
+            const container = document.getElementById('optionsList');
+            if (!options || options.length === 0) {
+                container.innerHTML = '<p style="color: var(--text-secondary);">暂无选项，点击上方按钮添加</p>';
+                return;
+            }
+
+            container.innerHTML = options.map((opt, idx) => `
+                <div class="option-card" data-index="${idx}">
+                    <div class="option-header">
+                        <h5>选项 ${idx + 1}</h5>
+                        <button class="btn btn-danger" onclick="removeOption(${idx})" style="padding: 4px 8px; font-size: 0.8rem;">删除</button>
+                    </div>
+                    <div class="form-group">
+                        <label>选项文本</label>
+                        <input type="text" value="${escapeHtml(opt.text || '')}" onchange="updateOption(${idx}, 'text', this.value)">
+                    </div>
+                    <div class="form-group">
+                        <label>后果效果</label>
+                        <div class="consequence-select" id="consequences_${idx}">
+                            ${(opt.consequences || []).map(c => `
+                                <span class="consequence-tag">
+                                    ${c}
+                                    <span class="remove" onclick="removeConsequence(${idx}, '${c}')">&times;</span>
+                                </span>
+                            `).join('')}
+                            <div class="add-consequence">
+                                <button class="btn btn-secondary" style="padding: 4px 8px; font-size: 0.8rem;" onclick="toggleConsequenceDropdown(${idx})">+ 添加</button>
+                                <div class="consequence-dropdown" id="conseqDropdown_${idx}">
+                                    ${CONSEQUENCES.map(c => `
+                                        <div class="consequence-dropdown-item" onclick="addConsequence(${idx}, '${c.id}')">${c.label} (${c.id})</div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>触发事件名称</label>
+                            <input type="text" value="${opt.triggerEventName || ''}" placeholder="留空表示不触发" onchange="updateOption(${idx}, 'triggerEventName', this.value)">
+                        </div>
+                        <div class="form-group">
+                            <label>金币变化</label>
+                            <input type="text" value="${opt.goldTotal || ''}" placeholder="例如: -100 或 R 50 200" onchange="updateOption(${idx}, 'goldTotal', this.value)">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>生命变化</label>
+                            <input type="text" value="${opt.healthTotal || ''}" placeholder="例如: -20" onchange="updateOption(${idx}, 'healthTotal', this.value)">
+                        </div>
+                        <div class="form-group">
+                            <label>声望变化</label>
+                            <input type="text" value="${opt.renownTotal || ''}" placeholder="例如: R 1 3" onchange="updateOption(${idx}, 'renownTotal', this.value)">
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function addOption() {
+            if (currentEventIndex < 0) return;
+            const event = events[currentEventIndex];
+            if (!event.options) event.options = [];
+            event.options.push(createDefaultOption(event.options.length));
+            renderOptions(event.options);
+        }
+
+        function removeOption(idx) {
+            if (currentEventIndex < 0) return;
+            events[currentEventIndex].options.splice(idx, 1);
+            // Reorder
+            events[currentEventIndex].options.forEach((opt, i) => opt.order = i);
+            renderOptions(events[currentEventIndex].options);
+        }
+
+        function updateOption(idx, field, value) {
+            if (currentEventIndex < 0) return;
+            events[currentEventIndex].options[idx][field] = value;
+            renderEventChain();
+        }
+
+        function toggleConsequenceDropdown(idx) {
+            const dropdown = document.getElementById(`conseqDropdown_${idx}`);
+            dropdown.classList.toggle('show');
+        }
+
+        function addConsequence(optIdx, conseqId) {
+            if (currentEventIndex < 0) return;
+            const opt = events[currentEventIndex].options[optIdx];
+            if (!opt.consequences) opt.consequences = [];
+            if (!opt.consequences.includes(conseqId)) {
+                opt.consequences.push(conseqId);
+            }
+            renderOptions(events[currentEventIndex].options);
+        }
+
+        function removeConsequence(optIdx, conseqId) {
+            if (currentEventIndex < 0) return;
+            const opt = events[currentEventIndex].options[optIdx];
+            opt.consequences = opt.consequences.filter(c => c !== conseqId);
+            renderOptions(events[currentEventIndex].options);
+        }
+
+        // ==================== UI Helpers ====================
+        function renderEventList() {
+            const container = document.getElementById('eventList');
+            const searchTerm = document.getElementById('eventSearch').value.toLowerCase();
+
+            const filtered = events.filter(e =>
+                e.name.toLowerCase().includes(searchTerm) ||
+                (e.text && e.text.toLowerCase().includes(searchTerm))
+            );
+
+            if (filtered.length === 0) {
+                container.innerHTML = '<div class="empty-state"><p>暂无事件</p></div>';
+                return;
+            }
+
+            container.innerHTML = filtered.map((event, idx) => {
+                const realIdx = events.indexOf(event);
+                const typeTag = event.isChainOnly ? 'chain' : event.eventType.toLowerCase();
+                return `
+                    <div class="event-item ${realIdx === currentEventIndex ? 'active' : ''}" onclick="selectEvent(${realIdx})">
+                        <div class="event-name">${escapeHtml(event.name)}</div>
+                        <div class="event-type">
+                            <span class="event-type-tag tag-${typeTag}">${event.isChainOnly ? '链式' : event.eventType}</span>
+                            ${event.options ? event.options.length + '个选项' : '0个选项'}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function filterEvents() {
+            renderEventList();
+        }
+
+        function switchTab(tabId) {
+            document.querySelectorAll('.editor-tab').forEach(el => {
+                el.classList.toggle('active', el.dataset.tab === tabId);
+            });
+            document.querySelectorAll('.tab-content').forEach(el => {
+                el.style.display = el.id === `tab-${tabId}` ? 'block' : 'none';
+            });
+        }
+
+        function renderEventChain() {
+            const container = document.getElementById('chainVisualizer');
+            if (currentEventIndex < 0) {
+                container.innerHTML = '<div class="empty-state"><p>选择一个事件查看其事件链</p></div>';
+                return;
+            }
+
+            const event = events[currentEventIndex];
+            container.innerHTML = renderChainNode(event, true);
+        }
+
+        function renderChainNode(event, isCurrent = false) {
+            const triggeredEvents = [];
+            if (event.options) {
+                event.options.forEach(opt => {
+                    if (opt.triggerEventName) {
+                        const triggered = events.find(e => e.name === opt.triggerEventName);
+                        if (triggered && !triggeredEvents.includes(triggered)) {
+                            triggeredEvents.push(triggered);
+                        }
+                    }
+                });
+            }
+
+            let html = `
+                <div class="chain-node ${isCurrent ? 'current' : ''}">
+                    <div class="node-name">${escapeHtml(event.name)}</div>
+                    <div class="node-options">${event.options ? event.options.length : 0}个选项</div>
+                </div>
+            `;
+
+            if (triggeredEvents.length > 0) {
+                html += '<div class="chain-arrow">↓</div>';
+                html += '<div class="chain-children">';
+                triggeredEvents.forEach(te => {
+                    html += renderChainNode(te, false);
+                });
+                html += '</div>';
+            }
+
+            return html;
+        }
+
+        // ==================== Import/Export ====================
+        function importXML() {
+            document.getElementById('importModal').classList.add('active');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+        }
+
+        function doImport() {
+            const fileInput = document.getElementById('xmlFileInput');
+            const pasteInput = document.getElementById('xmlPasteInput');
+
+            if (fileInput.files.length > 0) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    parseAndImportXML(e.target.result);
+                };
+                reader.readAsText(fileInput.files[0]);
+            } else if (pasteInput.value.trim()) {
+                parseAndImportXML(pasteInput.value);
+            } else {
+                showToast('请选择文件或粘贴XML内容', 'error');
+            }
+        }
+
+        function parseAndImportXML(xmlString) {
+            try {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(xmlString, 'text/xml');
+
+                const errorNode = doc.querySelector('parsererror');
+                if (errorNode) {
+                    throw new Error('XML解析错误');
+                }
+
+                const eventNodes = doc.querySelectorAll('CEEvent');
+                let importedCount = 0;
+
+                eventNodes.forEach(node => {
+                    const event = parseEventNode(node);
+                    events.push(event);
+                    importedCount++;
+                });
+
+                closeModal('importModal');
+                renderEventList();
+                showToast(`成功导入 ${importedCount} 个事件`);
+
+                // Clear inputs
+                document.getElementById('xmlFileInput').value = '';
+                document.getElementById('xmlPasteInput').value = '';
+            } catch (e) {
+                showToast('导入失败: ' + e.message, 'error');
+            }
+        }
+
+        function parseEventNode(node) {
+            const getText = (tag) => {
+                const el = node.querySelector(tag);
+                return el ? el.textContent : '';
+            };
+
+            const event = {
+                name: getText('Name'),
+                text: getText('Text'),
+                background: getText('BackgroundName'),
+                weight: parseInt(getText('WeightedChanceOfOccurring')) || 10,
+                minAge: parseInt(getText('ReqHeroMinAge')) || 18,
+                maxAge: parseInt(getText('ReqHeroMaxAge')) || null,
+                eventType: 'Random',
+                flags: [],
+                options: [],
+                isChainOnly: false,
+                isOverwritable: false
+            };
+
+            // Parse flags
+            const flagNodes = node.querySelectorAll('RestrictedListOfFlags');
+            flagNodes.forEach(fn => {
+                const flag = fn.textContent;
+                if (['Random', 'Captor', 'Captive'].includes(flag)) {
+                    event.eventType = flag;
+                } else if (flag === 'CanOnlyBeTriggeredByOtherEvent') {
+                    event.isChainOnly = true;
+                } else if (flag === 'Overwritable') {
+                    event.isOverwritable = true;
+                } else {
+                    event.flags.push(flag);
+                }
+            });
+
+            // Parse options
+            const optionNodes = node.querySelectorAll('Option');
+            optionNodes.forEach((optNode, idx) => {
+                const opt = {
+                    order: parseInt(optNode.querySelector('Order')?.textContent) || idx,
+                    text: optNode.querySelector('OptionText')?.textContent || '',
+                    consequences: [],
+                    triggerEventName: optNode.querySelector('TriggerEventName')?.textContent || '',
+                    goldTotal: optNode.querySelector('GoldTotal')?.textContent || null,
+                    healthTotal: optNode.querySelector('HealthTotal')?.textContent || null,
+                    renownTotal: optNode.querySelector('RenownTotal')?.textContent || null
+                };
+
+                optNode.querySelectorAll('RestrictedListOfConsequences').forEach(c => {
+                    opt.consequences.push(c.textContent);
+                });
+
+                event.options.push(opt);
+            });
+
+            return event;
+        }
+
+        function generateXML() {
+            let xml = `<?xml version="1.0" encoding="UTF-8"?>
+<CEEvents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../zCaptivityEvents/ModuleLoader/CaptivityRequired/Events/CEEventsModal.xsd">
+
+`;
+            events.forEach(event => {
+                xml += generateEventXML(event);
+            });
+
+            xml += '</CEEvents>\n';
+            return xml;
+        }
+
+        function generateEventXML(event) {
+            let xml = '    <CEEvent>\n';
+            xml += `        <Name>${escapeXml(event.name)}</Name>\n`;
+            xml += `        <Text>${escapeXml(event.text)}</Text>\n`;
+
+            if (event.background) {
+                xml += `        <BackgroundName>${escapeXml(event.background)}</BackgroundName>\n`;
+            }
+
+            // Flags
+            xml += '        <MultipleRestrictedListOfFlags>\n';
+            xml += `            <RestrictedListOfFlags>${event.eventType}</RestrictedListOfFlags>\n`;
+            if (event.isChainOnly) {
+                xml += '            <RestrictedListOfFlags>CanOnlyBeTriggeredByOtherEvent</RestrictedListOfFlags>\n';
+            }
+            if (event.isOverwritable) {
+                xml += '            <RestrictedListOfFlags>Overwritable</RestrictedListOfFlags>\n';
+            }
+            event.flags.forEach(flag => {
+                xml += `            <RestrictedListOfFlags>${flag}</RestrictedListOfFlags>\n`;
+            });
+            xml += '        </MultipleRestrictedListOfFlags>\n';
+
+            // Options
+            if (event.options && event.options.length > 0) {
+                xml += '        <Options>\n';
+                event.options.forEach(opt => {
+                    xml += '            <Option>\n';
+                    xml += `                <Order>${opt.order}</Order>\n`;
+                    xml += '                <MultipleRestrictedListOfConsequences>\n';
+                    opt.consequences.forEach(c => {
+                        xml += `                    <RestrictedListOfConsequences>${c}</RestrictedListOfConsequences>\n`;
+                    });
+                    xml += '                </MultipleRestrictedListOfConsequences>\n';
+                    xml += `                <OptionText>${escapeXml(opt.text)}</OptionText>\n`;
+
+                    if (opt.triggerEventName) {
+                        xml += `                <TriggerEventName>${escapeXml(opt.triggerEventName)}</TriggerEventName>\n`;
+                    }
+                    if (opt.goldTotal) {
+                        xml += `                <GoldTotal>${opt.goldTotal}</GoldTotal>\n`;
+                    }
+                    if (opt.healthTotal) {
+                        xml += `                <HealthTotal>${opt.healthTotal}</HealthTotal>\n`;
+                    }
+                    if (opt.renownTotal) {
+                        xml += `                <RenownTotal>${opt.renownTotal}</RenownTotal>\n`;
+                    }
+
+                    xml += '            </Option>\n';
+                });
+                xml += '        </Options>\n';
+            }
+
+            // Other properties
+            if (event.weight) {
+                xml += `        <WeightedChanceOfOccurring>${event.weight}</WeightedChanceOfOccurring>\n`;
+            }
+            if (event.minAge) {
+                xml += `        <ReqHeroMinAge>${event.minAge}</ReqHeroMinAge>\n`;
+            }
+            if (event.maxAge) {
+                xml += `        <ReqHeroMaxAge>${event.maxAge}</ReqHeroMaxAge>\n`;
+            }
+            if (event.reqGoldAbove) {
+                xml += `        <ReqGoldAbove>${event.reqGoldAbove}</ReqGoldAbove>\n`;
+            }
+            if (event.reqCaptivesAbove) {
+                xml += `        <ReqCaptivesAbove>${event.reqCaptivesAbove}</ReqCaptivesAbove>\n`;
+            }
+            if (event.reqTroopsAbove) {
+                xml += `        <ReqTroopsAbove>${event.reqTroopsAbove}</ReqTroopsAbove>\n`;
+            }
+
+            xml += '    </CEEvent>\n\n';
+            return xml;
+        }
+
+        function previewXML() {
+            const xml = generateXML();
+            document.getElementById('xmlPreviewContent').textContent = xml;
+            document.getElementById('previewModal').classList.add('active');
+        }
+
+        function exportXML() {
+            previewXML();
+        }
+
+        function copyXML() {
+            const xml = generateXML();
+            navigator.clipboard.writeText(xml).then(() => {
+                showToast('已复制到剪贴板');
+            });
+        }
+
+        function downloadXML() {
+            const xml = generateXML();
+            const blob = new Blob([xml], { type: 'application/xml' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'CustomEvents.xml';
+            a.click();
+            URL.revokeObjectURL(url);
+            showToast('文件已下载');
+        }
+
+        // ==================== Utilities ====================
+        function escapeHtml(str) {
+            if (!str) return '';
+            return str.replace(/&/g, '&amp;')
+                      .replace(/</g, '&lt;')
+                      .replace(/>/g, '&gt;')
+                      .replace(/"/g, '&quot;');
+        }
+
+        function escapeXml(str) {
+            if (!str) return '';
+            return str.replace(/&/g, '&amp;')
+                      .replace(/</g, '&lt;')
+                      .replace(/>/g, '&gt;')
+                      .replace(/"/g, '&quot;')
+                      .replace(/'/g, '&apos;');
+        }
+
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.style.borderLeftColor = type === 'error' ? 'var(--error)' : 'var(--success)';
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        }
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.add-consequence')) {
+                document.querySelectorAll('.consequence-dropdown').forEach(d => d.classList.remove('show'));
+            }
+        });
+
+        // Initialize
+        init();
+    </script>
+</body>
+</html>
